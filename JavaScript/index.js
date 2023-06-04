@@ -92,14 +92,17 @@ const users = [
 ];
 
 // This is Acess The keys
-const key = Object.keys(users[0]);
-console.log(key);
+// const key = Object.keys(users[0]);
+// console.log(key);
 
 //This is Acess The values
-console.log(users[1].firstname);
-console.log(users[1].lastname);
-console.log(users[1].age);
+// console.log(users[1].firstname);
+// console.log(users[1].lastname);
+// console.log(users[1].age);
 // ALL VALUES ARE ACCESSED
-for (let i = 0; i < users.length; i++) {
-  console.log(users[i].firstname, "", users[i].lastname, "", users[i].age);
-}
+// for (let i = 0; i < users.length; i++) {
+//   console.log(users[i].firstname, "", users[i].lastname, "", users[i].age);
+// }
+
+const output = users.filter((x) => x.age > 25).map((x) => x.firstname + " "+ x);
+console.log(output);
