@@ -1,0 +1,12 @@
+.date {
+  text-align: right;
+}
+.author {
+  text-align: center;
+}
+
+.showPage {
+  width: 80% !important;
+
+  margin-left: 137px !important;
+}
