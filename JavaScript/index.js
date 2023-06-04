@@ -104,5 +104,17 @@ const users = [
 //   console.log(users[i].firstname, "", users[i].lastname, "", users[i].age);
 // }
 
-const output = users.filter((x) => x.age > 25).map((x) => x.firstname + " "+ x);
+// Cobined Use Map and Filter
+// const output = users.filter((x) => x.age > 25).map((x) => x.firstname + " "+ x);
+// console.log(output);
+
+//Here we have Use Reduce
+
+const output = users.reduce((acc, curr) => {
+  if (curr.age < 35) {
+    acc.push(curr.firstname);
+  }
+  return acc;
+}, []);
+
 console.log(output);
