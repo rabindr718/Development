@@ -110,11 +110,16 @@ const users = [
 
 //Here we have Use Reduce
 
-const output = users.reduce((acc, curr) => {
-  if (curr.age < 35) {
-    acc.push(curr.firstname);
-  }
-  return acc;
-}, []);
+// const output = users.reduce((acc, curr) => {
+//   if (curr.age < 35) {
+//     acc.push(curr.firstname);
+//   }
+//   return acc;
+// }, []);
 
-console.log(output);
+// console.log(output);
+
+users.forEach((x) => {
+  x.age = x.age - 7;
+});
+console.log(users);

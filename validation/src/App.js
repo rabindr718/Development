@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import "./App.css";
+import YourComponent from "./YourComponent"
 
 function App() {
   const initialValues = { username: "", email: "", password: "" };
@@ -47,6 +48,7 @@ function App() {
 
   return (
     <div className="container">
+    <YourComponent />
       {Object.keys(formErrors).length === 0 && isSubmit ? (
         <div className="ui message success">Signed in successfully</div>
       ) : (

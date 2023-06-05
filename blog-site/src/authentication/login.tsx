@@ -12,30 +12,34 @@ import validator from "validator";
 import React from "react";
 
 const Login: React.FC = (props) => {
-  const [valList, setvalList] = useState([]);
+  // const [valList, setvalList] = useState([]);
 
   // const { valList }: any = props;
   const navigate = useNavigate();
+
   const [selected, setSelectValue] = useState("Email");
+  const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("");
+
+  const handleInputChange = (e: any) => {
+    if (selected === "Email") {
+      setEmail(e.target.value);
+    } else if (selected === "UserName") {
+      setUsername(e.target.value);
+    }
+    console.log(email);
+    console.log(username);
+  };
 
   const [inputVal, setInputVal] = useState({
-    // fullname: "",
     email: "",
     username: "",
     password: "",
-    // confirmpass: "",
   });
 
   const [errorData, setError] = useState(" ");
 
   //Using Single State
-
-  const [inputValue, setInputValue] = useState({
-    email: "",
-    username: "",
-    password: "",
-  });
-
   const fetchData = (e: any) => {
     const { value, name } = e.target;
 
@@ -49,8 +53,10 @@ const Login: React.FC = (props) => {
 
   const loginSubmitHandler = (e: any) => {
     e.preventDefault();
+    e.handleInputChange(); 
     const { email, username, password } = inputVal;
-
+    console.log(password);
+    console.log(email, username);
     if (username === " ") {
       alert("Enter username");
     } else if (email === " ") {
@@ -71,24 +77,20 @@ const Login: React.FC = (props) => {
         inputVal.email === localStoreData.email &&
         inputVal.password === localStoreData.password
       ) {
-        // Authentication successful
         alert("Authentication successful");
         navigate("/HomeAfterLogin");
 
         console.log("Authentication successful");
-        // You can perform any additional actions or redirect the user to a protected page here
       } else {
-        // Authentication failed
         alert("Please Enter Correct Details");
         console.log("Authentication failed");
-        // You can display an error message or perform any other appropriate action here
       }
 
       console.log(inputVal);
     }
   };
 
-  localStorage.setItem("Login", JSON.stringify(inputValue));
+  localStorage.setItem("Login", JSON.stringify(inputVal));
 
   const LoginHandler = () => {
     navigate("/Login");
@@ -96,6 +98,7 @@ const Login: React.FC = (props) => {
   const HomeHandler = () => {
     navigate("/");
   };
+
   return (
     <div className="red">
       <Navbar bg="primary" variant="bg">
@@ -118,7 +121,7 @@ const Login: React.FC = (props) => {
         <Modal.Body>
           <form className={classes.centerwidth}>
             <div className="input-group">
-              <Form.Group className="input-group">
+              {/* <Form.Group className="input-group">
                 <Form.Select
                   className="form-control"
                   value={selected}
@@ -127,16 +130,28 @@ const Login: React.FC = (props) => {
                   <option value="Email">Email Id</option>
                   <option value="UserName">UserName</option>
                 </Form.Select>
-              </Form.Group>
-
+              </Form.Group> */}
               <Form.Group className="input-group">
-                <Form.Control
-                  name="email"
-                  type="email"
-                  onChange={fetchData}
-                  placeholder={selected}
-                />
+                <Form.Select
+                  className="form-control"
+                  value={selected}
+                  onChange={(e: any) => setSelectValue(e.target.value)}
+                >
+                  <option value="Email">Email Id</option>
+                  <option value="UserName">Username</option>
+                </Form.Select>
               </Form.Group>
+              <Form.Control
+                type={selected === "Email" ? "email" : "text"}
+                placeholder={
+                  selected === "Email"
+                    ? "Enter your Email"
+                    : "Enter your Username"
+                }
+                // name={selected === "Email" ? email : username}
+                value={selected === "Email" ? email : username}
+                onChange={handleInputChange}
+              />
             </div>
             <div className="input-group">
               <span></span>
