@@ -119,7 +119,15 @@ const users = [
 
 // console.log(output);
 
-users.forEach((x) => {
-  x.age = x.age - 7;
+// users.forEach((x) => {
+//   x.age = x.age - 7;
+// });
+// console.log(users);
+const smaller = users.filter((student) => {
+  if (student.age > 30) {
+    return true;
+  } else {
+    return false;
+  }
 });
-console.log(users);
+console.log(smaller);
