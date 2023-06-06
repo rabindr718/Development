@@ -123,11 +123,68 @@ const users = [
 //   x.age = x.age - 7;
 // });
 // console.log(users);
-const smaller = users.filter((student) => {
-  if (student.age > 30) {
+const smaller = users.filter((student) => student.age > 30);
+//   if (student.age > 30) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// });
+
+//Convert Array into Object
+
+// const result = users.map((x) => x.firstname + " " + x.lastname);
+
+// const arr = ["a", "b", "c", "d"];
+// let obj = arr.reduce((acc, it,i) => ({ ...acc, [i]: it }), {});
+// console.log(obj)
+
+// Used indexof Method ********************
+
+// const admin = [1, 2, 5];
+// const user = {
+//   name: "Rabindra",
+//   id: 5,
+// };
+// const isAdmin = admin.indexOf(user.id) > -1;
+// console.log(isAdmin);
+
+// Used includes Method ********************
+
+// const admin = [1, 2, 5];
+// const user = {
+//   name: "Rabindra",
+//   id: 5,
+// };
+
+// console.log(admin.includes(user.id))
+
+const user = [
+  {
+    name: "Rabindra Kumar Sharma",
+    id: 17203,
+  },
+  {
+    name: "King Kohli",
+    id: 17201,
+  },
+  {
+    name: "MS Dhoni",
+    id: 17777,
+  },
+];
+
+// Used find Method ********************
+
+
+const myUserId = user.find((users) => {
+  if (users.id === 17203) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 });
-console.log(smaller);
+
+// console.log(myUserId);
+
+
+// Used find Method ********************
