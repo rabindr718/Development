@@ -83,13 +83,13 @@
 //   console.log(sum);
 // }
 
-const users = [
-  { firstname: "Rabindra", lastname: "Sharma", age: 23 },
-  { firstname: "Mahendra Singh", lastname: "Dhoni", age: 43 },
-  { firstname: "Virat", lastname: "Kohli", age: 34 },
-  { firstname: "Sheyas", lastname: "Iyer", age: 29 },
-  { firstname: "Ravindra", lastname: "Jadeja", age: 34 },
-];
+// const users = [
+//   { firstname: "Rabindra", lastname: "Sharma", age: 23 },
+//   { firstname: "Mahendra Singh", lastname: "Dhoni", age: 43 },
+//   { firstname: "Virat", lastname: "Kohli", age: 34 },
+//   { firstname: "Sheyas", lastname: "Iyer", age: 29 },
+//   { firstname: "Ravindra", lastname: "Jadeja", age: 34 },
+// ];
 
 // This is Acess The keys
 // const key = Object.keys(users[0]);
@@ -123,7 +123,7 @@ const users = [
 //   x.age = x.age - 7;
 // });
 // console.log(users);
-const smaller = users.filter((student) => student.age > 30);
+// const smaller = users.filter((student) => student.age > 30);
 //   if (student.age > 30) {
 //     return true;
 //   } else {
@@ -159,32 +159,30 @@ const smaller = users.filter((student) => student.age > 30);
 
 // console.log(admin.includes(user.id))
 
-const user = [
-  {
-    name: "Rabindra Kumar Sharma",
-    id: 17203,
-  },
-  {
-    name: "King Kohli",
-    id: 17201,
-  },
-  {
-    name: "MS Dhoni",
-    id: 17777,
-  },
-];
+// const user = [
+//   {
+//     name: "Rabindra Kumar Sharma",
+//     id: 17203,
+//   },
+//   {
+//     name: "King Kohli",
+//     id: 17201,
+//   },
+//   {
+//     name: "MS Dhoni",
+//     id: 17777,
+//   },
+// ];
 
 // Used find Method ********************
 
-
-const myUserId = user.find((users) => {
-  if (users.id === 17203) {
-    return true;
-  }
-  return false;
-});
+// const myUserId = user.find((users) => {
+//   if (users.id === 17203) {
+//     return true;
+//   }
+//   return false;
+// });
 
 // console.log(myUserId);
 
-
-// Used find Method ********************
+// Used sort Method ********************
