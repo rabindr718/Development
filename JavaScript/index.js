@@ -68,7 +68,8 @@
 //   return x.toString(2);
 // });
 
-//With Arrow Function
+// With Arrow Function
+
 // const output = arr.map((x) => x.toString(2));
 
 // const output1 = arr.filter((x) => x % 2);
@@ -83,29 +84,37 @@
 //   console.log(sum);
 // }
 
-// const users = [
-//   { firstname: "Rabindra", lastname: "Sharma", age: 23 },
-//   { firstname: "Mahendra Singh", lastname: "Dhoni", age: 43 },
-//   { firstname: "Virat", lastname: "Kohli", age: 34 },
-//   { firstname: "Sheyas", lastname: "Iyer", age: 29 },
-//   { firstname: "Ravindra", lastname: "Jadeja", age: 34 },
-// ];
+const users = [
+  { firstname: "Rabindra", lastname: "Sharma", age: 23 },
+  { firstname: "Mahendra Singh", lastname: "Dhoni", age: 43 },
+  { firstname: "Virat", lastname: "Kohli", age: 34 },
+  { firstname: "Sheyas", lastname: "Iyer", age: 29 },
+  { firstname: "Ravindra", lastname: "Jadeja", age: 34 },
+];
 
 // This is Acess The keys
+
 // const key = Object.keys(users[0]);
 // console.log(key);
 
 //This is Acess The values
+
 // console.log(users[1].firstname);
 // console.log(users[1].lastname);
 // console.log(users[1].age);
+
 // ALL VALUES ARE ACCESSED
+
 // for (let i = 0; i < users.length; i++) {
-//   console.log(users[i].firstname, "", users[i].lastname, "", users[i].age);
+//   console.log(users[i].firstname, "",
+//   users[i].lastname, "", users[i].age+100);
 // }
 
 // Cobined Use Map and Filter
-// const output = users.filter((x) => x.age > 25).map((x) => x.firstname + " "+ x);
+
+// const output = users
+//   .filter((x) => x.age > 25)
+//   .map((x) => x.firstname + " " + x.lastname);
 // console.log(output);
 
 //Here we have Use Reduce
@@ -113,23 +122,24 @@
 // const output = users.reduce((acc, curr) => {
 //   if (curr.age < 35) {
 //     acc.push(curr.firstname);
+//     // console.log(acc)
+//     // console.log(curr)
 //   }
 //   return acc;
 // }, []);
 
-// console.log(output);
+console.log(output);
 
-// users.forEach((x) => {
-//   x.age = x.age - 7;
-// });
-// console.log(users);
-// const smaller = users.filter((student) => student.age > 30);
-//   if (student.age > 30) {
-//     return true;
-//   } else {
-//     return false;
-//   }
-// });
+users.forEach((x) => {
+  x.age = x.age - 7;
+});
+console.log(users);
+const smaller = users.filter((student) => student.age > 30);
+if (student.age > 30) {
+  return true;
+} else {
+  return false;
+}
 
 //Convert Array into Object
 
@@ -186,3 +196,16 @@
 // console.log(myUserId);
 
 // Used sort Method ********************
+
+// console.log(x);
+// console.log(getname);
+// getname();
+// console.log(getname1);
+// var x = 7;
+
+// function getname() {
+//   console.log("This is Rabindra");
+// }
+// var getname1 = () => {
+//   console.log("This is Rabindra");
+// };

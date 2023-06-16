@@ -12,35 +12,19 @@ import validator from "validator";
 import React from "react";
 
 const Login: React.FC = (props) => {
-  // const [valList, setvalList] = useState([]);
-
-  // const { valList }: any = props;
   const navigate = useNavigate();
+  const [errorData, setError] = useState("");
 
-  const [selected, setSelectValue] = useState("Email");
+  const [selected, setSelectValue] = useState<"Email" | "UserName">("Email");
   const [email, setEmail] = useState("");
   const [username, setUsername] = useState("");
-
-  const handleInputChange = (e: any) => {
-    if (selected === "Email") {
-      setEmail(e.target.value);
-    } else if (selected === "UserName") {
-      setUsername(e.target.value);
-    }
-    console.log(email);
-    console.log(username);
-  };
 
   const [inputVal, setInputVal] = useState({
     email: "",
     username: "",
     password: "",
   });
-
-  const [errorData, setError] = useState(" ");
-
-  //Using Single State
-  const fetchData = (e: any) => {
+  const fetchPasswordValue = (e: any) => {
     const { value, name } = e.target;
 
     setInputVal(() => {
@@ -50,21 +34,47 @@ const Login: React.FC = (props) => {
       };
     });
   };
+  const fetchUserName_Email = (e: any) => {
+    const { name, value } = e.target;
 
-  const loginSubmitHandler = (e: any) => {
+    if (selected === "Email") {
+      setEmail(value);
+    } else if (selected === "UserName") {
+      setUsername(value);
+    }
+
+    setInputVal((inputVal) => ({
+      ...inputVal,
+      [name]: value,
+    }));
+  };
+
+  const loginSubmitHandler = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    e.handleInputChange(); 
     const { email, username, password } = inputVal;
+    e.preventDefault();
+    console.log(email);
+    console.log(username);
     console.log(password);
-    console.log(email, username);
-    if (username === " ") {
-      alert("Enter username");
-    } else if (email === " ") {
-      alert("Email field Required");
-    } else if (email === " " && !email.includes("prominentpixel@.com")) {
-      alert("Enter a Valid Mail Id");
-    } else if (password.trim().length < 6) {
-      alert("Enter Long password");
+    // Rest of your login validation logic...
+
+    if (selected === "Email") {
+      if (email.trim() === "") {
+        alert("Email field is required");
+      } else if (
+        !validator.isEmail(email) &&
+        !email.includes("prominentpixel@.com")
+      ) {
+        alert("Enter a valid email address");
+      }
+    } else if (selected === "UserName") {
+      if (username.trim() === "") {
+        alert("Enter Username");
+      }
+    }
+
+    if (password.trim().length < 6) {
+      alert("Enter a password with at least 6 characters");
     } else {
       console.log("Data Sent SuccessFully");
       // localStorage.setItem("keys", JSON.stringify([...data, inputVal]));
@@ -74,8 +84,9 @@ const Login: React.FC = (props) => {
       console.log(localStoreData);
 
       if (
-        inputVal.email === localStoreData.email &&
-        inputVal.password === localStoreData.password
+        inputVal.email === localStoreData.email ||
+        (inputVal.username === localStoreData.username &&
+          inputVal.password === localStoreData.password)
       ) {
         alert("Authentication successful");
         navigate("/HomeAfterLogin");
@@ -119,23 +130,15 @@ const Login: React.FC = (props) => {
         </Modal.Title>
 
         <Modal.Body>
-          <form className={classes.centerwidth}>
+          <form className={classes.centerwidth} onSubmit={loginSubmitHandler}>
             <div className="input-group">
-              {/* <Form.Group className="input-group">
-                <Form.Select
-                  className="form-control"
-                  value={selected}
-                  onChange={(e) => setSelectValue(e.target.value)}
-                >
-                  <option value="Email">Email Id</option>
-                  <option value="UserName">UserName</option>
-                </Form.Select>
-              </Form.Group> */}
               <Form.Group className="input-group">
                 <Form.Select
                   className="form-control"
                   value={selected}
-                  onChange={(e: any) => setSelectValue(e.target.value)}
+                  onChange={(e) =>
+                    setSelectValue(e.target.value as "Email" | "UserName")
+                  }
                 >
                   <option value="Email">Email Id</option>
                   <option value="UserName">Username</option>
@@ -148,9 +151,9 @@ const Login: React.FC = (props) => {
                     ? "Enter your Email"
                     : "Enter your Username"
                 }
-                // name={selected === "Email" ? email : username}
+                name={selected === "Email" ? "email" : "username"}
                 value={selected === "Email" ? email : username}
-                onChange={handleInputChange}
+                onChange={fetchUserName_Email}
               />
             </div>
             <div className="input-group">
@@ -161,7 +164,7 @@ const Login: React.FC = (props) => {
                 className="form-control"
                 name="password"
                 placeholder="Password"
-                onChange={fetchData}
+                onChange={fetchPasswordValue}
               />
             </div>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
@@ -172,7 +175,7 @@ const Login: React.FC = (props) => {
                 <button
                   id="btnSearch"
                   className="btn btn-primary btn-md center-block"
-                  onClick={loginSubmitHandler}
+                  type="submit"
                 >
                   Login
                 </button>
