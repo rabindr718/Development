@@ -65,18 +65,25 @@ const AddBlogs: React.FC = (props: any) => {
     );
     setUpdateBlog("");
   };
-  // const handleSelect = (data1: any) => {
-  //   setSelectValue(data1);
-  // };
+  const fileInput = (event: any) => setFile(event.target.value);
   const fileHandler = (e: any) => {
     console.log(e.target.files);
     setFile(URL.createObjectURL(e.target.files[0]));
+  };
+  const combineFunction = (e: any) => {
+    fileInput(e);
+    fileHandler(e);
   };
 
   const AddBlogsHandler = (e: any) => {
     e.preventDefault();
     console.log(title);
-    console.log(description);
+
+    const parser = new DOMParser();
+    const htmlDocument = parser.parseFromString(description, "text/html");
+    const plainText = htmlDocument.body.textContent;
+    // console.log(description);
+    console.log(plainText);
 
     console.log(authorUser);
     console.log(file);
@@ -174,8 +181,7 @@ const AddBlogs: React.FC = (props: any) => {
               className="form-control"
               type="file"
               id="formFileMultiple"
-              multiple
-              onChange={(event) => setFile(event.target.value)}
+              onChange={combineFunction}
             />
           </div>
           <Form.Group className="input-group">
@@ -183,7 +189,6 @@ const AddBlogs: React.FC = (props: any) => {
               className="form-control"
               value={selected}
               onChange={(e) => setSelectValue(e.target.value)}
-              // onChange={handleSelect}
             >
               <option value="Version">Version</option>
               <option value="Update 2">Update 2</option>
