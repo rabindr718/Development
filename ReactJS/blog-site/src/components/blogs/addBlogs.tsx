@@ -11,12 +11,14 @@ import validator from "validator";
 const AddBlogs: React.FC = (props: any) => {
   const data = localStorage.getItem("LoginData");
   const login = JSON.parse(data as string);
+
+  // Date to be Added
   let new_Date: Date = new Date();
   const date: string = `${new_Date.getDate()}/${
     new_Date.getMonth() + 1
   }/${new_Date.getFullYear().toLocaleString()}`;
 
-  // let date: string = new_Date.toLocaleString();
+  console.log(date);
 
   const [title, setTitle] = useState(" ");
   const [selected, setSelectValue] = useState("");
@@ -32,11 +34,11 @@ const AddBlogs: React.FC = (props: any) => {
   const localStorageData = JSON.parse(
     localStorage.getItem("LoginData") as string
   );
-  const username =
+  const authorUser =
     localStorageData.username.charAt(0).toUpperCase() +
     localStorageData.username.substring(1);
 
-  console.log(username);
+  // console.log(username);
   const updatenewData = (
     ids: string | number,
     title: any,
@@ -54,7 +56,7 @@ const AddBlogs: React.FC = (props: any) => {
               Title: title,
               Description: discription,
               Images: file,
-              Author: author,
+              Author: authorUser,
               PublishDate: publishDate,
               Tags: tags,
             }
@@ -63,9 +65,9 @@ const AddBlogs: React.FC = (props: any) => {
     );
     setUpdateBlog("");
   };
-  const handleSelect = (data: any) => {
-    setSelectValue(data);
-  };
+  // const handleSelect = (data1: any) => {
+  //   setSelectValue(data1);
+  // };
   const fileHandler = (e: any) => {
     console.log(e.target.files);
     setFile(URL.createObjectURL(e.target.files[0]));
@@ -76,8 +78,9 @@ const AddBlogs: React.FC = (props: any) => {
     console.log(title);
     console.log(description);
 
-    console.log(author);
+    console.log(authorUser);
     console.log(file);
+    console.log(selected);
     e.preventDefault();
     if (
       title.trim().length === 0 ||
@@ -89,37 +92,38 @@ const AddBlogs: React.FC = (props: any) => {
     } else if (!validator.isAlpha(title)) {
       setErrorMsg("Not valid");
     } else {
-      if (!UpdateBlog) {
-        setBloggingList([
-          ...blog,
-          {
-            id: blog.length,
-            Title: title,
-            Description: description,
-            Images: file,
-            Author: login[0].FullName,
-            PublishDate: date,
-            Tags: setSelectValue,
-          },
-        ]);
-        alert("Blog is Publish");
-      } else {
-        updatenewData(
-          +UpdateBlog.id,
-          title,
-          description,
-          file,
-          login[0].FullName,
-          date,
-          selected
-        );
-        navigate("/HomeAfterLogin");
-      }
+      // if (!UpdateBlog) {
+      // setBloggingList([
+      //   // ...blog,
+      //   {
+      //     // id: blog.length,
+      //     Title: title,
+      //     Description: description,
+      //     Images: file,
+      //     // Author: username,
+      //     PublishDate: date,
+      //     Tags: setSelectValue,
+      //   },
+      // ]);
+      alert("Blog is Publish");
+      // }
+      // else {
+      //   updatenewData(
+      //     +UpdateBlog.id,
+      //     title,
+      //     description,
+      //     file,
+      //     login[0].FullName,
+      //     date,
+      //     selected
+      //   );
+      //   navigate("/HomeAfterLogin");
+      // }
       setTitle("");
       setdescription("");
       setSelectValue("");
       setErrorMsg("");
-      console.log(blog);
+      // console.log(blog);
     }
   };
 
@@ -179,6 +183,7 @@ const AddBlogs: React.FC = (props: any) => {
               className="form-control"
               value={selected}
               onChange={(e) => setSelectValue(e.target.value)}
+              // onChange={handleSelect}
             >
               <option value="Version">Version</option>
               <option value="Update 2">Update 2</option>
@@ -194,10 +199,10 @@ const AddBlogs: React.FC = (props: any) => {
             <input
               className="form-control"
               id="formFileMultiple"
-              multiple
               onChange={(event) => setAuthor(event.target.value)}
               disabled={true}
-              placeholder={username}
+              value={authorUser}
+              placeholder={authorUser}
             />
           </div>
         </div>

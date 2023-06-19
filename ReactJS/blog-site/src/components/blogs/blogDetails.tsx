@@ -38,10 +38,14 @@ const BlogDetails: React.FC = (props) => {
             <h5>Show Blog</h5>
             <h1>Blog Title</h1>
           </Modal.Title>
-
           <p className={classes.date}>Date 12/06/2023</p>
-
-          <p>Here Image is Dispalayed</p>
+          <div className={classes.image}>
+            <img
+              src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pxfuel.com%2Fen%2Fquery%3Fq%3Djai%2Bshri%2Bram&psig=AOvVaw1ck6_q1cQ_a9z8VXnX2CqZ&ust=1687287776595000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCMCAq_iC0P8CFQAAAAAdAAAAABAI"
+              height="300"
+              width="800"
+            ></img>
+          </div>{" "}
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit.
             Blanditiis, expedita? Distinctio sint totam perferendis similique,
