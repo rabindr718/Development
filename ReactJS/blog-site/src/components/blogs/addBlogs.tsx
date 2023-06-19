@@ -9,7 +9,7 @@ import Navigation from "../navigation/navbar";
 import { useNavigate } from "react-router-dom";
 import validator from "validator";
 const AddBlogs: React.FC = (props: any) => {
-  const data = localStorage.getItem("keys");
+  const data = localStorage.getItem("LoginData");
   const login = JSON.parse(data as string);
   let new_Date: Date = new Date();
   const date: string = `${new_Date.getDate()}/${
@@ -29,6 +29,14 @@ const AddBlogs: React.FC = (props: any) => {
   const [description, setdescription] = useState("");
   const navigate = useNavigate();
 
+  const localStorageData = JSON.parse(
+    localStorage.getItem("LoginData") as string
+  );
+  const username =
+    localStorageData.username.charAt(0).toUpperCase() +
+    localStorageData.username.substring(1);
+
+  console.log(username);
   const updatenewData = (
     ids: string | number,
     title: any,
@@ -114,6 +122,7 @@ const AddBlogs: React.FC = (props: any) => {
       console.log(blog);
     }
   };
+
   const closePageHandler = () => {
     navigate("/");
   };
@@ -177,14 +186,18 @@ const AddBlogs: React.FC = (props: any) => {
               <option value="Update 4">Update 4</option>
             </Form.Select>
           </Form.Group>
+          <br></br>
           <div className="mb-3">
+            <label htmlFor="formFileMultiple" className="form-label">
+              Author{" "}
+            </label>
             <input
               className="form-control"
               id="formFileMultiple"
               multiple
               onChange={(event) => setAuthor(event.target.value)}
               disabled={true}
-              placeholder={login[0].fullname}
+              placeholder={username}
             />
           </div>
         </div>

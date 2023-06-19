@@ -6,6 +6,14 @@ import { useState } from "react";
 
 const HomeAfterLogin: React.FC = (props) => {
   const [blogsVisible, setBlogVisible] = useState(false);
+  const localStorageData = JSON.parse(
+    localStorage.getItem("LoginData") as string
+  );
+  const username =
+    localStorageData.username.charAt(0).toUpperCase() +
+    localStorageData.username.substring(1);
+
+  console.log(username);
   return (
     <div>
       <Navbar bg="primary" variant="bg">
@@ -15,7 +23,7 @@ const HomeAfterLogin: React.FC = (props) => {
           </span>
         </Nav>
         <div className={classes.loginName}>
-          <strong>Hello Username </strong>
+          <strong>Hello {username} </strong>
         </div>
       </Navbar>
 

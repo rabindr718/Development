@@ -79,7 +79,7 @@ const Login: React.FC = (props) => {
       console.log("Data Sent SuccessFully");
       // localStorage.setItem("keys", JSON.stringify([...data, inputVal]));
 
-      const data = localStorage.getItem("keys");
+      const data = localStorage.getItem("LoginData");
       const localStoreData = JSON.parse(data as string);
       console.log(localStoreData);
 

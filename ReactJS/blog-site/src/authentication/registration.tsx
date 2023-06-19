@@ -84,7 +84,7 @@ const Registration: React.FC = (props: any) => {
       // }
       // localStorage.setItem("allkeys", JSON.stringify([...valList, inputValue]));
       console.log(inputValue);
-      localStorage.setItem("keys", JSON.stringify(inputValue));
+      localStorage.setItem("LoginData", JSON.stringify(inputValue));
       navigate("/Login");
     }
   };
