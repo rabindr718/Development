@@ -7,6 +7,9 @@ import AddBlogs from "./components/blogs/addBlogs";
 import BlogDetails from "./components/blogs/blogDetails";
 import HomeAfterLogin from "./components/homepage/homeAfterLogin";
 function App() {
+  // const data = localStorage.getItem("BlogData");
+  // const localStoreData = JSON.parse(data as string);
+  // console.log(localStoreData);
   return (
     <div>
       <Routes>

@@ -7,18 +7,17 @@ import React, { useState, useRef } from "react";
 import JoditEditor from "jodit-react";
 import Navigation from "../navigation/navbar";
 import { useNavigate } from "react-router-dom";
-import validator from "validator";
-const AddBlogs: React.FC = (props: any) => {
-  const data = localStorage.getItem("LoginData");
-  const login = JSON.parse(data as string);
 
-  // Date to be Added
+const blogs: any = [];
+
+const AddBlogs: React.FC = () => {
+  const [updateBlog, setUpdateBlog] = useState(null);
+
   let new_Date: Date = new Date();
   const date: string = `${new_Date.getDate()}/${
     new_Date.getMonth() + 1
-  }/${new_Date.getFullYear().toLocaleString()}`;
-
-  console.log(date);
+  }/${new_Date.getFullYear()}`;
+  // }/${new_Date.getFullYear().toLocaleString()}`;
 
   const [title, setTitle] = useState(" ");
   const [selected, setSelectValue] = useState("");
@@ -26,7 +25,6 @@ const AddBlogs: React.FC = (props: any) => {
   const [author, setAuthor] = useState("");
   const [errorMsg, setErrorMsg] = useState("");
   const editor = useRef(null);
-  const { blog, setBloggingList, UpdateBlog, setUpdateBlog } = props;
 
   const [description, setdescription] = useState("");
   const navigate = useNavigate();
@@ -38,101 +36,138 @@ const AddBlogs: React.FC = (props: any) => {
     localStorageData.username.charAt(0).toUpperCase() +
     localStorageData.username.substring(1);
 
+  //  Here Logic for Update Data
   // console.log(username);
-  const updatenewData = (
-    ids: string | number,
-    title: any,
-    discription: any,
-    file: any,
-    author: any,
-    publishDate: any,
-    tags: any
-  ) => {
-    setBloggingList(
-      blog.map((d: any) =>
-        +d.id === +ids
-          ? {
-              id: ids,
-              Title: title,
-              Description: discription,
-              Images: file,
-              Author: authorUser,
-              PublishDate: publishDate,
-              Tags: tags,
-            }
-          : d
-      )
-    );
-    setUpdateBlog("");
-  };
+  // const updatenewData = (
+  //   ids: string | number,
+  //   title: any,
+  //   discription: any,
+  //   file: any,
+  //   author: any,
+  //   publishDate: any,
+  //   tags: any
+  // ) => {
+  //   setBloggingList(
+  //     blog.map((d: any) =>
+  //       +d.id === +ids
+  //         ? {
+  //             id: ids,
+  //             Title: title,
+  //             Description: discription,
+  //             Images: file,
+  //             Author: authorUser,
+  //             PublishDate: publishDate,
+  //             Tags: tags,
+  //           }
+  //         : d
+  //     )
+  //   );
+  //   setUpdateBlog("");
+  // };
   const fileInput = (event: any) => setFile(event.target.value);
+
   const fileHandler = (e: any) => {
     console.log(e.target.files);
     setFile(URL.createObjectURL(e.target.files[0]));
   };
-  const combineFunction = (e: any) => {
+
+  const fileFetchHandler = function (e: any) {
     fileInput(e);
     fileHandler(e);
   };
 
+  const parser = new DOMParser();
+  const htmlDocument = parser.parseFromString(description, "text/html");
+  const plainText = htmlDocument.body.textContent;
+  // Handle Add Blog Here
   const AddBlogsHandler = (e: any) => {
     e.preventDefault();
-    console.log(title);
-
     const parser = new DOMParser();
     const htmlDocument = parser.parseFromString(description, "text/html");
     const plainText = htmlDocument.body.textContent;
-    // console.log(description);
-    console.log(plainText);
 
-    console.log(authorUser);
-    console.log(file);
-    console.log(selected);
-    e.preventDefault();
-    if (
-      title.trim().length === 0 ||
-      description.trim().length === 0 ||
-      file === "" ||
-      setSelectValue.length === 0
-    ) {
-      setErrorMsg("Hi, ");
-    } else if (!validator.isAlpha(title)) {
-      setErrorMsg("Not valid");
-    } else {
-      // if (!UpdateBlog) {
-      // setBloggingList([
-      //   // ...blog,
-      //   {
-      //     // id: blog.length,
-      //     Title: title,
-      //     Description: description,
-      //     Images: file,
-      //     // Author: username,
-      //     PublishDate: date,
-      //     Tags: setSelectValue,
-      //   },
-      // ]);
-      alert("Blog is Publish");
-      // }
-      // else {
-      //   updatenewData(
-      //     +UpdateBlog.id,
-      //     title,
-      //     description,
-      //     file,
-      //     login[0].FullName,
-      //     date,
-      //     selected
-      //   );
-      //   navigate("/HomeAfterLogin");
-      // }
-      setTitle("");
-      setdescription("");
-      setSelectValue("");
-      setErrorMsg("");
-      // console.log(blog);
+    // console.log(description);
+
+    //Here Print in Console
+
+    // console.log(plainText);
+    // console.log(title);
+    // console.log(authorUser);
+    // console.log(file);
+    // console.log(selected);
+    // console.log(date);
+
+    // if (
+    //   title.trim().length === 0 ||
+    //   description.trim().length === 0 ||
+    //   file === "" ||
+    //   setSelectValue.length === 0
+    // ) {
+    //   setErrorMsg("Hi, ");
+    // } else if (!validator.isAlpha(title)) {
+    //   setErrorMsg("Not valid");
+    // } else {
+    // if (!UpdateBlog) {
+    // setBloggingList([
+    //   // ...blog,
+    //   {
+    //     // id: blog.length,
+    //     Title: title,
+    //     Description: description,
+    //     Images: file,
+    //     // Author: username,
+    //     PublishDate: date,
+    //     Tags: setSelectValue,
+    //   },
+    // ]);
+    alert("Blog is Publish");
+    // }
+    // else {
+    //   updatenewData(
+    //     +UpdateBlog.id,
+    //     title,
+    //     description,
+    //     file,
+    //     date,
+    //     selected
+    //   );
+    //   navigate("/HomeAfterLogin");
+    // }
+    //     setTitle("");
+    //     setdescription("");
+    //     setSelectValue("");
+    //     setErrorMsg("");
+    //     // console.log(blog);
+    //   }
+
+    const BlogData = {
+      id: Math.floor(Math.random() * 100 + 1),
+      date,
+      plainText,
+      title,
+      authorUser,
+      file,
+      selected,
+    };
+    // console.log(BlogData);
+
+    let blogsString = localStorage.getItem("BlogData");
+    if (!blogsString) {
+      blogsString = "[]";
     }
+    const blogs = JSON.parse(blogsString as string);
+    // console.log(blogs);
+    blogs.push(BlogData);
+    localStorage.setItem("BlogData", JSON.stringify(blogs));
+    navigate("/HomeAfterLogin");
   };
+
+  // console.log(plainText);
+  // console.log(title);
+  // console.log(authorUser);
+  // console.log(file);
+  // console.log(selected);
+  // console.log(date);
 
   const closePageHandler = () => {
     navigate("/");
@@ -181,7 +216,7 @@ const AddBlogs: React.FC = (props: any) => {
               className="form-control"
               type="file"
               id="formFileMultiple"
-              onChange={combineFunction}
+              onChange={fileFetchHandler}
             />
           </div>
           <Form.Group className="input-group">
@@ -216,8 +251,8 @@ const AddBlogs: React.FC = (props: any) => {
             <Button variant="danger secondary " onClick={closePageHandler}>
               Exit
             </Button>{" "}
-            <Button variant="success primary" onClick={AddBlogsHandler}>
-              Publish
+            <Button variant="primary" onClick={AddBlogsHandler}>
+              {updateBlog ? "Update" : "Publish"}
             </Button>
           </div>
         </footer>

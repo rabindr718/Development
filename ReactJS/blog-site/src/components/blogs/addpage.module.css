@@ -1,5 +1,6 @@
 .date {
   text-align: right;
+  margin-right: 7px !important;
 }
 .author {
   text-align: center;

@@ -4,17 +4,30 @@ import Button from "react-bootstrap/Button";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import classes from "./blogDetails.module.css";
-
 import Navigation from "../navigation/navbar";
 import { useNavigate } from "react-router-dom";
 
-const date = new Date();
-console.log(date);
-const BlogDetails: React.FC = (props) => {
+const BlogDetails: React.FC = () => {
   const navigate = useNavigate();
   const [blogAvailable, setBlogAvailable] = useState(true);
-  const UpdateBlogHandler = () => {};
-  const DeleteBlogHandler = () => {};
+  const [delet, setBlogList] = useState(" ");
+  const [updat, setUpdateBlog] = useState("");
+  const UpdateBlogHandler = (ids: any) => {
+    setUpdateBlog(
+      localStoreData.find((updateNow: any) => updateNow.id === ids)
+    );
+    navigate("/AddBlogs");
+  };
+  const DeleteBlogHandler = (ids: any) => {
+    setBlogList(
+      localStoreData.filter((deleteNow: any) => +deleteNow.id !== +ids)
+    );
+  };
+
+  const data = localStorage.getItem("BlogData");
+  const localStoreData = JSON.parse(data as string);
+  console.log(localStoreData);
+  console.log(typeof localStoreData);
 
   const paginationNext = () => {
     navigate("/");
@@ -30,58 +43,46 @@ const BlogDetails: React.FC = (props) => {
           <Navigation />
         </Nav>
       </Navbar>
-      <div>{blogAvailable && <h3>No Blogs are Available Now !</h3>}</div>
-
+      {/* <div>{blogAvailable && <h3>No Blogs are Available Now !</h3>}</div> */}
       {blogAvailable && (
         <div className={classes.showPage}>
-          <Modal.Title>
-            <h5>Show Blog</h5>
-            <h1>Blog Title</h1>
-          </Modal.Title>
-          <p className={classes.date}>Date 12/06/2023</p>
-          <div className={classes.image}>
-            <img
-              src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pxfuel.com%2Fen%2Fquery%3Fq%3Djai%2Bshri%2Bram&psig=AOvVaw1ck6_q1cQ_a9z8VXnX2CqZ&ust=1687287776595000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCMCAq_iC0P8CFQAAAAAdAAAAABAI"
-              height="300"
-              width="800"
-            ></img>
-          </div>{" "}
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Blanditiis, expedita? Distinctio sint totam perferendis similique,
-            iste ea earum unde cumque optio nihil accusantium veniam a molestias
-            consequatur in obcaecati magni! Lorem ipsum dolor sit amet
-            consectetur, adipisicing elit. Blanditiis, expedita? Distinctio sint
-            totam perferendis similique, iste ea earum unde cumque optio nihil
-            accusantium veniam a molestias consequatur in obcaecati magni! Lorem
-            ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis,
-            expedita? Distinctio sint totam perferendis similique, iste ea earum
-            unde cumque optio nihil accusantium veniam a molestias consequatur
-            in obcaecati magni!
-          </p>
-          <p className={classes.author}>
-            <strong>
-              <i>Author ~ Rabindra Kr. Sharma</i>
-            </strong>
-          </p>
-          <div className="deleteUpdate justify-content-center">
-            <Button variant="danger secondary" onClick={DeleteBlogHandler}>
-              Delete
-            </Button>{" "}
-            <Button variant="success primary" onClick={UpdateBlogHandler}>
-              Update
-            </Button>
-          </div>
-          <footer>
-            <div className={classes.pagination}>
-              <Button onClick={paginationPrevious} variant="info primary">
-                Previous
-              </Button>{" "}
-              <Button onClick={paginationNext} variant="info primary">
-                Next
-              </Button>
+          {localStoreData.map((e: any, id: any) => (
+            <div key={id}>
+              <Modal.Title>
+                <h5>Show Blog</h5>
+                <h1>{e.title}</h1>
+              </Modal.Title>
+              <p className={classes.date}>Published Date : {" " + e.date}</p>
+              <div className={classes.image}>
+                <img src={e.file} height="300" width="770"></img>
+              </div>
+              <p>{e.plainText}</p>
+              <p className={classes.author}>
+                <strong>
+                  <i>Author ~ {e.authorUser}</i>
+                </strong>
+              </p>
+              <div className="deleteUpdate justify-content-center">
+                <Button variant="danger secondary" onClick={DeleteBlogHandler}>
+                  Delete
+                </Button>{" "}
+                <Button variant="success primary" onClick={UpdateBlogHandler}>
+                  Update
+                </Button>
+              </div>
+              <footer>
+                <div className={classes.pagination}>
+                  <Button onClick={paginationPrevious} variant="info primary">
+                    Previous
+                  </Button>{" "}
+                  <Button onClick={paginationNext} variant="info primary">
+                    Next
+                  </Button>
+                </div>
+              </footer>
+              <hr className={classes.blogSpace}></hr>
             </div>
-          </footer>
+          ))}
         </div>
       )}
     </div>
@@ -89,3 +90,33 @@ const BlogDetails: React.FC = (props) => {
 };
 
 export default BlogDetails;
+
+
+// const nextHandler = (event) => {
+//   event.preventDefault();
+
+//   if (idForNextPrev < blogList.length - 1 && blogList.length - 1 > 0) {
+//     setIdForNextPrev(idForNextPrev + 1);
+//     setDis(false);
+//     if (idForNextPrev === blogList.length - 2) {
+//       setndis(true);
+//     }
+//   } else if (idForNextPrev === blogList.length - 1 || blogList.length === 1) {
+//     setndis(true);
+//   }
+//   console.log(idForNextPrev);
+// };
+
+// const prevHandler = (event) => {
+//   event.preventDefault();
+
+//   if (idForNextPrev <= blogList.length && idForNextPrev > 0) {
+//     setndis(false);
+//     setIdForNextPrev(idForNextPrev - 1);
+//     if (idForNextPrev === 1) {
+//       setDis(true);
+//     }
+//   } else if (idForNextPrev === 0) {
+//     console.log(`dis index : ${idForNextPrev}`);
+//     setDis(true);
+//   }

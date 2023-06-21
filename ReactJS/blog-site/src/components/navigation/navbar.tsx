@@ -16,7 +16,7 @@ const Navigation: React.FC = () => {
     localStorage.removeItem("key");
   };
   const HomeHandler = () => {
-    navigate("/");
+    navigate("/HomeAfterLogin");
   };
 
   return (

@@ -1,5 +1,5 @@
 .date {
-  text-align: right;
+  text-align: right !important;
 }
 .author {
   text-align: center;
@@ -17,4 +17,13 @@
 }
 .image {
   text-align: center;
+}
+
+.blogSpace {
+  background-color: black;
+
+  color: black;
+
+  height: 17px;
+  border-color: black;
 }
