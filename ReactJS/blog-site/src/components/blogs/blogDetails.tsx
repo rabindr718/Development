@@ -12,22 +12,59 @@ const BlogDetails: React.FC = () => {
   const [blogAvailable, setBlogAvailable] = useState(true);
   const [delet, setBlogList] = useState(" ");
   const [updat, setUpdateBlog] = useState("");
-  const UpdateBlogHandler = (ids: any) => {
-    setUpdateBlog(
-      localStoreData.find((updateNow: any) => updateNow.id === ids)
-    );
-    navigate("/AddBlogs");
-  };
-  const DeleteBlogHandler = (ids: any) => {
-    setBlogList(
-      localStoreData.filter((deleteNow: any) => +deleteNow.id !== +ids)
-    );
-  };
 
   const data = localStorage.getItem("BlogData");
   const localStoreData = JSON.parse(data as string);
-  console.log(localStoreData);
-  console.log(typeof localStoreData);
+
+  const id = Object.entries(localStoreData);
+  console.log(id);
+
+  // console.log(localStoreData);
+  // console.log(typeof localStoreData);
+
+  //
+  //
+  //
+  //
+  ///
+  //
+  //
+  //
+  //
+  //
+  const UpdateBlogHandler = (ids: any) => {
+    console.log(ids.target.id);
+    const data = localStorage.getItem("BlogData");
+    const localStoreData = JSON.parse(data as string);
+
+    const { plainText } = localStoreData[0];
+    console.log(plainText, localStoreData);
+    console.log(ids.target.id);
+    localStoreData.forEach((x: any) => {
+      console.log(x.id);
+    });
+    const j = localStoreData.find((x: any) => x.id === 50);
+    console.log(j);
+  };
+
+  //
+  ///
+  //
+  //
+  //
+  //
+  //
+  ///
+  ///
+  ///
+  ///
+  ///
+  ///
+  //
+
+  const DeleteBlogHandler = (ids: any) => {
+    setBlogList("");
+  };
 
   const paginationNext = () => {
     navigate("/");
@@ -43,7 +80,7 @@ const BlogDetails: React.FC = () => {
           <Navigation />
         </Nav>
       </Navbar>
-      {/* <div>{blogAvailable && <h3>No Blogs are Available Now !</h3>}</div> */}
+
       {blogAvailable && (
         <div className={classes.showPage}>
           {localStoreData.map((e: any, id: any) => (
@@ -67,7 +104,7 @@ const BlogDetails: React.FC = () => {
                   Delete
                 </Button>{" "}
                 <Button variant="success primary" onClick={UpdateBlogHandler}>
-                  Update
+                  Edit
                 </Button>
               </div>
               <footer>
@@ -90,7 +127,6 @@ const BlogDetails: React.FC = () => {
 };
 
 export default BlogDetails;
-
 
 // const nextHandler = (event) => {
 //   event.preventDefault();

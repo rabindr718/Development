@@ -32,10 +32,12 @@ const AddBlogs: React.FC = () => {
   const localStorageData = JSON.parse(
     localStorage.getItem("LoginData") as string
   );
+  console.log("Execute ", localStorageData);
   const authorUser =
     localStorageData.username.charAt(0).toUpperCase() +
     localStorageData.username.substring(1);
 
+  console.log(localStorageData.username);
   //  Here Logic for Update Data
   // console.log(username);
   // const updatenewData = (
@@ -161,13 +163,6 @@ const AddBlogs: React.FC = () => {
     localStorage.setItem("BlogData", JSON.stringify(blogs));
     navigate("/HomeAfterLogin");
   };
-
-  // console.log(plainText);
-  // console.log(title);
-  // console.log(authorUser);
-  // console.log(file);
-  // console.log(selected);
-  // console.log(date);
 
   const closePageHandler = () => {
     navigate("/");
