@@ -25,6 +25,26 @@ const AddBlogs: React.FC = () => {
   const [author, setAuthor] = useState("");
   const [errorMsg, setErrorMsg] = useState("");
   const editor = useRef(null);
+  const [isEditMode, setIsEditMode] = useState(false);
+  const [isPublished, setIsPublished] = useState(false);
+
+  const handleEditClick = () => {
+    setIsEditMode(true);
+  };
+
+  const handleDeleteClick = () => {
+    // Perform action when Delete button is clicked
+    // ...
+  };
+
+  const handlePublishClick = () => {
+    setIsPublished(true);
+  };
+
+  const handleCancelClick = () => {
+    setIsEditMode(false);
+    setIsPublished(false);
+  };
 
   const [description, setdescription] = useState("");
   const navigate = useNavigate();
@@ -243,12 +263,39 @@ const AddBlogs: React.FC = () => {
         </div>
         <footer>
           <div className="deleteUpdate justify-content-center">
-            <Button variant="danger secondary " onClick={closePageHandler}>
+            {!isEditMode && (
+              <div>
+                {/* <button onClick={handleEditClick}>Edit</button> */}
+                <button onClick={handleCancelClick}>Cancel</button>
+                {/* <button onClick={handleDeleteClick}>Delete</button> */}
+                <button onClick={handlePublishClick}>Publish</button>
+              </div>
+            )}
+
+            {isEditMode && (
+              <div>
+                <button onClick={handleCancelClick}>Cancel</button>
+                <button>Update</button>
+              </div>
+            )}
+
+            {!isPublished && (
+              <div>
+                {/* <button onClick={handlePublishClick}>Publish</button> */}
+              </div>
+            )}
+
+            {isPublished && (
+              <div>
+                <button onClick={handleCancelClick}>Cancel Publish</button>
+              </div>
+            )}
+            {/* <Button variant="danger secondary " onClick={closePageHandler}>
               Exit
             </Button>{" "}
             <Button variant="primary" onClick={AddBlogsHandler}>
               {updateBlog ? "Update" : "Publish"}
-            </Button>
+            </Button> */}
           </div>
         </footer>
       </form>
