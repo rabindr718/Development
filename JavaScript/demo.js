@@ -1,17 +1,17 @@
-// const obj = [
-//   {
-//     name: "Rabindra",
-//     age: -10,
-//   },
-//   {
-//     name: "RaAz",
-//     age: 29,
-//   },
-//   {
-//     name: "Rabindra",
-//     age: 1,
-//   },
-// ];
+const obj = [
+  {
+    name: "Rabindra",
+    age: -10,
+  },
+  {
+    name: "RaAz",
+    age: 29,
+  },
+  {
+    name: "Rabindra",
+    age: 1,
+  },
+];
 
 // const result = obj.map((x) => x.age);
 // const resul = result.filter(function (x, y) {
@@ -26,5 +26,30 @@
 // console.log(res);
 // const val = result.reduce((acc, curr) => acc + curr);
 
-console.log(res);
-consol
+// console.log(res);
+
+// Reduce with FlatMap
+
+
+// const ages = obj.reduce((acc, curr) => {
+//   const { age } = curr;
+//   const combinations = acc.flatMap((val) => [val + age, val]);
+//   return combinations;
+// }, [0]);
+
+// console.log("All combinations of ages:");
+// console.log(ages);
+
+// Reduce with Old Methods
+
+// const allAges = obj.reduce((acc, current) => {
+//   const currentAges = acc.reduce((innerAcc, age) => {
+//     innerAcc.push(age + current.age);
+//     return innerAcc;
+//   }, []);
+  
+//   return acc.concat(currentAges);
+// }, [0]);
+
+// console.log("All combinations of ages:");
+// console.log(allAges);
