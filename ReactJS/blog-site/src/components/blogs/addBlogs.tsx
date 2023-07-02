@@ -17,13 +17,11 @@ const AddBlogs: React.FC = () => {
   const date: string = `${new_Date.getDate()}/${
     new_Date.getMonth() + 1
   }/${new_Date.getFullYear()}`;
-  // }/${new_Date.getFullYear().toLocaleString()}`;
 
   const [title, setTitle] = useState(" ");
   const [selected, setSelectValue] = useState("");
   const [file, setFile] = useState("");
   const [author, setAuthor] = useState("");
-  const [errorMsg, setErrorMsg] = useState("");
   const editor = useRef(null);
   const [isEditMode, setIsEditMode] = useState(false);
   const [isPublished, setIsPublished] = useState(false);
@@ -58,34 +56,7 @@ const AddBlogs: React.FC = () => {
     localStorageData.username.substring(1);
 
   console.log(localStorageData.username);
-  //  Here Logic for Update Data
-  // console.log(username);
-  // const updatenewData = (
-  //   ids: string | number,
-  //   title: any,
-  //   discription: any,
-  //   file: any,
-  //   author: any,
-  //   publishDate: any,
-  //   tags: any
-  // ) => {
-  //   setBloggingList(
-  //     blog.map((d: any) =>
-  //       +d.id === +ids
-  //         ? {
-  //             id: ids,
-  //             Title: title,
-  //             Description: discription,
-  //             Images: file,
-  //             Author: authorUser,
-  //             PublishDate: publishDate,
-  //             Tags: tags,
-  //           }
-  //         : d
-  //     )
-  //   );
-  //   setUpdateBlog("");
-  // };
+
   const fileInput = (event: any) => setFile(event.target.value);
 
   const fileHandler = (e: any) => {
@@ -108,60 +79,6 @@ const AddBlogs: React.FC = () => {
     const htmlDocument = parser.parseFromString(description, "text/html");
     const plainText = htmlDocument.body.textContent;
 
-    // console.log(description);
-
-    //Here Print in Console
-
-    // console.log(plainText);
-    // console.log(title);
-    // console.log(authorUser);
-    // console.log(file);
-    // console.log(selected);
-    // console.log(date);
-
-    // if (
-    //   title.trim().length === 0 ||
-    //   description.trim().length === 0 ||
-    //   file === "" ||
-    //   setSelectValue.length === 0
-    // ) {
-    //   setErrorMsg("Hi, ");
-    // } else if (!validator.isAlpha(title)) {
-    //   setErrorMsg("Not valid");
-    // } else {
-    // if (!UpdateBlog) {
-    // setBloggingList([
-    //   // ...blog,
-    //   {
-    //     // id: blog.length,
-    //     Title: title,
-    //     Description: description,
-    //     Images: file,
-    //     // Author: username,
-    //     PublishDate: date,
-    //     Tags: setSelectValue,
-    //   },
-    // ]);
-    alert("Blog is Publish");
-    // }
-    // else {
-    //   updatenewData(
-    //     +UpdateBlog.id,
-    //     title,
-    //     description,
-    //     file,
-    //     date,
-    //     selected
-    //   );
-    //   navigate("/HomeAfterLogin");
-    // }
-    //     setTitle("");
-    //     setdescription("");
-    //     setSelectValue("");
-    //     setErrorMsg("");
-    //     // console.log(blog);
-    //   }
-
     const BlogData = {
       id: Math.floor(Math.random() * 100 + 1),
       date,
@@ -171,14 +88,13 @@ const AddBlogs: React.FC = () => {
       file,
       selected,
     };
-    // console.log(BlogData);
+    console.log(BlogData);
 
     let blogsString = localStorage.getItem("BlogData");
     if (!blogsString) {
       blogsString = "[]";
     }
     const blogs = JSON.parse(blogsString as string);
-    // console.log(blogs);
     blogs.push(BlogData);
     localStorage.setItem("BlogData", JSON.stringify(blogs));
     navigate("/HomeAfterLogin");
@@ -268,7 +184,7 @@ const AddBlogs: React.FC = () => {
                 {/* <button onClick={handleEditClick}>Edit</button> */}
                 <button onClick={handleCancelClick}>Cancel</button>
                 {/* <button onClick={handleDeleteClick}>Delete</button> */}
-                <button onClick={handlePublishClick}>Publish</button>
+                <button onClick={AddBlogsHandler}>Publish</button>
               </div>
             )}
 

@@ -14,56 +14,25 @@ const BlogDetails: React.FC = () => {
   const [updat, setUpdateBlog] = useState("");
 
   const data = localStorage.getItem("BlogData");
-  const localStoreData = JSON.parse(data as string);
+  const localStoreData = JSON.parse(data as any);
 
-  const id = Object.entries(localStoreData);
-  console.log(id);
-
-  // console.log(localStoreData);
-  // console.log(typeof localStoreData);
-
-  //
-  //
-  //
-  //
-  ///
-  //
-  //
-  //
-  //
-  //
-  const UpdateBlogHandler = (ids: any) => {
-    console.log(ids.target.id);
-    const data = localStorage.getItem("BlogData");
-    const localStoreData = JSON.parse(data as string);
-
-    const { plainText } = localStoreData[0];
-    console.log(plainText, localStoreData);
-    console.log(ids.target.id);
-    localStoreData.forEach((x: any) => {
-      console.log(x.id);
-    });
-    const j = localStoreData.find((x: any) => x.id === 50);
-    console.log(j);
+  const DeleteBlogHandler = (id: any) => {
+    console.log(id);
+    const updatedData = localStoreData.filter((item: any) => item.id !== id);
+    localStorage.setItem("BlogData", JSON.stringify(updatedData));
+    setBlogList(updatedData);
   };
 
-  //
-  ///
-  //
-  //
-  //
-  //
-  //
-  ///
-  ///
-  ///
-  ///
-  ///
-  ///
-  //
-
-  const DeleteBlogHandler = (ids: any) => {
-    setBlogList("");
+  const UpdateBlogHandler = (id: any) => {
+    const blogToUpdate = localStoreData.find((item: any) => item.id === id);
+    if (blogToUpdate) {
+      // Perform update operation for the corresponding blog
+      // You can set the blog data to a state or redirect to an update page, depending on your requirements
+      setUpdateBlog(blogToUpdate);
+      // Or you can navigate to an update page passing the blog ID as a parameter
+      navigate(`/AddBlogs/${id}`);
+      console.log(id);
+    }
   };
 
   const paginationNext = () => {
@@ -100,10 +69,16 @@ const BlogDetails: React.FC = () => {
                 </strong>
               </p>
               <div className="deleteUpdate justify-content-center">
-                <Button variant="danger secondary" onClick={DeleteBlogHandler}>
+                <Button
+                  variant="danger secondary"
+                  onClick={() => DeleteBlogHandler(e.id)}
+                >
                   Delete
                 </Button>{" "}
-                <Button variant="success primary" onClick={UpdateBlogHandler}>
+                <Button
+                  variant="success primary"
+                  onClick={() => UpdateBlogHandler(e.id)}
+                >
                   Edit
                 </Button>
               </div>
@@ -127,32 +102,3 @@ const BlogDetails: React.FC = () => {
 };
 
 export default BlogDetails;
-
-// const nextHandler = (event) => {
-//   event.preventDefault();
-
-//   if (idForNextPrev < blogList.length - 1 && blogList.length - 1 > 0) {
-//     setIdForNextPrev(idForNextPrev + 1);
-//     setDis(false);
-//     if (idForNextPrev === blogList.length - 2) {
-//       setndis(true);
-//     }
-//   } else if (idForNextPrev === blogList.length - 1 || blogList.length === 1) {
-//     setndis(true);
-//   }
-//   console.log(idForNextPrev);
-// };
-
-// const prevHandler = (event) => {
-//   event.preventDefault();
-
-//   if (idForNextPrev <= blogList.length && idForNextPrev > 0) {
-//     setndis(false);
-//     setIdForNextPrev(idForNextPrev - 1);
-//     if (idForNextPrev === 1) {
-//       setDis(true);
-//     }
-//   } else if (idForNextPrev === 0) {
-//     console.log(`dis index : ${idForNextPrev}`);
-//     setDis(true);
-//   }
