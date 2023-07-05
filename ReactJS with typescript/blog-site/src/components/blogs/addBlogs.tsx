@@ -25,6 +25,7 @@ const AddBlogs: React.FC = () => {
   const editor = useRef(null);
   const [isEditMode, setIsEditMode] = useState(false);
   const [isPublished, setIsPublished] = useState(false);
+  const [editVisible, setEditVisible] = useState(false);
 
   const handleEditClick = () => {
     setIsEditMode(true);
@@ -179,33 +180,21 @@ const AddBlogs: React.FC = () => {
         </div>
         <footer>
           <div className="deleteUpdate justify-content-center">
-            {!isEditMode && (
-              <div>
-                {/* <button onClick={handleEditClick}>Edit</button> */}
-                <button onClick={handleCancelClick}>Cancel</button>
-                {/* <button onClick={handleDeleteClick}>Delete</button> */}
-                <button onClick={AddBlogsHandler}>Publish</button>
-              </div>
-            )}
+            <div>
+              {/* <button onClick={handleEditClick}>Edit</button> */}
+              <button onClick={handleCancelClick}>Cancel</button>{" "}
+              {/* <button onClick={handleDeleteClick}>Delete</button> */}
+              <button onClick={AddBlogsHandler}>Publish</button>
+            </div>
 
-            {isEditMode && (
-              <div>
-                <button onClick={handleCancelClick}>Cancel</button>
-                <button>Update</button>
-              </div>
-            )}
+            {/* {isEditMode && ( */}
 
-            {!isPublished && (
-              <div>
-                {/* <button onClick={handlePublishClick}>Publish</button> */}
-              </div>
-            )}
+            {/* )} */}
 
-            {isPublished && (
-              <div>
-                <button onClick={handleCancelClick}>Cancel Publish</button>
-              </div>
-            )}
+            <div>
+              {/* <button onClick={handlePublishClick}>Publish</button> */}
+            </div>
+
             {/* <Button variant="danger secondary " onClick={closePageHandler}>
               Exit
             </Button>{" "}
@@ -215,6 +204,90 @@ const AddBlogs: React.FC = () => {
           </div>
         </footer>
       </form>
+      <div>
+        <form className={classes.showPage}>
+          <div className="mb-3">
+            <label htmlFor="exampleFormControlInput1" className="form-label">
+              <h2> Title</h2>
+            </label>
+            <input
+              type="text"
+              className="form-control"
+              id="exampleFormControlInput1"
+              placeholder="Write Title"
+              onChange={(event) => setTitle(event.target.value)}
+            />
+          </div>
+          <div className="mb-3">
+            <label htmlFor="exampleFormControlTextarea1" className="form-label">
+              <strong> Write Here Descrition</strong>
+            </label>
+            <div className="text-editor">
+              <JoditEditor
+                ref={editor}
+                value={description}
+                onChange={(content) => {
+                  setdescription(content);
+                }}
+              />
+            </div>
+          </div>
+          <div>
+            <div className="mb-3">
+              <label htmlFor="formFileMultiple" className="form-label">
+                Multiple files input example
+              </label>
+              <input
+                className="form-control"
+                type="file"
+                id="formFileMultiple"
+                onChange={fileFetchHandler}
+              />
+            </div>
+            <Form.Group className="input-group">
+              <Form.Select
+                className="form-control"
+                value={selected}
+                onChange={(e) => setSelectValue(e.target.value)}
+              >
+                <option value="Version">Version</option>
+                <option value="Update 2">Update 2</option>
+                <option value="Update 3">Update 3</option>
+                <option value="Update 4">Update 4</option>
+              </Form.Select>
+            </Form.Group>
+            <br></br>
+            <div className="mb-3">
+              <label htmlFor="formFileMultiple" className="form-label">
+                Author{" "}
+              </label>
+              <input
+                className="form-control"
+                id="formFileMultiple"
+                onChange={(event) => setAuthor(event.target.value)}
+                disabled={true}
+                value={authorUser}
+                placeholder={authorUser}
+              />
+            </div>
+          </div>
+          <footer>
+            <div className="deleteUpdate justify-content-center">
+              <div>
+                <button>Update</button>{" "}
+                <button onClick={handleCancelClick}>Cancel</button>
+              </div>
+
+              {/* <Button variant="danger secondary " onClick={closePageHandler}>
+              Exit
+            </Button>{" "}
+            <Button variant="primary" onClick={AddBlogsHandler}>
+              {updateBlog ? "Update" : "Publish"}
+            </Button> */}
+            </div>
+          </footer>
+        </form>
+      </div>
     </>
   );
 };

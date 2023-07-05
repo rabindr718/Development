@@ -6,7 +6,7 @@ import Nav from "react-bootstrap/Nav";
 import classes from "./blogDetails.module.css";
 import Navigation from "../navigation/navbar";
 import { useNavigate } from "react-router-dom";
-
+import { Link } from "react-router-dom";
 const BlogDetails: React.FC = () => {
   const navigate = useNavigate();
   const [blogAvailable, setBlogAvailable] = useState(true);
