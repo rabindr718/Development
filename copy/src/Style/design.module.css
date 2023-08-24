@@ -1,0 +1,39 @@
+body {
+  background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button {
+  background-color: blueviolet;
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 12px;
+  font-size: 15px;
+  cursor: pointer;
+}
+.buttonFirst {
+  background-color: #008cba;
+
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  cursor: pointer;
+
+  margin-right: 10px;
+  border-radius: 12px;
+}
+.button:hover {
+  background-color: green;
+}
+.buttonFirst:hover {
+  background-color: blue;
+}
