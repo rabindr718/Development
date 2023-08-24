@@ -23,14 +23,36 @@ const BlogDetails: React.FC = () => {
     setBlogList(updatedData);
   };
 
+  // const UpdateBlogHandler = (id: any, username: string, blogData: string, textArea: string) => {
+  //   // Find the blog to update based on the given id
+  //   const blogToUpdate = localStoreData.find((item: any) => item.id === id);
+
+  //   if (blogToUpdate) {
+  //     // Update the properties of the blog object with the new data
+  //     blogToUpdate.username = username;
+  //     blogToUpdate.blogData = blogData;
+  //     blogToUpdate.textArea = textArea;
+
+  //     // Assuming the navigation function is correct, you can pass the updated blogData as a state to the target route
+  //     navigate(`/AddBlogs/${id}`, { state: { blogData: blogToUpdate } });
+  //     console.log(id);
+  //   } else {
+  //     console.log('Blog not found with the given id');
+  //   }
+  // };
+
+  // const UpdateBlogHandler = (id: any) => {
+  //   const blogToUpdate = localStoreData.find((item: any) => item.id === id);
+  //   if (blogToUpdate) {
+
+  //     navigate(`/AddBlogs/${id}`);
+  //     console.log(id);
+  //   }
+  // };
   const UpdateBlogHandler = (id: any) => {
     const blogToUpdate = localStoreData.find((item: any) => item.id === id);
     if (blogToUpdate) {
-      // Perform update operation for the corresponding blog
-      // You can set the blog data to a state or redirect to an update page, depending on your requirements
-      setUpdateBlog(blogToUpdate);
-      // Or you can navigate to an update page passing the blog ID as a parameter
-      navigate(`/AddBlogs/${id}`);
+      navigate(`/AddBlogs/${id}`, { state: { blogData: blogToUpdate } });
       console.log(id);
     }
   };
