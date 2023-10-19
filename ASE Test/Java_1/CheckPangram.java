@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Check {
+public class CheckPangram {
     public static boolean isPangram(String input) {
         input = input.toLowerCase();      
         boolean[] alphabetPresent = new boolean[26];
