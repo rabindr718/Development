@@ -223,17 +223,21 @@ const Home = () => {
     },
     {
       userId: 4,
-      id: 35,
+      id: 36,
       title: "id nihil consequatur molestias animi provident",
       body: "nisi error delectus possimus ut eligendi vitae\nplaceat eos harum cupiditate facilis reprehenderit voluptatem beatae\nmodi ducimus quo illum voluptas eligendi\net nobis quia fugit",
     },
   ]);
+  const onPageWindowChange = (start, end) => {
+    console.log(start, end);
+    setPagination({ start: start, end: end });
+  };
   return (
     <div>
       <div className="container py-4">
         <div className="row">
-          {post.slice(pagination.start, pagination.stop).map((post) => (
-            <div className="col-md-3" key={post.id}>
+          {post.slice(pagination.start, pagination.end).map((post, index) => (
+            <div className="col-md-3" key={index}>
               <div className="card">
                 <div className="card-body">
                   <h5>
@@ -246,7 +250,11 @@ const Home = () => {
             </div>
           ))}
         </div>
-        <Pagination showPagination={showPagination} />
+        <Pagination
+          showPagination={showPagination}
+          onPageWindowChange={onPageWindowChange}
+          total={post.length}
+        />
       </div>
     </div>
   );
