@@ -42,7 +42,7 @@ const Registration: React.FC = (props: any) => {
     const { fullname, email, username, password, confirmpass } = inputValue;
     if (fullname === " ") {
       alert("Please Enter your FullName");
-    } else if (email === " " && !email.includes("prominentpixel@.com")) {
+    } else if (email === " " && !email.includes("india@.com")) {
       alert("Please Enter Your Mail Id");
     } else if (username === " ") {
       alert("Please Enter Your Username");
