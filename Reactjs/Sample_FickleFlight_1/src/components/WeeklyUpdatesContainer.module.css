@@ -1,0 +1,360 @@
+.subscribeSectionBackground {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  max-width: 100%;
+  overflow: hidden;
+  height: 530px;
+  object-fit: cover;
+}
+.formTitle,
+.formTitleSubtext {
+  align-self: stretch;
+  position: relative;
+}
+.formTitleSubtext {
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.formTitle {
+  font-size: var(--font-size-11xl);
+  color: var(--color-darkslategray-100);
+}
+.formHeader {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-6xs);
+}
+.fillInYour {
+  position: relative;
+  line-height: 34px;
+}
+.fillInYour,
+.formText,
+.input {
+  align-self: stretch;
+}
+.formText {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.input {
+  border: 0;
+  background-color: transparent;
+  font-family: var(--font-roboto);
+  font-size: var(--font-size-base);
+  color: var(--color-gray-200);
+}
+.formFields {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-3xs);
+}
+.button1 {
+  position: relative;
+  font-size: var(--font-size-mini);
+  letter-spacing: 0.46px;
+  line-height: 26px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-family: var(--font-roboto);
+  color: var(--color-white);
+  text-align: left;
+}
+.button,
+.unstyledbutton {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.unstyledbutton {
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-5xs) var(--padding-3xl);
+}
+.button {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: var(--color-orange-200);
+  border-radius: var(--br-9xs);
+  width: 164px;
+  height: 56px;
+  align-items: center;
+  justify-content: center;
+}
+.button:hover {
+  background-color: var(--color-darkorange);
+}
+.form,
+.shareYourTravelsForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.form {
+  align-self: stretch;
+  border-radius: var(--br-xs);
+  background-color: var(--color-white);
+  box-shadow: 0 0 24px rgba(0, 0, 0, 0.03);
+  border: 1px solid var(--color-whitesmoke);
+  align-items: flex-start;
+  padding: var(--padding-9xl) var(--padding-11xl);
+  gap: var(--gap-mid);
+  text-align: left;
+  color: var(--color-slategray);
+}
+.shareYourTravelsForm {
+  position: relative !important;
+  top: 52px;
+  left: auto !important;
+  width: 549px;
+  align-items: center;
+  padding: var(--padding-xl);
+  box-sizing: border-box;
+  gap: var(--gap-11xl);
+  margin-left: auto;
+  margin-right: auto;
+}
+.logoIcon,
+.subscribeSection {
+  position: relative;
+  overflow: hidden;
+}
+.subscribeSection {
+  align-self: stretch;
+  background-color: var(--color-aliceblue);
+  height: 529px;
+}
+.logoIcon {
+  width: 174px;
+  height: 33px;
+}
+.fickleFlightIs {
+  align-self: stretch;
+  position: relative;
+  line-height: 27px;
+}
+.socialIcons {
+  position: relative;
+  width: 130px;
+  height: 30px;
+}
+.fickleflightBio {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-sm);
+  margin-bottom: 40px !important;
+}
+.footerChild {
+  position: relative;
+  border-right: 1px solid var(--color-gray-300);
+  box-sizing: border-box;
+  width: 1px;
+  height: 157.87px;
+}
+.aboutUs {
+  top: 47.76px;
+  width: 135.67px;
+}
+.aboutUs,
+.careers,
+.company1,
+.howWeWork,
+.news {
+  position: absolute;
+  left: 0;
+  display: inline-block;
+}
+.company1 {
+  top: 0;
+  font-size: var(--font-size-xl);
+  line-height: 27px;
+  font-weight: 500;
+  width: 174.72px;
+}
+.careers,
+.howWeWork,
+.news {
+  top: 78.76px;
+  width: 84.28px;
+}
+.careers,
+.howWeWork {
+  top: 109.76px;
+  width: 115.11px;
+}
+.howWeWork {
+  top: 140.76px;
+  width: 197.33px;
+}
+.company {
+  position: relative;
+  width: 197.33px;
+  height: 159.76px;
+}
+.account,
+.support1 {
+  position: absolute;
+  top: 47.76px;
+  left: 0;
+  display: inline-block;
+  width: 109.63px;
+}
+.support1 {
+  top: 0;
+  font-size: var(--font-size-xl);
+  line-height: 27px;
+  font-weight: 500;
+  width: 131.56px;
+}
+.accessibility,
+.faq,
+.supportCenter {
+  position: absolute;
+  top: 78.76px;
+  left: 0;
+  display: inline-block;
+  width: 197.33px;
+}
+.accessibility,
+.faq {
+  top: 109.76px;
+  width: 52.99px;
+}
+.accessibility {
+  top: 140.76px;
+  width: 164.44px;
+}
+.covidAdvisory {
+  top: 47.76px;
+  width: 172.87px;
+}
+.airlineFees,
+.covidAdvisory,
+.more1,
+.tips {
+  position: absolute;
+  left: 0;
+  display: inline-block;
+}
+.more1 {
+  top: 0;
+  font-size: var(--font-size-xl);
+  line-height: 27px;
+  font-weight: 500;
+  width: 76.65px;
+}
+.airlineFees,
+.tips {
+  top: 78.76px;
+  width: 135.36px;
+}
+.tips {
+  top: 109.76px;
+  width: 50.56px;
+}
+.more {
+  position: relative;
+  width: 197.33px;
+  height: 159.76px;
+}
+.footerLinks {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  font-size: var(--font-size-base);
+}
+.footer,
+.footerSection {
+  align-self: stretch;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  font-size: var(--font-size-lg);
+  font-family: var(--font-roboto);
+}
+.footer {
+  background: linear-gradient(91.74deg, #0b5ba8 25.38%, #299bd8);
+  flex-direction: row;
+  padding: var(--padding-14xl) var(--padding-65xl);
+  gap: var(--gap-25xl);
+  text-align: left;
+  color: var(--color-white);
+}
+.footerSection {
+  flex-direction: column;
+  text-align: center;
+  color: var(--color-cornflowerblue-300);
+}
+@media screen and (max-width: 1200px) {
+  .footer {
+    padding: var(--padding-21xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .shareYourTravelsForm {
+    padding: var(--padding-5xl) 0;
+    box-sizing: border-box;
+  }
+  .fickleflightBio {
+    flex: unset;
+    align-self: stretch;
+  }
+  .footerChild {
+    display: none;
+  }
+  .footerLinks {
+    flex: unset;
+    align-self: stretch;
+  }
+  .footer {
+    flex-direction: column;
+    padding: var(--padding-21xl) var(--padding-5xl) var(--padding-11xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 650px) {
+  .button {
+    width: 100%;
+  }
+  .button:hover {
+    background-color: var(--color-orange-200);
+  }
+  .shareYourTravelsForm {
+    padding-left: var(--padding-5xl);
+    padding-right: var(--padding-5xl);
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative !important;
+    left: auto !important;
+    width: 100%;
+  }
+  .company {
+    margin-bottom: 40px !important;
+  }
+  .footerLinks {
+    flex-direction: column;
+  }
+  .footer {
+    padding: var(--padding-11xl) var(--padding-5xl);
+    box-sizing: border-box;
+  }
+}

@@ -1,0 +1,43 @@
+.primaryButtonChild {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: var(--br-7xs);
+  background-color: var(--color-cornflowerblue-200);
+}
+.searchFlights {
+  position: absolute;
+  top: calc(50% - 10.5px);
+  left: calc(50% - 81.5px);
+  font-size: var(--font-size-lg);
+  letter-spacing: 0.04em;
+  font-weight: 500;
+  font-family: var(--font-roboto);
+  color: var(--color-white);
+  text-align: center;
+}
+.primaryButton {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  position: relative;
+  width: 220px;
+  height: 72px;
+}
+.flightCards {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-4xs);
+  text-align: left;
+  font-size: var(--font-size-base);
+  color: var(--color-dimgray-200);
+  font-family: var(--font-roboto);
+}

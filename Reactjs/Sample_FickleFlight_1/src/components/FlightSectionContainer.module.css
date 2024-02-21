@@ -1,0 +1,350 @@
+.sin,
+.singapore,
+.upcomingFlight {
+  position: relative;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  display: inline-block;
+  width: 1268.05px;
+}
+.sin,
+.singapore {
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-transform: capitalize;
+  width: 44.73px;
+}
+.singapore {
+  top: 30px;
+  font-size: var(--font-size-sm);
+  letter-spacing: 0.02em;
+  color: var(--color-gray-100);
+  width: 72px;
+}
+.fromDetails {
+  position: relative;
+  width: 72px;
+  height: 46px;
+}
+.h55m {
+  position: absolute;
+  top: 28.09px;
+  left: 23.69px;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  display: inline-block;
+  width: 65.66px;
+}
+.flightIcons {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 117.35px;
+  height: 24px;
+}
+.duration {
+  position: relative;
+  width: 117.35px;
+  height: 44.09px;
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-100);
+}
+.lax,
+.losAngeles {
+  position: absolute;
+  top: 0;
+  left: 36px;
+  letter-spacing: 0.04em;
+  text-transform: capitalize;
+  display: inline-block;
+  width: 51.27px;
+}
+.losAngeles {
+  top: 30px;
+  left: 0;
+  font-size: var(--font-size-sm);
+  letter-spacing: 0.02em;
+  color: var(--color-gray-100);
+  width: 87.27px;
+}
+.toDetails {
+  position: relative;
+  width: 87.27px;
+  height: 46px;
+  text-align: right;
+}
+.toAndFrom {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.horizontalLine {
+  align-self: stretch;
+  position: relative;
+  border-top: 1px solid var(--color-whitesmoke);
+  box-sizing: border-box;
+  height: 1px;
+}
+.daysToGoContainer,
+.departsOn1 {
+  position: relative;
+  letter-spacing: 0.02em;
+  display: inline-block;
+  flex-shrink: 0;
+}
+.departsOn1 {
+  text-transform: capitalize;
+  width: 203.9px;
+}
+.daysToGoContainer {
+  text-align: right;
+  width: 87.23px;
+}
+.departureDetails {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-100);
+}
+.flightMainContainer {
+  border-radius: var(--br-5xs);
+  border: 1px solid var(--color-whitesmoke);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-xl);
+  gap: var(--gap-2xl);
+}
+.lineSeparator {
+  position: relative;
+  border-right: 1px solid var(--color-whitesmoke);
+  box-sizing: border-box;
+  width: 1px;
+  height: 145.99px;
+}
+.prepareForYour {
+  align-self: stretch;
+  position: relative;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.hotelIcon {
+  position: relative;
+  width: 65.39px;
+  height: 65.39px;
+}
+.hotel1 {
+  position: relative;
+  font-size: var(--font-size-mini);
+  letter-spacing: 0.04em;
+  font-family: var(--font-roboto);
+  color: var(--color-gray-100);
+  text-align: left;
+}
+.hotel {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-5xs);
+}
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: var(--br-base);
+  background-color: var(--color-sandybrown);
+  width: 65.39px;
+  height: 65.39px;
+}
+.ticketIcon {
+  position: absolute;
+  height: 47.93%;
+  width: 48.38%;
+  top: 26.04%;
+  right: 25.81%;
+  bottom: 26.03%;
+  left: 25.81%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.attractions1 {
+  position: relative;
+  font-size: var(--font-size-mini);
+  letter-spacing: 0.04em;
+  font-family: var(--font-roboto);
+  color: var(--color-gray-100);
+  text-align: center;
+}
+.background1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: var(--br-base);
+  background-color: var(--color-gold);
+  width: 65.39px;
+  height: 65.39px;
+}
+.trainIcon {
+  position: absolute;
+  height: 48.43%;
+  width: 41.17%;
+  top: 26.51%;
+  right: 29.42%;
+  bottom: 25.06%;
+  left: 29.42%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.background2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: var(--br-base);
+  background-color: var(--color-cornflowerblue-100);
+  width: 70px;
+  height: 65.39px;
+}
+.taxiIcon1 {
+  position: absolute;
+  height: 40.15%;
+  width: 40.52%;
+  top: 29.63%;
+  right: 29.74%;
+  bottom: 30.22%;
+  left: 29.74%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.taxiIcon {
+  position: relative;
+  width: 70px;
+  height: 65.39px;
+}
+.taxi1 {
+  position: relative;
+  font-size: var(--font-size-mini);
+  letter-spacing: 0.04em;
+  font-family: var(--font-roboto);
+  color: var(--color-gray-100);
+  text-align: center;
+  display: inline-block;
+  width: 32.12px;
+}
+.background3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: var(--br-base);
+  background-color: var(--color-yellowgreen);
+  width: 65.39px;
+  height: 65.39px;
+}
+.movieIcon {
+  position: absolute;
+  height: 35.6%;
+  width: 39.93%;
+  top: 32.2%;
+  right: 30.04%;
+  bottom: 32.2%;
+  left: 30.03%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.tripMenus {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.flightDetails,
+.prepareMenu,
+.upcomingFlightSection {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.prepareMenu {
+  flex: 1;
+  flex-direction: column;
+  gap: var(--gap-xl);
+  font-size: var(--font-size-lg);
+  color: var(--color-lightgray);
+}
+.flightDetails,
+.upcomingFlightSection {
+  align-self: stretch;
+  flex-direction: row;
+  gap: var(--gap-17xl);
+  font-size: var(--font-size-5xl);
+  color: var(--color-cornflowerblue-300);
+}
+.upcomingFlightSection {
+  flex-direction: column;
+  gap: var(--gap-xl);
+  text-align: left;
+  font-size: var(--font-size-lg);
+  color: var(--color-darkslategray-300);
+  font-family: var(--font-roboto);
+}
+@media screen and (max-width: 1200px) {
+  .flightMainContainer {
+    width: 520px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .horizontalLine {
+    width: 100%;
+  }
+  .flightMainContainer {
+    width: 100%;
+    display: block;
+    margin-bottom: 30px;
+  }
+  .lineSeparator {
+    display: none;
+  }
+  .prepareMenu {
+    width: 100%;
+    flex: unset;
+    align-self: stretch;
+  }
+  .flightDetails {
+    flex-direction: column;
+  }
+  .upcomingFlightSection {
+    display: block;
+  }
+}
+@media screen and (max-width: 650px) {
+  .hotel {
+    padding-bottom: var(--padding-xl);
+    box-sizing: border-box;
+    width: 33.33%;
+    text-align: center;
+  }
+  .tripMenus {
+    flex-direction: row;
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: -28px;
+    margin-right: -28px;
+  }
+}

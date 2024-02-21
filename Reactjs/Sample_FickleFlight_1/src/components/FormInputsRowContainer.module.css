@@ -1,0 +1,92 @@
+.selectoutlined {
+  align-self: stretch;
+}
+.inputGroup {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-8xs);
+}
+.inputsRow {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.button {
+  position: relative;
+  font-size: var(--font-size-mini);
+  letter-spacing: 0.46px;
+  line-height: 26px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-family: var(--font-roboto);
+  color: var(--color-white);
+  text-align: center;
+  display: inline-block;
+  width: 146.98px;
+}
+.buttonGroup,
+.searchFlightsButton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.searchFlightsButton {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: var(--color-orange-200);
+  border-radius: var(--br-9xs);
+  width: 164px;
+  height: 56px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+.searchFlightsButton:hover {
+  background-color: var(--color-darkorange);
+}
+.buttonGroup {
+  padding: var(--padding-8xs);
+}
+.formInputsRow {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+@media screen and (max-width: 1100px) {
+  .inputsRow {
+    width: 100%;
+    flex: unset;
+    align-self: stretch;
+  }
+  .searchFlightsButton {
+    margin-right: auto;
+  }
+  .buttonGroup {
+    width: 100%;
+    text-align: left;
+  }
+  .formInputsRow {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 650px) {
+  .inputGroup {
+    width: 100%;
+    flex: unset;
+    align-self: stretch;
+  }
+  .inputsRow {
+    flex-direction: column;
+  }
+  .searchFlightsButton {
+    width: 100% !important;
+  }
+}

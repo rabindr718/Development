@@ -1,0 +1,43 @@
+.results {
+  position: absolute;
+  top: 0;
+  left: 0;
+  letter-spacing: 0.26px;
+  display: inline-block;
+  width: 219.41px;
+}
+.resultsSummary,
+.resultsSummaryChild {
+  position: absolute;
+  left: 0;
+  width: 311.5px;
+}
+.resultsSummaryChild {
+  top: 46.5px;
+  max-height: 100%;
+}
+.resultsSummary {
+  top: 0;
+  height: 47px;
+}
+.seperatorIcon {
+  position: absolute;
+  top: 521.3px;
+  left: 0;
+  max-height: 100%;
+  width: 350.5px;
+}
+.searchFilters {
+  position: relative;
+  width: 350.5px;
+  height: 667px;
+  text-align: left;
+  font-size: var(--font-size-xl);
+  color: var(--color-dimgray-200);
+  font-family: var(--font-roboto);
+}
+@media screen and (max-width: 1200px) {
+  .searchFilters {
+    display: none;
+  }
+}

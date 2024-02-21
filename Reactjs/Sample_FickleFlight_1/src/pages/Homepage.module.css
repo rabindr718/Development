@@ -1,0 +1,38 @@
+.homeContents,
+.homepage {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.homeContents {
+  padding: 0 var(--padding-61xl);
+  box-sizing: border-box;
+  gap: 80px;
+  max-width: 1280px;
+}
+.homepage {
+  position: relative;
+  background-color: var(--color-white);
+  overflow: hidden;
+  gap: 69px;
+}
+.homepage:hover {
+  background: linear-gradient(#fff, #fff), #87550a;
+}
+@media screen and (max-width: 1100px) {
+  .homeContents {
+    padding-left: var(--padding-11xl);
+    padding-right: var(--padding-11xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 650px) {
+  .homepage {
+    width: 100%;
+  }
+  .homepage:hover {
+    background-color: var(--color-orange-200);
+  }
+}

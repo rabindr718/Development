@@ -1,0 +1,134 @@
+.webScreenIcon {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  cursor: pointer;
+}
+.symbols {
+  position: absolute;
+  height: 96.97%;
+  width: 99.82%;
+  top: 1.59%;
+  right: 0.18%;
+  bottom: 1.44%;
+  left: 0;
+}
+.fickleflightLogo {
+  width: 174px;
+  height: 33px;
+  overflow: hidden;
+}
+.explore,
+.fickleflightLogo,
+.hotels,
+.offers {
+  position: relative;
+  cursor: pointer;
+}
+.hotels,
+.offers {
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  font-size: var(--font-size-sm);
+  font-family: var(--font-roboto);
+  color: var(--color-cornflowerblue-200);
+  text-align: left;
+  display: inline-block;
+}
+.offers {
+  color: var(--color-darkslategray-200);
+}
+.navigationMenu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--gap-11xl);
+}
+.hamburgerMenuIcon {
+  display: none;
+}
+.hamburgerMenuIcon,
+.notificationBellIcon {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+}
+.unsplashd1upkifd04aIcon {
+  border-radius: var(--br-19xl);
+  width: 36px;
+  height: 36px;
+  object-fit: cover;
+}
+.accountSection {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-xs);
+}
+.navigationRight {
+  justify-content: flex-end;
+  gap: var(--gap-17xl);
+}
+.navigationRight,
+.topContainer,
+.topHeader {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.topContainer {
+  flex: 1;
+  justify-content: space-between;
+}
+.topHeader {
+  align-self: stretch;
+  background-color: var(--color-white);
+  height: 77px;
+  justify-content: center;
+  padding: var(--padding-3xl) var(--padding-61xl);
+  box-sizing: border-box;
+  position: sticky;
+  width: 100%;
+  top: 0;
+  background: #fff;
+  text-align: left;
+  font-size: var(--font-size-sm);
+  color: var(--color-darkslategray-200);
+  font-family: var(--font-roboto);
+}
+@media screen and (max-width: 1200px) {
+  .topHeader {
+    padding-left: var(--padding-21xl);
+    padding-right: var(--padding-21xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .navigationMenu {
+    display: none;
+  }
+  .hamburgerMenuIcon {
+    display: flex;
+  }
+  .topHeader {
+    padding-left: var(--padding-5xl);
+    padding-right: var(--padding-5xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 650px) {
+  .navigationRight {
+    display: flex;
+  }
+}

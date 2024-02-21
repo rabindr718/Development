@@ -1,0 +1,186 @@
+.siaIcon {
+  position: relative;
+  width: 34.77px;
+  height: 46px;
+}
+.singaporeAirlines {
+  position: relative;
+  letter-spacing: 0.26px;
+  display: inline-block;
+  width: 140px;
+  flex-shrink: 0;
+}
+.airlineSection {
+  width: 20%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-6xs);
+}
+.am,
+.sin {
+  position: absolute;
+  left: 0;
+  display: inline-block;
+}
+.am {
+  width: 100%;
+  top: 0;
+  letter-spacing: 0.32px;
+  font-weight: 500;
+}
+.sin {
+  width: 79.51%;
+  top: 63.46%;
+  font-size: var(--font-size-base);
+  letter-spacing: 0.26px;
+  color: var(--color-dimgray-100);
+}
+.departureDetails {
+  position: relative;
+  width: 93px;
+  height: 52px;
+}
+.flighticon {
+  position: absolute;
+  height: 27.46%;
+  width: 83.03%;
+  top: 0;
+  right: 8.26%;
+  bottom: 72.54%;
+  left: 8.71%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.h55mNonStop {
+  position: absolute;
+  top: 65.45%;
+  left: 0;
+  letter-spacing: 0.21px;
+}
+.flightduration,
+.sin1 {
+  font-size: var(--font-size-base);
+}
+.flightduration {
+  position: relative;
+  width: 129px;
+  height: 55px;
+  text-align: center;
+  color: var(--color-gray-100);
+}
+.sin1 {
+  position: absolute;
+  width: 81.25%;
+  top: 63.46%;
+  left: 17.65%;
+  letter-spacing: 0.26px;
+  color: var(--color-dimgray-100);
+  display: inline-block;
+}
+.arrivalDetails {
+  position: relative;
+  width: 91px;
+  height: 52px;
+  text-align: right;
+}
+.flightDetailsSection {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 64%;
+  text-align: left;
+  font-size: var(--font-size-2xl);
+  color: var(--color-cornflowerblue-200);
+}
+.priceSectionChild {
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  height: 100px;
+}
+.s730 {
+  flex: 1;
+  position: relative;
+  letter-spacing: 0.34px;
+}
+.flightCard,
+.priceSection {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.priceSection {
+  width: 128px;
+  font-size: var(--font-size-5xl);
+  color: var(--color-orange-100);
+}
+.flightCard {
+  align-self: stretch;
+  border-radius: var(--br-7xs);
+  background-color: var(--color-white);
+  border: 0.7px solid var(--color-lightgray);
+  padding: 0 var(--padding-6xl);
+  gap: var(--gap-31xl);
+  text-align: center;
+  font-size: var(--font-size-base);
+  color: var(--color-dimgray-200);
+  font-family: var(--font-roboto);
+}
+@media screen and (max-width: 1100px) {
+  .airlineSection {
+    flex-direction: column;
+  }
+  .flightDetailsSection {
+    flex-direction: row;
+  }
+}
+@media screen and (max-width: 650px) {
+  .siaIcon {
+    transform: scale(0.8);
+  }
+  .airlineSection {
+    flex-direction: row;
+    width: 100% !important;
+    margin-left: 40px;
+  }
+  .flightduration {
+    transform: scale(0.9);
+  }
+  .flightDetailsSection {
+    width: 90%;
+    flex-direction: row;
+    padding: 0;
+    box-sizing: border-box;
+    margin-right: 0 !important;
+    flex: unset;
+    align-self: stretch;
+  }
+  .priceSectionChild {
+    display: none;
+  }
+  .flightCard {
+    flex-direction: column;
+    padding: var(--padding-xl) 0;
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 428px) {
+  .am {
+    font-size: var(--font-size-base);
+  }
+  .departureDetails {
+    width: 80px;
+  }
+  .h55mNonStop {
+    font-size: var(--font-size-smi);
+  }
+  .arrivalDetails {
+    width: 80px;
+  }
+}

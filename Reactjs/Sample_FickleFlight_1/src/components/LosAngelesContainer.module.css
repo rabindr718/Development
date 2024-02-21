@@ -1,0 +1,116 @@
+.bannerBackground {
+  position: absolute;
+  height: calc(100% - 0.4px);
+  width: 100%;
+  top: 0.4px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.staysInLos {
+  position: relative;
+  letter-spacing: 0.02em;
+  line-height: 48px;
+  display: inline-block;
+  width: 1280px;
+}
+.beds {
+  position: relative;
+  letter-spacing: 0.04em;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+.pilldefault {
+  background-color: var(--color-white);
+  color: var(--color-cornflowerblue-200);
+}
+.pilldefault,
+.pilldefault1 {
+  border-radius: var(--br-8xl);
+  border: 1px solid var(--color-white);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-2xs) var(--padding-2xl);
+}
+.options,
+.title {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-5xs);
+}
+.options {
+  flex-direction: row;
+  text-align: center;
+  font-size: var(--font-size-base);
+  font-family: var(--font-roboto);
+}
+.title {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 1440px;
+  flex-direction: column;
+  padding: 0 var(--padding-61xl);
+  box-sizing: border-box;
+}
+.banner,
+.header {
+  align-self: stretch;
+}
+.banner {
+  position: relative;
+  background: linear-gradient(100.3deg, #0b5ba8, #299bd8);
+  height: 193px;
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: left;
+  font-size: var(--font-size-23xl);
+  color: var(--color-white);
+  font-family: var(--font-baloo-bhai);
+}
+@media screen and (max-width: 1200px) {
+  .banner,
+  .title {
+    box-sizing: border-box;
+  }
+  .title {
+    padding-left: var(--padding-21xl);
+    padding-right: var(--padding-21xl);
+  }
+  .banner {
+    padding: var(--padding-2xl) var(--padding-21xl) var(--padding-2xl)
+      var(--padding-22xl);
+  }
+}
+@media screen and (max-width: 1100px) {
+  .banner,
+  .title {
+    box-sizing: border-box;
+  }
+  .title {
+    padding-left: var(--padding-5xl);
+    padding-right: var(--padding-5xl);
+  }
+  .banner {
+    padding: var(--padding-2xl) var(--padding-5xl);
+  }
+}
+@media screen and (max-width: 650px) {
+  .staysInLos {
+    font-size: var(--font-size-13xl);
+  }
+  .beds {
+    font-size: var(--font-size-sm);
+  }
+}
