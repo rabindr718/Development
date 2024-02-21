@@ -1,0 +1,102 @@
+.results {
+  flex: 1;
+  position: relative;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.filtersIcon {
+  position: absolute;
+  top: 0;
+  left: 62px;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+}
+.filters1 {
+  position: absolute;
+  top: 2.5px;
+  left: 0;
+  letter-spacing: 0.04em;
+}
+.filters {
+  position: relative;
+  width: 86px;
+  height: 24px;
+  font-size: var(--font-size-base);
+}
+.resultsSumamry {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.map {
+  border: 0;
+  align-self: stretch;
+  position: relative;
+  height: 600px;
+  display: none;
+}
+.resultCardsCol {
+  width: 561.87px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-xs);
+}
+.map1 {
+  border: 0;
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+}
+.hotelResults,
+.resultsSection {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-4xl);
+  font-size: var(--font-size-base);
+  color: var(--color-gray-100);
+}
+.hotelResults {
+  flex-direction: column;
+  padding: var(--padding-31xl) var(--padding-61xl);
+  gap: var(--gap-xl);
+  text-align: left;
+  font-size: var(--font-size-lg);
+  color: var(--color-darkslategray-300);
+  font-family: var(--font-roboto);
+}
+@media screen and (max-width: 1200px) {
+  .hotelResults {
+    padding: var(--padding-21xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .map {
+    display: flex;
+    max-width: 1000px;
+  }
+  .resultCardsCol {
+    width: 100% !important;
+  }
+  .map1 {
+    display: none;
+  }
+  .hotelResults {
+    padding: var(--padding-11xl) var(--padding-5xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 650px) {
+  .resultCardsCol {
+    gap: var(--gap-xl);
+  }
+}

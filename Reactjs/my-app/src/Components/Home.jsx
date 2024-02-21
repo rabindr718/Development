@@ -1,16 +1,20 @@
-import CNavbar from "./CNavbar";
-import CenterHeading from "./CenterHeading";
-import Navbar from "./Navbar";
-import Item from "./Items";
-import Modal from "../Components/Model";
-import Explore from "./Explore";
-import DownMiddle from "./DownMiddle";
-import Pertange from "./Pertange";
-import FreeTrial from "./FreeTrial";
+// import CNavbar from "./CNavbar";
+// import CenterHeading from "./CenterHeading";
+// import Navbar from "./Navbar";
+// import Item from "./Items";
+// import Modal from "../Components/Model";
+// import Explore from "./Explore";
+// import DownMiddle from "./DownMiddle";
+// import Pertange from "./Pertange";
+
+import Integration from "./Integration";
+
+// import FreeTrial from "./FreeTrial";
 const Home = () => {
   return (
     <div>
-      <CNavbar></CNavbar>
+      <Integration></Integration>
+      {/* <CNavbar></CNavbar>
       <Navbar></Navbar>
       <CenterHeading></CenterHeading>
       <Item></Item>
@@ -18,7 +22,7 @@ const Home = () => {
       <Pertange></Pertange>
       <DownMiddle></DownMiddle>
       <Explore></Explore>
-      <FreeTrial></FreeTrial>
+      <FreeTrial></FreeTrial> */}
     </div>
   );
 };
