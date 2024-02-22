@@ -1,0 +1,474 @@
+.buildingabusinessChild {
+  width: 220px;
+  height: 20.4px;
+  position: relative;
+  z-index: 4;
+}
+.buildingABusiness,
+.ourNewsletterCan {
+  margin: 0;
+}
+.buildingABusinessContainer {
+  position: relative;
+  font-weight: 500;
+  z-index: 4;
+}
+.buildingabusiness {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 9px 0;
+}
+.weWontSpam {
+  position: relative;
+  z-index: 4;
+}
+.businessNewsletter,
+.subscribeForm {
+  align-self: stretch;
+  display: flex;
+  justify-content: flex-start;
+}
+.businessNewsletter {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background-color: var(--color-oldlace);
+  height: 33px;
+  flex-direction: row;
+  align-items: center;
+  padding: var(--padding-7xs) var(--padding-smi) var(--padding-8xs);
+  box-sizing: border-box;
+  font-family: var(--font-inter);
+  font-weight: 300;
+  font-size: var(--font-size-lg);
+  color: var(--color-tan-100);
+  min-width: 203px;
+  z-index: 4;
+}
+.subscribeForm {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px 0;
+}
+.subscribeButtonChild {
+  height: 33px;
+  width: 121px;
+  position: relative;
+  border-radius: var(--br-7xs);
+  background-color: var(--color-white);
+  display: none;
+}
+.subscribe {
+  position: relative;
+  font-size: var(--font-size-lg);
+  font-weight: 800;
+  font-family: var(--font-inter);
+  color: var(--color-sienna);
+  text-align: left;
+  z-index: 5;
+}
+.subscribeButton {
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-7xs) var(--padding-mini) var(--padding-8xs)
+    var(--padding-smi);
+  background-color: var(--color-white);
+  border-radius: var(--br-7xs);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  z-index: 4;
+}
+.subscribeButton:hover {
+  background-color: var(--color-gainsboro);
+}
+.followuson {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 0 var(--padding-5xs);
+  gap: 9px 0;
+}
+.followUsOn {
+  position: relative;
+  z-index: 4;
+}
+.groupIcon,
+.groupIcon1,
+.groupIcon2,
+.groupIcon3 {
+  height: 25px;
+  width: 25.7px;
+  position: relative;
+  min-height: 25px;
+  z-index: 4;
+}
+.buildingabusinessParent,
+.productCampaigns,
+.resourcesSection {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.resourcesSection {
+  flex-direction: row;
+  padding: 0 var(--padding-12xs) 0 0;
+  gap: 0 9px;
+}
+.buildingabusinessParent,
+.productCampaigns {
+  flex-direction: column;
+  gap: 3px 0;
+}
+.buildingabusinessParent {
+  width: 339px;
+  gap: 31px 0;
+  min-width: 339px;
+  max-width: 100%;
+}
+.product1 {
+  font-size: var(--font-size-6xl);
+  font-weight: 800;
+  font-family: var(--font-inter);
+}
+.product {
+  margin: 0;
+}
+.blankLine1 {
+  font-weight: 500;
+}
+.blankLine {
+  margin: 0;
+}
+.loyalty1 {
+  font-weight: 500;
+}
+.loyalty {
+  margin: 0;
+}
+.campaigns2 {
+  line-height: 25px;
+}
+.campaigns1 {
+  font-weight: 500;
+}
+.campaigns {
+  margin: 0;
+}
+.insights2 {
+  line-height: 25px;
+}
+.insights1 {
+  font-weight: 500;
+}
+.insights {
+  margin: 0;
+}
+.autoCampaigns2 {
+  line-height: 25px;
+}
+.autoCampaigns1 {
+  font-weight: 500;
+}
+.autoCampaigns {
+  margin: 0;
+}
+.feedback2 {
+  line-height: 25px;
+}
+.feedback1 {
+  font-weight: 500;
+}
+.feedback {
+  margin: 0;
+}
+.qrCode2 {
+  line-height: 25px;
+}
+.qrCode1 {
+  font-weight: 500;
+}
+.qrCode {
+  margin: 0;
+}
+.loyaltyInspiration2 {
+  line-height: 25px;
+}
+.loyaltyInspiration1 {
+  font-weight: 500;
+}
+.loyaltyInspiration {
+  margin: 0;
+}
+.onlineReviews2 {
+  line-height: 25px;
+}
+.onlineReviews1 {
+  font-weight: 500;
+}
+.onlineReviews {
+  margin: 0;
+}
+.referral2 {
+  line-height: 25px;
+}
+.referral1 {
+  font-weight: 500;
+}
+.referral {
+  margin: 0;
+}
+.productLoyaltyCampaignsContainer {
+  position: relative;
+  z-index: 4;
+}
+.companyAboutUsContactUsPr {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 var(--padding-2xs) 0 0;
+}
+.company {
+  margin: 0;
+  font-size: var(--font-size-6xl);
+  font-weight: 800;
+}
+.aboutUs,
+.blankLine2,
+.careers,
+.contactUs,
+.pricing,
+.privacyPolicy,
+.refundCancellation,
+.termsOfService {
+  margin: 0;
+  line-height: 25px;
+  font-weight: 500;
+}
+.companyAboutUsContainer {
+  position: relative;
+  z-index: 4;
+}
+.resources1 {
+  font-size: var(--font-size-6xl);
+  font-weight: 800;
+  font-family: var(--font-inter);
+}
+.resources {
+  margin: 0;
+}
+.blankLine4 {
+  font-weight: 500;
+}
+.blankLine3 {
+  margin: 0;
+}
+.videoAcademy2 {
+  line-height: 25px;
+}
+.videoAcademy1 {
+  font-weight: 500;
+}
+.videoAcademy {
+  margin: 0;
+}
+.blog2 {
+  line-height: 25px;
+}
+.blog1 {
+  font-weight: 500;
+}
+.blog {
+  margin: 0;
+}
+.caseStudies2 {
+  line-height: 25px;
+}
+.caseStudies1 {
+  font-weight: 500;
+}
+.caseStudies {
+  margin: 0;
+}
+.growthStories2 {
+  line-height: 25px;
+}
+.growthStories1 {
+  font-weight: 500;
+}
+.growthStories {
+  margin: 0;
+}
+.successStories2 {
+  line-height: 25px;
+}
+.successStories1 {
+  font-weight: 500;
+}
+.successStories {
+  margin: 0;
+}
+.webinars2 {
+  line-height: 25px;
+}
+.webinars1 {
+  font-weight: 500;
+}
+.webinars {
+  margin: 0;
+}
+.helpCenter2 {
+  line-height: 25px;
+}
+.helpCenter1 {
+  font-weight: 500;
+}
+.helpCenter {
+  margin: 0;
+}
+.watchDemo2 {
+  line-height: 25px;
+}
+.watchDemo1 {
+  font-weight: 500;
+}
+.watchDemo {
+  margin: 0;
+}
+.resourcesVideoAcademyContainer {
+  position: relative;
+  display: inline-block;
+  min-width: 132px;
+  z-index: 4;
+}
+.affiliateProgram1,
+.marketingCalendar,
+.marketingPlaybook,
+.marketingTemplates,
+.posIntegrationApi,
+.repeatBusinessPlaybook,
+.socialContentCalendar {
+  margin: 0;
+}
+.posIntegrationApiContainer {
+  position: relative;
+  line-height: 25px;
+  font-weight: 500;
+  z-index: 4;
+}
+.videosAcademy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 0 var(--padding-5xl);
+  box-sizing: border-box;
+  min-width: 202px;
+}
+.marketingTools,
+.pricingDetails {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: 0 34px;
+  max-width: 100%;
+}
+.marketingTools {
+  align-self: stretch;
+  align-items: flex-start;
+  gap: 0 79px;
+}
+.affiliateProgram,
+.componentParent {
+  display: flex;
+  align-items: flex-start;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.affiliateProgram {
+  width: 847px;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: var(--padding-4xs) 0 0;
+  min-width: 847px;
+  font-size: var(--font-size-base);
+}
+.componentParent {
+  align-self: stretch;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: var(--padding-33xl) var(--padding-202xl) var(--padding-281xl)
+    var(--padding-309xl);
+  position: relative;
+  gap: var(--gap-xl);
+  text-align: left;
+  font-size: var(--font-size-lg);
+  color: var(--color-white);
+  font-family: var(--font-inter);
+}
+@media screen and (max-width: 1800px) {
+  .buildingabusinessParent {
+    flex: 1;
+  }
+  .affiliateProgram {
+    flex: 1;
+    min-width: 100%;
+  }
+  .componentParent {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 1350px) {
+  .buildingabusinessParent {
+    min-width: 100%;
+  }
+  .marketingTools {
+    flex-wrap: wrap;
+  }
+  .componentParent {
+    padding-left: var(--padding-145xl);
+    padding-right: var(--padding-91xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 900px) {
+  .resourcesVideoAcademyContainer,
+  .videosAcademy {
+    flex: 1;
+  }
+  .pricingDetails {
+    flex-wrap: wrap;
+  }
+  .marketingTools {
+    gap: 0 79px;
+  }
+  .componentParent {
+    padding: var(--padding-15xl) var(--padding-36xl) var(--padding-176xl)
+      var(--padding-63xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 450px) {
+  .buildingabusinessParent {
+    gap: 31px 0;
+  }
+  .pricingDetails {
+    gap: 0 34px;
+  }
+  .marketingTools {
+    gap: 0 79px;
+  }
+  .componentParent {
+    padding-left: var(--padding-xl);
+    padding-right: var(--padding-xl);
+    box-sizing: border-box;
+  }
+}
