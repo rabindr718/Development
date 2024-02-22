@@ -1,0 +1,170 @@
+.vector {
+  height: 100%;
+  width: 2362px;
+  position: absolute;
+  margin: 0 !important;
+  top: 328px;
+  bottom: -328px;
+  left: 2129px;
+  border-radius: var(--br-smi);
+  background-color: var(--color-oldlace);
+  transform: rotate(180deg);
+  transform-origin: 0 0;
+  z-index: 3;
+}
+.startFor {
+  color: var(--color-black);
+}
+.free {
+  color: var(--color-sienna);
+}
+.startForFree {
+  margin: 0;
+}
+.real {
+  color: var(--color-sienna);
+}
+.growForReal {
+  margin: 0;
+}
+.startForFreeContainer {
+  margin: 0;
+  height: 116px;
+  position: relative;
+  font-size: inherit;
+  font-weight: 700;
+  font-family: inherit;
+  display: inline-block;
+  z-index: 4;
+}
+.ourSolutionFitsYourIndustr {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-29xl) 0 0;
+}
+.groupChild {
+  height: 57px;
+  width: 200px;
+  position: relative;
+  border-radius: var(--br-5xs);
+  background-color: var(--color-sienna);
+  box-shadow: 3px 3px 14px #a98a60;
+  display: none;
+}
+.startFreeTrial {
+  position: relative;
+  font-size: var(--font-size-xl);
+  font-family: var(--font-inter);
+  color: var(--color-white);
+  text-align: left;
+  z-index: 5;
+}
+.group {
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-mid) var(--padding-12xl) var(--padding-base)
+    var(--padding-5xl);
+  background-color: var(--color-sienna);
+  border-radius: var(--br-5xs);
+  box-shadow: 3px 3px 14px #a98a60;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  white-space: nowrap;
+  z-index: 4;
+}
+.group:hover {
+  background-color: var(--color-rosybrown);
+}
+.noCreditCard,
+.termsApply {
+  position: relative;
+  font-weight: 500;
+  z-index: 4;
+}
+.termsApply {
+  text-decoration: underline;
+  z-index: 5;
+}
+.frameBanquets,
+.frameCatering,
+.subscribe {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.frameBanquets {
+  gap: 17px 0;
+}
+.frameCatering {
+  padding: var(--padding-29xl) var(--padding-4xl) 0 0;
+  font-size: var(--font-size-lg);
+  color: var(--color-darkslategray-200);
+}
+.productLoyaltyCampaignsInsi {
+  height: 266px;
+  width: 449px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  max-width: 100%;
+  z-index: 4;
+}
+.vectorParent {
+  width: 100%;
+  margin: 0 !important;
+  position: absolute;
+  right: 0;
+  bottom: 653px;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-35xl) var(--padding-228xl) var(--padding-5xs);
+  box-sizing: border-box;
+  gap: 0 89px;
+  max-width: 100%;
+  text-align: left;
+  font-size: var(--font-size-29xl);
+  color: var(--color-black);
+  font-family: var(--font-inter);
+}
+@media screen and (max-width: 1800px) {
+  .vectorParent {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 1350px) {
+  .vectorParent {
+    padding-left: var(--padding-104xl);
+    padding-right: var(--padding-104xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 900px) {
+  .startForFreeContainer {
+    font-size: var(--font-size-19xl);
+  }
+  .vectorParent {
+    gap: 0 89px;
+    padding-left: var(--padding-42xl);
+    padding-right: var(--padding-42xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 450px) {
+  .startForFreeContainer {
+    font-size: var(--font-size-10xl);
+  }
+  .vectorParent {
+    gap: 0 89px;
+    padding-left: var(--padding-xl);
+    padding-right: var(--padding-xl);
+    box-sizing: border-box;
+  }
+}

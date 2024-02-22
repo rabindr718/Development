@@ -1,0 +1,814 @@
+.vectorIcon {
+  position: absolute;
+  top: 12px;
+  left: 158px;
+  width: 7454.2px;
+  height: 7726.6px;
+  object-fit: contain;
+  z-index: 1;
+}
+.cateringFrame {
+  position: absolute;
+  top: 12px;
+  left: 0;
+  background-color: var(--color-black);
+  width: 1920px;
+  height: 52px;
+  z-index: 3;
+}
+.banquetsFrameIcon {
+  position: absolute;
+  top: 0;
+  left: 1280.9px;
+  width: 264px;
+  height: 96.8px;
+  object-fit: contain;
+  z-index: 4;
+}
+.vectorIcon1 {
+  position: absolute;
+  top: 43px;
+  left: 1623px;
+  width: 60px;
+  height: 37px;
+  overflow: hidden;
+  z-index: 4;
+}
+.frameChild,
+.frameItem {
+  position: absolute;
+  top: 26.3px;
+  left: 1499px;
+  width: 90.2px;
+  height: 61.3px;
+  z-index: 5;
+}
+.frameItem {
+  top: 26px;
+  left: 379px;
+  width: 76.5px;
+  height: 51px;
+  object-fit: contain;
+  z-index: 4;
+}
+.resorts,
+.vectorParent {
+  position: absolute;
+  margin: 0 !important;
+}
+.vectorParent {
+  height: 7370px;
+  width: 2078px;
+  top: -4334px;
+  left: -158px;
+}
+.resorts {
+  height: calc(100% - 1px);
+  width: 2362px;
+  top: 580px;
+  bottom: -579px;
+  left: 2133px;
+  border-radius: var(--br-smi);
+  background-color: var(--color-sienna);
+  transform: rotate(180deg);
+  transform-origin: 0 0;
+  z-index: 7;
+}
+.blankLine,
+.for1mo,
+.putJustWedding {
+  margin: 0;
+}
+.putJustWeddingContainer {
+  margin: 0;
+  position: relative;
+  font-size: inherit;
+  font-weight: 700;
+  font-family: inherit;
+  z-index: 8;
+}
+.useCode {
+  font-weight: 500;
+  font-family: var(--font-inter);
+}
+.jw2024save {
+  font-weight: 800;
+}
+.blankLine1,
+.useCodejw2024save1 {
+  margin: 0;
+}
+.useCodejw2024save {
+  position: relative;
+  font-size: var(--font-size-6xl);
+  z-index: 9;
+  margin: -51px 0 0;
+  font-family: inherit;
+}
+.eventManagement {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.groupChild {
+  height: 57px;
+  width: 200px;
+  position: relative;
+  border-radius: var(--br-5xs);
+  background-color: var(--color-darkseagreen);
+  box-shadow: 3px 3px 14px #783a1e;
+  display: none;
+}
+.startFreeTrial {
+  position: relative;
+  font-size: var(--font-size-xl);
+  font-family: var(--font-inter);
+  color: var(--color-white);
+  text-align: left;
+  z-index: 11;
+}
+.group {
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-mid) var(--padding-12xl) var(--padding-base)
+    var(--padding-5xl);
+  background-color: var(--color-darkseagreen);
+  border-radius: var(--br-5xs);
+  box-shadow: 3px 3px 14px #783a1e;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  white-space: nowrap;
+  z-index: 10;
+}
+.group:hover {
+  background-color: var(--color-darkolivegreen);
+}
+.noCreditCard,
+.termsApply {
+  position: relative;
+  font-weight: 500;
+  z-index: 8;
+}
+.termsApply {
+  text-decoration: underline;
+  z-index: 9;
+}
+.subscribe {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.groupParent {
+  gap: 33px 0;
+  margin-top: -6px;
+  font-size: var(--font-size-lg);
+}
+.banquets,
+.catering,
+.groupParent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.catering {
+  padding: var(--padding-7xl) 0 0;
+  box-sizing: border-box;
+  min-width: 602px;
+  max-width: 100%;
+}
+.groupIcon {
+  position: absolute;
+  top: 0;
+  left: 30.2px;
+  width: 560.8px;
+  height: 408.9px;
+}
+.groupIcon1,
+.groupIcon2 {
+  position: absolute;
+  top: 39.4px;
+  left: 250px;
+  width: 223.4px;
+  height: 419.7px;
+  z-index: 1;
+}
+.groupIcon2 {
+  left: 238.4px;
+  width: 228.3px;
+  z-index: 2;
+}
+.groupIcon3,
+.groupIcon4 {
+  position: absolute;
+  top: 38.5px;
+  left: 237.5px;
+  width: 230.1px;
+  height: 221.8px;
+  z-index: 3;
+}
+.groupIcon4 {
+  top: 296.7px;
+  left: 240px;
+  width: 225.2px;
+  height: 163.3px;
+}
+.groupIcon5,
+.groupIcon6 {
+  position: absolute;
+  top: 51.3px;
+  left: 252px;
+  width: 201.5px;
+  height: 392.7px;
+  z-index: 4;
+}
+.groupIcon6 {
+  left: 324.3px;
+  width: 3.8px;
+  height: 3.8px;
+  z-index: 5;
+}
+.groupIcon7,
+.groupIcon8,
+.groupIcon9 {
+  position: absolute;
+  top: 52.1px;
+  left: 336.6px;
+  width: 45.4px;
+  height: 2.1px;
+  z-index: 5;
+}
+.groupIcon8,
+.groupIcon9 {
+  top: 97.4px;
+  left: 262.2px;
+  width: 180.8px;
+  height: 178.1px;
+}
+.groupIcon9 {
+  top: 120.1px;
+  left: 261.3px;
+  width: 167.8px;
+  height: 156.3px;
+  z-index: 6;
+}
+.groupIcon10,
+.groupIcon11 {
+  position: absolute;
+  top: 97.4px;
+  left: 285px;
+  width: 158px;
+  height: 135px;
+  z-index: 7;
+}
+.groupIcon11 {
+  top: 306.4px;
+  left: 284.8px;
+  width: 135.7px;
+  height: 36.5px;
+  z-index: 5;
+}
+.groupIcon12,
+.groupIcon13 {
+  position: absolute;
+  top: 191.7px;
+  left: 423.6px;
+  width: 128.5px;
+  height: 265.9px;
+  z-index: 8;
+}
+.groupIcon13 {
+  top: 86.3px;
+  left: 73.4px;
+  width: 127.9px;
+  height: 126.2px;
+  z-index: 1;
+}
+.groupIcon14,
+.groupIcon15,
+.groupIcon16,
+.groupIcon17,
+.groupIcon18 {
+  position: absolute;
+  top: 131.4px;
+  left: 282.3px;
+  width: 65.2px;
+  height: 50.2px;
+  z-index: 8;
+}
+.groupIcon15,
+.groupIcon16,
+.groupIcon17,
+.groupIcon18 {
+  left: 357.7px;
+}
+.groupIcon16,
+.groupIcon17,
+.groupIcon18 {
+  top: 191.4px;
+  left: 282.3px;
+}
+.groupIcon17,
+.groupIcon18 {
+  left: 357.7px;
+  z-index: 9;
+}
+.groupIcon18 {
+  top: 199.3px;
+  left: 382.2px;
+  width: 16.4px;
+  height: 34.4px;
+  z-index: 10;
+}
+.groupIcon19,
+.groupIcon20 {
+  position: absolute;
+  height: 18.17%;
+  width: 99.09%;
+  top: 5.91%;
+  right: 0.48%;
+  bottom: 75.92%;
+  left: 0.43%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.groupIcon20 {
+  height: 75.43%;
+  top: 24.08%;
+  bottom: 0.5%;
+}
+.groupIcon21,
+.groupIcon22,
+.groupIcon23,
+.groupIcon24 {
+  position: absolute;
+  top: 65.6px;
+  left: 13.3px;
+  width: 19.4px;
+  height: 15.8px;
+  z-index: 1;
+}
+.groupIcon22,
+.groupIcon23,
+.groupIcon24 {
+  top: 90.7px;
+}
+.groupIcon23,
+.groupIcon24 {
+  top: 115.9px;
+}
+.groupIcon24 {
+  top: 141px;
+}
+.groupIcon25,
+.groupIcon26,
+.groupIcon27,
+.groupIcon28,
+.groupIcon29,
+.groupIcon30 {
+  position: absolute;
+  top: 65.6px;
+  left: 40.4px;
+  width: 19.4px;
+  height: 15.8px;
+  z-index: 1;
+}
+.groupIcon26,
+.groupIcon27,
+.groupIcon28,
+.groupIcon29,
+.groupIcon30 {
+  top: 90.7px;
+}
+.groupIcon27,
+.groupIcon28,
+.groupIcon29,
+.groupIcon30 {
+  top: 115.9px;
+}
+.groupIcon28,
+.groupIcon29,
+.groupIcon30 {
+  top: 141px;
+}
+.groupIcon29,
+.groupIcon30 {
+  top: 65.6px;
+  left: 67.5px;
+}
+.groupIcon30 {
+  top: 90.7px;
+}
+.groupIcon31,
+.groupIcon32,
+.groupIcon33,
+.groupIcon34,
+.groupIcon35,
+.groupIcon36 {
+  position: absolute;
+  top: 115.9px;
+  left: 67.5px;
+  width: 19.4px;
+  height: 15.8px;
+  z-index: 1;
+}
+.groupIcon32,
+.groupIcon33,
+.groupIcon34,
+.groupIcon35,
+.groupIcon36 {
+  top: 141px;
+}
+.groupIcon33,
+.groupIcon34,
+.groupIcon35,
+.groupIcon36 {
+  top: 65.6px;
+  left: 94.7px;
+}
+.groupIcon34,
+.groupIcon35,
+.groupIcon36 {
+  top: 90.7px;
+}
+.groupIcon35,
+.groupIcon36 {
+  top: 115.9px;
+}
+.groupIcon36 {
+  top: 141px;
+}
+.groupIcon37,
+.groupIcon38,
+.groupIcon39,
+.groupIcon40,
+.groupIcon41,
+.groupIcon42 {
+  position: absolute;
+  top: 65.6px;
+  left: 121.8px;
+  width: 19.4px;
+  height: 15.8px;
+  z-index: 1;
+}
+.groupIcon38,
+.groupIcon39,
+.groupIcon40,
+.groupIcon41,
+.groupIcon42 {
+  top: 90.7px;
+}
+.groupIcon39,
+.groupIcon40,
+.groupIcon41,
+.groupIcon42 {
+  top: 115.9px;
+}
+.groupIcon40,
+.groupIcon41,
+.groupIcon42 {
+  top: 141px;
+}
+.groupIcon41,
+.groupIcon42 {
+  top: 115.9px;
+  left: 149px;
+}
+.groupIcon42 {
+  top: 65.6px;
+}
+.groupIcon43,
+.groupIcon44,
+.groupIcon45,
+.groupIcon46,
+.groupIcon47,
+.groupIcon48 {
+  position: absolute;
+  top: 90.7px;
+  left: 149px;
+  width: 19.4px;
+  height: 15.8px;
+  z-index: 1;
+}
+.groupIcon44,
+.groupIcon45,
+.groupIcon46,
+.groupIcon47,
+.groupIcon48 {
+  top: 141px;
+}
+.groupIcon45,
+.groupIcon46,
+.groupIcon47,
+.groupIcon48 {
+  left: 176.1px;
+}
+.groupIcon46,
+.groupIcon47,
+.groupIcon48 {
+  top: 65.6px;
+}
+.groupIcon47,
+.groupIcon48 {
+  top: 90.7px;
+}
+.groupIcon48 {
+  top: 115.9px;
+}
+.groupIcon49,
+.groupIcon50,
+.groupIcon51,
+.groupIcon52 {
+  position: absolute;
+  height: 6.63%;
+  width: 6.37%;
+  top: 51.19%;
+  right: 46.77%;
+  bottom: 42.19%;
+  left: 46.86%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  z-index: 2;
+}
+.groupIcon50,
+.groupIcon51,
+.groupIcon52 {
+  height: 0.99%;
+  width: 79.78%;
+  top: 23.47%;
+  right: 10.11%;
+  bottom: 75.54%;
+  left: 10.11%;
+  z-index: 1;
+}
+.groupIcon51,
+.groupIcon52 {
+  height: 25.62%;
+  width: 93.96%;
+  top: 5.41%;
+  right: 0;
+  bottom: 68.97%;
+  left: 6.04%;
+  z-index: 2;
+}
+.groupIcon52 {
+  height: 87.69%;
+  width: 100%;
+  top: 12.31%;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+}
+.groupIcon53 {
+  position: absolute;
+  top: 0;
+  left: 54.2px;
+  width: 10.3px;
+  height: 30.3px;
+  z-index: 4;
+}
+.group2,
+.groupIcon54,
+.groupIcon55,
+.groupIcon56,
+.groupIcon57,
+.groupIcon58 {
+  position: absolute;
+  top: 0;
+  left: 27.5px;
+  width: 10.3px;
+  height: 30.3px;
+  z-index: 4;
+}
+.group2,
+.groupIcon55,
+.groupIcon56,
+.groupIcon57,
+.groupIcon58 {
+  left: 83.4px;
+}
+.group2,
+.groupIcon56,
+.groupIcon57,
+.groupIcon58 {
+  left: 112.6px;
+}
+.group2,
+.groupIcon57,
+.groupIcon58 {
+  left: 141.8px;
+}
+.group2,
+.groupIcon58 {
+  left: 171px;
+}
+.group2 {
+  top: 277.9px;
+  left: 69.8px;
+  width: 208.7px;
+  height: 181.1px;
+  z-index: 5;
+}
+.groupIcon59,
+.groupIcon60 {
+  position: absolute;
+  top: 372.7px;
+  left: 338.2px;
+  width: 87.6px;
+  height: 87.7px;
+  z-index: 9;
+}
+.groupIcon60 {
+  top: 407.3px;
+  left: 6.6px;
+  width: 99.2px;
+  height: 50.4px;
+  z-index: 6;
+}
+.groupIcon61,
+.groupIcon62 {
+  position: absolute;
+  top: 198.4px;
+  left: 297.5px;
+  width: 34.7px;
+  height: 36.1px;
+  z-index: 9;
+}
+.groupIcon62 {
+  top: 140px;
+  left: 374.5px;
+  width: 31.8px;
+  height: 32.8px;
+}
+.groupIcon63,
+.groupIcon64 {
+  position: absolute;
+  height: 31.32%;
+  width: 96.2%;
+  top: 0;
+  right: 0.25%;
+  bottom: 68.68%;
+  left: 3.54%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.groupIcon64 {
+  height: 16.48%;
+  width: 16.2%;
+  top: 8.79%;
+  right: 40.25%;
+  bottom: 74.73%;
+  left: 43.54%;
+  z-index: 1;
+}
+.groupIcon65,
+.groupIcon66,
+.groupIcon67 {
+  position: absolute;
+  top: 13.4px;
+  left: 6.2px;
+  width: 4.8px;
+  height: 19.9px;
+}
+.groupIcon66,
+.groupIcon67 {
+  left: 18px;
+}
+.groupIcon67 {
+  left: 29.8px;
+}
+.groupIcon68 {
+  width: 96.2%;
+  top: 31.32%;
+  right: 0.25%;
+  bottom: 65.11%;
+  left: 3.54%;
+}
+.groupIcon68,
+.groupIcon69,
+.groupIcon70,
+.groupIcon71 {
+  position: absolute;
+  height: 3.57%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.groupIcon69 {
+  width: 86.08%;
+  top: 35.16%;
+  right: 5.32%;
+  bottom: 61.26%;
+  left: 8.61%;
+  z-index: 1;
+}
+.groupIcon70,
+.groupIcon71 {
+  width: 87.59%;
+  top: 89.84%;
+  right: 6.33%;
+  bottom: 6.59%;
+  left: 6.08%;
+}
+.groupIcon71 {
+  width: 100%;
+  top: 96.7%;
+  right: 0;
+  bottom: -0.27%;
+  left: 0;
+}
+.group3,
+.groupIcon72 {
+  position: absolute;
+  top: 138.2px;
+  left: 295.1px;
+  width: 39.5px;
+  height: 36.4px;
+  z-index: 9;
+}
+.groupIcon72 {
+  top: 457.3px;
+  left: 0;
+  width: 572.8px;
+  height: 2.7px;
+  z-index: 10;
+}
+.industryTag {
+  height: 460px;
+  flex: 1;
+  position: relative;
+  max-width: 100%;
+}
+.group1,
+.textFrame {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.group1 {
+  width: 591px;
+  justify-content: center;
+  padding: 0 0 var(--padding-12xs);
+  min-width: 591px;
+  z-index: 8;
+}
+.textFrame {
+  align-self: stretch;
+  justify-content: flex-start;
+  padding: var(--padding-40xl) var(--padding-130xl) var(--padding-42xl);
+  position: relative;
+  gap: 0 112px;
+  text-align: left;
+  font-size: var(--font-size-29xl);
+  color: var(--color-white);
+  font-family: var(--font-inter);
+}
+@media screen and (max-width: 1800px) {
+  .catering,
+  .group1 {
+    flex: 1;
+  }
+  .textFrame {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 1350px) {
+  .catering,
+  .group1 {
+    min-width: 100%;
+  }
+  .textFrame {
+    gap: 0 112px;
+    padding-left: var(--padding-55xl);
+    padding-right: var(--padding-55xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 900px) {
+  .putJustWeddingContainer {
+    font-size: var(--font-size-19xl);
+  }
+  .textFrame {
+    gap: 0 112px;
+    padding-left: var(--padding-18xl);
+    padding-right: var(--padding-18xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 450px) {
+  .putJustWeddingContainer {
+    font-size: var(--font-size-10xl);
+  }
+  .useCodejw2024save {
+    font-size: var(--font-size-xl);
+  }
+}

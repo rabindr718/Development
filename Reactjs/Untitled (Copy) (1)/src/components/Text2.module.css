@@ -1,0 +1,206 @@
+.group,
+.text1 {
+  position: absolute;
+  z-index: 4;
+}
+.text1 {
+  top: 0;
+  left: 93px;
+  border-radius: var(--br-5xs);
+  background-color: var(--color-saddlebrown);
+  box-shadow: 3px 3px 14px #9d9d9d;
+  width: 328px;
+  height: 57px;
+}
+.group {
+  top: 147px;
+  left: 0;
+  border-radius: 50%;
+  background-color: var(--color-sienna);
+  width: 549px;
+  height: 549px;
+}
+.blankLine,
+.exploreCampaignTemplates {
+  margin: 0;
+}
+.exploreCampaignTemplatesContainer {
+  margin: 0 !important;
+  height: 72px;
+  position: absolute;
+  top: 4px;
+  right: 56px;
+  font-size: inherit;
+  font-weight: 700;
+  font-family: inherit;
+  display: inline-block;
+  z-index: 5;
+}
+.frameChild,
+.textChild {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.frameChild {
+  object-fit: cover;
+}
+.textChild {
+  border-radius: var(--br-smi);
+  background-color: var(--color-white);
+  box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.25);
+}
+.birthday {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  z-index: 8;
+}
+.blankLine1,
+.blankLine2,
+.blankLine3,
+.call999999999,
+.dontMissThis,
+.thePizzaCafe,
+.thePizzaCafewill,
+.valentineenjoyANew,
+.with14Off {
+  margin: 0;
+}
+.clickHere {
+  margin: 0;
+  font-size: var(--font-size-xs);
+}
+.thePizzaCafewillContainer {
+  position: absolute;
+  top: 34px;
+  left: 15px;
+  z-index: 8;
+  font-size: var(--font-size-3xs);
+}
+.text3,
+.textItem {
+  position: absolute;
+  border-radius: var(--br-smi);
+  box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.25);
+}
+.text3 {
+  top: 331px;
+  left: 96px;
+  background-color: var(--color-white);
+  width: 229px;
+  height: 179px;
+  z-index: 7;
+}
+.textItem {
+  top: 0;
+  left: 0;
+  background-color: var(--color-mediumaquamarine);
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.thankYou {
+  position: absolute;
+  top: 7px;
+  left: 16px;
+  font-size: var(--font-size-smi);
+  font-family: var(--font-inter);
+  color: var(--color-white);
+  text-align: left;
+  z-index: 8;
+}
+.text4 {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: var(--color-mediumaquamarine);
+  position: absolute;
+  top: 515px;
+  left: 219px;
+  border-radius: var(--br-smi);
+  box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.25);
+  width: 106px;
+  height: 30px;
+  white-space: nowrap;
+  z-index: 7;
+}
+.text4:hover {
+  background-color: var(--color-seagreen);
+}
+.frameIcon,
+.rectangleChild {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.rectangleChild {
+  border-radius: var(--br-smi);
+  background-color: var(--color-white);
+  box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.25);
+  display: none;
+}
+.frameIcon {
+  border-radius: var(--br-mini);
+  object-fit: cover;
+  z-index: 8;
+}
+.rectangle {
+  position: absolute;
+  top: 178px;
+  left: 96px;
+  border-radius: var(--br-smi);
+  background-color: var(--color-white);
+  box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.25);
+  width: 229px;
+  height: 148px;
+  z-index: 7;
+}
+.rectangleParent {
+  height: 804px;
+  flex: 1;
+  position: relative;
+  background-image: url(/public/rectangle-55@2x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  max-width: 100%;
+  z-index: 6;
+  font-size: var(--font-size-xs);
+  color: var(--color-black);
+}
+.text,
+.text2 {
+  position: absolute;
+  max-width: 100%;
+}
+.text2 {
+  top: 13px;
+  left: 57px;
+  width: 399px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.text {
+  width: 549px;
+  height: 817px;
+  margin: 0 !important;
+  top: 3559px;
+  left: 545px;
+  text-align: left;
+  font-size: var(--font-size-xl);
+  color: var(--color-white);
+  font-family: var(--font-inter);
+}
+@media screen and (max-width: 450px) {
+  .exploreCampaignTemplatesContainer {
+    font-size: var(--font-size-base);
+  }
+}

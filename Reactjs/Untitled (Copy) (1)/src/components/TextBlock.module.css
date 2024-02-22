@@ -1,0 +1,128 @@
+.textBlockChild {
+  width: 360px;
+  height: 352px;
+  position: relative;
+  border-radius: var(--br-base);
+  background-color: var(--color-oldlace);
+  display: none;
+  max-width: 100%;
+}
+.kevin1Icon,
+.kevinPatel {
+  position: relative;
+  z-index: 4;
+}
+.kevin1Icon {
+  height: 72px;
+  width: 74px;
+  border-radius: var(--br-58xl);
+  object-fit: cover;
+}
+.kevinPatel {
+  margin: 0;
+  font-size: inherit;
+  font-weight: 700;
+  font-family: inherit;
+}
+.kevinPvtLtd {
+  position: relative;
+  font-size: var(--font-size-sm);
+  font-weight: 300;
+  z-index: 5;
+}
+.frameWrapper,
+.kevinPatelParent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.frameWrapper {
+  padding: 0 0 var(--padding-6xs);
+}
+.kevin1Parent,
+.textBlockInner {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.kevin1Parent {
+  flex: 1;
+  align-items: center;
+  gap: 0 32px;
+}
+.textBlockInner {
+  align-self: stretch;
+  align-items: flex-start;
+  padding: 0 var(--padding-4xs);
+}
+.willTransformThe,
+.withMostSystems,
+.withOdooYou,
+.youExpectedYou,
+.youGet70 {
+  margin: 0;
+}
+.withMostSystemsContainer {
+  position: relative;
+  font-weight: 300;
+  z-index: 4;
+}
+.withMostSystemsYouGet70Wrapper {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 0 var(--padding-xs);
+  text-align: left;
+  font-size: var(--font-size-sm);
+}
+.kevinPatel1 {
+  margin: 0;
+  position: relative;
+  font-size: inherit;
+  font-weight: 700;
+  font-family: inherit;
+  z-index: 4;
+}
+.kevinPvtLtd1 {
+  position: relative;
+  font-size: var(--font-size-sm);
+  font-weight: 300;
+  z-index: 5;
+}
+.kevinPatelGroup,
+.textBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.textBlock {
+  flex: 1;
+  border-radius: var(--br-base);
+  background-color: var(--color-oldlace);
+  padding: var(--padding-16xl) var(--padding-55xl) var(--padding-24xl)
+    var(--padding-34xl);
+  box-sizing: border-box;
+  gap: 32px 0;
+  min-width: 270px;
+  max-width: 100%;
+  z-index: 3;
+  text-align: center;
+  font-size: var(--font-size-xl);
+  color: var(--color-black);
+  font-family: var(--font-inter);
+}
+@media screen and (max-width: 450px) {
+  .kevinPatel,
+  .kevinPatel1 {
+    font-size: var(--font-size-base);
+  }
+  .textBlock {
+    gap: 32px 0;
+    padding: var(--padding-4xl) var(--padding-xl) var(--padding-9xl);
+    box-sizing: border-box;
+  }
+}
