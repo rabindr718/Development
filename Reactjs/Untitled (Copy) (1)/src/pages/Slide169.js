@@ -164,10 +164,7 @@ const Slide169 = () => {
           <b className={styles.selectMenu}>{`Select Menu & other Details`}</b>
           <div className={styles.textItem} />
         </div>
-        <div className={styles.text12}>
-          <b className={styles.getYourFinal}>Get your Final Menu and Catalog</b>
-          <div className={styles.textInner} />
-        </div>
+
         <div className={styles.headerContainer}>
           <img className={styles.icon} alt="" src="/5102@2x.png" />
           <div className={styles.subheaderGroup}>
@@ -176,6 +173,12 @@ const Slide169 = () => {
               alt=""
               src="/text-frame@2x.png"
             />
+            <div className={styles.text12}>
+              <b className={styles.getYourFinal}>
+                Get your Final Menu and Catalog
+              </b>
+              <div className={styles.textInner} />
+            </div>
             <div className={styles.textFrame} />
           </div>
           <div className={styles.rectangle}>
