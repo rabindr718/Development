@@ -522,18 +522,10 @@ const TermsFrame = () => {
                       <span>
                         <i>
                           <span className={styles.ofEventsEasilyManage}>
-                            of Events easily manage by{" "}
-                            <span className={styles.justWedding}>
-                              Just Wedding
-                            </span>
+                            of Events easily manage by Just Wedding
+                            <span className={styles.justWedding}></span>
                           </span>
                         </i>
-                      </span>
-                    </p>
-                    <p className={styles.justWeddingMembers}>
-                      <span>
-                        <i>just wedding membe</i>
-                        <i className={styles.rs}>rs.</i>
                       </span>
                     </p>
                   </div>
@@ -554,21 +546,9 @@ const TermsFrame = () => {
                       <span>
                         <i>
                           <span className={styles.ofInvoices1}>
-                            of invoices
+                            of invoices Are paid on time or early
                           </span>
                         </i>
-                      </span>
-                    </p>
-                    <p className={styles.arePaidOnTimeOrEarly}>
-                      <span>
-                        <i>
-                          <span className={styles.arePaidOn}>
-                            Are paid on time or early
-                          </span>
-                        </i>
-                        <span className={styles.span1}>
-                          <span className={styles.span2}>.</span>
-                        </span>
                       </span>
                     </p>
                   </div>
@@ -588,14 +568,8 @@ const TermsFrame = () => {
                     <p className={styles.ofMembersFeelMoreOrganized}>
                       <i>
                         <span className={styles.ofMembersFeel}>
-                          of members Feel more organized
-                        </span>
-                      </i>
-                    </p>
-                    <p className={styles.withJustWeddingPlatform}>
-                      <i>
-                        <span className={styles.withJustWedding}>
-                          with Just wedding platform.
+                          of members Feel more organized with Just wedding
+                          platform.
                         </span>
                       </i>
                     </p>
