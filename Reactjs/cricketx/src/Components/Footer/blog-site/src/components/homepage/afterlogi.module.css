@@ -1,0 +1,52 @@
+.homeShow {
+  background-color: cyan;
+  width: 80% !important;
+
+  margin-left: 137px !important;
+}
+.loginName {
+  margin-right: 7% !important;
+  color: white;
+}
+.author {
+  text-align: center !important;
+}
+.date {
+  text-align: right !important;
+}
+.author {
+  text-align: center;
+}
+
+.showPage {
+  width: 80% !important;
+  /* border: black solid 1px; */
+  color: aliceblue;
+
+  margin-left: 137px !important;
+}
+.pagination {
+  text-align: right !important;
+}
+.image {
+  text-align: center;
+}
+
+.blogSpace {
+  background-color: black;
+
+  color: black;
+
+  height: 17px;
+  border-color: black;
+}
+.bodyStyle {
+  font-size: 20px;
+  color: rgb(0, 0, 0) !important;
+
+  width: 50% !important;
+
+  background-color: rgb(129, 138, 158);
+
+  margin-left: 20px !important;
+}
