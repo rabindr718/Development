@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+  </head>
+  <body>
+    <h1>Details</h1>
+    <label>Name:</label><br />
+    <input type="text" id="name" /><br />
+    <button id="subt" onclick="addInput()">Submit</button>
+    <button id="edit" style="display: none">Update</button>
+    <div id="input-list"></div>
+    <script type="text/javascript">
+      var inputList = [];
+      function addInput() {
+        var name = document.getElementById("name").value;
+        var input = {
+          name: name,
+        };
+        inputList.push(input);
+        displayInputList();
+        resetInputFields();
+      }
+      function displayInputList() {
+        var inputListHTML = "<ul>";
+        for (var i = 0; i < inputList.length; i++) {
+          inputListHTML =
+            inputListHTML +
+            "<li><span>Name : " +
+            inputList[i].name +
+            "</span><br>";
+          inputListHTML =
+            inputListHTML +
+            "<button onclick='editInput(" +
+            i +
+            ")'>Edit</button> ";
+          inputListHTML =
+            inputListHTML +
+            "<button onclick='deleteInput(" +
+            i +
+            ")'>Delete</button></li>";
+        }
+        inputListHTML = inputListHTML + "</ul>";
+        document.getElementById("input-list").innerHTML = inputListHTML;
+      }
+      function editInput(index) {
+        var input = inputList[index];
+        document.getElementById("name").value = input.name;
+        document.getElementById("subt").style.display = "none";
+        document.getElementById("edit").style.display = "inline-block";
+        document
+          .getElementById("edit")
+          .setAttribute("onclick", "updateInput(" + index + ")");
+      }
+      function updateInput(index) {
+        var name = document.getElementById("name").value;
+        inputList[index].name = name;
+        displayInputList();
+        resetInputFields();
+        document.getElementById("subt").style.display = "inline-block";
+        document.getElementById("edit").style.display = "none";
+        document.getElementById("edit").setAttribute("onclick", "");
+      }
+      function deleteInput(index) {
+        inputList.splice(index, 1);
+        displayInputList();
+      }
+      function resetInputFields() {
+        document.getElementById("add").value = "";
+      }
+    </script>
+  </body>
+</html>

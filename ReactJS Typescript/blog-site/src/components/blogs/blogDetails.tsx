@@ -7,12 +7,22 @@ import classes from "./blogDetails.module.css";
 import Navigation from "../navigation/navbar";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { useRef } from "react";
 const BlogDetails: React.FC = () => {
   const navigate = useNavigate();
   const [blogAvailable, setBlogAvailable] = useState(true);
   const [delet, setBlogList] = useState(" ");
   const [updat, setUpdateBlog] = useState("");
+  const [description, setdescription] = useState("");
 
+  const [title, setTitle] = useState("");
+  const [selected, setSelectValue] = useState("");
+  const [file, setFile] = useState("");
+  const [author, setAuthor] = useState("");
+  const editor = useRef(null);
+  const [isEditMode, setIsEditMode] = useState(false);
+  const [isPublished, setIsPublished] = useState(false);
+  const [editVisible, setEditVisible] = useState(false);
   const data = localStorage.getItem("BlogData");
   const localStoreData = JSON.parse(data as any);
 
@@ -23,45 +33,58 @@ const BlogDetails: React.FC = () => {
     setBlogList(updatedData);
   };
 
-  // const UpdateBlogHandler = (id: any, username: string, blogData: string, textArea: string) => {
-  //   // Find the blog to update based on the given id
-  //   const blogToUpdate = localStoreData.find((item: any) => item.id === id);
-
-  //   if (blogToUpdate) {
-  //     // Update the properties of the blog object with the new data
-  //     blogToUpdate.username = username;
-  //     blogToUpdate.blogData = blogData;
-  //     blogToUpdate.textArea = textArea;
-
-  //     // Assuming the navigation function is correct, you can pass the updated blogData as a state to the target route
-  //     navigate(`/AddBlogs/${id}`, { state: { blogData: blogToUpdate } });
-  //     console.log(id);
-  //   } else {
-  //     console.log('Blog not found with the given id');
-  //   }
-  // };
-
   // const UpdateBlogHandler = (id: any) => {
   //   const blogToUpdate = localStoreData.find((item: any) => item.id === id);
   //   if (blogToUpdate) {
-
-  //     navigate(`/AddBlogs/${id}`);
+  //     navigate(`/AddBlogs/${id}`, { state: { blogData: blogToUpdate } });
   //     console.log(id);
   //   }
   // };
-  const UpdateBlogHandler = (id: any) => {
-    const blogToUpdate = localStoreData.find((item: any) => item.id === id);
-    if (blogToUpdate) {
-      navigate(`/AddBlogs/${id}`, { state: { blogData: blogToUpdate } });
-      console.log(id);
-    }
-  };
 
   const paginationNext = () => {
     navigate("/");
   };
   const paginationPrevious = () => {
     navigate("/");
+  };
+
+  //Here ypdate or edit
+  const UpdateBlogHandler = (e: any) => {
+    setIsEditMode(true);
+    // Here Copy and Edit Code From Add Blog Handler
+    const parser = new DOMParser();
+    const htmlDocument = parser.parseFromString(description, "text/html");
+    const plainText = htmlDocument.body.textContent;
+
+    const BlogData = {
+      id: Math.floor(Math.random() * 100 + 1),
+      Date,
+      plainText,
+      title,
+      authorUser: author,
+      file,
+      selected,
+    };
+    console.log(BlogData);
+
+    let blogsString = localStorage.getItem("BlogData");
+    if (!blogsString) {
+      blogsString = "[]";
+    }
+    const blogs = JSON.parse(blogsString);
+    blogs.push(BlogData);
+    localStorage.setItem("BlogData", JSON.stringify(blogs));
+    // The End
+    console.log(e.id, "this is id");
+
+    // Populate fields with data for editing
+    // setTitle(BlogData.title);
+    // setSelectValue(BlogData.selected);
+    // setFile(BlogData.file);
+    // setAuthor(BlogData.authorUser);
+    // setdescription(BlogData.plainText);
+
+    navigate(`/AddBlogs/${BlogData.id}`);
   };
 
   return (
@@ -124,30 +147,3 @@ const BlogDetails: React.FC = () => {
 };
 
 export default BlogDetails;
-
-  // const UpdateBlogHandler = (id: any, username: string, blogData: string, textArea: string) => {
-  //   // Find the blog to update based on the given id
-  //   const blogToUpdate = localStoreData.find((item: any) => item.id === id);
-
-  //   if (blogToUpdate) {
-  //     // Update the properties of the blog object with the new data
-  //     blogToUpdate.username = username;
-  //     blogToUpdate.blogData = blogData;
-  //     blogToUpdate.textArea = textArea;
-
-  //     // Assuming the navigation function is correct, you can pass the updated blogData as a state to the target route
-  //     navigate(`/AddBlogs/${id}`, { state: { blogData: blogToUpdate } });
-  //     console.log(id);
-  //   } else {
-  //     console.log('Blog not found with the given id');
-  //   }
-  // };
-
-  // const UpdateBlogHandler = (id: any) => {
-  //   const blogToUpdate = localStoreData.find((item: any) => item.id === id);
-  //   if (blogToUpdate) {
-
-  //     navigate(`/AddBlogs/${id}`);
-  //     console.log(id);
-  //   }
-  // };
