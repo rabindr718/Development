@@ -55,14 +55,30 @@ const BlogDetails: React.FC = () => {
   //   }
   // };
 
+  // import { useNavigate } from 'react-router-dom';
+
   const EditBlogHandler = (id: any) => {
     const selectedBlog = localStoreData.find((blog: any) => blog.id === id);
 
     if (selectedBlog) {
-      // Navigate to the AddBlogs component with the selected blog's data as URL parameters
-      navigate(`/AddBlogs/${selectedBlog.id}`, {
-        state: { blog: selectedBlog },
+      // Extract necessary data from selectedBlog
+      const { title, selected, file, plainText, authorUser, date } =
+        selectedBlog;
+      console.log(selectedBlog, "Here selected");
+      // Encode data as URL parameters
+      const queryParams = new URLSearchParams({
+        id: selectedBlog.id,
+        title,
+        file,
+        selected,
+        plainText,
+        authorUser,
+        date,
       });
+      console.log(file);
+
+      // Navigate to AddBlogs component with encoded URL parameters
+      navigate(`/AddBlogs?${queryParams.toString()}`);
     } else {
       console.log("Blog not found");
     }

@@ -18,8 +18,9 @@ const AddBlogs: React.FC = () => {
 
   // Now, you can safely access the selected blog object as `blog` in this component
   const [description, setdescription] = useState("");
+  const navigate = useNavigate();
+  // Default to empty string if null
 
-  const [title, setTitle] = useState("");
   const [selected, setSelectValue] = useState("");
   const [file, setFile] = useState("");
   const [author, setAuthor] = useState(" ");
@@ -34,22 +35,39 @@ const AddBlogs: React.FC = () => {
     localStorageData.username.charAt(0).toUpperCase() +
     localStorageData.username.substring(1);
 
-  const navigate = useNavigate();
+  // Retrieve data from URL parameters
+  const queryParams = new URLSearchParams(location.search);
 
-  // const location = useLocation();
-  // const { selectedBlog } = location.state || {};
-  // console.log(location.state);
-  // console.log("selectedBlog:", selectedBlog);
-  // useEffect(() => {
-  //   if (selectedBlog && selectedBlog.length > 0) {
-  //     const blogData = selectedBlog[0]; // Accessing the first element of the array
-  //     setTitle(blogData.title);
-  //     setSelectValue(blogData.selected);
-  //     setFile(blogData.file);
-  //     setAuthor(blogData.authorUser);
-  //     setIsEditMode(true);
-  //   }
-  // }, [selectedBlog]);
+  const Editedtitle = queryParams.get("title") || "";
+  const id = queryParams.get("id") || "";
+  const EditedSelect = queryParams.get("selected") || "";
+  const EditedText = queryParams.get("plainText") || "";
+  const EditedFile = queryParams.get("file") || ""; // Default to empty string if null
+
+  //Here for Title update
+  const [title, setTitle] = useState<string>(queryParams.get("title") || "");
+
+  const [titleFromQuery, setTitleFromQuery] = useState<string>(
+    queryParams.get("title") || ""
+  );
+  const [userTitle, setUserTitle] = useState<string>(titleFromQuery);
+
+  // Update userTitle when titleFromQuery changes
+  useEffect(() => {
+    setUserTitle(titleFromQuery);
+  }, [titleFromQuery]);
+  // The End
+  const EditedauthorUser = queryParams.get("authorUser") || "";
+  const Editeddate = queryParams.get("date") || "";
+
+  // Use the retrieved data as needed
+  console.log("ID:", id);
+  // console.log("Title:", title);
+  console.log("Selected:", EditedSelect);
+  console.log("PlainText:", EditedText);
+  console.log(EditedFile);
+  console.log("Author:", EditedauthorUser);
+  console.log("Date:", Editeddate);
 
   const handlePublishClick = () => {
     setIsPublished(true);
@@ -144,15 +162,7 @@ const AddBlogs: React.FC = () => {
   const closePageHandler = () => {
     navigate("/");
   };
-  let BlogData = {
-    id: Math.floor(Math.random() * 100 + 1),
-    date,
-    plainText,
-    title,
-    authorUser: username,
-    file,
-    selected,
-  };
+
   return (
     <>
       <Navbar bg="primary" variant="bg">
@@ -165,13 +175,21 @@ const AddBlogs: React.FC = () => {
           <label htmlFor="exampleFormControlInput1" className="form-label">
             <h2> Title</h2>
           </label>
+          {/* <input
+            type="text"
+            className="form-control"
+            id="exampleFormControlInput1"
+            placeholder="Write Title"
+            value={title ? `${title}` : Editedtitle}
+            onChange={(event) => setTitle(event.target.value)}
+          /> */}
           <input
             type="text"
             className="form-control"
             id="exampleFormControlInput1"
             placeholder="Write Title"
-            // value={blogData.title}
-            onChange={(event) => setTitle(event.target.value)}
+            value={userTitle}
+            onChange={(event) => setUserTitle(event.target.value)}
           />
         </div>
         <div className="mb-3">
@@ -181,7 +199,7 @@ const AddBlogs: React.FC = () => {
           <div className="text-editor">
             <JoditEditor
               ref={editor}
-              value={description}
+              value={EditedText}
               onChange={(content) => {
                 setdescription(content);
               }}
@@ -197,13 +215,15 @@ const AddBlogs: React.FC = () => {
               className="form-control"
               type="file"
               id="formFileMultiple"
+              {...(EditedFile && <span>{EditedFile}</span>)}
+              value={EditedFile ? EditedFile : EditedFile}
               onChange={fileFetchHandler}
             />
           </div>
           <Form.Group className="input-group">
             <Form.Select
               className="form-control"
-              value={BlogData.selected}
+              value={EditedSelect}
               onChange={(e) => setSelectValue(e.target.value)}
             >
               <option value="Version">Version</option>
