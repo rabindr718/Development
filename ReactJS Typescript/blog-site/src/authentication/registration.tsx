@@ -54,35 +54,6 @@ const Registration: React.FC = (props: any) => {
       let isFound = false;
 
       console.log(valList);
-
-      // for (let i = 0; i < valList.length; i++) {
-      //   if (valList[i].Username === username) {
-      //     setvalList("Username is already used");
-      //     isFound = true;
-      //     break;
-      //   } else if (valList[i].Email === email) {
-      //     setvalList("Email is already used");
-      //     isFound = true;
-      //     break;
-      //   }
-      // }
-      // if (isFound === false) {
-      //   setvalList([
-      //     ...valList,
-      //     {
-      //       id: valList.length,
-      //       username: username,
-      //       Email: email,
-      //       fullname: fullname,
-      //       password: password,
-      //     },
-      //   ]);
-      //   console.log(inputValue);
-
-      //   // }
-      //   LoginHandler();
-      // }
-      // localStorage.setItem("allkeys", JSON.stringify([...valList, inputValue]));
       console.log(inputValue);
       localStorage.setItem("LoginData", JSON.stringify(inputValue));
       navigate("/Login");

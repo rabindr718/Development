@@ -12,12 +12,12 @@ function Edit() {
   const [age, setAge] = useState("");
 
   var index = EmployeData.map((e) => e.id).indexOf(id);
-
   let handleSubmit = (e) => {
     e.preventDefault();
     let a = EmployeData[index];
     a.name = name;
     a.age = age;
+    console.log(a);
 
     History("/");
   };
