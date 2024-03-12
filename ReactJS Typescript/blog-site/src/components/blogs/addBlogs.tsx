@@ -9,40 +9,47 @@ import Navigation from "../navigation/navbar";
 import { useNavigate, useLocation } from "react-router-dom";
 
 const AddBlogs: React.FC = () => {
-  const [updateBlog, setUpdateBlog] = useState(null);
-
   let new_Date: Date = new Date();
   const date: string = `${new_Date.getDate()}/${
     new_Date.getMonth() + 1
   }/${new_Date.getFullYear()}`;
 
+  const location = useLocation();
+
+  // Now, you can safely access the selected blog object as `blog` in this component
+  const [description, setdescription] = useState("");
+
   const [title, setTitle] = useState("");
   const [selected, setSelectValue] = useState("");
   const [file, setFile] = useState("");
-  const [author, setAuthor] = useState("");
+  const [author, setAuthor] = useState(" ");
   const editor = useRef(null);
   const [isEditMode, setIsEditMode] = useState(false);
   const [isPublished, setIsPublished] = useState(false);
   const [editVisible, setEditVisible] = useState(false);
+  const localStorageData = JSON.parse(
+    localStorage.getItem("LoginData") as string
+  );
+  const username =
+    localStorageData.username.charAt(0).toUpperCase() +
+    localStorageData.username.substring(1);
 
-  const location = useLocation();
-  const blogData = location.state?.blogData;
   const navigate = useNavigate();
 
-  useEffect(() => {
-    if (blogData) {
-      setTitle(blogData.title);
-      setSelectValue(blogData.selected);
-      setFile(blogData.file);
-      setAuthor(blogData.authorUser);
-      setIsEditMode(true);
-    }
-  }, [blogData]);
-
-  const handleDeleteClick = () => {
-    // Perform action when Delete button is clicked
-    // ...
-  };
+  // const location = useLocation();
+  // const { selectedBlog } = location.state || {};
+  // console.log(location.state);
+  // console.log("selectedBlog:", selectedBlog);
+  // useEffect(() => {
+  //   if (selectedBlog && selectedBlog.length > 0) {
+  //     const blogData = selectedBlog[0]; // Accessing the first element of the array
+  //     setTitle(blogData.title);
+  //     setSelectValue(blogData.selected);
+  //     setFile(blogData.file);
+  //     setAuthor(blogData.authorUser);
+  //     setIsEditMode(true);
+  //   }
+  // }, [selectedBlog]);
 
   const handlePublishClick = () => {
     setIsPublished(true);
@@ -52,8 +59,6 @@ const AddBlogs: React.FC = () => {
     setIsEditMode(false);
     setIsPublished(false);
   };
-
-  const [description, setdescription] = useState("");
 
   const fileInput = (event: any) => setFile(event.target.value);
 
@@ -77,16 +82,16 @@ const AddBlogs: React.FC = () => {
     const htmlDocument = parser.parseFromString(description, "text/html");
     const plainText = htmlDocument.body.textContent;
 
-    const BlogData = {
+    let BlogData = {
       id: Math.floor(Math.random() * 100 + 1),
       date,
       plainText,
       title,
-      authorUser: author,
+      authorUser: username,
       file,
       selected,
     };
-    console.log(BlogData);
+    console.log("Add LOG FUNCTION", BlogData.selected);
 
     let blogsString = localStorage.getItem("BlogData");
     if (!blogsString) {
@@ -98,51 +103,19 @@ const AddBlogs: React.FC = () => {
     navigate("/HomeAfterLogin");
   };
 
-  // const handleEditClick = (e: any) => {
-  //   setIsEditMode(true);
-  //   //Here Copy and Edit Code From Add Blog Handler
-  //   const parser = new DOMParser();
-  //   const htmlDocument = parser.parseFromString(description, "text/html");
-  //   const plainText = htmlDocument.body.textContent;
-
-  //   const BlogData = {
-  //     id: Math.floor(Math.random() * 100 + 1),
-  //     date,
-  //     plainText,
-  //     title,
-  //     authorUser: author,
-  //     file,
-  //     selected,
-  //   };
-  //   console.log(BlogData);
-
-  //   let blogsString = localStorage.getItem("BlogData");
-  //   if (!blogsString) {
-  //     blogsString = "[]";
-  //   }
-  //   const blogs = JSON.parse(blogsString);
-  //   blogs.push(BlogData);
-  //   localStorage.setItem("BlogData", JSON.stringify(blogs));
-
-  //   // The End
-  //   console.log(e.id, "this is id");
-  //   navigate(`/AddBlogs/${BlogData.id}`);
-  // };
-
   const handleEditClick = () => {
     setIsEditMode(true);
 
-    // Copying and editing code from Add Blog Handler to populate the fields
     const parser = new DOMParser();
     const htmlDocument = parser.parseFromString(description, "text/html");
     const plainText = htmlDocument.body.textContent;
 
-    const BlogData = {
-      id: Math.floor(Math.random() * 100 + 1), // Assuming you're generating a new ID for editing
+    let BlogData = {
+      id: Math.floor(Math.random() * 100 + 1),
       date,
       plainText,
       title,
-      authorUser: author,
+      authorUser: username,
       file,
       selected,
     };
@@ -165,14 +138,21 @@ const AddBlogs: React.FC = () => {
     }
     localStorage.setItem("BlogData", JSON.stringify(blogs));
 
-    // Navigate to the edit page with the ID of the edited blog
     navigate(`/AddBlogs/${BlogData.id}`);
   };
 
   const closePageHandler = () => {
     navigate("/");
   };
-
+  let BlogData = {
+    id: Math.floor(Math.random() * 100 + 1),
+    date,
+    plainText,
+    title,
+    authorUser: username,
+    file,
+    selected,
+  };
   return (
     <>
       <Navbar bg="primary" variant="bg">
@@ -190,7 +170,7 @@ const AddBlogs: React.FC = () => {
             className="form-control"
             id="exampleFormControlInput1"
             placeholder="Write Title"
-            value={title}
+            // value={blogData.title}
             onChange={(event) => setTitle(event.target.value)}
           />
         </div>
@@ -223,7 +203,7 @@ const AddBlogs: React.FC = () => {
           <Form.Group className="input-group">
             <Form.Select
               className="form-control"
-              value={selected}
+              value={BlogData.selected}
               onChange={(e) => setSelectValue(e.target.value)}
             >
               <option value="Version">Version</option>
@@ -242,8 +222,8 @@ const AddBlogs: React.FC = () => {
               id="formFileMultiple"
               onChange={(event) => setAuthor(event.target.value)}
               disabled={!isEditMode}
-              value={author}
-              placeholder={author}
+              value={username}
+              placeholder={username}
             />
           </div>
         </div>

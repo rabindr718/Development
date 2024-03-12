@@ -6,40 +6,27 @@ import Nav from "react-bootstrap/Nav";
 import classes from "./blogDetails.module.css";
 import Navigation from "../navigation/navbar";
 import { useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
 import { useRef } from "react";
 const BlogDetails: React.FC = () => {
   const navigate = useNavigate();
   const [blogAvailable, setBlogAvailable] = useState(true);
   const [delet, setBlogList] = useState(" ");
-  const [updat, setUpdateBlog] = useState("");
-  const [description, setdescription] = useState("");
 
   const [title, setTitle] = useState("");
-  const [selected, setSelectValue] = useState("");
   const [file, setFile] = useState("");
   const [author, setAuthor] = useState("");
   const editor = useRef(null);
-  const [isEditMode, setIsEditMode] = useState(false);
   const [isPublished, setIsPublished] = useState(false);
   const [editVisible, setEditVisible] = useState(false);
   const data = localStorage.getItem("BlogData");
   const localStoreData = JSON.parse(data as any);
-
+  console.log("Here Data", localStoreData);
   const DeleteBlogHandler = (id: any) => {
     console.log(id);
     const updatedData = localStoreData.filter((item: any) => item.id !== id);
     localStorage.setItem("BlogData", JSON.stringify(updatedData));
     setBlogList(updatedData);
   };
-
-  // const UpdateBlogHandler = (id: any) => {
-  //   const blogToUpdate = localStoreData.find((item: any) => item.id === id);
-  //   if (blogToUpdate) {
-  //     navigate(`/AddBlogs/${id}`, { state: { blogData: blogToUpdate } });
-  //     console.log(id);
-  //   }
-  // };
 
   const paginationNext = () => {
     navigate("/");
@@ -48,45 +35,46 @@ const BlogDetails: React.FC = () => {
     navigate("/");
   };
 
-  //Here ypdate or edit
-  const UpdateBlogHandler = (e: any) => {
-    setIsEditMode(true);
-    // Here Copy and Edit Code From Add Blog Handler
-    const parser = new DOMParser();
-    const htmlDocument = parser.parseFromString(description, "text/html");
-    const plainText = htmlDocument.body.textContent;
+  // const EditBlogHandler = (id: any) => {
+  //   const selectedBlog = localStoreData.filter((blog: any) => blog.id === id);
+  //   if (selectedBlog.length > 0) {
+  //     selectedBlog.forEach((blog: any) => {
+  //       console.log("Title:", blog.title);
+  //       console.log("Selected:", blog.selected);
+  //       console.log("ID:", blog.id);
+  //       console.log("PlainText:", blog.plainText);
+  //       console.log("Author:", blog.authorUser);
+  //       console.log("Date:", blog.date);
+  //       console.log(typeof selectedBlog);
+  //     });
+  //     navigate(`/AddBlogs/${selectedBlog[0].id}`, {
+  //       state: { selectedBlog: selectedBlog },
+  //     });
 
-    const BlogData = {
-      id: Math.floor(Math.random() * 100 + 1),
-      Date,
-      plainText,
-      title,
-      authorUser: author,
-      file,
-      selected,
-    };
-    console.log(BlogData);
+  //     console.log(selectedBlog[0].id);
+  //   }
+  // };
 
-    let blogsString = localStorage.getItem("BlogData");
-    if (!blogsString) {
-      blogsString = "[]";
+  const EditBlogHandler = (id: any) => {
+    const selectedBlog = localStoreData.find((blog: any) => blog.id === id);
+
+    if (selectedBlog) {
+      // Navigate to the AddBlogs component with the selected blog's data as URL parameters
+      navigate(`/AddBlogs/${selectedBlog.id}`, {
+        state: { blog: selectedBlog },
+      });
+    } else {
+      console.log("Blog not found");
     }
-    const blogs = JSON.parse(blogsString);
-    blogs.push(BlogData);
-    localStorage.setItem("BlogData", JSON.stringify(blogs));
-    // The End
-    console.log(e.id, "this is id");
-
-    // Populate fields with data for editing
-    // setTitle(BlogData.title);
-    // setSelectValue(BlogData.selected);
-    // setFile(BlogData.file);
-    // setAuthor(BlogData.authorUser);
-    // setdescription(BlogData.plainText);
-
-    navigate(`/AddBlogs/${BlogData.id}`);
   };
 
+  const localStorageData = JSON.parse(
+    localStorage.getItem("LoginData") as string
+  );
+  const username =
+    localStorageData.username.charAt(0).toUpperCase() +
+    localStorageData.username.substring(1);
+  console.log(username);
   return (
     <div>
       <Navbar bg="primary" variant="bg">
@@ -101,7 +89,7 @@ const BlogDetails: React.FC = () => {
             <div key={id}>
               <Modal.Title>
                 <h5>Show Blog</h5>
-                <h1>{e.title}</h1>
+                <h1 data-value={title}>{(e as any).title}</h1>
               </Modal.Title>
               <p className={classes.date}>Published Date : {" " + e.date}</p>
               <div className={classes.image}>
@@ -122,7 +110,7 @@ const BlogDetails: React.FC = () => {
                 </Button>{" "}
                 <Button
                   variant="success primary"
-                  onClick={() => UpdateBlogHandler(e.id)}
+                  onClick={() => EditBlogHandler(e.id)}
                 >
                   Edit
                 </Button>
@@ -147,3 +135,31 @@ const BlogDetails: React.FC = () => {
 };
 
 export default BlogDetails;
+
+// setIsEditMode(true);
+//     // Here Copy and Edit Code From Add Blog Handler
+//     const parser = new DOMParser();
+//     const htmlDocument = parser.parseFromString(description, "text/html");
+//     const plainText = htmlDocument.body.textContent;
+
+//     const BlogData = {
+//       id: Math.floor(Math.random() * 100 + 1),
+//       Date,
+//       plainText,
+//       title,
+//       authorUser: author,
+//       file,
+//       selected,
+//     };
+//     console.log(BlogData);
+
+//     let blogsString = localStorage.getItem("BlogData");
+//     if (!blogsString) {
+//       blogsString = "[]";
+//     }
+//     const blogs = JSON.parse(blogsString);
+//     blogs.push(BlogData);
+//     localStorage.setItem("BlogData", JSON.stringify(blogs));
+//     // The End
+
+//     navigate(`/AddBlogs/${BlogData.id}`);
