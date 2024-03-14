@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ATTENDENCE</title>
+<style>
+    /* CSS rules for table styling */
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+   
+
+    select{
+      height: 25px;
+      width: 110px;
+
+    },
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+    /* Target anchor elements within "COMPANY NAME" cells */
+    td:nth-child(2) a {
+        text-decoration: none; /* Remove underline */
+    }
+    /* Align specific columns to center */
+    th:nth-child(1),
+    td:nth-child(1),
+    th:nth-child(4),
+    td:nth-child(4),
+    th:nth-child(5),
+    td:nth-child(5) {
+        text-align: center;
+    }
+    /* Styling for editable date input */
+    .editable-date {
+        display: flex;
+        align-items: center;
+    }
+    .editable-date input {
+        border: none;
+        width: calc(100% - 35px);
+    }
+    .editable-date button {
+        margin-left: 5px;
+        background-color: green !important; /* Set button background color to green */
+        color: white; /* Set button text color to white */
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+    #img-heading{
+       height: 26px;
+       padding-right: 14px;
+
+    }
+</style>
+</head>
+<body>
+<!-- //RABINDRA KUMAR SHARMA -->
+
+<h1 align="center"><img id="img-heading" src="C:\Users\Admin\Pictures\ATTENDENCE-Pic\image001 (1).jpg">ATTENDENCE REPORT</h1>
+<table id="companyTable">
+    <thead>
+        <tr>
+            <th>SR.NO</th>
+            <th>COMPANY NAME</th>
+            <th>DATE</th>
+            <th>SOFTWARE NAME</th>
+            <th>DEVICE STATUS</th>
+            <th>REPORT STATUS</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Data will be populated here -->
+    </tbody>
+</table>
+
+<script>
+    function loadData() {
+        const storedData = JSON.parse(localStorage.getItem('CompanyData'));
+        return storedData || CompanyData;
+    }
+    const CompanyData = [
+        {
+            "SR.NO": "1",
+            "COMPANY NAME": "DURGA CRANE",
+            "LINK": "http://att.easytimeonline.in:8050/durga_crane/Login",
+            "DATE": "2024-03-12",
+            "REPORT STATUS": true,
+            "SOFTWARE NAME": "WDMS SOFTWARE",
+           
+            "DEVICE STATUS": "ONLINE" 
+        },
+        {
+            "SR.NO": "2",
+            "COMPANY NAME": "NAVKAR EVENTS",
+            "LINK": "http://att.easytimeonline.in:8050/navkar_events/Login",
+            "DATE": "2024-03-12",
+            "REPORT STATUS": false,
+           "SOFTWARE NAME": "SMART-OFFICE SOFTWARE",
+            "DEVICE STATUS": "OFFLINE" // Updated key for DEVICE STATUS
+        },
+        {
+            "SR.NO": "3",
+            "COMPANY NAME": "DEEP PRINT",
+            "LINK":"http://att.easytimeonline.in:8050/deepprint/Login",
+            "DATE": "2024-03-12",
+            "REPORT STATUS": true,
+            "SOFTWARE NAME": "SMART-OFFICE SOFTWARE",
+            "DEVICE STATUS": "ONLINE"
+        },
+        {
+            "SR.NO": "3",
+             "COMPANY NAME": "UNIMECH INDUSTRIES",
+          "LINK":"http://att.easytimeonline.in:8050/deepprint/Login",
+             "DATE": "2024-03-12",
+           "REPORT STATUS": true,
+          "SOFTWARE NAME": "SMART-OFFICE SOFTWARE",
+          "DEVICE STATUS": "OFFLINE"
+    },
+  
+    {
+        "SR.NO": "4",
+        "COMPANY NAME": "DEEPAK POLYPLAST",
+         "LINK":"http://att.easytimeonline.in:8050/deepakpolyplast/Login",
+        "DATE": "2024-03-12",
+        "REPORT STATUS": true,
+        "SOFTWARE NAME": "SMART-OFFICE SOFTWARE",
+         "DEVICE STATUS": "ONLINE"
+    },
+    {
+        "SR.NO": "5",
+        "COMPANY NAME": "VIJAYA MATERNITY & SURGICAL NURSING HOME",
+         "LINK":"http://att.easytimeonline.in:8050/VIJAYA_NURSING_HOME/login",
+        "DATE": "2024-03-12", 
+        "REPORT STATUS": true,
+         "SOFTWARE NAME": "SMART-OFFICE SOFTWARE",
+         "DEVICE STATUS": "OFFLINE"
+    },
+    {
+        "SR.NO": "6",
+        "COMPANY NAME": "PRIMARY PACKAGING",
+         "LINK":"http://att.easytimeonline.in:8050/primary_packaging/Login",
+        "DATE": "2024-03-12",
+         "REPORT STATUS": true,
+       "SOFTWARE NAME": "SMART-OFFICE SOFTWARE",
+         "DEVICE STATUS": "ONLINE"
+    },
+    {
+        "SR.NO": "7",
+        "COMPANY NAME": "MODERN DENIM LIMITED",
+         "LINK":"http://att.easytimeonline.in:8050/moderndenim/login",
+        "DATE": "2024-03-12",
+         "REPORT STATUS": true,
+       "SOFTWARE NAME": "WDMS SOFTWARE",
+         "DEVICE STATUS": "OFFLINE"
+    },
+    {
+        "SR.NO": "8",
+        "COMPANY NAME": "MASTER PET INDUSTRIES",
+         "LINK":"http://att.easytimeonline.in:8050/master_pet_industries/login",
+        "DATE": "2024-03-12",
+         "REPORT STATUS": true,
+         "SOFTWARE NAME": "SMART-OFFICE SOFTWARE",
+         "DEVICE STATUS": "ONLINE"
+    },
+    {
+        "SR.NO": "9",
+        "COMPANY NAME": "SEAL-PACK",
+         "LINK":"http://att.easytimeonline.in:8050/sealpack/login",
+        "DATE": "2024-03-12",
+        "REPORT STATUS": true,
+        "SOFTWARE NAME": "WDMS SOFTWARE",
+         "DEVICE STATUS": "OFFLINE"
+    },
+    {
+        "SR.NO": "10",
+        "COMPANY NAME": "ORIGIN DESIGN STUDIOS",
+         "LINK":"http://att.easytimeonline.in:8050/origin_design_studio/Login",
+        "DATE": "2024-03-12",
+         "REPORT STATUS": true,
+         "SOFTWARE NAME": "SMART-OFFICE SOFTWARE",
+         "DEVICE STATUS": "ONLINE"
+    },
+    {
+        "SR.NO": "11",
+        "COMPANY NAME": "HCP DESIGN PLANING MANAGEMENT PVT. LTD.",
+         "LINK":"http://att.easytimeonline.in:8050/HCP_DESIGN/login",
+        "DATE": "2024-03-12",
+         "REPORT STATUS": true,
+         "SOFTWARE NAME": "SMART-OFFICE SOFTWARE",
+         "DEVICE STATUS": "OFFLINE"
+    },
+    {
+        "SR.NO": "12",
+        "COMPANY NAME": "AHMEDABAD DENTAL",
+         "LINK":"http://att.easytimeonline.in:8050/Ahmedabad_Dental/login",
+        "DATE": "2024-03-12",
+         "REPORT STATUS": true,
+        "SOFTWARE NAME": "SMART-OFFICE SOFTWARE",
+        "DEVICE STATUS": "ONLINE"
+    },
+    {
+        "SR.NO": "13",
+        "COMPANY NAME": "TEXEL LTD",
+         "LINK":"http://att.easytimeonline.in:8050/texelltd/Login",
+        "DATE": "2024-03-12",
+         "REPORT STATUS": true,
+        "SOFTWARE NAME": "CLIENT-SIDE",
+         "DEVICE STATUS": "OFFLINE"
+    },
+    {
+        "SR.NO": "14",
+        "COMPANY NAME": "UNIQUE AIRA LINED VALVES_UNIT-1",
+         "LINK":"http://att.easytimeonline.in:8050/unique_aira/login",
+        "DATE": "2024-03-12",
+         "REPORT STATUS": true,
+        "SOFTWARE NAME": "SMART-OFFICE SOFTWARE",
+         "DEVICE STATUS": "ONLINE"
+    },
+    {
+        "SR.NO": "15",
+        "COMPANY NAME": "HI SPEED INTERNATIONAL COURIER,(AHD, BRD)",
+         "LINK":"http://att.easytimeonline.in:8050/hispeed/login",
+        "DATE": "2024-03-12",
+        "REPORT STATUS": true,
+       "SOFTWARE NAME": "SMART-OFFICE SOFTWARE",
+         "DEVICE STATUS": "OFFLINE"
+    },
+    {
+        "SR.NO": "16",
+        "COMPANY NAME": "CLOCK WORK INTERNATIONAL COURIER",
+         "LINK":"http://att.easytimeonline.in:8050/clockwork/login",
+        "DATE": "2024-03-12",
+         "REPORT STATUS": true,
+        "SOFTWARE NAME": "SMART-OFFICE SOFTWARE",
+         "DEVICE STATUS": "ONLINE"
+    },
+    {
+        "SR.NO": "17",
+        "COMPANY NAME": "INFINITE FOOD SOLUTION",
+         "LINK":"http://att.easytimeonline.in:8050/infinitefood/login",
+        "DATE": "2024-03-12",
+         "REPORT STATUS": true,
+         "SOFTWARE NAME": "SMART-OFFICE SOFTWARE",
+         "DEVICE STATUS": "OFFLINE"
+    },
+    {
+        "SR.NO": "18",
+        "COMPANY NAME": "SHREE LAXMI VIDYAMANDIR",
+         "LINK":"http://att.easytimeonline.in:8050/shreelaxmi_vidhyamandir/Login",
+        "DATE": "2024-03-12",
+         "REPORT STATUS": true,
+        "SOFTWARE NAME": "SMART-OFFICE SOFTWARE",
+         "DEVICE STATUS": "ONLINE"
+    },
+    {
+        "SR.NO": "19",
+        "COMPANY NAME": "EXCELON IP",
+         "LINK":"http://att.easytimeonline.in:8050/EXCELON_IP/Login",
+        "DATE": "2024-03-12",
+         "REPORT STATUS": true,
+        "SOFTWARE NAME": "SMART-OFFICE SOFTWARE",
+         "DEVICE STATUS": "OFFLINE"
+    },
+    {
+        "SR.NO": "20",
+        "COMPANY NAME": "CHUZEE FOODS PVT. LTD. ",
+         "LINK":"http://att.easytimeonline.in:8050/ChuzeeFoods/Login",
+        "DATE": "2024-03-12",
+         "REPORT STATUS": true,
+        "SOFTWARE NAME": "SMART-OFFICE SOFTWARE",
+         "DEVICE STATUS": "ONLINE"
+    },
+    {
+        "SR.NO": "21",
+        "COMPANY NAME": "VELOCITY ENGINEERS & PROJECT CONSULTANTS",
+         "LINK":"http://att.easytimeonline.in:8050/Velocity/login",
+        "DATE": "2024-03-12",
+         "REPORT STATUS": true,
+         "SOFTWARE NAME": "SMART-OFFICE SOFTWARE",
+         "DEVICE STATUS": "OFFLINE"
+    },
+    {
+        "SR.NO": "22",
+        "COMPANY NAME": "UNIQUE AIRA LINED VALVES_UNIT-2",
+         "LINK":"http://att.easytimeonline.in:8050/Unique_Aira_2/login",
+        "DATE": "2024-03-12",
+         "REPORT STATUS": true,
+        "SOFTWARE NAME": "SMART-OFFICE SOFTWARE",
+         "DEVICE STATUS": "ONLINE"
+    },
+    {
+        "SR.NO": "23",
+        "COMPANY NAME": "SANGAM ELEMENTORY SCHOOL",
+         "LINK":"http://att.easytimeonline.in:8050/sangam_school/login",
+        "DATE": "2024-03-12",
+         "REPORT STATUS": true,
+       "SOFTWARE NAME": "WDMS SOFTWARE",
+         "DEVICE STATUS": "OFFLINE"
+    },
+    {
+        "SR.NO": "24",
+        "COMPANY NAME": "FOCUS LIGHTING AND FIXTURES LTD",
+         "LINK":"http://att.easytimeonline.in:8050/focuslighting/Login",
+        "DATE": "2024-03-12",
+        "REPORT STATUS": true,
+       "SOFTWARE NAME": "CLIENT-SIDE",
+         "DEVICE STATUS": "ONLINE"
+    },
+    {
+        "SR.NO": "25",
+        "COMPANY NAME": "CONNOTE HEALTHCARE",
+         "LINK":"http://att.easytimeonline.in:8050/connote_helthcare/Login",
+        "DATE": "2024-03-12",
+         "REPORT STATUS": true,
+        "SOFTWARE NAME": "WDMS SOFTWARE",
+         "DEVICE STATUS": "OFFLINE"
+    },
+
+
+    {
+        "SR.NO": "26",
+        "COMPANY NAME": "RADIENT CONTROLS",
+         "LINK":"http://att.easytimeonline.in:8050/radiant_controls/Login",
+        "DATE": "2024-03-12",
+          "REPORT STATUS": true,
+        "SOFTWARE NAME": "SMART-OFFICE SOFTWARE",
+         "DEVICE STATUS": "ONLINE"
+          // Add more data here if needed
+    },
+
+
+        // Add more data here if needed
+    ];
+
+    const tableBody = document.querySelector('#companyTable tbody');
+
+    // Function to populate table rows with data
+    function populateTable(data) {
+        data.forEach(company => {
+            const row = document.createElement('tr');
+            Object.entries(company).forEach(([key, value]) => {
+                if (key !== "LINK" && key !== "REPORT STATUS") { // Exclude the LINK and REPORT STATUS columns
+                    const cell = document.createElement('td');
+                    if (key === "COMPANY NAME") {
+                        const link = document.createElement('a');
+                        link.href = company.LINK;
+                        link.textContent = value;
+                        link.target = "_blank"; // Open link in new tab
+                        cell.appendChild(link);
+                    } else if (key === "DATE") {
+                        const dateCell = document.createElement('div');
+                        const dateInput = document.createElement('input');
+                        dateInput.type = 'date';
+                        dateInput.value = value;
+                        dateInput.classList.add('editable-date');
+                        dateCell.appendChild(dateInput);
+
+                        const saveButton = document.createElement('button');
+                        saveButton.textContent = 'Save';
+                        saveButton.style.backgroundColor = '#00ff00';
+                        saveButton.style.transition = 'background-color 0.3s'; // Add transition effect for smooth color change
+                        saveButton.addEventListener('mouseover', function() {
+                            this.style.backgroundColor = 'cyan';
+                            });
+                        saveButton.addEventListener('mouseout', function() {
+                        this.style.backgroundColor = '#00ff00'; // Restores original color on mouseout
+                        });
+
+                        saveButton.style.border = 'none';
+                        saveButton.style.cursor = 'pointer';
+                        saveButton.style.borderRadius = '7px';
+                        saveButton.style.width = '80px'; // Set the width to your desired size
+                        saveButton.style.height = '30px';
+                        saveButton.addEventListener('click', (event) => {
+                            const newValue = dateInput.value;
+                            const companyName = event.target.closest('tr').querySelector('td:nth-child(2) a').textContent;
+                            updateCompanyDate(companyName, newValue);
+                        });
+                        dateCell.appendChild(saveButton);
+                        cell.appendChild(dateCell);
+                    } else if (key === "DEVICE STATUS") {
+                        const select = document.createElement('select');
+                        const option1 = document.createElement('option');
+                        option1.value = 'ONLINE';
+                        option1.style.backgroundColor='#00ff00'
+                        option1.textContent = 'ONLINE';
+                        const option2 = document.createElement('option');
+                        option2.value = 'OFFLINE';
+                        option2.style.backgroundColor='#ff0000'
+                        option2.textContent = 'OFFLINE';
+                        select.appendChild(option1);
+                        select.appendChild(option2);
+                        select.value = value; // Set the initial value
+                        select.addEventListener('change', (event) => {
+                            const newValue = select.value;
+                            const companyName = event.target.closest('tr').querySelector('td:nth-child(2) a').textContent;
+                            updateCompanyDeviceStatus(companyName, newValue);
+                        });
+                        cell.appendChild(select);
+                    } else {
+                        cell.textContent = value;
+                    }
+                    row.appendChild(cell);
+                }
+            });
+
+            // Add a checkbox in the "REPORT STATUS" column for each row
+            const reportStatusCell = document.createElement('td');
+            const reportStatusCheckbox = document.createElement('input');
+            reportStatusCheckbox.type = 'checkbox';
+            reportStatusCheckbox.style.height='25px'
+            reportStatusCheckbox.style.width='27px'
+           reportStatusCheckbox.style.textAlign = 'center';
+            reportStatusCheckbox.checked = company['REPORT STATUS'];
+            reportStatusCheckbox.addEventListener('change', function() {
+                const companyName = row.querySelector('td:nth-child(2) a').textContent;
+                updateReportStatus(companyName, reportStatusCheckbox.checked);
+            });
+            reportStatusCell.appendChild(reportStatusCheckbox);
+            row.appendChild(reportStatusCell);
+
+            tableBody.appendChild(row);
+        });
+    }
+
+    // Call the function to populate the table
+    populateTable(loadData());
+
+    // Function to update report status in localStorage
+    function updateReportStatus(companyName, status) {
+        const data = loadData();
+        const companyToUpdate = data.find(company => company['COMPANY NAME'] === companyName);
+        if (companyToUpdate) {
+            companyToUpdate['REPORT STATUS'] = status;
+            localStorage.setItem('CompanyData', JSON.stringify(data));
+        }
+    }
+
+    // Function to update company date in localStorage
+    function updateCompanyDate(companyName, date) {
+        const data = loadData();
+        const companyToUpdate = data.find(company => company['COMPANY NAME'] === companyName);
+        if (companyToUpdate) {
+            companyToUpdate['DATE'] = date;
+            localStorage.setItem('CompanyData', JSON.stringify(data));
+        }
+    }
+
+    // Function to update device status in localStorage
+    function updateCompanyDeviceStatus(companyName, status) {
+        const data = loadData();
+        const companyToUpdate = data.find(company => company['COMPANY NAME'] === companyName);
+        if (companyToUpdate) {
+            companyToUpdate['DEVICE STATUS'] = status;
+            localStorage.setItem('CompanyData', JSON.stringify(data));
+        }
+    }
+</script>
+</body>
+</html>
