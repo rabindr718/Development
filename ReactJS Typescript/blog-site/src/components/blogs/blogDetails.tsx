@@ -35,28 +35,6 @@ const BlogDetails: React.FC = () => {
     navigate("/");
   };
 
-  // const EditBlogHandler = (id: any) => {
-  //   const selectedBlog = localStoreData.filter((blog: any) => blog.id === id);
-  //   if (selectedBlog.length > 0) {
-  //     selectedBlog.forEach((blog: any) => {
-  //       console.log("Title:", blog.title);
-  //       console.log("Selected:", blog.selected);
-  //       console.log("ID:", blog.id);
-  //       console.log("PlainText:", blog.plainText);
-  //       console.log("Author:", blog.authorUser);
-  //       console.log("Date:", blog.date);
-  //       console.log(typeof selectedBlog);
-  //     });
-  //     navigate(`/AddBlogs/${selectedBlog[0].id}`, {
-  //       state: { selectedBlog: selectedBlog },
-  //     });
-
-  //     console.log(selectedBlog[0].id);
-  //   }
-  // };
-
-  // import { useNavigate } from 'react-router-dom';
-
   const EditBlogHandler = (id: any) => {
     const selectedBlog = localStoreData.find((blog: any) => blog.id === id);
 
@@ -105,7 +83,7 @@ const BlogDetails: React.FC = () => {
             <div key={id}>
               <Modal.Title>
                 <h5>Show Blog</h5>
-                <h1 data-value={title}>{(e as any).title}</h1>
+                <h1>{e.Editedtitle}</h1>
               </Modal.Title>
               <p className={classes.date}>Published Date : {" " + e.date}</p>
               <div className={classes.image}>

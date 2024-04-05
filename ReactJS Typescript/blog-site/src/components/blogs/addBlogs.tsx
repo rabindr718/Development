@@ -38,25 +38,18 @@ const AddBlogs: React.FC = () => {
   // Retrieve data from URL parameters
   const queryParams = new URLSearchParams(location.search);
 
-  const Editedtitle = queryParams.get("title") || "";
+  // const Editedtitle = queryParams.get("title") || "";
   const id = queryParams.get("id") || "";
   const EditedSelect = queryParams.get("selected") || "";
   const EditedText = queryParams.get("plainText") || "";
   const EditedFile = queryParams.get("file") || ""; // Default to empty string if null
 
   //Here for Title update
-  const [title, setTitle] = useState<string>(queryParams.get("title") || "");
-
-  const [titleFromQuery, setTitleFromQuery] = useState<string>(
+  const [Editedtitle, setEditedtitle] = useState(
     queryParams.get("title") || ""
   );
-  const [userTitle, setUserTitle] = useState<string>(titleFromQuery);
 
-  // Update userTitle when titleFromQuery changes
-  useEffect(() => {
-    setUserTitle(titleFromQuery);
-  }, [titleFromQuery]);
-  // The End
+  // const [title, setTitle] = useState<string>(queryParams.get("title") || "");
   const EditedauthorUser = queryParams.get("authorUser") || "";
   const Editeddate = queryParams.get("date") || "";
 
@@ -104,7 +97,7 @@ const AddBlogs: React.FC = () => {
       id: Math.floor(Math.random() * 100 + 1),
       date,
       plainText,
-      title,
+      Editedtitle,
       authorUser: username,
       file,
       selected,
@@ -132,7 +125,7 @@ const AddBlogs: React.FC = () => {
       id: Math.floor(Math.random() * 100 + 1),
       date,
       plainText,
-      title,
+      Editedtitle: Editedtitle,
       authorUser: username,
       file,
       selected,
@@ -175,22 +168,24 @@ const AddBlogs: React.FC = () => {
           <label htmlFor="exampleFormControlInput1" className="form-label">
             <h2> Title</h2>
           </label>
-          {/* <input
-            type="text"
-            className="form-control"
-            id="exampleFormControlInput1"
-            placeholder="Write Title"
-            value={title ? `${title}` : Editedtitle}
-            onChange={(event) => setTitle(event.target.value)}
-          /> */}
           <input
             type="text"
             className="form-control"
             id="exampleFormControlInput1"
             placeholder="Write Title"
-            value={userTitle}
-            onChange={(event) => setUserTitle(event.target.value)}
+            value={Editedtitle}
+            onChange={(e) => {
+              setEditedtitle(e.target.value);
+            }}
           />
+          {/* <input
+            type="text"
+            className="form-control"
+            id="exampleFormControlInput1"
+            placeholder="Write Title"
+            value={Editedtitle}
+            onChange={(e) => setUserTitle(e.target.value)}
+          /> */}
         </div>
         <div className="mb-3">
           <label htmlFor="exampleFormControlTextarea1" className="form-label">
