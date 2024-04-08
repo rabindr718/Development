@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import EmployeeService from "./EmployeeService";
+import { EmployeeService } from "./EmployeeService";
 const EmployeeList = () => {
   const [employee, setEmployee] = useState([]);
   const navigate = useNavigate();
@@ -20,6 +20,10 @@ const EmployeeList = () => {
     navigate("/addEmployee");
   };
 
+  const updateEmployee = (id) => {
+    console.log(id);
+    navigate(`/editEmployee/${id}`);
+  };
   return (
     <div className="container">
       <button className="btn btn-primary" onClick={RedirectToADDEmployee}>
@@ -34,6 +38,7 @@ const EmployeeList = () => {
               <th>Employee FirstName</th>
               <th>Employee LastName</th>
               <th>Employee Email Id</th>
+              <th>Actions</th>
             </tr>
           </thead>
           <tbody>
@@ -45,6 +50,14 @@ const EmployeeList = () => {
                   <td>{emp.firstname}</td>
                   <td>{emp.lastname}</td>
                   <td>{emp.email}</td>
+                  <td>
+                    <button
+                      className="btn btn-info"
+                      onClick={() => updateEmployee(emp.id)}
+                    >
+                      Update
+                    </button>
+                  </td>
                 </tr>
               );
             })}
