@@ -1,12 +1,26 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { EmployeeService } from "./EmployeeService";
+import { EmployeeService, deleteEmployee } from "./EmployeeService";
 const EmployeeList = () => {
   const [employee, setEmployee] = useState([]);
   const navigate = useNavigate();
 
   useEffect(() => {
     // Fetch all employees when the component mounts
+
+    // EmployeeService()
+    //   .then((response) => {
+    //     setEmployee(response.data);
+    //   })
+    //   .catch((error) => {
+    //     console.error("Error fetching employees:", error);
+    //   });
+
+    //SAME METHOD COPY FOR REUSE in below getAllEmployee
+    // Fetch all employees when the component mounts
+    getAllEmployee();
+  }, []);
+  const getAllEmployee = () => {
     EmployeeService()
       .then((response) => {
         setEmployee(response.data);
@@ -14,7 +28,7 @@ const EmployeeList = () => {
       .catch((error) => {
         console.error("Error fetching employees:", error);
       });
-  }, []);
+  };
 
   const RedirectToADDEmployee = () => {
     navigate("/addEmployee");
@@ -24,6 +38,18 @@ const EmployeeList = () => {
     console.log(id);
     navigate(`/editEmployee/${id}`);
   };
+  //HERE FOR DELETE EMPLOYEE
+  const removeEmployee = (id) => {
+    console.log(employee);
+    console.log(employee);
+    console.log(id);
+    deleteEmployee(id)
+      .then((response) => {
+        getAllEmployee();
+      })
+      .catch((error) => console.log(error));
+  };
+
   return (
     <div className="container">
       <button className="btn btn-primary" onClick={RedirectToADDEmployee}>
@@ -56,6 +82,13 @@ const EmployeeList = () => {
                       onClick={() => updateEmployee(emp.id)}
                     >
                       Update
+                    </button>
+                    <button
+                      style={{ marginLeft: "10px" }}
+                      className="btn btn-danger"
+                      onClick={() => removeEmployee(emp.id)}
+                    >
+                      Delete
                     </button>
                   </td>
                 </tr>
