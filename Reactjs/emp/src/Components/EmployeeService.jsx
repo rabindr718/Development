@@ -15,3 +15,8 @@ export const getEmployee = (employeeId) =>
 //This Function is USED for Update
 export const updateEmployee = (employeeId, employee) =>
   axios.put(REST_SPRINGBOOT_API + "/" + employeeId, employee);
+
+//This Function is Used to Delete the The data of Given id from Server using React Appllication
+
+export const deleteEmployee = (employeeId) =>
+  axios.delete(REST_SPRINGBOOT_API + "/" + employeeId);

@@ -32,12 +32,13 @@ export const EmployeeComponent = () => {
           console.error(error);
         });
     }
-  });
+  }, []);
 
   //HERE SUBMIT BUTTON OF FORM
   //also Send DATA TO SERVER Using createEmployee
   const SubmitOrUpdateHandler = (e) => {
     e.preventDefault();
+
     if (FormValidation()) {
       const employee = { firstname, lastname, email };
       console.log(employee);
@@ -91,6 +92,8 @@ export const EmployeeComponent = () => {
     setErrors(ErrorCopy);
     return true;
   };
+  //CHATGPT GENERATED
+  //HERE
 
   //PAGE NAME DYNAMICALLY CHANGES USING PARAMS Id
   const PageTitle = () => {
@@ -117,7 +120,7 @@ export const EmployeeComponent = () => {
                 <input
                   type="text"
                   placeholder="Enter Employee FirstName"
-                  name="firstName"
+                  name="firstname"
                   value={firstname}
                   // Here Dynamically check errors
                   // className="form-control"
@@ -136,7 +139,7 @@ export const EmployeeComponent = () => {
                 <input
                   type="text"
                   placeholder="Enter Employee LastName"
-                  name="lastName"
+                  name="lastname"
                   value={lastname}
                   className={`form-control ${
                     errors.lastname ? "is-invalid" : ""
@@ -150,7 +153,7 @@ export const EmployeeComponent = () => {
               <div className="form-group mb-2">
                 <label className="form-label">Email Id</label>
                 <input
-                  type="email"
+                  type="text"
                   placeholder="Enter Employee Email id"
                   name="email"
                   value={email}
