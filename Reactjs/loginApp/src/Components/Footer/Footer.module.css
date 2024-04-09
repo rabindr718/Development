@@ -1,0 +1,11 @@
+.footer {
+  width: 100%;
+  height: 90px;
+  background-color: slategrey;
+  text-align: center;
+  color: white;
+  position: fixed;
+  bottom: 0; /*Fix the Footer from button*/
+  left: 0; /*Fix the Footer from RIGHT and belwo left*/
+  right: 0;
+}

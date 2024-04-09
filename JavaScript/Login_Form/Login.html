@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Modal</title>
+  <style>.loginContainer {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  max-width: 400px; /* Limiting the width for smaller screens */
+  text-align: center;
+  background-color: rgba(255, 0, 0, 0.8); /* Using rgba to add transparency */
+  padding: 20px;
+}
+
+.loginForm {
+  background-color: white; /* Changing the background color of the form */
+  padding: 20px;
+  border-radius: 10px; /* Adding rounded corners */
+}
+
+.loginForm h2 {
+  margin-bottom: 20px; /* Adding margin below the heading */
+}
+
+.loginForm form {
+  margin-top: 20px; /* Adding space between heading and form */
+}
+
+.loginForm label {
+  display: block; /* Displaying labels in block format */
+  margin-bottom: 5px; /* Adding margin below labels */
+}
+
+.loginForm input[type="text"],
+.loginForm input[type="password"],
+.loginForm input[type="submit"] {
+  width: 100%; /* Making inputs full width */
+  padding: 10px; /* Adding padding to inputs */
+  margin-bottom: 10px; /* Adding margin below inputs */
+  border: 1px solid #ccc; /* Adding border to inputs */
+  border-radius: 5px; /* Adding rounded corners to inputs */
+}
+
+.loginForm input[type="submit"] {
+  background-color: #4CAF50; /* Changing submit button color */
+  color: white; /* Changing text color of submit button */
+  cursor: pointer; /* Changing cursor to pointer */
+}
+
+.loginForm input[type="submit"]:hover {
+  background-color: #45a049; /* Changing background color on hover */
+}
+</style>
+  </head>
+<body>
+  <div class="loginContainer">
+    <div class="loginForm">
+      <h2>Login</h2>
+      <form>
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username"><br>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password"><br><br>
+        <input type="submit" value="Login">
+      </form>
+    </div>
+  </div>
+</body>
+</html>

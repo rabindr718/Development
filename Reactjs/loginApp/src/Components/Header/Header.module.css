@@ -1,0 +1,45 @@
+.header {
+  text-align: center;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  padding: 10px 20px; /* Adjust padding as needed */
+  margin-bottom: 2%;
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.navbar ul li {
+  display: inline-block;
+  font-size: 17px;
+
+  margin-right: 80px; /* Adjust margin as needed */
+}
+.navbar ul span {
+  display: inline-block;
+  color: #fff;
+  font-size: 25px;
+  font-weight: bold;
+  margin-left: -400px; /* Adjust margin as needed */
+  margin-right: 300px;
+}
+.navbar ul li:last-child {
+  margin-right: 0; /* Remove margin from last item */
+}
+
+.navbar ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar ul li a:hover {
+  text-decoration: underline;
+}
