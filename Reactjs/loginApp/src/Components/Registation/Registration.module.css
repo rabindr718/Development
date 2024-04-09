@@ -1,0 +1,74 @@
+/* * {
+  margin: 0;
+} */
+.RegistrationForm {
+  margin: 120px; /* This is for scrollable */
+  margin-left: 20%;
+  border-radius: 10px;
+  text-align: center;
+  background-color: aliceblue;
+  width: 60%;
+  height: 70%;
+  max-height: calc(100% - 415px);
+  overflow-y: auto;
+  top: 36%;
+  left: 50%;
+  bottom: 10%;
+  margin-top: 80px;
+}
+
+.RegistrationForm h2 {
+  margin-bottom: 20px; /* Adding margin below the heading */
+}
+
+.RegistrationForm form {
+  margin-top: 20px; /* Adding space between heading and form */
+}
+
+.RegistrationForm label {
+  display: block; /* Displaying labels in block format */
+  margin-bottom: 5px; /* Adding margin below labels */
+}
+
+.RegistrationForm input[type="text"],
+.RegistrationForm input[type="number"],
+.RegistrationForm input[type="password"] {
+  width: 50%; /* Making inputs full width */
+  padding: 10px; /* Adding padding to inputs */
+  margin-bottom: 10px; /* Adding margin below inputs */
+  border: 1px solid #ccc; /* Adding border to inputs */
+  border-radius: 5px; /* Adding rounded corners to inputs */
+}
+.RegistrationForm input[type="submit"] {
+  width: 15%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.RegistrationForm input[type="submit"] {
+  background-color: #4caf50; /* Changing submit button color */
+  color: white; /* Changing text color of submit button */
+  cursor: pointer; /* Changing cursor to pointer */
+}
+@media screen and (max-width: 520px) {
+  .RegistrationForm input[type="submit"] {
+    font-size: 4px; /* Reduce font size for smaller screens */
+    padding: 8px 16px; /* Adjust padding for smaller screens */
+  }
+}
+.RegistrationForm input[type="submit"]:hover {
+  background-color: #45a049; /* Changing background color on hover */
+}
+
+.fileInput {
+  padding: 10px;
+  border-radius: 5px;
+  width: 52.8%; /* Making inputs full width */
+  margin-bottom: 9px; /* Adding margin below inputs */
+  border: 1px solid #ccc; /* Adding border to inputs */
+  box-sizing: border-box;
+}
+.marginBotton {
+  margin-bottom: 18px;
+}

@@ -1,0 +1,50 @@
+.loginForm {
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  background-color: aliceblue;
+  width: 60%;
+  height: 40%;
+  position: fixed;
+  top: 33%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.loginForm h2 {
+  margin-bottom: 20px; /* Adding margin below the heading */
+}
+
+.loginForm form {
+  margin-top: 20px; /* Adding space between heading and form */
+}
+
+.loginForm label {
+  display: block; /* Displaying labels in block format */
+  margin-bottom: 5px; /* Adding margin below labels */
+}
+
+.loginForm input[type="text"],
+.loginForm input[type="password"] {
+  width: 50%; /* Making inputs full width */
+  padding: 10px; /* Adding padding to inputs */
+  margin-bottom: 10px; /* Adding margin below inputs */
+  border: 1px solid #ccc; /* Adding border to inputs */
+  border-radius: 5px; /* Adding rounded corners to inputs */
+}
+.loginForm input[type="submit"] {
+  width: 15%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.loginForm input[type="submit"] {
+  background-color: #4caf50; /* Changing submit button color */
+  color: white; /* Changing text color of submit button */
+  cursor: pointer; /* Changing cursor to pointer */
+}
+
+.loginForm input[type="submit"]:hover {
+  background-color: #45a049; /* Changing background color on hover */
+}
