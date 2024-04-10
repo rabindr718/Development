@@ -1,45 +1,79 @@
-.header {
-  text-align: center;
-}
-
 .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  margin: 0;
+  width: 100%;
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  background-color: #333;
-  padding: 10px 20px; /* Adjust padding as needed */
-  margin-bottom: 2%;
 }
 
-.navbar ul {
-  list-style: none;
-  padding: 0;
+.left {
+  flex: 1;
 }
 
-.navbar ul li {
-  display: inline-block;
-  font-size: 17px;
-
-  margin-right: 80px; /* Adjust margin as needed */
-}
-.navbar ul span {
-  display: inline-block;
-  color: #fff;
-  font-size: 25px;
-  font-weight: bold;
-  margin-left: -400px; /* Adjust margin as needed */
-  margin-right: 300px;
-}
-.navbar ul li:last-child {
-  margin-right: 0; /* Remove margin from last item */
+.center {
+  flex: 2;
+  text-align: center;
 }
 
-.navbar ul li a {
-  color: #fff;
+.right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  cursor: pointer;
+  color: white;
   text-decoration: none;
 }
 
-.navbar ul li a:hover {
-  text-decoration: underline;
+.navItems {
+  list-style-type: none;
+  padding: 0;
+  margin: 20;
+}
+
+.navItems li {
+  display: inline;
+  padding-right: 70px; /* Updated to 10px */
+}
+
+.navItems li:last-child {
+  margin-right: 0;
+}
+
+.navItems li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 17px;
+}
+.navItems li a:hover {
+  color: rgb(0, 247, 255);
+  text-decoration: none;
+  font-size: 17px;
+}
+.siteName {
+  font-weight: bold;
+  font-size: 33px;
+  margin-left: 14%;
+  color: blue;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.username {
+  margin-right: 10px;
+
+  text-decoration: none;
+}
+
+.userImage {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 14%;
 }
