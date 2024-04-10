@@ -9,3 +9,6 @@
   left: 0; /*Fix the Footer from RIGHT and belwo left*/
   right: 0;
 }
+.footerContainer {
+  margin-top: 2%;
+}
