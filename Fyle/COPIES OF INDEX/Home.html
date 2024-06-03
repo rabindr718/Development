@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="homepage.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+      <span id="showPop"></span>
+      <div class="split left">
+        <div class="leftDiv">
+          <div class="containleft">
+            <span class="title-main">AWARD WINNING</span>
+
+            <h1>DIGITAL MARKETING AGENCY</h1>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Dignissimos id praesentium iusto fugit quam neque sed delectus
+              quibusdam est modi veniam
+            </p>
+            <button onclick="PopUpFunction()" class="btnContact">
+              Contact us
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="split right">
+        <img src="image/1.jpg" />
+      </div>
+    </div>
+    <!-- POP UP STARTED -->
+    <div id="myModal" class="modal">
+      <div>
+        <span class="close">&times;</span>
+
+        <div class="popDisplay">
+          <form
+            class="popupModel"
+            action="https://getform.io/f/paygxdya"
+            method="POST"
+          >
+            <div class="popUpWindow">
+              <h2>Talk to us</h2>
+
+              <div class="input-container">
+                <input
+                  type="text"
+                  placeholder=" "
+                  class="full-width"
+                  id="workEmail"
+                  name="email"
+                />
+                <label for="workEmail">Work email*</label>
+              </div>
+              <br />
+              <div class="name-fields">
+                <!-- CODE FOR NAMES -->
+                <div class="input-container">
+                  <input
+                    type="text"
+                    placeholder=" "
+                    class="half-width"
+                    id="firstname"
+                    name="firstname"
+                  />
+                  <label for="workEmail">First name*</label>
+                </div>
+                <div class="input-container">
+                  <input
+                    type="text"
+                    placeholder=" "
+                    class="half-width"
+                    id="firstname"
+                    name="lastname"
+                  />
+                  <label for="workEmail">Last name*</label>
+                </div>
+                <br />
+              </div>
+
+              <div class="checkbox-container">
+                <input type="checkbox" name="checkbox" id="cb1" />
+                <label for="cb1" style="pointer-events: none" class="demoX"
+                  >I agree to flye's term and condition, and provide consent to
+                  send me communication.</label
+                >
+              </div>
+
+              <div class="contactBtn">
+                <button type="submit" class="contactUsbtn">Contact us</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- </POP UP ENDED> -->
+
+    <script src="script.js"></script>
+  </body>
+</html>

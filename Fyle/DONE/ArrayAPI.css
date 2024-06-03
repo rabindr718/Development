@@ -1,0 +1,162 @@
+.title-mainApi {
+  margin-top: 100px;
+  color: #ff0066;
+  font-size: 19px;
+}
+.apiH1 {
+  font-size: 46px;
+  width: 130%;
+}
+.container {
+  margin-top: 45px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.text-wrapper {
+  display: flex;
+  flex-direction: column; /* Stack the span and h1 vertically */
+  margin-right: 20px; /* Add space between the text wrapper and the paragraph */
+}
+
+.paragraph-wrapper {
+  display: flex;
+  align-items: flex-start; /* Align the paragraph to the top */
+}
+
+.paragraphW {
+  margin-top: 150px;
+  margin-left: 20px;
+  margin-right: 7%;
+  width: 880px;
+}
+.main-container {
+  margin-left: 9.6%;
+  margin-right: 0%;
+  padding-right: 0%;
+}
+
+/* Afer 3PM */
+
+.container-slider {
+  display: flex;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+.card {
+  display: flex;
+  gap: 1.5%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.dots-container {
+  text-align: left;
+  margin-top: 36px;
+  gap: 200px;
+}
+
+.dot {
+  height: 7.7px;
+  width: 7.7px;
+  margin: 0 10px;
+  background-color: black;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+}
+
+.dot.active {
+  background-color: #ff0066;
+}
+
+.dot.active::after {
+  content: "";
+  position: absolute;
+  top: -10.8px;
+  left: -10.8px;
+  width: 25px;
+  height: 25px;
+  border: 2px solid #ff0066;
+  border-radius: 50%;
+}
+
+.viewImg {
+  margin-right: 1px; /* Space between images */
+  display: flex;
+  flex-direction: column;
+  min-width: 311px;
+  height: 450px;
+  align-items: center;
+  justify-content: center;
+  position: relative; /* Ensure positioning for absolute child elements */
+  cursor: pointer;
+}
+
+.imageSize {
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.5s ease;
+}
+
+.viewImg:hover .imageSize {
+  opacity: 0; /* Hide the image on hover */
+}
+
+.details {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ff0066;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.viewImg:hover .details {
+  opacity: 1; /* Show the details on hover */
+}
+.no-underline {
+  text-decoration: none;
+}
+.detailsLogo {
+  width: 39px;
+  height: 42px;
+}
+
+.fontColorTitle {
+  color: white;
+  font-size: 1.5em;
+  margin-top: 10px;
+}
+
+.fontColor {
+  color: white;
+  margin-top: 30px;
+  text-align: justify;
+  padding-left: 14px;
+  padding-right: 14px;
+}
+
+.btnReadmore {
+  background-color: white;
+  color: #ff0066;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 2px;
+  height: 40px;
+  margin-top: 20px;
+  width: 150px;
+}
+
+.btnReadmore:hover {
+  background-color: #a0b2c4;
+  color: white;
+}

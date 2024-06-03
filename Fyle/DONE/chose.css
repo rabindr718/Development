@@ -1,0 +1,53 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: white;
+}
+.containerChose {
+  display: flex;
+  margin-left: 160px;
+}
+.choseContainer {
+  background-color: white;
+  width: 260px;
+  height: 260px;
+  margin-top: 50px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.main-title {
+  color: black;
+  font-size: 46px;
+  margin-top: 45px;
+}
+.heading-style {
+  margin-top: 60px;
+  text-align: center;
+}
+.headingOfTitle {
+  text-align: left;
+  /* font: normal normal medium 20px/80px Poppins; */
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+}
+
+#secondSpan {
+  margin-top: 10px;
+}
+.imageLogo {
+  width: 83px;
+  height: 83px;
+}
+.imageLogo1 {
+  width: 72px;
+  height: 72px;
+}
+.imageLogo2 {
+  width: 72px;
+  height: 72px;
+}
+.main-about {
+  color: #ff0066;
+  font-size: 19px;
+}

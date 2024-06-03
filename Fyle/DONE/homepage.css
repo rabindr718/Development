@@ -1,0 +1,224 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.split {
+  height: 100%;
+  width: 725px;
+  /* IN THIS SECTION ADJUST SIZE  */
+  position: relative;
+  z-index: 1;
+  top: 20px;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* Control the left side */
+.left {
+  left: 20;
+  height: 100%;
+  /* width: 30%; */
+  background-color: white;
+}
+
+.right {
+  right: 0;
+  width: 620px;
+  background-color: white;
+}
+
+/* If you want the content centered horizontally and vertically */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.leftDiv {
+  height: 100%;
+  width: 70%;
+  padding-left: 22%;
+}
+.containleft {
+  padding-top: 37%;
+}
+.btnContact {
+  background-color: #ff0066;
+  color: white;
+  margin-top: 14px;
+  padding: 9px 23px;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+}
+#h1tag {
+  font-size: 46px;
+}
+.title-main {
+  margin-top: 20%;
+  color: #ff0066;
+  font-size: 19px;
+}
+#h2tag {
+  padding-top: 10%;
+  margin-bottom: 5%;
+}
+/* Here Pop Model */
+.popupModel {
+  margin-top: 10%;
+  /* Main Model Code Display */
+  width: 37.9%;
+  background-color: white;
+  margin-left: 31%;
+  border-radius: 1%;
+  border: 1px solid #888;
+}
+
+.popupModel input[type="text"] {
+  padding: 10px;
+  width: 87.5%;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 2px solid #d6c3c3;
+}
+
+.contactUsbtn {
+  background-color: #ff0066;
+  width: 90%;
+  height: 50%;
+  color: white;
+  margin-top: 14px;
+  padding: 9px 23px;
+  font-size: 15px;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  margin-left: 1px;
+  border-radius: 5px;
+}
+.popUpWindow {
+  margin-left: 5%;
+}
+
+.mainId {
+  background-color: #d6c3c3;
+}
+.name-fields {
+  margin-top: -7px;
+  display: flex;
+  gap: 40px;
+}
+
+/*II */
+
+.full-width {
+  /* padding-top: 700px; */
+  margin-bottom: 7px;
+}
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
+.checkbox-container label {
+  display: flex;
+}
+
+.checkbox-container input[type="checkbox"] {
+  opacity: 0;
+  position: absolute;
+  cursor: pointer;
+}
+
+.checkbox-container ::before {
+  content: "";
+  width: 1.6em;
+  height: 1em;
+  border-radius: 0.25em;
+  margin-right: 0.5em;
+  margin-left: 0.1em;
+  border: 0.15em solid #ff0066;
+}
+
+.checkbox-container input[type="checkbox"]:checked + label::before {
+  content: "\002714";
+  background-color: #ff0066;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.demoX {
+  font-size: 18px;
+  padding-right: 85px;
+}
+
+.contactBtn {
+  padding-bottom: 7%;
+}
+::placeholder {
+  font-size: 19px;
+}
+.full-width,
+.half-width {
+  font-size: 19px;
+}
+
+/* for display label */
+.input-container {
+  position: relative;
+  margin-bottom: 25px; /* Add some space between input fields */
+}
+
+.input-container input {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.input-container label {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: #888;
+  transition: top 0.3s, font-size 0.3s, color 0.3s;
+  pointer-events: none;
+  font-size: 19px;
+}
+
+.input-container input:focus + label,
+.input-container input:not(:placeholder-shown) + label {
+  top: -1px;
+  font-size: 18px;
+  color: #333;
+}
+/* Here for modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}

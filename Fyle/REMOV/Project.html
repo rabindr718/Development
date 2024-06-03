@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="Project.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div>
+      <div class="project-title">
+        <span class="projectName">OUR PROJECT</span>
+        <h1>WHY WE ARE BEST</h1>
+      </div>
+      <div class="container-image">
+        <div class="container Left">
+          <!-- THIS IS PERMANENT INSTEAD IF API NOT WORK USE, ANTHING ISTEAD FOR STATUS -->
+          <img src="image" id="imageDisplay" />
+        </div>
+        <div class="container Right">
+          <!-- DYNAMIC IMAGE ADD HERE BELOW -->
+          <div class="scroll-image" data-img="P1.png">
+            <h2>Genderless Kei - Japan's Hot</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Doloribus repudiandae, iste commodi, sapiente?
+            </p>
+          </div>
+          <div class="scroll-image" data-img="P2.jpg">
+            <h2>Genderless Kei - Japan's Hot</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Doloribus repudiandae, iste commodi, sapiente?
+            </p>
+          </div>
+          <div class="scroll-image" data-img="P3.jpeg">
+            <h2>Genderless Kei - Japan's Hot</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Doloribus repudiandae, iste commodi, sapiente?
+            </p>
+          </div>
+          <div class="scroll-image" data-img="P4.jpg">
+            <h2>Genderless Kei - Japan's Hot</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Doloribus repudiandae, iste commodi, sapiente?
+            </p>
+          </div>
+          <div class="scroll-image" data-img="P5.png">
+            <h2>Genderless Kei - Japan's Hot</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Doloribus repudiandae, iste commodi, sapiente?
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const scrollImages = document.querySelectorAll(".scroll-image");
+        const imageDisplay = document.getElementById("imageDisplay");
+
+        scrollImages.forEach((item) => {
+          item.addEventListener("mouseover", () => {
+            const newImageSrc = item.getAttribute("data-img");
+            imageDisplay.setAttribute("src", newImageSrc);
+          });
+
+          item.addEventListener("mouseout", () => {
+            imageDisplay.setAttribute("src", "P1.png");
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
