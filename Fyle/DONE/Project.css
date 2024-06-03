@@ -1,0 +1,73 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: white;
+}
+.containerLeft {
+  width: 20px;
+  height: 30px;
+}
+.project-title {
+  text-align: center;
+  margin-top: 50px; /* Custom space from the top */
+}
+.projectName {
+  margin-top: 40px !important;
+  color: #ff0066;
+  font-size: 19px;
+}
+#h1Project {
+  font-size: 46px;
+}
+.h2Project {
+  padding-top: 36px;
+  margin-top: 10px;
+}
+.Projectcontainer {
+  margin-top: 2%;
+  margin-left: 5%;
+  height: 65%;
+  width: 50%;
+  position: relative;
+  z-index: 1;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+.ProjectLeft {
+  left: 0%;
+}
+.container-image {
+  display: flex;
+}
+
+#imageDisplay {
+  padding-bottom: 20px !important;
+  width: 620px;
+  position: relative;
+  height: 550.3px;
+  margin-left: 75px; /*Margin of image from left */
+  margin-top: 11.1px; /* Custom space from the top */
+}
+
+.ProjectRight {
+  right: 16%;
+  margin-top: 57.1px;
+  width: 27%;
+  height: 550.3px;
+  position: absolute;
+  /* overflow-x: none; */
+  margin-left: 300px;
+  background-color: rgb(248, 242, 242);
+}
+.scroll-image {
+  /* DO NOT EDIT BELOW DONE */
+  padding-left: 25px;
+  height: 38.79%;
+  padding-right: 25px;
+  text-align: left;
+  margin-top: -10%;
+  cursor: pointer;
+}
+.scroll-image:hover {
+  background-color: #ff0066;
+  color: white;
+}

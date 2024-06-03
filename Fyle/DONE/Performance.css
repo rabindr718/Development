@@ -1,0 +1,65 @@
+.containerPerformance {
+  display: flex;
+}
+.containerPerformanceInternal {
+  background-color: rgb(241, 237, 234);
+  width: 260px;
+  height: 260px;
+  margin: -85px;
+  margin-top: 5%;
+  margin-left: 127px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.containerPerformanceInternal:hover {
+  background-color: rgb(250, 250, 250);
+}
+.sucesimg {
+  margin-top: 40px;
+  width: 41px;
+  height: 38px;
+}
+.trophyimg {
+  margin-top: 40px;
+
+  width: 38px;
+  height: 40px;
+}
+.ctmrimg,
+.daysimg {
+  margin-top: 40px;
+  width: 40px;
+  height: 42px;
+}
+.headNumberAw {
+  margin-top: 2px;
+  margin-bottom: -10px;
+}
+.headNumberMn {
+  margin-top: -10px;
+  margin-bottom: -10px;
+}
+.manualSpan {
+  font-size: 19px;
+  margin-left: -9px;
+}
+.fontAwmSpan {
+  font-size: 19px;
+  margin-left: -9px;
+}
+.main-aboutPerformance {
+  color: #ff0066;
+  font-size: 19px;
+}
+.main-titlePerformance {
+  color: black;
+  font-size: 46px;
+  margin-top: 45px;
+}
+.heading-stylePerformance {
+  margin-top: 60px;
+  text-align: center;
+}
