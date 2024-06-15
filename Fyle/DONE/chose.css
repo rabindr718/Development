@@ -51,3 +51,38 @@ body {
   color: #ff0066;
   font-size: 19px;
 }
+/* Media query for screens with a maximum width of 768px (typical tablet size) */
+@media (max-width: 768px) {
+  .containerChose {
+    margin-left: 0; /* Reset left margin */
+  }
+
+  .choseContainer {
+    width: 200px; /* Adjust width for better fit on smaller screens */
+    height: 200px; /* Adjust height for better fit on smaller screens */
+  }
+
+  .main-title {
+    font-size: 28px; /* Adjust font size for better readability on smaller screens */
+    margin-top: 10px; /* Adjust margin for better spacing on smaller screens */
+  }
+
+  .heading-style {
+    margin-top: 20px; /* Adjust margin for better spacing on smaller screens */
+  }
+
+  .headingOfTitle {
+    font-size: 18px; /* Adjust font size for better readability on smaller screens */
+  }
+
+  .imageLogo,
+  .imageLogo1,
+  .imageLogo2 {
+    width: 60px; /* Adjust image size for better fit on smaller screens */
+    height: 60px; /* Adjust image size for better fit on smaller screens */
+  }
+
+  .main-about {
+    font-size: 14px; /* Adjust font size for better readability on smaller screens */
+  }
+}

@@ -25,17 +25,19 @@
 .FooterIMGStyle {
   background-color: #ff0066;
   position: relative;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  width: 1444px;
   height: 210px;
   display: flex;
   justify-content: center;
   align-items: center;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 100px 0;
+  margin-bottom: -9px;
+  margin-right: -90px;
 }
+
 .logoCompanies {
-  background-color: #ff0066;
-  /* Remove any margin settings */
   width: 60%;
 }
 .Footerparagraph {
@@ -43,7 +45,6 @@
 }
 .authorstyle {
   text-align: center;
-  /* margin-left: 7px; */
   width: 300px;
 }
 .authorLogo {
@@ -52,4 +53,14 @@
 .quoteDetails {
   margin-top: -50px;
   margin-left: 370px;
+}
+.footerColorBox {
+  width: 100%;
+  margin-right: 100px !important;
+  margin-left: -10px;
+}
+@media only screen and (max-width: 768px) {
+  .FooterIMGStyle {
+    padding: 30px 0; /* Adjusted padding for smaller screens */
+  }
 }

@@ -160,3 +160,53 @@
   background-color: #a0b2c4;
   color: white;
 }
+/* Media Query for smaller screens (max-width: 768px) */
+@media only screen and (max-width: 768px) {
+  .title-mainApi {
+    margin-top: 30px;
+    font-size: 14px;
+  }
+
+  .apiH1 {
+    font-size: 32px;
+  }
+
+  .container {
+    margin-top: 15px;
+  }
+
+  .paragraphW {
+    margin-top: 30px;
+    font-size: 14px;
+  }
+
+  .dots-container {
+    margin-top: 10px;
+  }
+
+  .dot {
+    height: 4px;
+    width: 4px;
+    margin: 0 3px;
+  }
+
+  .dot.active::after {
+    width: 12px;
+    height: 12px;
+  }
+
+  .fontColorTitle {
+    font-size: 1em;
+    margin-top: 3px;
+  }
+
+  .fontColor {
+    margin-top: 5px;
+  }
+
+  .btnReadmore {
+    height: 30px;
+    margin-top: 10px;
+    width: 100px;
+  }
+}

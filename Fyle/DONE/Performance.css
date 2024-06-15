@@ -3,11 +3,11 @@
 }
 .containerPerformanceInternal {
   background-color: rgb(241, 237, 234);
-  width: 232px;
+  width: 223px;
   height: 260px;
   margin: -85px;
   margin-top: 5%;
-  margin-left: 135px;
+  margin-left: 141px;
   text-align: center;
   line-height: 75px;
   font-size: 30px;
@@ -19,14 +19,6 @@
 }
 .sucesimg {
   margin-top: 40px;
-  width: 41px;
-  height: 38px;
-}
-.trophyimg {
-  margin-top: 40px;
-
-  width: 38px;
-  height: 40px;
 }
 .ctmrimg,
 .daysimg {
@@ -62,4 +54,26 @@
 .heading-stylePerformance {
   margin-top: 60px;
   text-align: center;
+}
+@media (max-width: 768px) {
+  .containerPerformanceInternal {
+    width: 150px; /* Adjust width for smaller screens */
+    height: 200px; /* Adjust height for smaller screens */
+    font-size: 20px; /* Adjust font size for smaller screens */
+  }
+
+  .sucesimg,
+  .ctmrimg,
+  .daysimg {
+    margin-top: 20px; /* Adjust margin top for smaller screens */
+  }
+
+  .main-titlePerformance {
+    font-size: 36px; /* Adjust font size for smaller screens */
+    margin-top: 30px; /* Adjust margin top for smaller screens */
+  }
+
+  .heading-stylePerformance {
+    margin-top: 40px; /* Adjust margin top for smaller screens */
+  }
 }
