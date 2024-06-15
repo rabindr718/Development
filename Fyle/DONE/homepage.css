@@ -1,7 +1,3 @@
-body {
-  font-family: Arial, sans-serif;
-}
-
 .split {
   height: 100%;
   width: 715px;
@@ -221,4 +217,32 @@ body {
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+  .split {
+    width: 60%; /* Adjusted for responsiveness */
+    padding-top: 10px; /* Adjusted for responsiveness */
+  }
+
+  .right {
+    width: 40%; /* Adjusted for responsiveness */
+  }
+
+  .popupModel {
+    width: 90%; /* Adjusted for responsiveness */
+    margin-left: 5%; /* Adjusted for responsiveness */
+  }
+
+  .popupModel input[type="text"] {
+    width: 90%; /* Adjusted for responsiveness */
+  }
+
+  .contactUsbtn {
+    width: 90%; /* Adjusted for responsiveness */
+  }
+
+  .input-container label {
+    font-size: 16px; /* Adjusted for responsiveness */
+  }
 }
