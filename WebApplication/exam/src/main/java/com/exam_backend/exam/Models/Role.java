@@ -6,9 +6,33 @@ import java.util.Set;
 @Entity
 @Table(name="roles")
 public class Role {
+    public Long getRoleId() {
+        return roleId;
+    }
+
+    public Role(Long roleId, String roleName, Set<UserRole> userRoles) {
+        this.roleId = roleId;
+        this.roleName = roleName;
+        this.userRoles = userRoles;
+    }
+
+    public void setRoleId(Long roleId) {
+        this.roleId = roleId;
+    }
+
+    public String getRoleName() {
+        return roleName;
+    }
+
+    public void setRoleName(String roleName) {
+        this.roleName = roleName;
+    }
+
     @Id
-    private Long roleid;
-    private String rollName;
+    @Column(name = "role_id")
+
+    private Long roleId;
+    private String roleName;
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "role")
     private Set<UserRole> userRoles=new HashSet<>();
@@ -25,24 +49,14 @@ public class Role {
         this.userRoles = userRoles;
     }
 
-    public Role(Long roleid, String rollName) {
-        this.roleid = roleid;
-        this.rollName = rollName;
-    }
 
-    public Long getRoleid() {
-        return roleid;
-    }
 
-    public void setRoleid(Long roleid) {
-        this.roleid = roleid;
-    }
 
     public String getRollName() {
-        return rollName;
+        return roleName;
     }
 
-    public void setRollName(String rollName) {
-        this.rollName = rollName;
+    public void setRollName(String roleName) {
+        this.roleName = roleName;
     }
 }
