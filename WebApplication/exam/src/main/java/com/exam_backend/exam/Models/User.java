@@ -3,12 +3,15 @@ package com.exam_backend.exam.Models;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
+import java.util.ArrayDeque;
+import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
 
 @Entity
 @Table(name="users") //Table name of below entity
 public class User {
+    public HashSet<UserRole> getUserRoles;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
@@ -113,4 +116,6 @@ public class User {
     public void setEnabled(boolean enabled) {
         this.enabled = enabled;
     }
+
+
 }
