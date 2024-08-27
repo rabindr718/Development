@@ -1,0 +1,15 @@
+/Users/rabindrakumarsharma/Development/NET c#/bin/Debug/net8.0/NET c#
+/Users/rabindrakumarsharma/Development/NET c#/bin/Debug/net8.0/NET c#.deps.json
+/Users/rabindrakumarsharma/Development/NET c#/bin/Debug/net8.0/NET c#.runtimeconfig.json
+/Users/rabindrakumarsharma/Development/NET c#/bin/Debug/net8.0/NET c#.dll
+/Users/rabindrakumarsharma/Development/NET c#/bin/Debug/net8.0/NET c#.pdb
+/Users/rabindrakumarsharma/Development/NET c#/obj/Debug/net8.0/NET c#.GeneratedMSBuildEditorConfig.editorconfig
+/Users/rabindrakumarsharma/Development/NET c#/obj/Debug/net8.0/NET c#.AssemblyInfoInputs.cache
+/Users/rabindrakumarsharma/Development/NET c#/obj/Debug/net8.0/NET c#.AssemblyInfo.cs
+/Users/rabindrakumarsharma/Development/NET c#/obj/Debug/net8.0/NET c#.csproj.CoreCompileInputs.cache
+/Users/rabindrakumarsharma/Development/NET c#/obj/Debug/net8.0/NET c#.sourcelink.json
+/Users/rabindrakumarsharma/Development/NET c#/obj/Debug/net8.0/NET c#.dll
+/Users/rabindrakumarsharma/Development/NET c#/obj/Debug/net8.0/refint/NET c#.dll
+/Users/rabindrakumarsharma/Development/NET c#/obj/Debug/net8.0/NET c#.pdb
+/Users/rabindrakumarsharma/Development/NET c#/obj/Debug/net8.0/NET c#.genruntimeconfig.cache
+/Users/rabindrakumarsharma/Development/NET c#/obj/Debug/net8.0/ref/NET c#.dll
