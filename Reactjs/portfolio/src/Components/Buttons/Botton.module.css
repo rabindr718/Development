@@ -1,6 +1,24 @@
 .container {
   text-align: center;
-  column-gap: 100px;
-  background-color: red;
+  column-gap: 26px;
   text-decoration: none;
+  display: flex;
+  margin-left: 29%;
+  gap: 4;
+}
+.porfolio {
+  text-decoration: none;
+  color: yellow;
+}
+.contact {
+  text-decoration: none;
+  color: yellow;
+}
+.aboutme {
+  text-decoration: none;
+  color: yellow;
+}
+.Services {
+  text-decoration: none;
+  color: yellow;
 }

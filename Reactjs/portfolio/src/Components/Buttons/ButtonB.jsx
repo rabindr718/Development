@@ -5,7 +5,8 @@ import { Link } from "react-router-dom";
 const ButtonB = () => {
   return (
     <div className={classes.container}>
-      <Link>Portfolio</Link> <Link>Contact</Link>{" "}
+      <Link className={classes.porfolio}>Portfolio</Link>{" "}
+      <Link className={classes.contact}>Contact</Link>{" "}
     </div>
   );
 };

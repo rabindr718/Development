@@ -4,7 +4,8 @@ import { Link } from "react-router-dom";
 const BottonA = () => {
   return (
     <div className={classess.container}>
-      <Link>About me</Link> <Link>Services</Link>{" "}
+      <Link className={classess.aboutme}>About me</Link>{" "}
+      <Link className={classess.Services}>Services</Link>{" "}
     </div>
   );
 };
