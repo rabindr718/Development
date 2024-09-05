@@ -7,12 +7,37 @@
  
    <style>
     .container {
-            display: flex; 
-            align-items: center; 
-            gap: 20px; 
-            padding: 10px; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 1%;
+    width: 93%;
+    border: 1px solid #ccc;
+    background-color: white;
+    position: absolute;
+    top: 43%;
+    left: 50%;
+    border-radius: 4px;
+    transform: translate(-50%, -50%);
+}
+
+.containerOuter{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 12%;
+            gap: 20px;
+            width: 57.9%;
             border: 1px solid #ccc;
-        }
+            background-color: #d1d1e0;
+            position: absolute;
+            top: 25%;
+            left: 50%;
+            border-radius: 5px;
+            transform: translate(-50%, -50%);
+
+}
 
         .content {
             display: flex; 
@@ -30,43 +55,96 @@
             background: none;
             cursor: pointer;
         }
-    #vehicle3{
+    #vehicle3, vehicle4, vehicle5{
             transform: scale(2.5);
-            margin-right: 10px;
+            margin-right: 0px;
+            margin-left: 4px;
       
 
     }
-.btn-add{
+    .parent-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px; 
+            box-sizing: border-box;
+            width: 60%; 
+            margin: 0 auto; 
+}
+
+
+.btn-add {
+            margin-right: auto; 
             background-color: #0066ff;
             font-size: 24px; 
-            padding: 12px 24px; 
-            border-radius: 4px; 
+            padding: 12px 24px;
+            border-radius: 5px; 
             background-color: #007bff; 
             transition: background-color 0.3s, border-color 0.3s;
+
 }
 
 .sortingSelect {
+            margin-left: 10px; 
             font-size: 22px; 
-            padding: 12px 24px; 
+            padding: 12px 24px;            
             border-radius: 4px; 
-            background-color: #d1d1e0; 
+            background-color: #d1d1e0;
             transition: background-color 0.3s, border-color 0.3s;
-        }
+}
 
+@media (max-width: 768px) {
 .parent-container {
-            display: flex;
-            justify-content: flex-end;
-            padding: 10px; 
-            border: 1px solid #ccc;
-        }
+        flex-direction: column;
+        align-items: stretch;
+  }
+
+.btn-add,
+.sortingSelect {
+        margin: 10px 0;
+        width: 100%; 
+  }
+}
+
+@media (min-width: 1241px) {
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 1%;
+    width: 93%;
+    border: 1px solid #ccc;
+    background-color: white;
+    position: absolute;
+    top: 43%;
+    left: 50%;
+    border-radius: 4px;
+    transform: translate(-50%, -50%);}
+
+}
+
+
+
+
+
+
+    .items1 {
+        margin-right: 60%;
+}
+
+@media (min-width: 768px){
+    .items1 {
+        margin-right: 60%;
+}
+}
    </style>
    
 </head>
 <body>
-    <h1>TODO LIST</h1>
-   <div >
-            <div class="parent-container">
-                <button class="btn-add">ADD TASK</button>
+    <h1 align="center">TODO LIST</h1>
+                <div class="parent-container">
+                    <button class="btn-add">Add Task</button>
                 
                     <select class="sortingSelect">
                         <option value="volvo">ALL</option>
@@ -74,22 +152,23 @@
                         <option value="mercedes">Mercedes</option>
                         <option value="audi">Audi</option>
                     </select>
-                    </div>
-                </div> 
-                <div class="container">
-                    <span class="items">
-                        <input  type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
-                    </span>
-                <div class="items">
-                    <span>Create a React Project</span><br>
-                    <span >5:33 AM, 05/09/2024</span>
                 </div>
-                <span class="items">
-                    <button ><img height="33px" src="/idelete-30.png"></button>
-                    <button ><img height="33px" src="/pencil-32.png"></button>
-                </span>
+                <div class="containerOuter">
+                    <div class="container">
+                            <span class="items">
+                                <input  type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                            </span>
+                            <div class="items1">
+                                <b>Create a React Project</b><br>
+                                <span >5:33 AM, 05/09/2024</span>
+                            </div>
+                            <span class="items2">
+                                <button ><img height="33px" src="/idelete-30.png"></button>
+                                <button ><img height="33px" src="/pencil-32.png"></button>
+                            </span>
 
-            </div>
+                    </div>
+                </div>
             
 </body>
 <script src="index.js"></script>
