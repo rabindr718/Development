@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ 
+   <style>
+    .container {
+            display: flex; 
+            align-items: center; 
+            gap: 20px; 
+            padding: 10px; 
+            border: 1px solid #ccc;
+        }
+
+        .content {
+            display: flex; 
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .actions {
+            display: flex; 
+            gap: 5px; 
+        }
+
+        button {
+            border: none;
+            background: none;
+            cursor: pointer;
+        }
+    #vehicle3{
+            transform: scale(2.5);
+            margin-right: 10px;
+      
+
+    }
+.btn-add{
+            background-color: #0066ff;
+            font-size: 24px; 
+            padding: 12px 24px; 
+            border-radius: 4px; 
+            background-color: #007bff; 
+            transition: background-color 0.3s, border-color 0.3s;
+}
+
+.sortingSelect {
+            font-size: 22px; 
+            padding: 12px 24px; 
+            border-radius: 4px; 
+            background-color: #d1d1e0; 
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+
+.parent-container {
+            display: flex;
+            justify-content: flex-end;
+            padding: 10px; 
+            border: 1px solid #ccc;
+        }
+   </style>
+   
+</head>
+<body>
+    <h1>TODO LIST</h1>
+   <div >
+            <div class="parent-container">
+                <button class="btn-add">ADD TASK</button>
+                
+                    <select class="sortingSelect">
+                        <option value="volvo">ALL</option>
+                        <option value="saab">Saab</option>
+                        <option value="mercedes">Mercedes</option>
+                        <option value="audi">Audi</option>
+                    </select>
+                    </div>
+                </div> 
+                <div class="container">
+                    <span class="items">
+                        <input  type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                    </span>
+                <div class="items">
+                    <span>Create a React Project</span><br>
+                    <span >5:33 AM, 05/09/2024</span>
+                </div>
+                <span class="items">
+                    <button ><img height="33px" src="/idelete-30.png"></button>
+                    <button ><img height="33px" src="/pencil-32.png"></button>
+                </span>
+
+            </div>
+            
+</body>
+<script src="index.js"></script>
+</html>
