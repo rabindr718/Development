@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centered Dropdown Arrow</title>
+    <style>
+       /* Container for the custom select */
+.custom-select-container {
+    position: relative;
+    display: inline-block;
+    width: 100%; /* Adjust width as needed */
+}
+
+/* Hide the native dropdown arrow */
+.custom-select {
+    appearance: none; /* Remove default dropdown arrow */
+    -webkit-appearance: none; /* Remove default dropdown arrow in WebKit browsers */
+    -moz-appearance: none; /* Remove default dropdown arrow in Firefox */
+    font-size: 22px; 
+    padding: 12px 24px; 
+    border-radius: 4px; 
+    background-color: #d1d1e0;
+    border: 1px solid #ccc; /* Border for visual separation */
+    transition: background-color 0.3s, border-color 0.3s;
+    text-align: center; /* Center text */
+    width: 100%; /* Adjust width as needed */
+}
+
+/* Custom arrow */
+.custom-select-container::after {
+    content: '▼'; /* Unicode character for down arrow */
+    font-size: 18px; /* Adjust arrow size */
+    position: absolute;
+    right: 10px; /* Position the arrow inside the select element */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Center vertically */
+    pointer-events: none; /* Make sure arrow does not interfere with clicks */
+}
+
+    </style>
+</head>
+<body>
+    <div class="custom-select-container">
+        <select class="custom-select">
+            <option value="volvo">ALL</option>
+            <option value="saab">Saab</option>
+            <option value="mercedes">Mercedes</option>
+            <option value="audi">Audi</option>
+        </select>
+    </div>
+</body>
+</html>

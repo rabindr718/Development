@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>TodoApp</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+.itemsContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 1%;
+    width: 100%; 
+    border: 1px solid #ccc;
+    background-color: white;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+.containerOuter {
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-start;
+    border: 1px solid #ccc;
+    top: -10%;
+    background-color: #d1d1e0;
+    width: 58.7%;
+    border-radius: 5px;
+    padding: 20px 20px 10px 20px;
+    margin: 0px auto; 
+}
+
+     .content {
+            display: flex; 
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .actions {
+            display: flex; 
+            gap: 5px; 
+        }
+
+        button {
+            border: none;
+            background: none;
+            cursor: pointer;
+        }
+
+        #vehicle3 {
+    transform: scale(2.5); 
+    margin-right: 0px;
+    margin-left: 4px;
+    text-decoration: none;
+}
+    .parent-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px; 
+            box-sizing: border-box;
+            width: 60%; 
+            margin: 0 auto; 
+}
+.btn-add {
+            margin-right: auto; 
+            background-color: #0066ff;
+            font-size: 24px; 
+            padding: 12px 24px;
+            border-radius: 5px; 
+            background-color: #007bff; 
+            transition: background-color 0.3s, border-color 0.3s;
+
+}
+.custom-select-container {
+    position: relative;
+    display: inline-block;
+    
+}
+ .sortingSelect {
+    appearance: none;
+    -webkit-appearance: none; 
+    -moz-appearance: none;
+    border-radius: 4px; 
+    border: none;
+    background-color: #d1d1e0;
+    border: 1px solid #ccc;
+    text-align: center; 
+    width: 93%;
+    outline: none;
+    margin-left: 10px; 
+    content: '▼';
+    background-size: 16px; 
+    font-size: 22px; 
+    padding: 12px 24px;            
+}
+.custom-select-container::after {
+  content: '▼';
+    font-size: 18px; 
+    position: absolute;
+    right: 10px; 
+    top: 50%;
+    transform: translateY(-50%); 
+    pointer-events: none;
+}
+/* .sortingSelect {
+  
+            margin-left: 10px; 
+            content: '▼';
+            font-size: 22px; 
+            padding: 12px 24px;            
+            border-radius: 4px; 
+            background-color: #d1d1e0;
+} */
+@media (min-width: 768px){
+    .items1 {
+        margin-right: 60%;
+}
+}
+
+.modal-body{
+    
+    text-align: center;
+}
+   </style>
+</head>
+<body>
+
+<div class="container12">
+    <h1 align="center">TODO LIST</h1>
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+     <!--BELOW ARE INPUT FORM -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Enter the Details</h4>
+        </div>
+        <div class="modal-body">
+            <div class="loginContainer">
+                <div class="loginForm">
+                  <!-- <h2>Login</h2> -->
+                  <form>
+                    <label for="username">Enter Title</label><br>
+                    <input type="text" id="username" placeholder="Enter Title" name="username"><br>
+                    <label for="birthdaytime">Birthday</label><br />
+                    <input type="submit" value="Submit" />
+                </form>
+                </div>
+              </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+         <!--ABOVE ARE INPUT FORM -->
+      </div>
+    </div>
+  </div>
+</div>
+<div class="parent-container">
+    <button type="button"  data-toggle="modal" data-target="#myModal" id="addtask" class="btn-add">Add Task</button>
+    <div class="custom-select-container" ><select class="sortingSelect">
+      <option value="volvo">ALL </option>
+      <option value="saab">Saab </option>
+      <option value="mercedes">Benz </option>
+      <option value="audi">Audi </option>
+  </select></div>
+</div>
+<div class="containerOuter">
+
+    <div><div id="itemsContainer"></div></div>
+
+    <!-- <div id="itemsContainer">
+            <span class="items">
+                <input  type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+            </span>
+            <div class="items1">
+                <b>Create a React Project</b><br>
+                <span >5:33 AM, 05/09/2024</span>
+            </div>
+            <span class="items2">
+                <button ><img height="33px" src="/idelete-30.png"></button>
+                <button ><img height="33px" src="/pencil-32.png"></button>
+            </span>
+
+    </div> -->
+</div>
+</body>
+<script src="index.js"></script>
+</html>

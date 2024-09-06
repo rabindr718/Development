@@ -6,7 +6,7 @@
     <title>Document</title>
  
    <style>
-    .container {
+    .container2 {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -16,12 +16,11 @@
     border: 1px solid #ccc;
     background-color: white;
     position: absolute;
-    top: 43%;
+    top: 44%;
     left: 50%;
     border-radius: 4px;
     transform: translate(-50%, -50%);
 }
-
 .containerOuter{
             display: flex;
             align-items: center;
@@ -32,14 +31,13 @@
             border: 1px solid #ccc;
             background-color: #d1d1e0;
             position: absolute;
-            top: 25%;
+            top: 27%;
             left: 50%;
             border-radius: 5px;
             transform: translate(-50%, -50%);
 
 }
-
-        .content {
+     .content {
             display: flex; 
             flex-direction: column;
             gap: 5px;
@@ -71,8 +69,6 @@
             width: 60%; 
             margin: 0 auto; 
 }
-
-
 .btn-add {
             margin-right: auto; 
             background-color: #0066ff;
@@ -83,7 +79,6 @@
             transition: background-color 0.3s, border-color 0.3s;
 
 }
-
 .sortingSelect {
             margin-left: 10px; 
             font-size: 22px; 
@@ -92,22 +87,19 @@
             background-color: #d1d1e0;
             transition: background-color 0.3s, border-color 0.3s;
 }
-
 @media (max-width: 768px) {
 .parent-container {
         flex-direction: column;
         align-items: stretch;
   }
-
 .btn-add,
 .sortingSelect {
         margin: 10px 0;
         width: 100%; 
   }
 }
-
 @media (min-width: 1241px) {
-.container {
+.container2 {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -123,13 +115,7 @@
     transform: translate(-50%, -50%);}
 
 }
-
-
-
-
-
-
-    .items1 {
+ .items1 {
         margin-right: 60%;
 }
 
@@ -138,14 +124,27 @@
         margin-right: 60%;
 }
 }
+
+.demo{
+    background-color: #007bff;
+}
    </style>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
    
 </head>
 <body>
     <h1 align="center">TODO LIST</h1>
                 <div class="parent-container">
-                    <button class="btn-add">Add Task</button>
-                
+                    <button id="addtask" class="btn-add">Add Task</button>
+<!--BELLOW ARE INPUT FORM -->
+                        <p id="demo">
+                        
+                          <!-- Modal -->
+  
+</p>
+<!--ABOVE ARE INPUT FORM -->
                     <select class="sortingSelect">
                         <option value="volvo">ALL</option>
                         <option value="saab">Saab</option>
@@ -154,7 +153,7 @@
                     </select>
                 </div>
                 <div class="containerOuter">
-                    <div class="container">
+                    <div class="container2">
                             <span class="items">
                                 <input  type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
                             </span>
