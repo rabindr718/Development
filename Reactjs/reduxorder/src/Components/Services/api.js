@@ -1,0 +1,58 @@
+export const dataArray = [
+  {
+    id: 1,
+    name: "Hotel Empire",
+    location: "North Indian, Kebabs, Biryani",
+    distance: "1.2 kms away",
+    image: ".jpg",
+  },
+  {
+    id: 2,
+    name: "Meghana Foods",
+    location: "South Indian, Kebabs, Biryani",
+    distance: "1.3 kms away",
+    image: "path/to/your/image.jpg",
+  },
+  {
+    id: 3,
+    name: "Kannur Food Point",
+    location: "Kerala Chinese",
+    distance: "3 kms away",
+    image: "path/to/your/image.jpg",
+  },
+  {
+    id: 4,
+    name: "Roti Wala",
+    location: "Home Food, North India, Thali",
+    distance: "1 kms away",
+    image: "path/to/your/image.jpg",
+  },
+  {
+    id: 5,
+    name: "Kannur Food Kitchen",
+    location: "Kerala Indian, Beverages",
+    distance: "1.2 kms away",
+    image: "path/to/your/image.jpg",
+  },
+  {
+    id: 6,
+    name: "Shyamji's Chhole Bhature",
+    location: "North Indian, Beverages",
+    distance: "1.2 kms away",
+    image: "path/to/your/image.jpg",
+  },
+  {
+    id: 7,
+    name: "Kabbab Magic",
+    location: "South Indian, Chinese, Biryani",
+    distance: "1.2 kms away",
+    image: "path/to/your/image.jpg",
+  },
+  {
+    id: 8,
+    name: "Muthashy's",
+    location: "Chinese, Indian, Kebabs, Biryani",
+    distance: "1.2 kms away",
+    image: "path/to/your/image.jpg",
+  },
+];
