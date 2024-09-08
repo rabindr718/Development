@@ -1,0 +1,122 @@
+.dispaydemo {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  place-items: center;
+  width: 90%;
+  margin: 0 auto;
+  gap: 4%;
+}
+.mapImage {
+  margin-top: -2px;
+  padding-top: -5px;
+}
+.searching {
+  float: right;
+  margin: 0% 10% 4% 0%;
+  /* DIFFERENT BETWEEN GRID+SEARCH */
+}
+.searchbar {
+  width: 570px;
+  height: 40px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1.3px solid #ccc;
+  font-size: 17px;
+  outline: none;
+  margin-right: 10px;
+}
+.searchbtn {
+  width: 109px;
+  height: 40px;
+  padding: 9px 10px 10px 10px;
+  background-color: black;
+  border-radius: 6px;
+  font-size: 17px;
+  justify-items: right;
+  color: white;
+  cursor: pointer;
+}
+
+.searchbar:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.dispaydemo ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  background-color: white;
+  /*  */
+}
+.shopname {
+  font-weight: bold;
+  width: 80%;
+  font-size: 19px;
+  display: block;
+  padding-bottom: 6px;
+}
+.foodtype {
+  color: rgb(106, 106, 106);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  margin-bottom: 90px;
+}
+.distance {
+}
+
+.tittle {
+  margin: 2% 2% 2% 2%;
+}
+
+.titleName {
+  font-weight: bold;
+}
+.imageTittle {
+  padding-left: 7px;
+}
+@media (max-width: 767px) {
+  .searching {
+    float: none;
+    margin: 2% 5% 5%;
+    text-align: center;
+  }
+
+  .searchbar {
+    width: 100%;
+    height: 35px;
+    padding: 8px;
+    font-size: 15px;
+    margin-right: 0;
+    box-sizing: border-box;
+  }
+
+  .searchbtn {
+    width: 100%;
+    height: 35px;
+    padding: 8px;
+    font-size: 15px;
+    box-sizing: border-box;
+  }
+}
+.itemImage {
+  border-radius: 4px;
+}
+.parent {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.customhr {
+  height: 12px;
+  margin: 16px 0;
+  border: 0;
+  width: 100vw;
+  box-shadow: inset 0 10px 10px -12px rgba(27, 27, 27, 0.5);
+  background-color: transparent;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
