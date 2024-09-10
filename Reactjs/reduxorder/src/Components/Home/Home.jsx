@@ -1,46 +1,49 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import classes from "./home.module.css";
-import { dataArray } from "../Services/api";
 import Mapimage from "./map1.png";
-import { useState, useEffect } from "react";
-// import image1 from "./image1.avif";
+import { useSelector } from "react-redux";
 
 const Home = () => {
-  const [data, setData] = useState([]); // DF...SERVER
   const [searchQuery, setSearchQuery] = useState(""); // SEARCHING TIME QUERY
   const [filteredData, setFilteredData] = useState([]);
+
+  const userdata = useSelector((state) => state.users);
+
+  useEffect(() => {
+    setFilteredData(userdata); // Initialize filteredData with userdata
+  }, [userdata]);
 
   const FindShops = (event) => {
     setSearchQuery(event.target.value);
   };
 
-  const handleKeyPress = (event) => {
+  const EnterButtonPress = (event) => {
     if (event.key === "Enter") {
       filterDataOnClick();
     }
   };
 
   const filterDataOnClick = () => {
+    let filtered = [];
+
     if (searchQuery === "") {
-      setFilteredData(data);
+      filtered = userdata;
     } else {
-      const filtered = data.filter(
+      filtered = userdata.filter(
         (item) =>
           (item.name &&
             item.name.toLowerCase().includes(searchQuery.toLowerCase())) ||
           (item.Fooditems &&
             item.Fooditems.toLowerCase().includes(searchQuery.toLowerCase()))
       );
-      setFilteredData(filtered);
     }
+
+    setFilteredData(filtered);
+    console.log("RABINDRA");
+
+    console.log("Filtered Data:", filtered);
   };
 
-  useEffect(() => {
-    setData(dataArray);
-    setFilteredData(dataArray); // INITIALY DISPLAY ALL DATA
-  }, []);
-
-  console.log(dataArray);
   return (
     <>
       <div className={classes.searching}>
@@ -50,7 +53,7 @@ const Home = () => {
           placeholder="Search"
           value={searchQuery}
           onChange={FindShops}
-          onKeyDown={handleKeyPress}
+          onKeyDown={EnterButtonPress}
         />
         <button className={classes.searchbtn} onClick={filterDataOnClick}>
           Search
@@ -62,14 +65,14 @@ const Home = () => {
           <ul key={apiDataReceive.id}>
             <img
               className={classes.itemImage}
-              width="100%"
-              height="100%"
+              width="280px"
+              height="270px"
               src={apiDataReceive.image}
-            ></img>
+              alt={apiDataReceive.name} // Adding alt attribute for accessibility
+            />
             <li>
               <span className={classes.shopname}>{apiDataReceive.name}</span>
             </li>
-
             <li>
               <span className={classes.foodtype}>
                 {apiDataReceive.Fooditems}
@@ -78,195 +81,20 @@ const Home = () => {
             <li>
               <img
                 className={classes.mapImage}
-                width="6%%"
-                height="4.7%%"
+                width="6%"
+                height="4.7%"
                 src={Mapimage}
-              ></img>
+                alt="Map" // Adding alt attribute for accessibility
+              />
               <span className={classes.distance}>
                 {apiDataReceive.distance}
               </span>
             </li>
           </ul>
         ))}
-        {/* <ul>
-          <img
-            className={classes.itemImage}
-            width="100%"
-            height="100%"
-            src={image1}
-          ></img>
-          <li>
-            <span className={classes.shopname}>Hotel Empire</span>
-          </li>
-
-          <li>
-            <span className={classes.foodtype}>
-              North Indian, Kebabs, Biryani
-            </span>
-          </li>
-          <li>
-            <span className={classes.distance}>1.2 kms away</span>
-          </li>
-        </ul>
-        <ul>
-          <img
-            className={classes.itemImage}
-            width="100%"
-            height="100%"
-            src={image1}
-          ></img>
-          <li>
-            <span className={classes.shopname}>Hotel Empire</span>
-          </li>
-
-          <li>
-            <span className={classes.foodtype}>
-              North Indian, Kebabs, Biryani
-            </span>
-          </li>
-          <li>
-            <span className={classes.distance}>1.2 kms away</span>
-          </li>
-        </ul>
-        <ul>
-          <img
-            className={classes.itemImage}
-            width="100%"
-            height="100%"
-            src={image1}
-          ></img>
-          <li>
-            <span className={classes.shopname}>Hotel Empire</span>
-          </li>
-
-          <li>
-            <span className={classes.foodtype}>
-              North Indian, Kebabs, Biryani
-            </span>
-          </li>
-          <li>
-            <span className={classes.distance}>1.2 kms away</span>
-          </li>
-        </ul>
-        <ul>
-          <img
-            className={classes.itemImage}
-            width="100%"
-            height="100%"
-            src={image1}
-          ></img>
-          <li>
-            <span className={classes.shopname}>Hotel Empire</span>
-          </li>
-
-          <li>
-            <span className={classes.foodtype}>
-              North Indian, Kebabs, Biryani
-            </span>
-          </li>
-          <li>
-            <span>1.2 kms away</span>
-          </li>
-        </ul>
-        <ul>
-          <img
-            className={classes.itemImage}
-            width="100%"
-            height="100%"
-            src={image1}
-          ></img>
-          <li>
-            <span className={classes.shopname}>Hotel Empire</span>
-          </li>
-
-          <li>
-            <span className={classes.foodtype}>
-              North Indian, Kebabs, Biryani
-            </span>
-          </li>
-          <li>
-            <span className={classes.distance}>1.2 kms away</span>
-          </li>
-        </ul>
-        <ul>
-          <img
-            className={classes.itemImage}
-            width="100%"
-            height="100%"
-            src={image1}
-          ></img>
-          <li>
-            <span className={classes.shopname}>Hotel Empire</span>
-          </li>
-
-          <li>
-            <span className={classes.foodtype}>
-              North Indian, Kebabs, Biryani
-            </span>
-          </li>
-          <li>
-            <span>1.2 kms away</span>
-          </li>
-        </ul>
-        <ul>
-          <img
-            className={classes.itemImage}
-            width="100%"
-            height="100%"
-            src={image1}
-          ></img>
-          <li>
-            <span className={classes.shopname}>Hotel Empire</span>
-          </li>
-
-          <li>
-            <span className={classes.foodtype}>
-              North Indian, Kebabs, Biryani
-            </span>
-          </li>
-          <li>
-            <span>1.2 kms away</span>
-          </li>
-        </ul>
-        <ul>
-          <img
-            className={classes.itemImage}
-            width="100%"
-            height="100%"
-            src={image1}
-          ></img>
-          <li>
-            <span className={classes.shopname}>Hotel Empire</span>
-          </li>
-
-          <li>
-            <span className={classes.foodtype}>
-              North Indian, Kebabs, Biryani
-            </span>
-          </li>
-          <li>
-            <span>1.2 kms away</span>
-          </li>
-        </ul> */}
       </div>
     </>
   );
 };
 
 export default Home;
-// const FindShops = (searchItem) => {
-//   const query = searchItem.target.value;
-//   setSearchQuery(query);
-
-//   if (query === "") {
-//     setFilteredData(data);
-//   } else {
-//     const filtered = data.filter(
-//       (item) =>
-//         item.name && item.name.toLowerCase().includes(query.toLowerCase())
-//     );
-//     setFilteredData(filtered);
-//   }
-
-//   console.log("RABINDRA");
-// };
