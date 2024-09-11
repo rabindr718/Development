@@ -22,11 +22,18 @@ function Edit() {
     History("/");
   };
 
-  useEffect(() => {
-    setName(localStorage.getItem("Name"));
-    setAge(localStorage.getItem("Age"));
-    setId(localStorage.getItem("Id"));
-  }, []);
+ useEffect(() => {
+  const name = localStorage.getItem("Name");
+  const age = localStorage.getItem("Age");
+  const id = localStorage.getItem("Id");
+
+  console.log("ID from localStorage:", id);
+
+  setName(name);
+  setAge(age);
+  setId(id);
+}, []);
+
 
   return (
     <div>
