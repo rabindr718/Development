@@ -1,0 +1,5 @@
+/Users/rabindrakumarsharma/Development/NET c#/ecommerce-site/obj/Debug/net8.0/ecommerce-site.GeneratedMSBuildEditorConfig.editorconfig
+/Users/rabindrakumarsharma/Development/NET c#/ecommerce-site/obj/Debug/net8.0/ecommerce-site.AssemblyInfoInputs.cache
+/Users/rabindrakumarsharma/Development/NET c#/ecommerce-site/obj/Debug/net8.0/ecommerce-site.AssemblyInfo.cs
+/Users/rabindrakumarsharma/Development/NET c#/ecommerce-site/obj/Debug/net8.0/ecommerce-site.csproj.CoreCompileInputs.cache
+/Users/rabindrakumarsharma/Development/NET c#/ecommerce-site/obj/Debug/net8.0/ecommerce-site.sourcelink.json
