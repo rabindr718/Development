@@ -1,4 +1,11 @@
-﻿var c=9;
-var y=87;
-var j=c+y;
-Console.WriteLine(j + "Hello Shree Krishna");
+﻿var builder = WebApplication.CreateBuilder(args);
+var app = builder.Build();
+
+app.UseHttpsRedirection();
+app.UseStaticFiles();
+app.UseRouting();
+app.UseAuthorization();
+
+app.MapRazorPages();
+
+app.Run();
