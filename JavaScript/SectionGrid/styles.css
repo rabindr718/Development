@@ -1,0 +1,243 @@
+body {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "navbar navbar navbar"
+    "left-sidebar main right-sidebar"
+    "second-navbar main right-sidebar"
+    "footer footer footer";
+  grid-template-rows: auto auto 1fr auto auto;
+  grid-template-columns: 1fr 3fr 1fr;
+  height: 100vh;
+  margin: 0;
+}
+
+.header {
+  grid-area: header;
+  background: #4caf50;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.navbar {
+  grid-area: navbar;
+  background: #333;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+.navbar li {
+  margin: 0 15px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+}
+
+.second-navbar {
+  grid-area: second-navbar;
+  background: #444;
+  display: none; /* Hidden by default */
+}
+
+.accordion-content {
+  display: none; /* Hidden by default */
+}
+
+.accordion-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.accordion-content li {
+  margin: 10px 0;
+}
+
+.main {
+  grid-area: main;
+  padding: 20px;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  padding: 5px 10px;
+  width: 100%;
+  max-width: 400px; /* Adjust as needed */
+  background-color: #f9f9f9;
+}
+
+.search-container input {
+  border: none;
+  outline: none;
+  padding: 10px;
+  flex: 1; /* Allows input to take available space */
+  border-radius: 20px; /* Round edges */
+}
+
+.search-container button {
+  background-color: transparent; /* No background */
+  border: none; /* No border */
+  cursor: pointer; /* Pointer cursor */
+  padding: 0 10px; /* Padding around the button */
+}
+
+.search-container button svg {
+  width: 20px; /* Set SVG width */
+  height: 20px; /* Set SVG height */
+  vertical-align: middle; /* Center the icon vertically */
+}
+
+.search-container button:hover {
+  background-color: #e0e0e0; /* Hover effect */
+  border-radius: 20px; /* Round edges */
+}
+
+.left-sidebar {
+  grid-area: left-sidebar;
+  background: #f4f4f4;
+  padding: 20px;
+}
+
+.right-sidebar {
+  grid-area: right-sidebar;
+  background: #f4f4f4;
+  padding: 20px;
+}
+
+.footer {
+  grid-area: footer;
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 20px;
+
+  padding: 20px; /* Padding around the footer */
+}
+
+.footer-columns {
+  display: grid; /* Use grid layout */
+  grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+  gap: 20px; /* Space between columns */
+}
+
+.column {
+  display: flex;
+  flex-direction: column; /* Stack rows vertically */
+  align-items: flex-start; /* Align rows to the start (top) */
+}
+
+.column1 p {
+  margin: 0; /* Remove default margin from paragraphs */
+}
+
+.column2 p {
+  margin: 0; /* Remove default margin from paragraphs */
+}
+
+.column3 p {
+  margin: 0; /* Remove default margin from paragraphs */
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+  align-items: center;
+  padding: 10px;
+  background-color: #f0f0f0; /* Background color for header */
+}
+
+.title {
+  flex: 1; /* Allows title to take available space */
+  font-size: 24px; /* Title font size */
+}
+
+.dropdowns,
+.buttons {
+  display: flex;
+  gap: 10px; /* Space between dropdowns/buttons */
+}
+
+.dropdown .dropbtn,
+.toggle-button button,
+.buttons button {
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff; /* Background color for buttons */
+  cursor: pointer;
+}
+
+.custom-search-container {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  padding: 5px 10px;
+
+  width: 9%; /* Set width for search field */
+  margin-right: 10px; /* Space between search field and toggle button */
+}
+
+.custom-search-container input {
+  border: none;
+  outline: none;
+  background-color: transparent;
+
+  width: 7%;
+  padding: 10px;
+  flex: 1; /* Allows input to take available space */
+}
+
+.search-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0 10px;
+  width: 40px; /* Set a width */
+  height: 40px; /* Set a height */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    align-items: flex-start; /* Align items to the start */
+  }
+
+  .title {
+    font-size: 20px; /* Smaller title font size for tablets */
+  }
+
+  .search-bar {
+    width: 100%; /* Full width search bar on smaller screens */
+    margin: 10px 0; /* Margin around search bar */
+  }
+
+  .buttons {
+    flex-wrap: wrap; /* Allow buttons to wrap */
+    justify-content: flex-start; /* Align buttons to the start */
+    width: 100%; /* Full width for buttons */
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 18px; /* Even smaller title font size for mobile */
+  }
+
+  .dropdowns,
+  .buttons {
+    flex-direction: column; /* Stack dropdowns and buttons vertically */
+    gap: 5px; /* Smaller gap between items */
+  }
+}
