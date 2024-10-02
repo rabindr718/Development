@@ -1,0 +1,76 @@
+.parentContainerLOGIN {
+  margin: auto;
+  padding: 20px;
+  font-family: sans-serif;
+  line-height: 1.5;
+  background: #f3f3f3;
+  position: fixed;
+  top: 10%;
+  left: 10%;
+  /* transform: translate(-50%, -50%); */
+  overflow: hidden;
+  z-index: 1000;
+}
+/* .parentContainerLOGIN {
+  grid-row: 2;
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 0;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 1000;
+} */
+
+.mainLogin {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  width: 500px;
+  text-align: center;
+  margin: auto;
+}
+
+/* h1 {
+  color: #4caf50;
+} */
+
+.XRFORM label {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  text-align: left;
+  color: #555;
+  font-weight: bold;
+}
+.XRFORM input {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.buttonC {
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  background-color: #4caf50;
+  width: 100%;
+  font-size: 16px;
+}
+
+.wrap {
+  margin: 0 auto;
+  width: 100%;
+}

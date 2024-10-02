@@ -1,7 +1,323 @@
 :root {
-  font-family: "Poppins", "Segoe UI", "Roboto", "Helvetica Neue",
-    Times New Roman;
-  line-height: 1.5;
+  font-family: "Poppins", "Segoe UI", "Roboto", "Helvetica Neue", Times;
+}
+* {
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+body {
+  margin: 0% 0% 0% 7.5%;
+  padding: 0;
+  height: 100vh;
+
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "navbar navbar navbar"
+    "left-sidebar main right-sidebar"
+    "second-navbar main right-sidebar"
+    "footer footer footer";
+  grid-template-rows: auto auto 1fr auto auto;
+  grid-template-columns: auto 1fr auto;
+  width: 85%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
 
 
+.content-container-Main {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+  align-items: flex-start;
+  /* padding: 20px 0px 20px 0px; */
+  /* margin: 0 20px; */
+}
+
+.left-sidebar {
+  grid-area: left-sidebar;
+  background: #491212;
+  margin-left: 0;
+  flex: 0 0 250px;
+  height: 100%;
+}
+
+.right-sidebar {
+  grid-area: right-sidebar;
+  background: #491212;
+  margin-right: 0;
+  flex: 0 0 250px;
+  height: 100%;
+}
+.header {
+  grid-area: header;
+  background: #4caf50;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.navbar {
+  grid-area: navbar;
+  background: #333;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 15px;
+  margin: 0;
+}
+
+.navbar li {
+  margin: 0 15px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+}
+
+.second-navbar {
+  grid-area: second-navbar;
+  background: #444;
+  display: none; /* Hidden by default */
+}
+
+.accordion-content {
+  display: none; /* Hidden by default */
+}
+
+.accordion-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.accordion-content li {
+  margin: 10px 0;
+}
+
+.main {
+  grid-area: main;
+  padding: 20px;
+}
+.mainSaerchitem {
+  display: flex; /* Set parent as flex */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  padding: 5px 10px;
+  justify-content: center; /* Center items inside the search container */
+  width: 100%;
+  max-width: 500px; /* Adjust as needed */
+  background-color: #f9f9f9;
+}
+
+.search-container input {
+  border: none;
+  outline: none;
+  padding: 10px;
+  flex: 1; /* Allows input to take available space */
+  border-radius: 20px; /* Round edges */
+}
+
+.X {
+  background-color: transparent; /* No background */
+  border: none; /* No border */
+  cursor: pointer; /* Pointer cursor */
+  padding: 0 10px; /* Padding around the button */
+}
+.twoSearch {
+  display: flex; /* Enable flex layout */
+  /* gap: 5; */
+
+  /* margin: 0% 0% 0% 0%; */
+  justify-content: center;
+
+  /* justify-content: space-between; */
+}
+
+/* HERE BUTTONS MAIN */
+.item1Search,
+.item2Search {
+  display: flex;
+  align-items: center; /* Align items vertically in the center */
+}
+
+.item1Search {
+  padding: 6px 20px;
+}
+.item2Search {
+  padding: 6px 20px;
+}
+
+/* Increase button size */
+.item1Search button,
+.item2Search button {
+  padding: 12px 20px; /* Adjust padding for button size */
+  font-size: 16px; /* Adjust font size for button text */
+  border: none; /* Remove default border */
+  border-radius: 4px; /* Optional: Round the corners */
+  background-color: #4caf50; /* Set background color */
+  color: white; /* Set text color */
+  cursor: pointer; /* Change cursor on hover */
+}
+
+/* Optional: Add hover effect */
+.item1Search button:hover,
+.item2Search button:hover {
+  background-color: #45a049; /* Darker shade on hover */
+}
+/* HERE ENDED */
+.X svg {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+}
+
+.X:hover {
+  background-color: #e0e0e0;
+  border-radius: 20px;
+}
+
+.footer {
+  grid-row: 4;
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 0;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.footer-columns {
+  display: grid; /* Use grid layout */
+  grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+  gap: 20px; /* Space between columns */
+}
+
+.column {
+  display: flex;
+  flex-direction: column; /* Stack rows vertically */
+  align-items: flex-start; /* Align rows to the start (top) */
+}
+
+.column1 p {
+  margin: 0; /* Remove default margin from paragraphs */
+}
+.mainView p {
+  text-align: justify; /* Justifies the paragraph text */
+  height: 700px; /* Set a fixed height to make it scrollable (adjust as needed) */
+  overflow-y: auto; /* Enables vertical scrolling if the content exceeds the height */
+  padding: 10px; /* Optional: Adds padding inside the element */
+  margin: 0; /* Removes margin for a cleaner layout */
+}
+
+.imageView {
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 600px;
+  /* height: 400px; */
+  overflow: hidden; /* Hide overflow if the image is larger */
+  display: flex; /* Center the image */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  margin: auto; /* Center the container in its parent */
+}
+
+.imageView img {
+  width: 100%; /* Make the image fill the container */
+  height: auto; /* Maintain aspect ratio */
+  max-height: 100%; /* Ensure the image does not exceed the container height */
+  object-fit: contain; /* Ensure the image maintains its aspect ratio */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 800px) {
+  .imageView {
+    width: 90%; /* Responsive width for smaller screens */
+    height: auto; /* Adjust height based on aspect ratio */
+  }
+}
+
+.column2 p {
+  margin: 0; /* Remove default margin from paragraphs */
+}
+
+.column3 p {
+  margin: 0; /* Remove default margin from paragraphs */
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+  align-items: center;
+  padding: 10px;
+  background-color: #f0f0f0; /* Background color for header */
+}
+
+.title {
+  flex: 1;
+  font-size: 24px;
+  color: teal;
+}
+
+.dropdowns,
+.buttons {
+  display: flex;
+  gap: 10px; /* Space between dropdowns/buttons */
+}
+
+.dropdown .dropbtn,
+.toggle-button button,
+.buttons button {
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff; /* Background color for buttons */
+  cursor: pointer;
+}
+
+.custom-search-container {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  padding: 3px 0px 3px 5px;
+  width: 7%; /* Set width for search field */
+  margin: 0px 3px 0px 3px; /* Space between search field and toggle button */
+}
+.custom-search-container input {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  padding: 0px 0px 0px 0px;
+  width: 6%;
+  /* padding: 10px; */
+  flex: 1; /* Allows input to take available space */
+}
+
+.search-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0 10px;
+  width: 36px; /* Set a width */
+  height: 31px; /* Set a height */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
 }
