@@ -1,24 +1,68 @@
 .container {
-  text-align: center;
-  column-gap: 26px;
-  text-decoration: none;
   display: flex;
-  margin-left: 29%;
-  gap: 4;
+  justify-content: center;
+  align-items: center;
+  column-gap: 26px;
+  text-align: center;
+  width: 100%;
 }
-.porfolio {
-  text-decoration: none;
-  color: yellow;
-}
-.contact {
-  text-decoration: none;
-  color: yellow;
-}
-.aboutme {
-  text-decoration: none;
-  color: yellow;
-}
+.porfolio,
+.contact,
+.aboutme,
 .Services {
   text-decoration: none;
-  color: yellow;
+  font-weight: 400;
+  color: #1d1d1f;
+  margin-left: 50px;
+  padding: 10px;
+  transition: all 0.3s ease;
 }
+.porfolio:hover,
+.contact:hover,
+.aboutme:hover,
+.Services:hover {
+  padding: 10px;
+  font-weight: 450;
+  transform: scale(1.07);
+}
+
+.left-group {
+  display: flex;
+  justify-content: flex-end;
+  flex: 1;
+}
+
+.right-group {
+  display: flex;
+  justify-content: flex-start;
+  flex: 1;
+}
+/* .Services {
+  text-decoration: none;
+  font-weight: 400;
+  color: #1d1d1f;
+  margin-right: 15px;
+}
+
+
+/* .contact {
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  font-family: SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial,
+    sans-serif;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--r-globalnav-color);
+  position: relative;
+  z-index: 1;
+  padding: 0 calc(8px / var(--r-globalnav-text-zoom-scale, 1));
+  height: 44px;
+  background: no-repeat;
+  text-decoration: none;
+  white-space: nowrap;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  transition: color 0.32s cubic-bezier(0.4, 0, 0.6, 1);
+} */
