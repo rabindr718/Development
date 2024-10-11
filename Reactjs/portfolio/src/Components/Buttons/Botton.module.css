@@ -6,6 +6,10 @@
   text-align: center;
   width: 100%;
 }
+.container button {
+  background-color: #ffffff;
+}
+
 .porfolio,
 .contact,
 .aboutme,

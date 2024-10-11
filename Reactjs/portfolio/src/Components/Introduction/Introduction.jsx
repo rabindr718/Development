@@ -5,18 +5,22 @@ import classes from "./Introduction.module.css";
 
 const Introduction = () => {
   useEffect(() => {
-    const options = {
-      strings: ["Rabindra", "I'm a Professional Software Developer"],
-      typeSpeed: 100,
-      backSpeed: 60,
-      loop: true,
-    };
+    const typingElement = document.querySelector(".typing");
 
-    const typed = new Typed(".typing", options);
+    if (typingElement) {
+      const options = {
+        strings: ["Professional Software Developer", "Professional Engineer"],
+        typeSpeed: 90,
+        backSpeed: 60,
+        loop: true,
+      };
 
-    return () => {
-      typed.destroy();
-    };
+      const typed = new Typed(".typing", options);
+
+      return () => {
+        typed.destroy();
+      };
+    }
   }, []);
 
   return (
@@ -24,18 +28,41 @@ const Introduction = () => {
       <span className={classes.Greeting}>
         Hello,{" "}
         <span className={classes.GreetingIn}>
-          Mr. <span className={classes.GreetingInY}>Narendra Modi</span>
+          Mr. <span className={classes.GreetingInY}>My name is</span>
         </span>
       </span>
       <br />
       <div className={classes.divTypingName}>
-        <span className={classes.nameX}>My name is RABINDRA</span> <br />
-        <span
-          className={`${classes.Professional} ${classes.nameXR} typing typing`}
-        ></span>
+        <span className={classes.myName}> </span>{" "}
+        <div className={classes.nameX}>RABINDRA</div>
+        <br></br>
+        <span style={{ fontSize: "22.88px" }}>
+          I am <span className={`typing`}></span>
+        </span>
       </div>
       <br />
-      <button className={classes.DownloadCV}>Download CV</button>
+      <div className={classes.aboutEngg}>
+        I have Completed my{" "}
+        <a
+          href="https://www.gtu.ac.in/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={classes.universityLink}
+        >
+          Bachelor's
+        </a>{" "}
+        in Computer Engineering from{" "}
+        <a
+          href="https://www.gtu.ac.in/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={classes.universityLink}
+        >
+          Gujarat Technological University
+        </a>
+      </div>
+
+      {/* <button className={classes.DownloadCV}>Download CV</button> */}
     </div>
   );
 };
