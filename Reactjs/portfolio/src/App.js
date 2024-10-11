@@ -10,8 +10,11 @@ import Contact from "./Components/RedirectCompnents/Contact";
 import Details from "./Components/Details/Details";
 import ButtonA from "./Components/Buttons/BottonA";
 import Footer from "./Components/Footer/Footer";
+import Skills from "./Components/RedirectCompnents/Skills";
+import Experience from "./Components/RedirectCompnents/Experience";
 import Services from "./Components/RedirectCompnents/Services";
 import PortFolio from "./Components/RedirectCompnents/Portfolio";
+import { ROUTES } from "././Routes/Routes";
 function App() {
   return (
     <Router>
@@ -35,10 +38,12 @@ function App() {
                 </>
               }
             ></Route>
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/portfolio" element={<PortFolio />} />
+            <Route path={ROUTES.ABOUT} element={<About />} />
+            <Route path={ROUTES.CONTACT} element={<Contact />} />
+            <Route path={ROUTES.SERVICES} element={<Services />} />
+            <Route path={ROUTES.PORTFOLIO} element={<PortFolio />} />
+            <Route path={ROUTES.SKILLS} element={<Skills />}></Route>
+            <Route path={ROUTES.EXPERIENCE} element={<Experience />}></Route>
           </Routes>
           {/* HERE ALL THINGS IMPLEMENTED */}
 

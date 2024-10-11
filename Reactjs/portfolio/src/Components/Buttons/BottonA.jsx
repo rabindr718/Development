@@ -19,24 +19,33 @@ const BottonA = () => {
   const Contact = () => {
     navigate("/contact"); // Navigate to '/contact' path
   };
-
+  const Skills = () => {
+    navigate("/skills");
+  };
+  const Experience = () => {
+    navigate("/experience");
+  };
   return (
     <div className={classes.container}>
       <button className={classes.porfolio} onClick={PortFolio}>
         Home
       </button>
-      <button className={classes.aboutme} onClick={AboutMe}>
-        About me
+      <button className={classes.contact} onClick={Skills}>
+        Skills
       </button>
       <button className={classes.contact} onClick={Contact}>
         Contact
       </button>
+      <button className={classes.contact} onClick={Experience}>
+        Experience
+      </button>
+      <button className={classes.aboutme} onClick={AboutMe}>
+        About me
+      </button>
+
       <button className={classes.Services} onClick={Services}>
         Services
       </button>
-      {/* <Link className={classes.Services} to="/contact">
-        Services
-      </Link> */}
     </div>
   );
 };
