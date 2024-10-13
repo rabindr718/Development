@@ -2,7 +2,6 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import classes from "./Components/ProjectList/Homepage.module.css";
-import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Introduction from "./Components/Introduction/Introduction";
 import About from "./Components/RedirectCompnents/About";
@@ -25,7 +24,7 @@ function App() {
         <div>
           <Routes>
             <Route
-              path="/"
+              path={ROUTES.HOME}
               element={
                 <div className={classes.flexRow}>
                   <Col className={classes.item}>
@@ -37,12 +36,12 @@ function App() {
                 </div>
               }
             />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/portfolio" element={<PortFolio />} />
-            <Route path="/skills" element={<Skills />} />
-            <Route path="/experience" element={<Experience />} />
+            <Route path={ROUTES.ABOUT} element={<About />} />
+            <Route path={ROUTES.CONTACT} element={<Contact />} />
+            <Route path={ROUTES.SERVICES} element={<Services />} />
+            <Route path={ROUTES.PORTFOLIO} element={<PortFolio />} />
+            <Route path={ROUTES.SKILLS} element={<Skills />} />
+            <Route path={ROUTES.EXPERIENCE} element={<Experience />} />
           </Routes>
         </div>
         <Footer className={classes.footer} />

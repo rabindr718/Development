@@ -1,29 +1,82 @@
 .containerExperience {
-  /* width: 50% !important;
-  height: 100vh;
-  color: #1d1d1f;
-  margin: 0 auto;
+  margin-top: 1px !important;
+  padding-bottom: 100px;
+  min-height: calc(100vh - 150px);
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  top: 0;
-  padding-top: 50px;
-  margin-top: 50px !important;
-  overflow: hidden;
-  position: fixed;
-  left: 0;
-  right: 0; */
-  min-height: 100vh;
-  background-color: #f5f5f7;
-  color: #1d1d1f;
-  text-align: center;
-  display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: flex-start;
+  background-color: #f5f5f7;
+}
+.WorkplacceTitle {
+  font-weight: 550;
+  font-size: 22.88px;
+}
+.RoleTittle {
+  font-weight: 600;
+  font-size: 22.88px;
+}
+.styledtable {
+  width: 60%;
+  padding: 0 20px;
+  table-layout: fixed;
+  border-collapse: separate;
+  border-spacing: 0 10px;
+  margin-top: 5%;
+}
+
+.styledtable {
+  width: 60%;
+  margin-top: 5%;
+  padding: 0 20px;
+  table-layout: fixed;
+  border-collapse: separate;
+  border-spacing: 0 10px;
+}
+
+.styledtable td {
+  padding: 10px 15px;
+  /* background-color: teal; */
+  vertical-align: middle;
+  width: 50%;
+}
+
+.styledtable td:first-child {
+  text-align: left;
+}
+
+.styledtable td:last-child {
+  text-align: right;
+  position: relative;
+}
+
+.techInfo {
+  font-size: 14px;
+  color: #777;
+  margin-top: 5px;
+}
+
+.ContentinTable {
+  text-align: center;
+  font-size: 16px;
+  /* background-color: #f9f9f9; */
+  margin-top: 2px;
+  margin-bottom: 7px;
   top: 0;
-  overflow: hidden;
-  width: 100% !important;
-  margin-left: auto;
-  margin-right: auto;
+  text-align: justify !important;
+}
+.ContentinTable li {
+  list-style-type: none;
+  position: relative;
+  padding: 1.5px;
+}
+
+.ContentinTable li::before {
+  /* content: "\25B7"; */
+  /* content: "\21D2"; */
+  /* content: "\2794"; */
+  content: "\25BA";
+  position: absolute;
+  left: -20px;
+  font-size: 16px;
+  color: #000;
 }

@@ -48,7 +48,7 @@
 
 .barContainer {
   width: 100%;
-  height: 20px;
+  height: 10px;
   background-color: #99f6e4; /* This will be overridden by dynamic colors */
   border-radius: 10px;
   overflow: hidden;

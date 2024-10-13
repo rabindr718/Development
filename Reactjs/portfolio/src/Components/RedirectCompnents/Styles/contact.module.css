@@ -72,12 +72,12 @@
 }
 .ICONContainer {
   display: flex;
-  margin-left: 10px !important;
+  /* margin-left: 90px !important; */
   flex-direction: row;
   justify-content: center !important;
   align-items: center !important;
-  margin-right: 50px !important; /* Keep if necessary for specific layout needs */
-  gap: 65px; /* More responsive and easier to control */
+  margin-right: 15px !important;
+  gap: 45px; /* More responsive and easier to control */
   justify-content: space-between; /* Space out the items */
 }
 
@@ -181,8 +181,26 @@
 }
 
 .iconSizeNumber {
-  /* transform: rotate(90deg); */
+  transform: rotate(90deg);
   font-size: 32px;
   color: #333;
   margin-right: 20px;
+  background-color: transparent;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.iconSizeNumber:hover {
+  background-color: #ffffff;
+  color: rgb(20, 216, 20);
+  cursor: pointer;
+}
+.NumberLetter:hover {
+  transform: scale(1.02);
+  color: #6d6b6b;
+}
+.NumberLetter {
+  transform: scale(1.02);
+  color: #000;
+  text-decoration: none;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
