@@ -36,8 +36,12 @@ const Introduction = () => {
         <span className={classes.myName}> </span>{" "}
         <div className={classes.nameX}>RABINDRA</div>
         <br></br>
-        <span style={{ fontSize: "22.88px" }}>
-          I am <span className={`typing`}></span>
+        <span style={{ fontSize: "26.88px", fontWeight: "400" }}>
+          I am{" "}
+          <span
+            style={{ fontSize: "26.88px", fontWeight: "600" }}
+            className={`typing`}
+          ></span>
         </span>
       </div>
       <br />
@@ -56,7 +60,7 @@ const Introduction = () => {
           href="https://www.gtu.ac.in/"
           target="_blank"
           rel="noopener noreferrer"
-          className={classes.universityLink}
+          className={`${classes.universityLink} ${classes.largeFont}`} // Add the new class here
         >
           Gujarat Technological University
         </a>

@@ -1,5 +1,5 @@
 .container {
-  background-color: slategray;
+  background-color: #404040;
   display: grid;
   position: fixed;
   bottom: 0;
@@ -8,4 +8,8 @@
   margin: 0;
   height: 10%;
   width: 100%;
+  color: #ffffff;
+  text-align: center;
+  /* font-weight: 600; */
+  font-size: 22.88px;
 }

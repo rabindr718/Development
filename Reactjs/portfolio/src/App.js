@@ -18,40 +18,35 @@ import { ROUTES } from "././Routes/Routes";
 function App() {
   return (
     <Router>
-      <div className={classes.X}>
-        <Row>
-          <Row className={classes.buttonsStyle}>
-            <ButtonA />
-          </Row>
-          {/* HERE ALL THINGS IMPLEMENTED */}
+      <div>
+        <div className={classes.buttonsStyle}>
+          <ButtonA />
+        </div>
+        <div>
           <Routes>
             <Route
               path="/"
               element={
-                <>
-                  <Col className={`${classes.item} ${classes.itemColor1}`}>
+                <div className={classes.flexRow}>
+                  <Col className={classes.item}>
                     <Introduction />
                   </Col>
-                  <Col className={`${classes.item2} ${classes.itemColor1}`}>
+                  <Col className={classes.item2}>
                     <Details />
                   </Col>
-                </>
+                </div>
               }
-            ></Route>
-            <Route path={ROUTES.ABOUT} element={<About />} />
-            <Route path={ROUTES.CONTACT} element={<Contact />} />
-            <Route path={ROUTES.SERVICES} element={<Services />} />
-            <Route path={ROUTES.PORTFOLIO} element={<PortFolio />} />
-            <Route path={ROUTES.SKILLS} element={<Skills />}></Route>
-            <Route path={ROUTES.EXPERIENCE} element={<Experience />}></Route>
+            />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/portfolio" element={<PortFolio />} />
+            <Route path="/skills" element={<Skills />} />
+            <Route path="/experience" element={<Experience />} />
           </Routes>
-          {/* HERE ALL THINGS IMPLEMENTED */}
-
-          <Footer />
-        </Row>
+        </div>
+        <Footer className={classes.footer} />
       </div>
-
-      <Footer />
     </Router>
   );
 }

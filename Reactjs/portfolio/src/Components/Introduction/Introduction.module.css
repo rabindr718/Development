@@ -1,10 +1,11 @@
 .container {
-  margin: 20px 6px 500px 20px;
   color: #1d1d1f;
   height: auto;
-  padding: 60px 6px 0px 100px;
+  /* margin-top: -50px !important; */
+  padding-top: 0px !important;
   display: flex;
   flex-direction: column;
+  margin-bottom: 90px !important;
 }
 .nameX {
   font-size: 48px;
@@ -65,7 +66,10 @@ button {
   text-decoration: none; /* Removes the underline */
   color: inherit; /* Inherits the color from the parent element */
 }
-
+.largeFont {
+  font-size: 22.88px; /* Adjust size as needed, e.g., 1.5rem for larger text */
+  font-weight: 580; /* Optional: make text bold */
+}
 .universityLink:hover {
   text-decoration: none; /* Ensures no underline on hover */
   color: inherit; /* Ensures the color stays the same on hover */

@@ -2,7 +2,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* column-gap: 16px; */
   text-align: center;
   width: 100%;
   position: relative; /* Ensure positioning context */

@@ -1,0 +1,188 @@
+.containerContact {
+  /* width: 100% !important;
+  height: 80vh;
+  color: #1d1d1f;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding-top: 50px;
+  margin-top: 50px !important; */
+  width: 100% !important;
+  min-height: 100vh;
+  background-color: #f5f5f7;
+  color: #1d1d1f;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  top: 0;
+  overflow: hidden;
+}
+
+.leftSide {
+  flex: 1;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ContactUSX {
+  /* margin-top: -200px !important; */
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.contactImage {
+  width: 490px;
+  height: 490px;
+  border-radius: 50%;
+  object-fit: cover;
+  /* margin-top: 0 !important;
+  padding-top: 0 !important; */
+}
+
+.rightSide {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.NumberContainer {
+  display: flex;
+  gap: 10px;
+  font-weight: 550;
+  font-size: 30.88px;
+  justify-content: center !important;
+  margin-top: 20px;
+}
+
+.ICONContainer a {
+  margin-top: 70px;
+  color: #333;
+  font-size: 40px;
+  text-decoration: none;
+}
+
+.ICONContainer a:hover {
+  color: #007bff;
+}
+
+.ICONContainer i {
+  font-size: 24px;
+}
+.ICONContainer {
+  display: flex;
+  margin-left: 10px !important;
+  flex-direction: row;
+  justify-content: center !important;
+  align-items: center !important;
+  margin-right: 50px !important; /* Keep if necessary for specific layout needs */
+  gap: 65px; /* More responsive and easier to control */
+  justify-content: space-between; /* Space out the items */
+}
+
+.ICONContainer a {
+  text-decoration: none;
+  color: #333;
+  padding: 0px !important;
+}
+
+.githubIcon i {
+  font-size: 50px;
+  margin-left: 24px !important;
+  color: #181717;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.githubIcon i:hover {
+  transform: scale(1.02);
+  color: #6b6969;
+}
+
+.stackOverflowIcon i {
+  font-size: 50px;
+  color: #f48023;
+  transition: transform 0.3s ease, color 0.3s ease;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3), 0 0 25px rgba(0, 0, 0, 0.2);
+}
+
+.stackOverflowIcon i:hover {
+  transform: scale(1.02);
+  color: #e94e32;
+}
+
+.linkedinIcon i {
+  font-size: 50px;
+  color: #0b66c2;
+  /* color: #0077b5;  */
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect */
+.linkedinIcon i:hover {
+  transform: scale(1.02);
+  color: #005582;
+}
+.ContactUX:active {
+  color: #c31cc3;
+  transform: scale(0.95);
+}
+
+.googlePlusIcon i {
+  font-size: 50px;
+}
+
+.twitterIcon i {
+  font-size: 50px;
+  color: #1da1f2;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect */
+.twitterIcon i:hover {
+  transform: scale(1.02);
+  color: #0a85d1;
+}
+
+.instagramIcon i {
+  font-size: 50px;
+  background: linear-gradient(45deg, #f58529, #dd2a7b, #8134b8, #515bd4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Hover effect */
+.instagramIcon i:hover {
+  transform: scale(1.02);
+  opacity: 0.8;
+}
+
+.appleIcon i {
+  font-size: 50px;
+  color: #333;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.ContactUX {
+  text-decoration: none;
+  color: #000;
+  font-size: 22.88px;
+  font-weight: 250;
+}
+.ContactUX:hover {
+  text-decoration: underline;
+  color: gray;
+}
+
+.appleIcon i:hover {
+  transform: scale(1.02);
+  color: #e5dcdc;
+}
+
+.iconSizeNumber {
+  /* transform: rotate(90deg); */
+  font-size: 32px;
+  color: #333;
+  margin-right: 20px;
+}

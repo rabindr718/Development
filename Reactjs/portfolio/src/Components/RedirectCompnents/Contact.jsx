@@ -1,26 +1,94 @@
 import React from "react";
-import classes from "./styles.module.css";
+import classes from "./Styles/contact.module.css";
+import { ICONS } from "../resources/ICONS";
 
 const Contact = () => {
   return (
     <div className={classes.containerContact}>
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam iste
-      consequatur itaque nulla necessitatibus nisi voluptates totam atque
-      voluptatem! Et laboriosam ipsa ratione tenetur quos. Veniam, iste
-      consectetur! Impedit, fuga? Tempore nesciunt asperiores quos voluptate
-      illum rem ab at nemo, voluptatem magnam a voluptatibus eaque veniam
-      excepturi beatae labore similique neque ullam mollitia quis commodi
-      accusamus. Maxime accusantium maiores accusamus? Quasi, nostrum iusto?
-      Error expedita illo, ipsam in tempora quas repellendus repellat velit vel
-      molestias accusantium excepturi odio assumenda voluptatum neque amet
-      laudantium! Et, consectetur dolorem. Consequatur aliquid doloremque
-      accusamus? Et temporibus aspernatur quidem repellat perferendis
-      consequuntur nostrum aliquam ad eligendi. Excepturi molestias nemo itaque
-      suscipit neque adipisci quasi, sint velit eligendi blanditiis possimus
-      perspiciatis quisquam obcaecati! Dolore, porro magnam. Fugiat mollitia qui
-      magnam a molestiae, sit nobis consectetur modi nam ipsa repellendus quas
-      aut aspernatur exercitationem, ratione similique iste! Eaque dolor
-      provident repellat in nemo fugiat nobis consequatur deserunt!
+      <div className={classes.leftSide}>
+        <img
+          src={ICONS.myImage1}
+          alt="Contact Image"
+          className={classes.contactImage}
+        />
+      </div>
+      <div className={classes.rightSide}>
+        <span className={classes.ContactUSX}>Contact us : ~</span>
+        <span>
+          <a
+            href="mailto:rksharma00000777@gmail.com"
+            className={classes.ContactUX}
+          >
+            rksharma00000777@gmail.com
+          </a>
+        </span>
+
+        <div className={classes.ICONContainer}>
+          <a
+            className={classes.githubIcon}
+            href="https://github.com/rabindr718"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fab fa-git"></i>{" "}
+          </a>
+          <a
+            className={classes.stackOverflowIcon}
+            href="https://stackoverflow.com/users/23137585/rabindr718"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i className="fab fa-stack-overflow"></i>
+          </a>
+          <a
+            className={classes.linkedinIcon}
+            href="https://www.linkedin.com/in/rabindr718/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i className="fab fa-linkedin"></i>
+          </a>
+          <a
+            className={classes.appleIcon}
+            href="https://developer.apple.com/forums/profile/rabindr718"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i className="fab fa-apple"></i>{" "}
+          </a>
+
+          <a
+            className={classes.twitterIcon}
+            href="https://x.com/rabindr718"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i className="fab fa-twitter"></i>
+          </a>
+          <a
+            className={classes.instagramIcon}
+            href="https://instagram.com/rabindr718"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i className="fab fa-instagram"></i>
+          </a>
+        </div>
+
+        <div className={classes.NumberContainer}>
+          <p>
+            <i
+              className={`${classes.iconSizeNumber} fas fa-phone-square-alt`}
+            ></i>
+            <a
+              href="tel:+917079121008"
+              style={{ color: "inherit", textDecoration: "none" }}
+            >
+              +91 7079121008
+            </a>
+          </p>
+        </div>
+      </div>
     </div>
   );
 };

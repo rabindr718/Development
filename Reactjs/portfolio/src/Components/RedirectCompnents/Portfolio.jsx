@@ -1,5 +1,5 @@
 import React from "react";
-import classes from "./styles.module.css";
+import classes from "./Styles/portfolio.module.css";
 
 const Portfolio = () => {
   return <div className={classes.containerPortfolio}>HELLO</div>;
