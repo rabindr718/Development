@@ -1,57 +1,59 @@
 import React from "react";
-import styles from "./Styles/skills.module.css";
+import classes from "./Styles/skills.module.css";
 
 const SkillsTable = () => {
-  // Array of items with their corresponding values
   const items = [
-    { name: "Item 1", value: 1 },
-    { name: "Item 2", value: 2 },
-    { name: "Item 3", value: 3 },
-    { name: "Item 4", value: 4 },
-    { name: "Item 5", value: 5 },
-    { name: "Item 6", value: 6 },
-    { name: "Item 7", value: 7 },
-    { name: "Item 8", value: 8 },
-    { name: "Item 9", value: 9 },
+    { name: "Core Java", value: 1 },
+    { name: "React, Redux ", value: 2 },
+    { name: "SpringBoot, Spring", value: 3 },
+    { name: "Javascript", value: 4 },
+    { name: "DBMS SQL", value: 5 },
+    { name: "DSA + Algorithms", value: 6 },
+    { name: "Python, .NET ", value: 7 },
+    { name: "Wordpress, Firebase, Jira, Git, Postman", value: 8 },
+    { name: "Linux, MacOS, Windows", value: 9 },
   ];
 
-  const getBarColor = (value) => {
-    // Light blue (rgb(173, 216, 230)) to dark blue (rgb(0, 0, 139))
-    const lightBlue = [173, 216, 230];
-    const darkBlue = [0, 0, 139];
-
-    // Calculate color intensity based on the value (1-9)
-    const interpolateColor = (start, end, factor) =>
-      start + (end - start) * factor;
-
-    const factor = (value - 1) / 8; // Scale between 0 (for value 1) and 1 (for value 9)
-    const r = Math.round(interpolateColor(lightBlue[0], darkBlue[0], factor));
-    const g = Math.round(interpolateColor(lightBlue[1], darkBlue[1], factor));
-    const b = Math.round(interpolateColor(lightBlue[2], darkBlue[2], factor));
-
-    return `rgb(${r}, ${g}, ${b})`;
+  const getGradientColor = (value) => {
+    const segments = 9;
+    const gradientStops = Array.from({ length: segments + 1 }, (_, i) => {
+      const factor = i / segments;
+      const r = Math.round(144 - 144 * factor);
+      const g = Math.round(238 - 138 * factor);
+      const b = Math.round(144 - 44 * factor);
+      return `rgb(${r}, ${g}, ${b}) ${(i / segments) * 100}%`;
+    });
+    return `linear-gradient(to right, ${gradientStops.join(", ")})`;
   };
 
   return (
-    <div className={styles.containerSkills}>
-      <table className={styles.table}>
+    <div className={classes.containerSkills}>
+      <table className={classes.table}>
         <tbody>
           {items.map((item, index) => (
-            <tr key={index} className={styles.row}>
-              <td className={styles.itemName}>{item.name}</td>
-              <td className={styles.itemValue}>
-                <div className={styles.barContainer}>
+            <tr key={index} className={classes.row}>
+              <td className={classes.itemName}>{item.name}</td>
+              <td className={classes.itemValue}>
+                <div className={classes.barContainer}>
                   <div
-                    className={styles.bar}
+                    className={classes.bar}
                     style={{
-                      width: `${(item.value / 9) * 100}%`, // Calculate width based on item value
-                      backgroundColor: getBarColor(item.value), // Get dynamic color
+                      width: "100%",
+                      background: getGradientColor(item.value),
                     }}
-                  ></div>
+                  >
+                    <div
+                      style={{
+                        width: `${(item.value / 9) * 100}%`,
+                        height: "100%",
+                        backgroundColor: "rgba(0, 0, 0, 0.2)",
+                      }}
+                    />
+                  </div>
                 </div>
-                <div
-                  className={styles.valueText}
-                >{`${item.value} out of 9`}</div>
+                <div className={classes.valueText}>
+                  {`${item.value} out of 9`}
+                </div>
               </td>
             </tr>
           ))}

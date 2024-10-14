@@ -11,8 +11,8 @@
   width: 100% !important;
   margin-left: auto;
   margin-right: auto;
-  /* 
-  height: 100vh;
+
+  /* height: 100vh;
   color: #1d1d1f;
   margin: 0 auto;
   display: flex;
@@ -25,39 +25,68 @@
   overflow: hidden;
   position: fixed;
   left: 0;
-  right: 0; */
+  right: 0;  */
 }
+
 .table {
-  width: 50%;
+  top: 0 !important;
+  width: 56%;
+  margin-left: 60px;
   border-collapse: collapse;
 }
 
 .row {
   border-bottom: 1px solid #e0e0e0;
+  display: flex !important;
+  justify-content: space-between !important;
 }
 
 .itemName {
-  padding: 8px;
+  padding: 5px;
   text-align: left;
+  font-weight: 600;
 }
 
 .itemValue {
-  padding: 8px;
-  text-align: right;
+  padding: 9px;
+  left: 0 !important;
+  text-align: right !important;
 }
 
 .barContainer {
-  width: 100%;
   height: 10px;
-  background-color: #99f6e4; /* This will be overridden by dynamic colors */
+  background-color: #011b15;
   border-radius: 10px;
   overflow: hidden;
+  min-width: 100px;
+  width: 20vw;
+  max-width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .bar {
   height: 100%;
+  background-color: #228a64;
+  min-width: 100px;
+  max-width: 100%;
+  transition: width 0.5s ease-out;
 }
 
 .valueText {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #666;
   text-align: center;
+  width: 100%;
+}
+
+.itemValue {
+  padding: 10px;
+  width: 40%;
+  text-align: right;
+  display: flex;
+  flex-direction: column; /* Align children vertically */
+  align-items: flex-end; /* Align items to the end (right) */
 }

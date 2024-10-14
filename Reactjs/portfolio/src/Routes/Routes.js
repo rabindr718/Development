@@ -6,4 +6,5 @@ export const ROUTES = {
   PORTFOLIO: "/portfolio",
   SKILLS: "/skills",
   EXPERIENCE: "/experience",
+  GALLERY: "/gallery",
 };

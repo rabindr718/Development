@@ -14,6 +14,7 @@ import Experience from "./Components/RedirectCompnents/Experience";
 import Services from "./Components/RedirectCompnents/Services";
 import PortFolio from "./Components/RedirectCompnents/Portfolio";
 import { ROUTES } from "././Routes/Routes";
+import Gallery from "./Components/Gallery/Gallery";
 function App() {
   return (
     <Router>
@@ -42,6 +43,7 @@ function App() {
             <Route path={ROUTES.PORTFOLIO} element={<PortFolio />} />
             <Route path={ROUTES.SKILLS} element={<Skills />} />
             <Route path={ROUTES.EXPERIENCE} element={<Experience />} />
+            <Route path={ROUTES.GALLERY} element={<Gallery />} />
           </Routes>
         </div>
         <Footer className={classes.footer} />
