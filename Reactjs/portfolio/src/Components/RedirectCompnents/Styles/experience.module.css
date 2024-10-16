@@ -1,12 +1,23 @@
 .containerExperience {
-  margin-top: 1px !important;
-  padding-bottom: 100px;
-  min-height: calc(100vh - 150px);
+  top: 0; 
+  bottom: 0; 
+  left: 0;
+  right: 0; 
+  margin-top: 0 !important; 
+  padding-top: 22px;
+  padding-bottom: 0; 
+  margin-left: 1.5%;
+  height: 100vh; 
   display: flex;
   justify-content: center;
   align-items: flex-start;
   background-color: #f5f5f7;
+  overflow-y: auto; 
+  box-sizing: border-box; 
+  min-width: 100%; 
 }
+
+
 .WorkplacceTitle {
   font-weight: 550;
   font-size: 22.88px;

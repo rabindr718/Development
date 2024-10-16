@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convert Web Page to PDF</title>
+</head>
+<body>
+    <h1>Convert External Page to PDF</h1>
+    <button id="convertButton">Get PDF</button>
+
+    <script>
+        document.getElementById('convertButton').addEventListener('click', async function() {
+            try {
+                const response = await fetch('https://api.pdfshift.io/v3/convert', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': 'Bearer YOUR_API_KEY'  // Replace with your API key
+                    },
+                    body: JSON.stringify({
+                        source: 'https://v2-sandbox.aurorasolar.com/e-proposal/MMVaAQ3UkA7U_HD7sj-d4whhZbRTL4JgthXWFy91OhI',
+                        landscape: false, // Set to true for landscape
+                        // other options can be set here
+                    })
+                });
+
+                if (!response.ok) {
+                    throw new Error('Failed to generate PDF: ' + response.statusText);
+                }
+
+                const blob = await response.blob();
+                const url = window.URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.style.display = 'none';
+                a.href = url;
+                a.download = 'proposal.pdf';
+                document.body.appendChild(a);
+                a.click();
+                window.URL.revokeObjectURL(url);
+            } catch (error) {
+                console.error('Error generating PDF:', error);
+                alert('Error generating PDF: ' + error.message);
+            }
+        });
+    </script>
+</body>
+</html>
