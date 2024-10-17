@@ -1,31 +1,4 @@
 .containerServices {
-  /* width: 50% !important;
-  height: 100vh;
-  color: #1d1d1f;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  top: 0;
-  padding-top: 50px;
-  margin-top: 50px !important;
-  overflow: hidden; 
-  position: fixed; 
-  left: 0;
-  right: 0; */
-  /* width: 100% !important;
-  min-height: 100vh;
-  background-color: #f5f5f7;
-  color: #1d1d1f;
-  align-items: center;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  align-items: center;
-  top: 0;
-  overflow: hidden; */
   width: 100% !important;
   min-height: 100vh;
   background-color: #f5f5f7;
@@ -148,23 +121,23 @@
   border-radius: 15px;
 }
 .GalleryText .tooltip {
-  visibility: hidden; /* Hidden by default */
-  color: red; /* Text color */
+  visibility: hidden;
+  color: red;
   text-align: center;
   font-size: 12px;
-  padding: 3px 5px; /* Padding for better readability */
-  border-radius: 4px; /* Optional: Rounded corners */
+  padding: 3px 5px;
+  border-radius: 4px;
   position: absolute;
   z-index: 1;
   width: auto !important;
-  white-space: nowrap; /* Prevents text from breaking into multiple lines */
-  margin-top: -16px; /* Adjust this to position tooltip above the text */
+  white-space: nowrap;
+  margin-top: -16px;
   top: 100%;
   left: 100%;
   margin-left: -90px;
 
-  opacity: 0; /* Initially invisible */
-  transition: opacity 0.3s ease-in-out; /* Smooth fade-in */
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
 }
 .GalleryText:hover .tooltip {
   visibility: visible;

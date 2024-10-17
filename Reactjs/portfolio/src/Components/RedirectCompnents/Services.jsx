@@ -1,10 +1,35 @@
 import React from "react";
+import { useState } from "react";
 import classes from "./Styles/services.module.css";
 import { ICONS } from "../resources/ICONS";
+import Login from "../Modals/Login";
+
+
 
 const Services = () => {
+  const [openLoginModal, setLoginModal] = useState(false);
+
+
+  const SeeImages = () => { setLoginModal(true) }
+
+
+
+  const ArtificialIntelligence = () => {
+
+
+  };
+  const SOftwareEngineering = () => {
+
+  };
+
+  const Algorithms = () => {
+
+  };
+
   return (
     <div className={classes.containerServices}>
+      {openLoginModal && <Login setLoginModal={setLoginModal} />
+      }
       <div className={classes.containerServicesInner}>
         <div className={classes.BtnS}>
           <div className={classes.ImageSize}>
@@ -12,7 +37,7 @@ const Services = () => {
               <img src={ICONS.AISpark} alt="Chip Sparks" />
               <div className={classes.overlay}>
                 <div className={classes.text}>
-                  <div className={classes.AIProjectText}>
+                  <div className={classes.AIProjectText} onClick={ArtificialIntelligence}>
                     Artificial Intelligence
                   </div>
                 </div>
@@ -24,7 +49,7 @@ const Services = () => {
               <img src={ICONS.CodeJavascript} alt="Chip Sparks" />
               <div className={classes.overlay}>
                 <div className={classes.text}>
-                  <div className={classes.SoftwareText}>
+                  <div className={classes.SoftwareText} onClick={SOftwareEngineering}>
                     Software Engineering
                   </div>
                 </div>
@@ -38,7 +63,7 @@ const Services = () => {
               <img src={ICONS.BigComputer} alt="Chip Sparks" />
               <div className={classes.overlay}>
                 <div className={classes.text}>
-                  <div className={classes.AlgorithmsText}>Algorithms</div>
+                  <div className={classes.AlgorithmsText} onClick={Algorithms}>Algorithms</div>
                 </div>
               </div>
             </div>
@@ -50,9 +75,10 @@ const Services = () => {
               <div className={classes.overlay}>
                 <div className={classes.text}>
                   <div>
-                    <div className={classes.GalleryText}>
+
+                    <div className={classes.GalleryText} onClick={SeeImages}>
                       Gallery
-                      <span className={classes.tooltip}>Click for view</span>
+                      {/* <span className={classes.tooltip}>Click for view</span> */}
                     </div>
                   </div>
                 </div>
@@ -67,23 +93,3 @@ const Services = () => {
 
 export default Services;
 
-{
-  /* <div className={classes.details}>
-              <img
-                className={classes.detailsLogo}
-                src="image/Logo.png"
-                alt="not need"
-              />
-              <br />
-              <span className={classes.fontColorTitle}>WEB DEVELOPMENT</span>
-              <p className={classes.fontColor}>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Dignissimos id praesentium iusto fugit quam neque sed.
-              </p>
-              <button className={classes.btnReadmore}>
-                <a href="https://github.com/rabindr718" target="_blank">
-                  READ MORE ➡
-                </a>
-              </button>
-            </div> */
-}

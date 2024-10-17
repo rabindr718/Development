@@ -12,6 +12,10 @@ import Codesi from "./assets/Codes.jpg";
 import BigComputer from "./assets/ComputerXR1.avif";
 import BigComputer01 from "./assets/ComputerX.avif";
 import BigSVGComputer from "./assets/ComputeSVG.svg";
+import CrossW from "./assets/WhiteCross.png"
+import G_Cross from "./assets/GrayCross.svg"
+import D_Cross from "./assets/DarkCross.svg"
+
 export const ICONS = {
   // BACKGROUND: require('./assets/1662389800666.jpg')
   myImage1: image01,
@@ -28,4 +32,7 @@ export const ICONS = {
   BigComputer: BigComputer,
   BigComputer01: BigComputer01,
   BigSVGComputer: BigSVGComputer,
+  W_Cross:CrossW,
+  D_Cross:D_Cross,
+  G_Cross:G_Cross
 };
