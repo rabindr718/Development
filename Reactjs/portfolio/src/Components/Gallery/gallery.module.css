@@ -67,13 +67,9 @@
   width: 399px !important;
 }
 
-.UploadImage input {
-  height: 40px !important;
-  width: 399px !important;
-}
-
 .FormUpload input[type="date"] {
   text-align: center;
+  font-weight: 350;
 }
 
 input[type="datetime-local"] {

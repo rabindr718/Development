@@ -21,6 +21,7 @@
 .PassInput input {
   font-size: 21.88px;
   border-radius: 10px;
+  min-width: 275px;
   border: none;
   border: 1px solid blue;
   padding-left: 0;
@@ -32,7 +33,7 @@
 .btnEnter {
   margin-top: 30px;
   margin-bottom: 20px;
-  width: 125px !important;
+  width: 128px !important;
   height: 33px !important;
   border-radius: 4px;
   background-color: #000;
