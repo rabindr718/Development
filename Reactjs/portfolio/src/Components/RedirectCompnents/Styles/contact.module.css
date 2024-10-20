@@ -184,15 +184,15 @@
   transform: rotate(90deg);
   font-size: 32px;
   color: #333;
-  margin-right: 20px;
-  background-color: transparent;
+  margin-right: 9px;
+  color: #25d366 !important;
   transition: background-color 0.3s, color 0.3s;
 }
 
 .iconSizeNumber:hover {
-  background-color: #ffffff;
-  color: rgb(20, 216, 20);
+  transform: scale(1.09);
   cursor: pointer;
+  color: #0e9b42 !important;
 }
 .NumberLetter:hover {
   transform: scale(1.02);

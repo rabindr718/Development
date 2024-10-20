@@ -2,3 +2,7 @@
 User-agent: *
 Disallow:
 
+User-agent: *
+Disallow: /path/to/protected/
+Disallow: /another/protected/path/
+Disallow: /sensitive-data/

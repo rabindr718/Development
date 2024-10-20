@@ -40,7 +40,11 @@ const Login = ({ setLoginModal }) => {
               onKeyDown={handleKeyDown}
             />
           </div>
-          <button onClick={EnterInGalley} className={classes.btnEnter}>
+          <button
+            type="button"
+            onClick={EnterInGalley}
+            className={classes.btnEnter}
+          >
             Enter
           </button>
         </div>

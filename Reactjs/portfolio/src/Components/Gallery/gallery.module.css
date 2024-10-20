@@ -1,0 +1,167 @@
+.GalleryContainer {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-top: 0 !important;
+  padding-top: 5px;
+  padding-bottom: 0;
+  margin-left: 1.5%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #f5f5f7;
+  overflow-y: auto;
+  box-sizing: border-box;
+  min-width: 100%;
+}
+
+.GalleryContainer {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-top: 0 !important;
+  padding-top: 5px;
+  padding-bottom: 0;
+  margin-left: 1.5%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #f5f5f7;
+  overflow-y: auto;
+  box-sizing: border-box;
+  min-width: 100%;
+}
+.FormUpload {
+  display: flex;
+  padding-top: 0 !important;
+  flex-direction: column;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.FormUpload {
+  width: 951px;
+  margin-top: auto !important;
+  min-height: 360px;
+  margin-bottom: auto !important;
+}
+
+.FileNameXR input {
+  text-align: center;
+  width: 100%;
+}
+
+.FileNameXR,
+.TimeandDate,
+.DateasUpload,
+.UploadImage {
+  padding: 20px;
+}
+
+.FormUpload input {
+  height: 40px !important;
+  width: 399px !important;
+}
+
+.UploadImage input {
+  height: 40px !important;
+  width: 399px !important;
+}
+
+.FormUpload input[type="date"] {
+  text-align: center;
+}
+
+input[type="datetime-local"] {
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* ********************************** FILE UPLOAD DESIGN **************************************** */
+
+/* ************************* in Testing */
+/* UploadImage.module.css */
+.uploadImage {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.dragDropArea {
+  width: 100%;
+  max-width: 400px;
+  padding: 27px;
+  border: 2px dashed #007bff;
+  border-radius: 8px;
+  text-align: center;
+  background-color: #f8f9fa; /* Light background */
+  transition: background-color 0.3s ease;
+}
+
+.dragDropAreaDragging {
+  background-color: #e0f7fa; /* Change background color when dragging */
+}
+
+.dragDropLabel {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.previewContainer {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 600px;
+  background-color: #e9ecef;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.previewContainer h4 {
+  margin-bottom: 10px;
+}
+
+.previewContainer ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.previewContainer li {
+  margin: 5px 0;
+  color: #343a40; /* Dark text color */
+}
+
+.hidden {
+  display: none; /* Hide the default file input */
+}
+
+.btnEnter {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  width: 184px !important;
+  height: 46px !important;
+  border-radius: 4px;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 19px;
+  background-color: #000;
+  transition: transform 0.5s ease, color 0.4s ease;
+}
+.btnEnter:hover {
+  background-color: slategray;
+  transform: scale(1.01);
+}
+
+.dragDropLabel i {
+  margin-right: 8px;
+  font-size: 1.2rem;
+  color: #333;
+}

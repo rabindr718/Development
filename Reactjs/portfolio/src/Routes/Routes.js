@@ -7,4 +7,5 @@ export const ROUTES = {
   SKILLS: "/skills",
   EXPERIENCE: "/experience",
   GALLERY: "/gallery",
+  DiSPLAY: "/display",
 };

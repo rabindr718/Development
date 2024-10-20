@@ -77,10 +77,10 @@ const Contact = () => {
 
         <div className={classes.NumberContainer}>
           <p>
-            <i
-              href="tel:+917079121008"
-              className={`${classes.iconSizeNumber} fas fa-phone-square-alt`}
-            ></i>
+            <a href="tel:+917079121008" className={classes.iconSizeNumber}>
+              <i className="fa-brands fa-whatsapp text-green-500 text-2xl"></i>
+              {/* <i className="fas fa-phone-square-alt"></i> */}
+            </a>
             <a className={classes.NumberLetter} href="tel:+917079121008">
               +91 7079121008
             </a>

@@ -23,8 +23,9 @@
   border-radius: 10px;
   border: none;
   border: 1px solid blue;
-  justify-content: center !important;
-  padding-left: 30px;
+  padding-left: 0;
+  padding-right: 0;
+  text-align: center;
   font-weight: 350;
 }
 
@@ -38,7 +39,10 @@
   color: #ffffff;
   font-weight: 500;
 }
-
+.btnEnter:hover {
+  background-color: slategray;
+  transform: scale(1.02);
+}
 .CrossXRight {
   display: flex;
   flex-direction: row-reverse;
