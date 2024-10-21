@@ -10,7 +10,9 @@ const Services = () => {
   const [openLoginModal, setLoginModal] = useState(false);
 
 
-  const SeeImages = () => { setLoginModal(true) }
+  const SeeImages = () => { 
+    setLoginModal(true) 
+  }
 
 
 
