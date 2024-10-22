@@ -81,3 +81,95 @@ button {
 <h4>: 1em (typically 16px)
 <h5>: 0.83em (typically 14px)
 <h6>: 0.67em (typically 12px) */
+
+/* For screens between 528px and 768px */
+@media (min-width: 528px) and (max-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: -60px !important;
+    color: #1d1d1f;
+    height: auto;
+    padding-top: 0px !important;
+  }
+}
+
+/* For screens below 528px */
+@media (max-width: 527px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 14px !important;
+    color: #1d1d1f;
+    height: auto;
+    padding-top: 0px !important;
+  }
+
+  .nameX {
+    font-size: 48px;
+    /* font-weight: 600; */
+  }
+  .myName {
+    font-size: 22.88px;
+  }
+  .Greeting {
+    font-size: 22.88px;
+  }
+
+  .GreetingIn {
+    font-size: 22.88px;
+  }
+  .nameXR {
+    font-size: 22.88px;
+    /* font-weight: 600; */
+  }
+  .divTypingName {
+    height: 100px;
+    font-size: 14px;
+  }
+  .aboutEngg {
+    margin-top: 40px;
+    font-size: 22.88px;
+  }
+  .DownloadCV {
+    /* background-color: #6200ea;
+    color: white;
+    border: none;
+    margin-top: 20%;
+    margin-left: 15%;
+    border-radius: 25px;
+    padding: 12px 20px;
+    font-size: 16px;
+    max-width: 50%;
+    cursor: pointer;
+    min-height: 10% !important;
+  
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    font: 2em;
+    font-weight: 600; */
+  }
+  .DownloadCV:hover {
+    background-color: #3700b3;
+  }
+
+  .DownloadCV:active {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  button {
+    border: none;
+  }
+  .universityLink {
+    text-decoration: none; /* Removes the underline */
+    color: inherit; /* Inherits the color from the parent element */
+  }
+  .largeFont {
+    font-size: 22.88px; /* Adjust size as needed, e.g., 1.5rem for larger text */
+    font-weight: 580; /* Optional: make text bold */
+  }
+  .universityLink:hover {
+    text-decoration: none; /* Ensures no underline on hover */
+    color: inherit; /* Ensures the color stays the same on hover */
+  }
+}

@@ -1,14 +1,25 @@
 import React, { useState } from "react";
 import classes from "./Login.module.css";
 import { ICONS } from "../resources/ICONS";
+import { useNavigate } from "react-router-dom";
 
 const Login = ({ setLoginModal }) => {
+  const navigate = useNavigate();
   const [keys, setKeys] = useState("");
   const CloseModal = () => {
     setLoginModal(false);
   };
   const EnterInGalley = () => {
-    console.log(keys);
+    if (keys == 1234) {
+      navigate("/display");
+      setLoginModal(false);
+    } else if (keys == 12345) {
+      navigate("/gallery");
+      setLoginModal(false);
+    } else {
+      navigate("/");
+      setLoginModal(false);
+    }
     setKeys("");
   };
   const handleKeyDown = (e) => {

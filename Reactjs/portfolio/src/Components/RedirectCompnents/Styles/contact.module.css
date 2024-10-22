@@ -101,27 +101,26 @@
 
 .stackOverflowIcon i {
   font-size: 50px;
-  color: #f48023;
+  color: #000;
   transition: transform 0.3s ease, color 0.3s ease;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3), 0 0 25px rgba(0, 0, 0, 0.2);
 }
 
 .stackOverflowIcon i:hover {
   transform: scale(1.02);
-  color: #e94e32;
+  color: #f48023;
 }
 
 .linkedinIcon i {
   font-size: 50px;
-  color: #0b66c2;
-  /* color: #0077b5;  */
+  color: #000;
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
 /* Hover effect */
 .linkedinIcon i:hover {
   transform: scale(1.02);
-  color: #005582;
+  color: #0b66c2;
 }
 .ContactUX:active {
   color: #c31cc3;
@@ -133,28 +132,29 @@
 }
 
 .twitterIcon i {
+  color: #000;
   font-size: 50px;
-  color: #1da1f2;
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
 /* Hover effect */
 .twitterIcon i:hover {
   transform: scale(1.02);
-  color: #0a85d1;
+  color: #1da1f2;
 }
 
 .instagramIcon i {
   font-size: 50px;
-  background: linear-gradient(45deg, #f58529, #dd2a7b, #8134b8, #515bd4);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
+  color: #000;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 /* Hover effect */
 .instagramIcon i:hover {
+  background: linear-gradient(45deg, #f58529, #dd2a7b, #8134b8, #515bd4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
   transform: scale(1.02);
   opacity: 0.8;
 }
@@ -183,16 +183,15 @@
 .iconSizeNumber {
   transform: rotate(90deg);
   font-size: 32px;
-  color: #333;
+  color: #000;
   margin-right: 9px;
-  color: #25d366 !important;
   transition: background-color 0.3s, color 0.3s;
 }
 
 .iconSizeNumber:hover {
   transform: scale(1.09);
   cursor: pointer;
-  color: #0e9b42 !important;
+  color: #25d366 !important;
 }
 .NumberLetter:hover {
   transform: scale(1.02);

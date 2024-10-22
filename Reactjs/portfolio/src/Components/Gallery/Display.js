@@ -47,7 +47,7 @@ const Display = () => {
       <div className={classes.DisplayContainer}>
         <div className={classes.diplayImage}>
           {populatedArray.slice(0, 15).map((value) => (
-            <div key={value.id} className={classes.diplayImagediv}>
+            <div className={classes.diplayImagediv}>
               <img
                 onClick={() => ShowLarge(value)}
                 className={classes.ImgAccess}

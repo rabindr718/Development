@@ -13,3 +13,19 @@
   /* font-weight: 600; */
   font-size: 22.88px;
 }
+.RabindraSharma {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: 430;
+}
+.NameX {
+  font-weight: 510;
+}
+.NameX:hover {
+  color: aqua;
+  font-weight: 510;
+  cursor: pointer;
+}

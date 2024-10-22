@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { imageDbStore, textDataStore } from "./firebase"; // Adjust the path as necessary
 import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import classes from "./gallery.module.css";

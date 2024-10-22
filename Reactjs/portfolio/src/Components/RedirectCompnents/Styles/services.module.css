@@ -18,13 +18,15 @@
 
 .BtnS {
   display: flex;
-  gap: 30px !important;
-  margin-bottom: 20px; /* Space between rows */
+  gap: 16px !important;
+  align-items: center !important;
+  margin-bottom: -4px; /* Space between rows */
 }
 
 .ImageSize {
+  margin-top: 20px;
   width: 500px;
-  height: 280px;
+  height: 270px;
   overflow: hidden; /* Hide overflow if needed */
 }
 

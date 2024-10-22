@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 const BottonA = () => {
   const navigate = useNavigate();
+  const isMobile = window.innerWidth <= 767;
 
   const AboutMe = () => {
     navigate("/about"); // Changed path to '/about' (ensure it's defined in routes)
@@ -26,7 +27,7 @@ const BottonA = () => {
     navigate("/experience");
   };
   return (
-    <div className={classes.container}>
+    <div className={isMobile ? classes.containerMobile : classes.container}>
       <button className={classes.porfolio} onClick={PortFolio}>
         Home
       </button>

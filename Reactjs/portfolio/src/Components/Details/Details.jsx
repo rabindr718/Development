@@ -15,12 +15,12 @@ const Details = () => {
       plan, Marketing strategy, Investment proposals, Internal strategy) •
       Coordination with investors • Front-end Development Specially<br></br>
       <strong>Experience : </strong>
-      <key>
+      <div className={classes.Keywords}>
         Developer/Programmer - Languages, Frameworks, Environments, Databases,
         Stacks & Preprocessors: Javascript, Typescript, Java, Python, HTML, CSS,
-        SCSS/SASS,PHP, React.js , Vue.js, MySQL, Xcode, Android Studio, AWS
-        Redshift.
-      </key>
+        SCSS/SASS, PHP, React.js, Vue.js, MySQL, Xcode, Android Studio, AWS Redshift.
+      </div>
+
     </div>
   );
 };

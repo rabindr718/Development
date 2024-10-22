@@ -4,8 +4,8 @@
   align-items: center;
   text-align: center;
   width: 100%;
-  position: relative; /* Ensure positioning context */
-  z-index: 1; /* Ensure it stays on top of other elements */
+  position: relative;
+  z-index: 1;
 }
 .container button {
   background-color: #ffffff;
@@ -30,15 +30,36 @@
   font-weight: 450;
   transform: scale(1.05);
 }
+@media (max-width: 768px) {
+  .containerMobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+  }
 
-.left-group {
-  display: flex;
-  justify-content: flex-end;
-  flex: 1;
-}
+  .containerMobile button {
+    background-color: #ffffff;
+  }
 
-.right-group {
-  display: flex;
-  justify-content: flex-start;
-  flex: 1;
+  .porfolio,
+  .contact,
+  .aboutme,
+  .Services {
+    text-decoration: none;
+    font-weight: 400;
+    color: #1d1d1f;
+    margin-left: 0px;
+    padding: 0px;
+    transition: all 0.5s ease;
+  }
+
+  .porfolioMobile:hover,
+  .contactMobile:hover,
+  .aboutmeMobile:hover,
+  .ServicesMobile:hover {
+    font-weight: 500; /* Adjusted to 500 for more standard font weight */
+    transform: scale(1.05);
+  }
 }
