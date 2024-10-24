@@ -1,53 +1,63 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import classes from "./Botton.module.css";
-import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 const BottonA = () => {
   const navigate = useNavigate();
-  const isMobile = window.innerWidth <= 767;
+  const [isOpen, setIsOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 767); // state for mobile detection
 
-  const AboutMe = () => {
-    navigate("/about"); // Changed path to '/about' (ensure it's defined in routes)
-  };
-  const PortFolio = () => {
-    navigate("/");
-  };
-  const Services = () => {
-    navigate("/services"); // Changed path to '/services' (ensure it's defined in routes)
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 767);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    // Clean up event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  const handleNavigation = (path) => {
+    navigate(path);
+    if (isMobile) setIsOpen(false); // Close the slider on mobile after navigation
   };
 
-  const Contact = () => {
-    navigate("/contact"); // Navigate to '/contact' path
-  };
-  const Skills = () => {
-    navigate("/skills");
-  };
-  const Experience = () => {
-    navigate("/experience");
-  };
+  const AboutMe = () => handleNavigation("/about");
+  const PortFolio = () => handleNavigation("/");
+  const Services = () => handleNavigation("/services");
+  const Contact = () => handleNavigation("/contact");
+  const Skills = () => handleNavigation("/skills");
+  const Experience = () => handleNavigation("/experience");
+
   return (
-    <div className={isMobile ? classes.containerMobile : classes.container}>
-      <button className={classes.porfolio} onClick={PortFolio}>
-        Home
-      </button>
-      <button className={classes.contact} onClick={Skills}>
-        Skills
-      </button>
-      <button className={classes.contact} onClick={Contact}>
-        Contact
-      </button>
-      <button className={classes.contact} onClick={Experience}>
-        Experience
-      </button>
-      <button className={classes.aboutme} onClick={AboutMe}>
-        About me
-      </button>
+    <>
+      {isMobile && !isOpen && ( // Hide ☰ when slider is open
+        <button className={classes.menuButton} onClick={() => setIsOpen(true)}>
+          ☰
+        </button>
+      )}
 
-      <button className={classes.Services} onClick={Services}>
-        Services
-      </button>
-    </div>
+      {isMobile && (
+        <>
+          <div
+            className={`${classes.overlay} ${isOpen ? classes.open : ""}`}
+            onClick={() => setIsOpen(false)}
+          />
+        </>
+      )}
+
+      <div className={`${isMobile ? classes.containerMobile : classes.container} ${isOpen ? classes.open : ''}`}>
+        <button className={classes.porfolio} onClick={PortFolio}>Home</button>
+        <button className={classes.contact} onClick={Skills}>Skills</button>
+        <button className={classes.contact} onClick={Contact}>Contact</button>
+        <button className={classes.contact} onClick={Experience}>Experience</button>
+        <button className={classes.aboutme} onClick={AboutMe}>About me</button>
+        <button className={classes.Services} onClick={Services}>Services</button>
+      </div>
+    </>
   );
 };
 

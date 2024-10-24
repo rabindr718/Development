@@ -21,17 +21,17 @@ const SkillsTable = () => {
         <div key={index} className={styles.card}>
           <div className={styles.nameContainer}>
             <div className={styles.heading}>{item.name}</div>
-          </div>  
+          </div>
           <div className={styles.progressContainer}>
-          <div className={styles.progressBarContainer}>
-              <div 
+            <div className={styles.progressBarContainer}>
+              <div
                 className={styles.progressBar}
                 style={{
                   width: `${(item.value / item.totalSpots) * 100}%`,
                 }}
               ></div>
             </div>
-           
+
             <div className={styles.progressText}>
               {item.value} out of {item.totalSpots}
             </div>

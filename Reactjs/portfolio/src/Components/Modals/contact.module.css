@@ -1,0 +1,165 @@
+/* ContactModal.module.css */
+.openButton {
+  padding: 10px 20px;
+  background-color: #000;
+  /* background-color: #ff0066; */
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  opacity: 0.75;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.openButton:hover {
+  background-color: slategray;
+  transform: scale(1.01);
+
+  /* background-color: #d40054; */
+}
+
+.modal {
+  display: flex;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 10%;
+}
+
+.popupModel {
+  width: 37.9%;
+  background-color: white;
+  border-radius: 8px;
+  border: 1px solid #888;
+  position: relative;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.close {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.close:hover {
+  color: black;
+}
+
+.h2tag {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.inputContainer {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.inputContainer input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-bottom: 2px solid #d6c3c3;
+  font-size: 16px;
+  background: transparent;
+  transition: border-color 0.3s;
+}
+
+.inputContainer input:focus {
+  outline: none;
+  border-bottom-color: #ff0066;
+}
+
+.inputContainer label {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: #888;
+  transition: all 0.3s;
+  pointer-events: none;
+  font-size: 16px;
+}
+
+.inputContainer input:focus + label,
+.inputContainer input:not(:placeholder-shown) + label {
+  top: -12px;
+  font-size: 14px;
+  color: #ff0066;
+}
+
+.nameFields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.checkboxContainer {
+  display: flex;
+  align-items: center;
+  margin: 30px 0;
+  position: relative;
+}
+
+.checkboxContainer input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.checkboxContainer label {
+  font-size: 14px;
+  color: #666;
+  cursor: pointer;
+}
+
+.contactUsbtn {
+  width: 100%;
+  padding: 12px;
+  background-color: #ff0066;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contactUsbtn:hover {
+  background-color: #d40054;
+}
+
+@media only screen and (max-width: 768px) {
+  .popupModel {
+    width: 90%;
+    margin: 0 20px;
+  }
+
+  .nameFields {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .inputContainer input {
+    font-size: 14px;
+  }
+
+  .contactUsbtn {
+    font-size: 16px;
+  }
+}

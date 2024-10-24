@@ -29,3 +29,19 @@
   font-weight: 510;
   cursor: pointer;
 }
+@media (max-width: 768px) {
+  .container {
+    background-color: #404040;
+    display: grid;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    height: 11vh;
+    width: 100%;
+    color: #ffffff;
+    text-align: center;
+    font-size: 22.88px;
+  }
+}

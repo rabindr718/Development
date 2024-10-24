@@ -30,36 +30,74 @@
   font-weight: 450;
   transform: scale(1.05);
 }
+
 @media (max-width: 768px) {
   .containerMobile {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    height: 100%;
+    align-items: flex-start;
+    height: 89vh;
+    position: fixed;
+    padding-top: 35px;
+    top: 0;
+    left: 0;
+    width: 254px;
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: 1000;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    overflow: auto;
+  }
+
+  .containerMobile.open {
+    transform: translateX(0);
   }
 
   .containerMobile button {
-    background-color: #ffffff;
-  }
-
-  .porfolio,
-  .contact,
-  .aboutme,
-  .Services {
-    text-decoration: none;
-    font-weight: 400;
+    width: 50%;
+    background-color: transparent;
     color: #1d1d1f;
-    margin-left: 0px;
-    padding: 0px;
-    transition: all 0.5s ease;
+    font-size: 18px;
+    font-weight: 500;
+    border: none;
+    padding: 15px 0px;
+    text-align: left; /* Align text to the left */
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin-left: 39px;
   }
 
-  .porfolioMobile:hover,
-  .contactMobile:hover,
-  .aboutmeMobile:hover,
-  .ServicesMobile:hover {
-    font-weight: 500; /* Adjusted to 500 for more standard font weight */
-    transform: scale(1.05);
+  .containerMobile button:hover {
+    background-color: rgba(0, 0, 0, 0.05); /* Light background on hover */
+    transform: scale(1.05); /* Subtle scale effect */
+  }
+
+  .menuButton {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1001;
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .overlay.open {
+    opacity: 1;
+    pointer-events: auto;
   }
 }

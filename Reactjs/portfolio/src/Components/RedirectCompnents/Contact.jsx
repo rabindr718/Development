@@ -1,11 +1,14 @@
 import React from "react";
 import classes from "./Styles/contact.module.css";
 import { ICONS } from "../resources/ICONS";
-
+import ContactModal from "../Modals/ContactForm"
 const Contact = () => {
+
+  const isMobile = window.innerWidth = 767;
   return (
     <div className={classes.containerContact}>
       <div className={classes.leftSide}>
+
         <img
           src={ICONS.myImage1}
           alt="Contact Image"
@@ -13,15 +16,38 @@ const Contact = () => {
         />
       </div>
       <div className={classes.rightSide}>
-        <span className={classes.ContactUSX}>Contact us : ~</span>
-        <span>
-          <a
-            href="mailto:rksharma00000777@gmail.com"
-            className={classes.ContactUX}
-          >
-            rksharma00000777@gmail.com
-          </a>
-        </span>
+        {/* ///HERE FOR MOBILE */}
+
+        {isMobile ?
+          <div className={classes.ContactFormXS}>
+            <span className={classes.ContactUSX}><ContactModal /></span>
+            <div className={classes.EmailAbove}>
+              <a href="mailto:rksharma00000777@gmail.com" className={classes.ContactUX}>rksharma00000777@gmail.com</a>
+            </div>
+          </div> :
+          <div className={classes.ContactFormXS}>
+            <span className={classes.ContactUSX}>Contact us : ~</span>
+            <div className={classes.EmailAbove}>
+              <a href="mailto:rksharma00000777@gmail.com" className={classes.ContactUX}>rksharma00000777@gmail.com</a>
+            </div>
+          </div>}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         <div className={classes.ICONContainer}>
           <a

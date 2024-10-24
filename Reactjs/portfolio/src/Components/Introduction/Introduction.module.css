@@ -30,7 +30,7 @@
   font-size: 14px;
 }
 .aboutEngg {
-  margin-top: 40px;
+  padding-top: 48px;
   font-size: 22.88px;
 }
 .DownloadCV {
@@ -128,7 +128,7 @@ button {
     font-size: 14px;
   }
   .aboutEngg {
-    margin-top: 40px;
+    padding-top: 49px;
     font-size: 22.88px;
   }
   .DownloadCV {

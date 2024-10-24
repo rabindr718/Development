@@ -54,11 +54,14 @@
   min-width: 100% !important;
   display: flex;
 }
-
+.nameContainer:hover {
+  background-color: #ffffff;
+  border-radius: 8px;
+}
 .progressBarContainer {
   position: relative;
   height: 0.5rem;
-  background-color: #e6f7e6;
+  background-color: #9fd29f;
   border-radius: 9999px;
   overflow: hidden;
   margin-bottom: 0.25rem;
@@ -73,6 +76,7 @@
   border-radius: 9999px;
   background: linear-gradient(to right, #7fff00, #008000);
   width: 340px;
+  background-color: #ffffff;
 }
 .progressText {
   font-size: 14px;
@@ -83,4 +87,58 @@
 
 .progressContainer {
   /* margin-left: 10px ; */
+}
+@media (max-width: 768px) {
+  .Skillscontainer {
+    margin-top: 51px !important;
+    width: 100% !important;
+    min-height: 100vh;
+    background-color: #f5f5f7;
+    color: #1d1d1f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0;
+    overflow-y: scroll;
+  }
+
+  .HeadingTittle {
+    width: 80%;
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: -100px !important;
+  }
+  .card {
+    all: unset;
+    padding: 1.5px;
+    border-radius: 8px;
+  }
+
+  .heading {
+  }
+
+  .heading::before {
+    content: "\25BA";
+  }
+
+  .nameContainer {
+    justify-self: start;
+    min-width: 363px !important;
+    display: flex;
+  }
+
+  .progressBarContainer {
+    width: 270px;
+  }
+
+  .progressBar {
+  }
+  .progressText {
+  }
+
+  .progressContainer {
+  }
 }

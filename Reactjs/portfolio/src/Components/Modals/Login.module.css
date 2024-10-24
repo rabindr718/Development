@@ -39,10 +39,11 @@
   background-color: #000;
   color: #ffffff;
   font-weight: 500;
+  transition: opacity 0.5s ease-in-out;
 }
 .btnEnter:hover {
   background-color: slategray;
-  transform: scale(1.02);
+  transform: scale(1.01);
 }
 .CrossXRight {
   display: flex;
