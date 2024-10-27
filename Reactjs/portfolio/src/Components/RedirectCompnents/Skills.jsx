@@ -1,7 +1,12 @@
 import styles from "./Styles/skills.module.css";
-import React from "react";
+import React, { useState } from "react";
+import Education from "../RedirectCompnents/Education"
+import Certification from "./Certifications";
 
 const SkillsTable = () => {
+  const [showCertificate, setShowCertificate] = useState(false);
+  const [showEducation, setShowEducation] = useState(false);
+
   const items = [
     { name: "Core Java", value: 10, totalSpots: 10 },
     { name: "React, Redux", value: 7, totalSpots: 10 },
@@ -10,14 +15,45 @@ const SkillsTable = () => {
     { name: "DBMS SQL", value: 5, totalSpots: 10 },
     { name: "DSA + Algorithms", value: 6, totalSpots: 10 },
     { name: "Python, Basic .NET", value: 7, totalSpots: 10 },
-    { name: "Wordpress, Firebase, Jira, Git, Postman", value: 8, totalSpots: 10 },
+    {
+      name: "Wordpress, Firebase, jira, git, postman",
+      value: 8,
+      totalSpots: 10,
+    },
     { name: "Linux, MacOS, Windows", value: 9, totalSpots: 10 },
   ];
 
+  const ShowCertification = () => {
+    setShowCertificate(true);
+    setShowEducation(false); // Close the education section
+  };
+
+  const ShowEducation = () => {
+    setShowEducation(true);
+    setShowCertificate(false); // Close the certification section
+  };
+
   return (
     <div className={styles.Skillscontainer}>
+      <div className={styles.BottonsContainer}>
+        <span className={styles.Education} onClick={ShowEducation}>Education</span>
+        <span className={styles.Certifications} onClick={ShowCertification} >Certifications</span>
+      </div>
       <span className={styles.HeadingTittle}>Skills & Technologies</span>
-      {items.map((item, index) => (
+      <div className={styles.AnotherPage}>
+        <div className={styles.EC_Container}>
+          {showEducation && <div className={styles.EC_ContainerFirst}>
+            <Education />
+          </div>}
+        </div>
+        <div className={styles.EC_Container}>
+          {showCertificate && <div className={styles.EC_ContainerSecond}>
+            <Certification />
+          </div>}
+
+        </div>
+      </div>
+      {/* {items.map((item, index) => (
         <div key={index} className={styles.card}>
           <div className={styles.nameContainer}>
             <div className={styles.heading}>{item.name}</div>
@@ -37,49 +73,11 @@ const SkillsTable = () => {
             </div>
           </div>
         </div>
-      ))}
+      ))} */}
+
+
     </div>
   );
 };
 
 export default SkillsTable;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

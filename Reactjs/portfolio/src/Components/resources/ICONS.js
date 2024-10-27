@@ -15,10 +15,20 @@ import BigSVGComputer from "./assets/ComputeSVG.svg";
 import CrossW from "./assets/WhiteCross.png";
 import G_Cross from "./assets/GrayCross.svg";
 import D_Cross from "./assets/DarkCross.svg";
+import MULogo from "./assets/MuLo.png";
+import mulogo from "./assets/MuLo.png";
+import MarwadiLogo from "./assets/Marwadi_University_logo.png";
+import GTU from "./assets/LogoGTU.png";
+import CBSE from "./assets/CBSE_LOGO.png";
 
 export const ICONS = {
   // BACKGROUND: require('./assets/1662389800666.jpg')
   myImage1: image01,
+  MULogo: MULogo,
+  mulogo: mulogo,
+  MarwadiLogo: MarwadiLogo,
+  GTU: GTU,
+  CBSE: CBSE,
   AISpark: AI_1,
   ChipGlow: AIChips,
   ChipSparks: AIChips2,

@@ -31,7 +31,7 @@
 }
 .aboutEngg {
   padding-top: 48px;
-  font-size: 22.88px;
+  font-size: 18px;
 }
 .DownloadCV {
   /* background-color: #6200ea;
@@ -106,30 +106,30 @@ button {
   }
 
   .nameX {
-    font-size: 48px;
+    font-size: 39px;
     /* font-weight: 600; */
   }
   .myName {
-    font-size: 22.88px;
+    font-size: 20.88px;
   }
   .Greeting {
-    font-size: 22.88px;
+    font-size: 20.88px;
   }
 
   .GreetingIn {
-    font-size: 22.88px;
+    font-size: 20.88px;
   }
   .nameXR {
-    font-size: 22.88px;
+    font-size: 20.88px;
     /* font-weight: 600; */
   }
   .divTypingName {
     height: 100px;
-    font-size: 14px;
+    font-size: 12px;
   }
   .aboutEngg {
     padding-top: 49px;
-    font-size: 22.88px;
+    font-size: 21px;
   }
   .DownloadCV {
     /* background-color: #6200ea;
@@ -165,8 +165,8 @@ button {
     color: inherit; /* Inherits the color from the parent element */
   }
   .largeFont {
-    font-size: 22.88px; /* Adjust size as needed, e.g., 1.5rem for larger text */
-    font-weight: 580; /* Optional: make text bold */
+    font-size: 21px; /* Adjust size as needed, e.g., 1.5rem for larger text */
+    font-weight: 600; /* Optional: make text bold */
   }
   .universityLink:hover {
     text-decoration: none; /* Ensures no underline on hover */

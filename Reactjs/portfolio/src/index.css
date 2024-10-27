@@ -103,7 +103,9 @@ body {
   align-items: center;
   z-index: 102;
 }
-
+s {
+  padding-bottom: 1.9rem;
+}
 /* 
 
 ********CODE FOR MODAL********

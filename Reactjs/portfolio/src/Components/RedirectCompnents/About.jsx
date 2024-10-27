@@ -8,8 +8,8 @@ const About = () => {
         {/* <div>Rabindra Kumar Sharma</div> */}
         <div className={classes.aboutXTitle}>Full Stack Developer</div>
         <div className={classes.aboutTitle}>
-          I am a <span className={classes.FontStyleA}>Software Engineer,</span>{" "}
-          with Strong foundation in
+          <div className={classes.PaddingDiv}>I am a <span className={classes.FontStyleA}>Software Engineer,</span>{" "}
+            with Strong foundation in</div>
           <ul>
             <li>
               <span className={classes.FontStyleA}>

@@ -21,7 +21,7 @@ const Contact = () => {
         {isMobile ?
           <div className={classes.ContactFormXS}>
             <span className={classes.ContactUSX}><ContactModal /></span>
-            <div className={classes.EmailAbove}>
+            <div className={classes.EmailAbove}> Email id :
               <a href="mailto:rksharma00000777@gmail.com" className={classes.ContactUX}>rksharma00000777@gmail.com</a>
             </div>
           </div> :

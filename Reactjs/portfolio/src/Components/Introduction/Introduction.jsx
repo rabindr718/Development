@@ -36,10 +36,10 @@ const Introduction = () => {
         <span className={classes.myName}> </span>{" "}
         <div className={classes.nameX}>RABINDRA</div>
         <br></br>
-        <span style={{ fontSize: "26.88px", fontWeight: "400" }}>
+        <span style={{ fontSize: "22.88px", fontWeight: "440" }}>
           I am{" "}
           <span
-            style={{ fontSize: "26.88px", fontWeight: "600" }}
+            style={{ fontSize: "22.88px", fontWeight: "600" }}
             className={`typing`}
           ></span>
         </span>

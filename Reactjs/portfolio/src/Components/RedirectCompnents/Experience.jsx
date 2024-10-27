@@ -15,14 +15,15 @@ const Experience = () => {
         <tbody>
           <tr>
             <td className={classes.RoleTittle}>
-              <span>Frontend Developer Intern</span>
+              <span className={classes.titleText}>Frontend Developer Intern</span>
               <div className={classes.techInfo}>
                 Tech: ReactJS, Java, JavaScript
               </div>
             </td>
             <td className={classes.WorkplacceTitle}>
-              <span>KaaShiv Infotech, Chennai</span>
-              <div className={classes.techInfo}>May 2022 - Sept 2022</div>
+              <span className={classes.titleText} >
+                KaaShiv Infotech, Chennai
+              </span>              <div className={classes.techInfo}>May 2022 - Sept 2022</div>
             </td>
           </tr>
           <tr>
@@ -78,7 +79,7 @@ const Experience = () => {
               </div>
             </td>
             <td className={classes.WorkplacceTitle}>
-              <span>YBI Foundation, New Delhi</span>
+              <span>YBI Foundation, Delhi</span>
               <div className={classes.techInfo}>
                 Tech: ReactJS, Java, JavaScript
               </div>
