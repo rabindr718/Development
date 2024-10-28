@@ -3,7 +3,26 @@ import React, { useState } from 'react';
 import styles from './contact.module.css';
 
 const ContactModal = () => {
+    const [isChecked, setIsChecked] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
+    const [isLastNameFocused, setIsLastNameFocused] = useState(false);
+    const [isFirstNameFocused, setIsFirstNameFocused] = useState(false);
+    const [IsEmailFocused, setIsEmailFocused] = useState(false);
+    const [IsNumberFocused, setIsNumberFocused] = useState(false);
+    const [IsMessageFocused, setIsMessageFocused] = useState(false);
+
+
+
+
+    const [inputValue, setInputValue] = useState("");
+
+
+
+    const handleCheckboxChange = () => {
+        if (!inputValue) {
+            setIsChecked(!isChecked);
+        }
+    };
     const [formData, setFormData] = useState({
         workEmail: '',
         firstName: '',
@@ -31,7 +50,7 @@ const ContactModal = () => {
     return (
         <>
             <button onClick={handleOpen} className={styles.openButton}>
-                Contact us
+                Contact us 🎯
             </button>
 
             {isOpen && (
@@ -43,18 +62,7 @@ const ContactModal = () => {
                             <h2 className={styles.h2tag}>Talk to us</h2>
 
                             <form onSubmit={handleSubmit}>
-                                <div className={styles.inputContainer}>
-                                    <input
-                                        type="email"
-                                        id="workEmail"
-                                        name="workEmail"
-                                        placeholder=" "
-                                        value={formData.workEmail}
-                                        onChange={handleChange}
-                                        required
-                                    />
-                                    <label htmlFor="workEmail">Work email*</label>
-                                </div>
+
 
                                 <div className={styles.nameFields}>
                                     <div className={styles.inputContainer}>
@@ -65,9 +73,13 @@ const ContactModal = () => {
                                             placeholder=" "
                                             value={formData.firstName}
                                             onChange={handleChange}
+                                            onFocus={() => setIsFirstNameFocused(true)}
+                                            onBlur={() => setIsFirstNameFocused(false)}
                                             required
                                         />
-                                        <label htmlFor="firstName">First name*</label>
+                                        <label htmlFor="firstName">
+                                            First name{!isFirstNameFocused && "*"}
+                                        </label>
                                     </div>
 
                                     <div className={styles.inputContainer}>
@@ -78,27 +90,85 @@ const ContactModal = () => {
                                             placeholder=" "
                                             value={formData.lastName}
                                             onChange={handleChange}
+                                            onFocus={() => setIsLastNameFocused(true)}
+                                            onBlur={() => setIsLastNameFocused(false)}
                                             required
                                         />
-                                        <label htmlFor="lastName">Last name*</label>
+                                        <label htmlFor="lastName">
+                                            Last name{!isLastNameFocused && "*"}
+                                        </label>
                                     </div>
                                 </div>
+                                <div className={styles.nameFields}>
 
+                                    <div className={styles.inputContainer}>
+                                        <input
+                                            type="email"
+                                            id="workEmail"
+                                            name="workEmail"
+                                            placeholder=" "
+                                            value={formData.workEmail}
+                                            onChange={handleChange}
+                                            onFocus={() => setIsEmailFocused(true)}
+                                            onBlur={() => setIsEmailFocused(false)}
+                                            required
+                                        />
+                                        <label htmlFor="workEmail">
+                                            {/* Work email{!isEmailFocused && '*'}  */}
+                                            Work email{!IsEmailFocused && "*"}
+                                        </label>
+                                    </div>
+                                    <div className={styles.inputContainer}>
+                                        <input
+                                            type="number"
+                                            id="mobilenumber"
+                                            name="mobilenumber"
+                                            placeholder=" "
+                                            value={formData.number}
+                                            onChange={handleChange}
+                                            onFocus={() => setIsNumberFocused(true)}
+                                            onBlur={() => setIsNumberFocused(false)}
+                                            required
+                                        />
+                                        <label htmlFor="workEmail">
+                                            {/* Work email{!isEmailFocused && '*'}  */}
+                                            Mobile number{!IsNumberFocused && "*"}
+                                        </label>
+                                    </div>
+                                </div>
+                                <div className={styles.inputContainer}>
+                                    <input
+                                        type="email"
+                                        id="workEmail"
+                                        name="workEmail"
+                                        placeholder=" "
+                                        value={formData.workEmail}
+                                        onChange={handleChange}
+                                        onFocus={() => setIsMessageFocused(true)}
+                                        onBlur={() => setIsMessageFocused(false)}
+                                        required
+                                    />
+                                    <label htmlFor="workEmail">
+                                        {/* Work email{!isEmailFocused && '*'}  */}
+                                        Messages{!IsMessageFocused && "*"}
+                                    </label>
+                                </div>
                                 <div className={styles.checkboxContainer}>
+
                                     <input
                                         type="checkbox"
-                                        id="isAgreed"
-                                        name="isAgreed"
-                                        checked={formData.isAgreed}
-                                        onChange={handleChange}
+                                        name="checkbox"
+                                        id="cb1"
+                                        checked={isChecked}
+                                        onChange={handleCheckboxChange}
+                                        className={styles.checkboxInput}
                                     />
-                                    <label htmlFor="isAgreed">
-                                        I agree to flye's terms and conditions, and provide consent to
-                                        send me communication.
+                                    <label htmlFor="cb1" className={styles.checkboxLabel}>
+                                        I agree to flye's terms and conditions and provide consent to send me communication.
                                     </label>
                                 </div>
 
-                                <div className={styles.contactBtn}>
+                                <div className={isChecked ? styles.contactUsbtnChecked : styles.contactBtn}>
                                     <button type="submit" className={styles.contactUsbtn}>
                                         Contact us
                                     </button>

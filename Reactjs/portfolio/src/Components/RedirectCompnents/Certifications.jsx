@@ -273,6 +273,7 @@ const Certification = () => {
                     </div>
 
                     <div className={styles.content}>
+                        {/* <kbd className={styles.Certificate}>{edu.Certificate}</kbd> */}
                         <h2 className={styles.Certificate}>{edu.Certificate}</h2>
                         <h3 className={styles.property}>{edu.property}</h3>
 

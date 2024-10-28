@@ -53,7 +53,7 @@ const SkillsTable = () => {
 
         </div>
       </div>
-      {/* {items.map((item, index) => (
+      {items.map((item, index) => (
         <div key={index} className={styles.card}>
           <div className={styles.nameContainer}>
             <div className={styles.heading}>{item.name}</div>
@@ -73,7 +73,7 @@ const SkillsTable = () => {
             </div>
           </div>
         </div>
-      ))} */}
+      ))}
 
 
     </div>

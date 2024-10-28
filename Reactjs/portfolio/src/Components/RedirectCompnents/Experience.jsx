@@ -23,7 +23,7 @@ const Experience = () => {
             <td className={classes.WorkplacceTitle}>
               <span className={classes.titleText} >
                 KaaShiv Infotech, Chennai
-              </span>              <div className={classes.techInfo}>May 2022 - Sept 2022</div>
+              </span>              <div className={classes.techInfo}>May 2022 - September 2022</div>
             </td>
           </tr>
           <tr>
@@ -75,13 +75,13 @@ const Experience = () => {
             <td className={classes.RoleTittle}>
               <span>AI/ML Internship</span>
               <div className={classes.techInfo}>
-                Tech: ReactJS, Java, JavaScript
+                Tech: Python, Jupiter, scikit-learn, PyTorch
               </div>
             </td>
             <td className={classes.WorkplacceTitle}>
               <span>YBI Foundation, Delhi</span>
               <div className={classes.techInfo}>
-                Tech: ReactJS, Java, JavaScript
+                May 2022 - October 2022
               </div>
             </td>
           </tr>
@@ -132,7 +132,7 @@ const Experience = () => {
           </tr>
           <tr>
             <td className={classes.RoleTittle}>
-              <span>Frontend Developer Intern</span>
+              <span>Software Engineer Trainee</span>
               <div className={classes.techInfo}>
                 Tech: ReactJS, Java, JavaScript
               </div>
@@ -140,7 +140,7 @@ const Experience = () => {
             <td className={classes.WorkplacceTitle}>
               <span>Prominent Pixel, Rajkot</span>
               <div className={classes.techInfo}>
-                Tech: ReactJS, Java, JavaScript
+                December 2022 - July 2023
               </div>
             </td>
           </tr>

@@ -21,8 +21,12 @@
 .ContactUSX {
   font-size: 28px;
   font-weight: 500;
+  margin-bottom: 26px !important;
 }
-
+.EmailXD {
+  font-size: 22.88px;
+  font-weight: 250;
+}
 .contactImage {
   width: 490px;
   height: 490px;

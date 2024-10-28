@@ -4,7 +4,7 @@
   align-items: center;
   /* justify-content: center; */
   padding-top: 101px;
-  /* background-color: #f5f5f7; */
+  background-color: #f5f5f7;
   overflow: hidden;
   /* height: calc(105vh - 80px); */
   position: relative;
@@ -54,6 +54,8 @@
   justify-self: start;
   min-width: 100% !important;
   display: flex;
+  transition: all 0.2s ease;
+  cursor: pointer;
 }
 .nameContainer:hover {
   background-color: #ffffff;
@@ -102,21 +104,34 @@
   background-color: teal;
 }
 .Certifications {
-  padding: 19px 90px;
-  background-color: gold;
+  padding: 19px 70px;
+  background-color: #ffffff;
   font-size: 22.88px;
   font-weight: 450;
+  cursor: pointer;
+  transition: all 0.5s ease;
+
+  /* transition: all ease-in 0.55ms; */
+  border-radius: 8px;
 }
 .Education {
-  background-color: rgb(0, 255, 30);
+  background-color: #ffffff;
   font-size: 22.88px;
-  padding: 19px 90px;
+  padding: 19px 70px;
   font-weight: 450;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  border-radius: 8px;
+}
+.Education:hover,
+.Certifications:hover {
+  background-color: slategray;
+  transform: scale(1.01);
 }
 
 .EC_Container {
-  gap: 100px;
-  background-color: red;
+  /* gap: 100px; */
+  /* background-color: red; */
 }
 .EC_ContainerSecond {
   background-color: cyan;
