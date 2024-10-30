@@ -97,7 +97,10 @@ button {
 /* For screens below 528px */
 @media (max-width: 527px) {
   .container {
-    margin-top: 51px !important;
+    margin-top: 15px !important;
+    /* margin-left: -9px !important;
+    margin-right: -9px !important; */
+
     display: flex;
     flex-direction: column;
     margin-bottom: 14px !important;

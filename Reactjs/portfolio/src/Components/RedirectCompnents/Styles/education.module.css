@@ -201,7 +201,7 @@
   .description p {
     /* color: #9ca3af; */
     line-height: 1.6;
-    font-size: 1rem;
+    font-size: 15px;
     color: #000000;
     opacity: 0.9;
   }
@@ -255,6 +255,7 @@
     -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
     display: flex; /* Use flexbox for layout */
     flex-direction: column; /* Stack items vertically */
+    font-size: 15px;
   }
 
   .logoContainer {

@@ -176,6 +176,7 @@
     width: 80vw;
     max-width: 390px;
     text-align: justify;
+    font-size: 14px;
 
     height: auto;
   }

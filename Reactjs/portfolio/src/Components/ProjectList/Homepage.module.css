@@ -99,10 +99,10 @@
     margin: 0;
     overflow-y: hidden;
     position: relative;
+    margin-left: 0px;
+    margin-right: 0px;
     /* padding: 10px; */
     gap: 3px;
-    padding: 0 !important;
-    margin: 0 !important;
   }
 
   /* .flexRow {
