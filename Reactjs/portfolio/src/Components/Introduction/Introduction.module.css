@@ -97,12 +97,17 @@ button {
 /* For screens below 528px */
 @media (max-width: 527px) {
   .container {
+    margin-top: 51px !important;
     display: flex;
     flex-direction: column;
     margin-bottom: 14px !important;
     color: #1d1d1f;
     height: auto;
     padding-top: 0px !important;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 5px;
   }
 
   .nameX {

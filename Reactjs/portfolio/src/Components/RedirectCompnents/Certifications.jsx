@@ -290,7 +290,7 @@ const Certification = () => {
                         {edu.description && (
                             <div className={styles.description}>
                                 {edu.description.map((desc, i) => (
-                                    <p key={i}>{desc}</p>
+                                    <span className={styles.desc} key={i}>{desc}</span>
                                 ))}
                             </div>
                         )}

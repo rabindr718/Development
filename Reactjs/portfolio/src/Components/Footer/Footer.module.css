@@ -38,10 +38,22 @@
     left: 0;
     right: 0;
     margin: 0;
-    height: 11vh;
+    height: 9vh;
     width: 100%;
     color: #ffffff;
     text-align: center;
-    font-size: 22.88px;
+    font-size: 17.88px;
+    font-weight: 300;
+  }
+  .NameX {
+    font-weight: 400;
+  }
+  .RabindraSharma {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: 330;
   }
 }

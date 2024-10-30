@@ -82,8 +82,19 @@
   transition: border-color 0.3s;
 }
 
+/* FOR NUMBER INPUT CLEAR */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
 .inputContainer input:focus {
   outline: none;
+  /* FOR NUMBER INPUT CLEAR */
 
   /* border-bottom-color: #ff0066; */
   /* border-bottom-color: #09b040; */
@@ -159,6 +170,15 @@
   background-color: #000;
 }
 
+/* .checkboxLabel::before {
+  cursor: pointer;
+  background-color: #000;
+}
+
+.checkboxInput:checked + .checkedLabel::before {
+  background-color: #2bac2b;
+} */
+
 .checkboxInput:checked + .checkboxLabel::after {
   /* content: "\2714"; */
   content: "✓";
@@ -178,7 +198,7 @@
 }
 
 .contactBtn {
-  padding-bottom: 7%;
+  /* padding-bottom: 7%; */
 }
 
 ::placeholder {
@@ -192,28 +212,26 @@
   color: white;
   border: none;
   border-radius: 5px;
-  font-size: 18px;
+  font-size: 19px;
   cursor: pointer;
   transition: all 0.5s ease;
   background-color: #000;
   font-weight: 500;
+  margin-bottom: 14px;
 }
 .contactUsbtnChecked {
   width: 100%;
   padding: 12px;
   margin-top: 20px;
-  /* background-color: #ff0066; */
   color: white;
   border: none;
   border-radius: 5px;
-  font-size: 18px;
+  font-size: 19px;
   cursor: pointer;
   transition: all 0.5s ease;
-  background-color: #08d342;
+  background-color: #2bac2b;
   font-weight: 500;
-}
-.contactUsbtnChecked:hover {
-  background-color: rgb(3, 148, 3);
+  margin-bottom: 14px;
 }
 .contactUsbtn:hover {
   transform: scale(1.01);
@@ -223,7 +241,7 @@
 @media only screen and (max-width: 768px) {
   .popupModel {
     width: 90%;
-    margin: 0 20px;
+    margin: 30px 15px 0px 15px;
   }
 
   .nameFields {
@@ -235,13 +253,13 @@
     font-size: 14px;
   }
 
-  .contactUsbtn {
-    font-size: 16px;
-  }
+  /* .contactUsbtn {
+    font-size: 19px;
+  } */
   .openButton {
     padding: 10px 20px;
     background-color: #000;
-    width: 310px;
+    width: 285px;
     /* background-color: #ff0066; */
     color: #ffffff;
     border: none;

@@ -3,6 +3,7 @@ import logo from "./images/LogoGTU.png"
 import mulogo from "./images/Marwadi_University_logo.png"
 import CbseLogo from "./images/CBSE_LOGO.png"
 import styles from '../RedirectCompnents/Styles/education.module.css';
+import MobileLogo from "./images/images3.png"
 
 const Education = () => {
     const educationData = [
@@ -14,9 +15,12 @@ const Education = () => {
             description: [
                 "I am currently pursuing a Master of Computer Application (MCA) degree at Patliputra University, with an expected completion date in April 2024. This program has provided me with a deep understanding of various computer science concepts and practical skills.",
                 "During my studies, I have had the opportunity to explore a wide range of topics, including software development, data structures, algorithms, and more. Additionally, I have actively participated in coding projects and collaborated with fellow students to solve complex problems.",
-                "My academic journey has equipped me with the knowledge and skills necessary to excel in the field of computer science. I look forward to applying my expertise to real-world challenges and contributing to innovative solutions in the future."
+                "My academic journey has equipped me with the knowledge and skills necessary to excel in the field of computer science. I look forward to applying my expertise to real-world challenges and contributing to innovative solutions in the future.",
+                "I am currently pursuing a Master of Computer Application (MCA) degree at Patliputra University, with an expected completion date in April 2024. This program has provided me with a deep understanding of various computer science concepts and practical skills.",
+
             ],
-            logo: logo
+            logo: logo,
+            mlogo: MobileLogo
         },
         // {
         //     university: "Marwadi Education Foundation Group of Institutions",
@@ -58,7 +62,13 @@ const Education = () => {
                                 alt={`${edu.university} logo`}
                                 className={styles.logo}
                             />
+                            {/* <img
+                                src={edu.mlogo}
+                                alt={`${edu.university} logo`}
+                                className={styles.logo}
+                            /> */}
                         </div>
+
 
                         <div className={styles.content}>
                             <h2 className={styles.university}>{edu.university}</h2>
@@ -84,6 +94,7 @@ const Education = () => {
                         </div>
                     </div>
                 ))}
+
             </div>
         </section>
     );

@@ -104,7 +104,10 @@
 
 @media (max-width: 768px) {
   .section {
-    padding: 20px;
+    width: 100vw; /* Full viewport width */
+    /* padding: 20px; */
+    margin: 0; /* Removes any margin that might limit width */
+    box-sizing: border-box; /* Ensures any padding or borders stay within 100vw */
   }
 
   .title {
@@ -115,15 +118,28 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    width: 101%;
+    height: 101%;
   }
-
+  .desc {
+    width: 100%;
+  }
   .logoContainer {
-    width: 50px;
-    height: 50px;
+    width: 80vw; /* Responsive width, scales with screen */
+    max-width: 390px; /* Keeps original max width */
+    height: auto;
   }
-
+  .logo {
+    width: 100%; /* Full width of logoContainer */
+    height: auto; /* Keeps aspect ratio */
+    max-height: 491px;
+  }
   .Certificate {
-    font-size: 20px;
+    font-size: 18px;
+    width: 80vw;
+    max-width: 390px;
+    text-align: center;
+    height: auto;
   }
 
   .property,
@@ -131,5 +147,36 @@
   .status,
   .description {
     font-size: 13px;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    text-align: center; /* Optional: centers text inside each element */
+    max-width: 600px; /* Optional: restricts width */
+  }
+
+  .metadata {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80vw;
+    max-width: 390px;
+    text-align: center;
+    height: auto;
+    /* margin: 0 auto; */
+    left: 0 !important;
+    gap: 0.5rem; /* Adjusts spacing between elements */
+  }
+
+  .description {
+    width: 80vw;
+    max-width: 390px;
+    text-align: justify;
+
+    height: auto;
   }
 }

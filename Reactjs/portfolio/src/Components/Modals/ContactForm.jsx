@@ -12,41 +12,52 @@ const ContactModal = () => {
     const [IsMessageFocused, setIsMessageFocused] = useState(false);
 
 
-
-
-    const [inputValue, setInputValue] = useState("");
-
-
-
-    const handleCheckboxChange = () => {
-        if (!inputValue) {
-            setIsChecked(!isChecked);
-        }
-    };
     const [formData, setFormData] = useState({
         workEmail: '',
+        mobilenumber: '',
         firstName: '',
         lastName: '',
-        isAgreed: false
+        messages: '',
+        checkbox: false
     });
 
-    const handleOpen = () => setIsOpen(true);
-    const handleClose = () => setIsOpen(false);
 
     const handleChange = (e) => {
         const { name, value, type, checked } = e.target;
+
         setFormData(prev => ({
             ...prev,
             [name]: type === 'checkbox' ? checked : value
         }));
+
+        if (name === "checkbox") {
+            setIsChecked(checked);
+        }
     };
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Handle form submission here
-        console.log('Form submitted:', formData);
+        if (isChecked) {
+            console.log("Form submitted:", formData);
+            setFormData({
+                workEmail: '',
+                mobilenumber: '',
+                firstName: '',
+                lastName: '',
+                messages: '',
+                checkbox: false
+            });
+            setIsChecked(false);
+        } else {
+            alert("Please agree to the terms and conditions to submit the form.");
+        }
     };
 
+
+
+
+    const handleOpen = () => setIsOpen(true);
+    const handleClose = () => setIsOpen(false);
     return (
         <>
             <button onClick={handleOpen} className={styles.openButton}>
@@ -59,7 +70,7 @@ const ContactModal = () => {
                         <span className={styles.close} onClick={handleClose}>&times;</span>
 
                         <div className={styles.popUpWindow}>
-                            <h2 className={styles.h2tag}>Talk to us</h2>
+                            <h2 className={styles.h2tag}>Talk to me</h2>
 
                             <form onSubmit={handleSubmit}>
 
@@ -124,13 +135,13 @@ const ContactModal = () => {
                                             id="mobilenumber"
                                             name="mobilenumber"
                                             placeholder=" "
-                                            value={formData.number}
+                                            value={formData.mobilenumber}
                                             onChange={handleChange}
                                             onFocus={() => setIsNumberFocused(true)}
                                             onBlur={() => setIsNumberFocused(false)}
                                             required
                                         />
-                                        <label htmlFor="workEmail">
+                                        <label htmlFor="mobilenumber">
                                             {/* Work email{!isEmailFocused && '*'}  */}
                                             Mobile number{!IsNumberFocused && "*"}
                                         </label>
@@ -138,17 +149,17 @@ const ContactModal = () => {
                                 </div>
                                 <div className={styles.inputContainer}>
                                     <input
-                                        type="email"
-                                        id="workEmail"
-                                        name="workEmail"
+                                        type="text"
+                                        id="messages"
+                                        name="messages"
                                         placeholder=" "
-                                        value={formData.workEmail}
+                                        value={formData.messages}
                                         onChange={handleChange}
                                         onFocus={() => setIsMessageFocused(true)}
                                         onBlur={() => setIsMessageFocused(false)}
                                         required
                                     />
-                                    <label htmlFor="workEmail">
+                                    <label htmlFor="messages">
                                         {/* Work email{!isEmailFocused && '*'}  */}
                                         Messages{!IsMessageFocused && "*"}
                                     </label>
@@ -159,17 +170,24 @@ const ContactModal = () => {
                                         type="checkbox"
                                         name="checkbox"
                                         id="cb1"
-                                        checked={isChecked}
-                                        onChange={handleCheckboxChange}
+                                        checked={formData.checkbox}
+                                        onChange={handleChange}
                                         className={styles.checkboxInput}
                                     />
+                                    {/* <label
+                                        htmlFor="cb1"
+                                        className={`${styles.checkboxLabel} ${isChecked ? styles.checkedLabel : ""}`}
+                                    >
+                                        I agree to Flye's terms and conditions and provide consent to receive communication.
+                                    </label> */}
                                     <label htmlFor="cb1" className={styles.checkboxLabel}>
-                                        I agree to flye's terms and conditions and provide consent to send me communication.
+                                        I agree to communication.
                                     </label>
                                 </div>
+                                {/* <div className={styles.contactBtn}> */}
 
-                                <div className={isChecked ? styles.contactUsbtnChecked : styles.contactBtn}>
-                                    <button type="submit" className={styles.contactUsbtn}>
+                                <div className={styles.contactBtn}>
+                                    <button type="submit" className={isChecked ? styles.contactUsbtnChecked : styles.contactUsbtn}>
                                         Contact us
                                     </button>
                                 </div>
