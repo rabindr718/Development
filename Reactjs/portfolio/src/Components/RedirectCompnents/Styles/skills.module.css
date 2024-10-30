@@ -108,8 +108,10 @@
   background-color: #ffffff;
   font-size: 22.88px;
   font-weight: 450;
+  width: 274.03px;
   cursor: pointer;
   transition: all 0.5s ease;
+  text-align: center;
 
   /* transition: all ease-in 0.55ms; */
   border-radius: 8px;
@@ -118,6 +120,9 @@
   background-color: #ffffff;
   font-size: 22.88px;
   padding: 19px 70px;
+  width: 274.03px;
+  text-align: center;
+
   font-weight: 450;
   cursor: pointer;
   transition: all 0.5s ease;
@@ -145,7 +150,7 @@
   .Skillscontainer {
     margin-top: 51px !important;
     width: 100% !important;
-    min-height: 150vh;
+    max-height: 150vh;
     background-color: #f5f5f7;
     color: #1d1d1f;
     display: flex;
@@ -162,7 +167,7 @@
     width: 80%;
     margin: 0;
     font-size: 24px;
-    font-weight: bold;
+    font-weight: 500;
     margin-bottom: 20px;
     /* margin-top: -100px !important; */
   }
@@ -171,7 +176,6 @@
     padding-top: 80px;
     padding: 1.5px;
     border-radius: 8px;
-    display: none;
   }
 
   .heading {
@@ -221,8 +225,11 @@
     background-color: #ffffff;
     font-size: 20px;
     font-weight: 450;
+    width: 172.33px;
+
     cursor: pointer;
     transition: all 0.5s ease;
+    text-align: center;
 
     transition: all ease-in 0.55ms;
     border-radius: 8px;
@@ -230,10 +237,12 @@
   .Education {
     background-color: #ffffff;
     font-size: 20px;
+    width: 172.33px;
     padding: 9px 30px;
     font-weight: 450;
     cursor: pointer;
     transition: all 0.5s ease;
     border-radius: 8px;
+    text-align: center;
   }
 }

@@ -7,7 +7,7 @@
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   max-width: 100%;
-  height: 80vh;
+  height: 90vh;
   overflow-y: auto;
 }
 .timeline {
@@ -26,6 +26,7 @@
   border-radius: 8px;
   box-shadow: 0 2px 4px #ffffff;
   margin-bottom: 15px;
+  height: 100%;
 }
 
 .logoContainer {
@@ -125,13 +126,13 @@
     width: 100%;
   }
   .logoContainer {
-    width: 80vw; /* Responsive width, scales with screen */
-    max-width: 390px; /* Keeps original max width */
+    width: 85vw;
+    max-width: 399px;
     height: auto;
   }
   .logo {
-    width: 100%; /* Full width of logoContainer */
-    height: auto; /* Keeps aspect ratio */
+    width: 100%;
+    height: auto;
     max-height: 491px;
   }
   .Certificate {
@@ -163,8 +164,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 80vw;
-    max-width: 390px;
+    width: 85vw;
+    max-width: 399px;
     text-align: center;
     height: auto;
     /* margin: 0 auto; */
@@ -173,8 +174,8 @@
   }
 
   .description {
-    width: 80vw;
-    max-width: 390px;
+    width: 82vw;
+    max-width: 396px;
     text-align: justify;
     font-size: 14px;
 
