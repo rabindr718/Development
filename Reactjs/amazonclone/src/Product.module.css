@@ -1,0 +1,28 @@
+.product {
+  background-color: white;
+  z-index: 1;
+  margin: 10px;
+  padding: 20px;
+  width: 25%;
+  max-height: 400px;
+  min-width: 270px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  border: 1px solid #ddd;
+  background-color: gray;
+}
+
+.info {
+  height: 100px;
+  margin-bottom: 15px;
+}
+
+.price {
+  margin-top: 5px;
+}
+
+.rating p {
+  display: inline;
+}

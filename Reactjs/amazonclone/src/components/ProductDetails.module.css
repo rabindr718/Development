@@ -1,0 +1,13 @@
+.detail {
+  display: flex;
+  padding: 20px;
+}
+
+.info {
+  margin-left: 20px;
+}
+
+.price {
+  color: #b12704;
+  font-size: 24px;
+}

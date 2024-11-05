@@ -15,55 +15,88 @@
   margin-top: 18px;
 }
 
-.header__search {
-  display: flex;
-  flex: 1;
-  align-items: center;
-  border-radius: 24px;
-}
-
-.header__searchInput {
-  height: 12px;
+.header__search-input {
   padding: 10px;
   border: none;
   width: 100%;
+  background-color: white;
+  color: #111;
+  border: none !important;
+  outline: none !important;
+  font-size: 15px;
+  align-items: center !important;
+  justify-content: center !important;
 }
 
-.header__searchIcon {
+.header__search-icon {
   padding: 5px;
-  height: 22px !important;
-  background-color: #cd9042;
+  width: 40px !important;
+  height: 27.4px !important;
+  background-color: #febd69;
+  border-radius: 0 5px 5px 0;
+  color: #131921;
+  align-items: center !important;
+  justify-content: center !important;
 }
 
-.header__optionLineOne {
+.header__option-line-one {
   font-size: 10px;
+  color: #cccccc;
 }
 
-.header__optionLineTwo {
+.header__search {
+  display: flex;
+  width: 50%;
+  max-width: 60%;
+  align-items: center;
+  outline: 3px solid transparent;
+  border-radius: 6px;
+  transition: outline 0.5s;
+}
+
+.header__search--focused {
+  outline: 3px solid #ffbc61;
+}
+
+.header__option-line-two {
   font-size: 13px;
   font-weight: 800;
+  color: white;
+}
+.dropdown--focused {
+  padding: 0 !important;
+  border-radius: 5px 0 0 5px;
+
+  outline: 2px solid #ffbc61;
 }
 
-.header__optionBasket {
+.header__option-basket {
   display: flex;
   align-items: center;
   color: white;
 }
 
-.header__basketCount {
+.header__basket-count {
   margin-left: 10px;
   margin-right: 10px;
 }
 
 .header__nav {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-end; /* Aligns items to the right */
+  margin-right: 0; /* No margin on the right */
 }
 
 .header__option {
   display: flex;
   flex-direction: column;
-  margin-left: 10px;
-  margin-right: 10px;
-  color: white;
+  margin-left: 10px; /* Keep left margin for spacing between items */
+  /* Remove right margin for tight alignment */
+}
+
+/* Keep the rest of your existing CSS as is */
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
