@@ -9,8 +9,7 @@ const Certification = () => {
             provider: "Oracle Academy",
             duration: "May 2020 - November 2020",
             status: "Completed",
-            description: [
-                "I am currently pursuing a Master of Computer Application (MCA) property at Patliputra Certificate, with an expected completion date in April 2024. This program has provided me with a deep understanding of various computer science concepts and practical skills.",
+            description: ["Earning the Oracle Academy certificate for 'Database Programming with SQL' shows your understanding of key database concepts. One important topic in this course is data normalization, which is about organizing data to reduce repetition, ensure accuracy, and improve query performance. By breaking down a database into smaller, linked tables based on rules or 'normal forms', you create efficient, scalable, and maintainable structures.  The course also likely covered SQL query optimization. As databases grow, writing efficient queries becomes essential. Using techniques like indexing helps speed up these queries, which is important for large applications. Showing your knowledge of these core database skills can be a great addition to your portfolio, proving your technical expertise to employers or clients."
             ],
             logo: CERTIFICATIONS.DBMS
         },

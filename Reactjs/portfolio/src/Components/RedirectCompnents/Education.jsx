@@ -13,10 +13,9 @@ const Education = () => {
             duration: "September 2019 - September 2023",
             status: "Completed",
             description: [
-                "I am currently pursuing a Master of Computer Application (MCA) degree at Patliputra University, with an expected completion date in April 2024. This program has provided me with a deep understanding of various computer science concepts and practical skills.",
+                "I am completed my Bachelor's of Computer Engineering and Technology (B.Tech) degree from Gujarat Technological University, in 2023. This program has provided me with a deep understanding of various computer science concepts and practical skills.",
                 "During my studies, I have had the opportunity to explore a wide range of topics, including software development, data structures, algorithms, and more. Additionally, I have actively participated in coding projects and collaborated with fellow students to solve complex problems.",
                 "My academic journey has equipped me with the knowledge and skills necessary to excel in the field of computer science. I look forward to applying my expertise to real-world challenges and contributing to innovative solutions in the future.",
-                "I am currently pursuing a Master of Computer Application (MCA) degree at Patliputra University, with an expected completion date in April 2024. This program has provided me with a deep understanding of various computer science concepts and practical skills.",
 
             ],
             logo: logo,
