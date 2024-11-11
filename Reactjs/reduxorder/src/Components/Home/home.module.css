@@ -2,9 +2,13 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   place-items: center;
-  width: 90%;
+  width: 92%;
   margin: 0 auto;
-  gap: 4%;
+  gap: 1%;
+  margin-bottom: 10px;
+}
+.dispaydemo:hover {
+  /* background-color: black; */
 }
 .mapImage {
   margin-top: -2px;
@@ -32,41 +36,79 @@
   background-color: black;
   border-radius: 6px;
   font-size: 17px;
+  font-weight: 550;
   justify-items: right;
   color: white;
   cursor: pointer;
+  border: none;
+  transition: all 0.33s ease-in-out;
+}
+.searchbtn:hover {
+  transform: scale(1.02);
+  outline: none;
+  background-color: gray;
 }
 
-.searchbar:focus {
+.searchbar:focus,
+.searchbar:hover {
   border-color: #007bff;
   box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+.textData {
+  padding-left: 3.6px;
 }
 
 .dispaydemo ul {
   list-style-type: none;
-  padding: 0;
+  place-items: center;
   margin: 0;
   background-color: white;
-  /*  */
+  margin-bottom: 15px;
+  padding: 10px;
+}
+.dispaydemo ul:hover {
+  list-style-type: none;
+  padding: 10px;
+  margin: 0;
+  background-color: white;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transform: scale(1.01);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.price {
+  font-weight: 600;
+  font-size: 15px;
+  float: right !important;
+  margin-right: 5px;
+  color: #ff0066;
 }
 .shopname {
-  font-weight: bold;
+  font-weight: 600;
   width: 80%;
-  font-size: 19px;
+  font-size: 18px;
   display: block;
   padding-bottom: 6px;
+}
+.MobileView {
+  all: unset;
 }
 .foodtype {
   color: rgb(106, 106, 106);
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   margin-bottom: 90px;
+  font-size: 15px;
+  white-space: nowrap;
 }
 .distance {
 }
 
 .tittle {
-  margin: 2% 2% 2% 2%;
+  margin: 2%;
 }
 
 .titleName {
@@ -77,30 +119,115 @@
 }
 @media (max-width: 767px) {
   .searching {
-    float: none;
-    margin: 2% 5% 5%;
-    text-align: center;
+    margin: 0% 14px 4% 0%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 18px;
+    width: 90%;
+    padding: 0px 0px 0px 14px;
+    box-sizing: border-box;
+  }
+  .price {
+    font-weight: 600;
+    font-size: 15px;
+    float: right !important;
+  }
+  .searchbtn {
+    background-color: black;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    justify-items: right;
+    color: white;
+    cursor: pointer;
+  }
+
+  .dispaydemo {
+    padding: 10px;
+    display: grid;
+    background-color: #ffffff;
+    grid-template-columns: repeat(1, 1fr);
+    place-items: center;
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+  }
+  .dispaydemo ul {
+    list-style-type: none;
+    padding: 14px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-sizing: border-box;
+  }
+  .dispaydemo ul:hover {
+    list-style-type: none;
+    padding: 14px;
+    background-color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transform: scale(1.01);
+    transition: all 0.3s ease-in-out;
+    border-radius: 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+  }
+  .tittle {
+    margin: 2% 2% 2% 2%;
+  }
+  .MobileView {
+    display: flex;
+    flex-direction: row;
+    padding: 0px 14px;
+    justify-content: space-between;
+  }
+  .MobileView img {
+    height: 30px;
+    width: 30px;
+  }
+  .textData {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .titleName {
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .imageTittle {
+    padding-left: 7px;
+  }
+  .shopname {
+    font-weight: 600;
+    width: 80%;
+    font-size: 18px;
+    display: block;
+    padding-top: 6px;
   }
 
   .searchbar {
-    width: 100%;
-    height: 35px;
-    padding: 8px;
-    font-size: 15px;
-    margin-right: 0;
-    box-sizing: border-box;
+    width: 200px;
+    margin-left: 0 !important;
   }
 
-  .searchbtn {
-    width: 100%;
-    height: 35px;
-    padding: 8px;
-    font-size: 15px;
-    box-sizing: border-box;
+  .itemImage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px !important;
+    width: 88vw;
+  }
+  .ratings {
+    margin-top: 6px !important;
+  }
+  .tittle {
   }
 }
 .itemImage {
-  border-radius: 4px;
+  border-radius: 12px;
 }
 .parent {
   position: relative;
@@ -119,4 +246,30 @@
   position: relative;
   left: 50%;
   transform: translateX(-50%);
+}
+.shopname {
+  font-weight: 600;
+  font-size: 18px;
+  display: inline-block;
+}
+
+.ratings {
+  font-size: 18px;
+  font-weight: 550;
+  display: inline-flex;
+  align-items: center;
+  padding: 1px;
+  float: right;
+  background-color: green;
+  border-radius: 3px;
+  color: white;
+  margin-right: 3.9px;
+}
+
+.ratings::after {
+  font-size: 14px;
+  content: "★";
+  color: white;
+  margin-left: 3px;
+  margin-right: 1px;
 }

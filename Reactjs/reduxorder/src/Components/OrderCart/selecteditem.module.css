@@ -1,0 +1,45 @@
+/* selecteditem.module.css */
+.detailsPageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #f4f4f4;
+  min-height: 100vh;
+}
+
+.selectedItem {
+}
+
+.itemName {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ff7b00;
+  margin-bottom: 20px;
+}
+
+.selectedItemName {
+  color: #777;
+}
+
+.distanceofSelectItem,
+.priceSelected {
+  font-weight: 600;
+}
+
+.itemImage {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.itemtitleX {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.selectedItem img {
+  width: 390px;
+  height: 310px;
+}

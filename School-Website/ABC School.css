@@ -1,0 +1,58 @@
+#type1{ font-size: 80px;
+    text-align: center;
+
+}
+p{
+text-align: justify;
+color: palevioletred;
+font-weight: italic;
+}
+p1{
+color: red;
+text-align: right;
+width: 500px;
+}
+p3{
+color: green;
+}
+body1{
+    /* The image used */
+    background-image: url("School.jpg");
+    /* Add the blur effect */
+    filter: blur(2px);
+  
+    /* Full height */
+    /* height: 100%;
+    weight: 100%; */
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat:no-repeat;
+    background-size:cover;
+  }
+p5{
+font-size: 30px;
+}
+
+.footer{
+text-align: center;
+padding: 23px;
+background-color: rgb(9, 122, 160);
+}
+#Sname{
+font-weight: bold;
+color: orange;
+text-align: center;
+/* color:white ; */
+}
+#xy{
+text-align: center;
+
+}
+#LinkSchool
+{
+color: white;
+text-decoration: none;
+/* padding-bottom: 30px ; */
+
+}

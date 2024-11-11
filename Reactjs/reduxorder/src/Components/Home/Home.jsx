@@ -2,15 +2,17 @@ import React, { useState, useEffect } from "react";
 import classes from "./home.module.css";
 import Mapimage from "./map1.png";
 import { useSelector } from "react-redux";
+import DetailsPage from "../OrderCart/SelectedItem";
 
 const Home = () => {
-  const [searchQuery, setSearchQuery] = useState(""); // SEARCHING TIME QUERY
+  const [searchQuery, setSearchQuery] = useState("");
   const [filteredData, setFilteredData] = useState([]);
+  const [orderItem, setOrderedItem] = useState(true)
 
   const userdata = useSelector((state) => state.users);
 
   useEffect(() => {
-    setFilteredData(userdata); // Initialize filteredData with userdata
+    setFilteredData(userdata);
   }, [userdata]);
 
   const FindShops = (event) => {
@@ -39,10 +41,13 @@ const Home = () => {
     }
 
     setFilteredData(filtered);
-    console.log("RABINDRA");
-
     console.log("Filtered Data:", filtered);
   };
+  var data;
+  const getId = (data) => {
+    console.log(data)
+  }
+  const [selectedItem, setSelectedItem] = useState(data);
 
   return (
     <>
@@ -61,35 +66,49 @@ const Home = () => {
       </div>
 
       <div className={classes.dispaydemo}>
+        {orderItem && <DetailsPage setSelectedItem={setSelectedItem} setOrderedItem={setOrderedItem} />}
         {filteredData.map((apiDataReceive) => (
-          <ul key={apiDataReceive.id}>
+
+          <ul key={apiDataReceive.id} onClick={() => getId(apiDataReceive)}>
             <img
               className={classes.itemImage}
-              width="280px"
-              height="270px"
+              width="291px"
+              height="272px"
               src={apiDataReceive.image}
-              alt={apiDataReceive.name} // Adding alt attribute for accessibility
+              alt={apiDataReceive.name}
             />
-            <li>
-              <span className={classes.shopname}>{apiDataReceive.name}</span>
-            </li>
-            <li>
-              <span className={classes.foodtype}>
-                {apiDataReceive.Fooditems}
-              </span>
-            </li>
-            <li>
-              <img
-                className={classes.mapImage}
-                width="6%"
-                height="4.7%"
-                src={Mapimage}
-                alt="Map" // Adding alt attribute for accessibility
-              />
-              <span className={classes.distance}>
-                {apiDataReceive.distance}
-              </span>
-            </li>
+            <div className={classes.textData}>
+              <li>
+                <span className={classes.shopname}>{apiDataReceive.name}</span>
+                <span className={classes.ratings}>
+                  3.2</span>
+              </li>
+              <li>
+                <span>
+                  <span className={classes.foodtype}>
+                    {apiDataReceive.Fooditems.length > 28
+                      ? `${apiDataReceive.Fooditems.slice(0, 28)}...`
+                      : apiDataReceive.Fooditems}
+                  </span>
+
+                  <span className={classes.price}>
+                    Price $2</span>
+                </span>
+              </li>
+              <li>
+                <img
+                  className={classes.mapImage}
+                  width="6%"
+                  height="4.7%"
+                  src={Mapimage}
+                  alt="Map"
+                />
+                <span className={classes.distance}>
+                  {apiDataReceive.distance}
+                </span>
+              </li>
+
+            </div>
           </ul>
         ))}
       </div>

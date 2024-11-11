@@ -25,7 +25,7 @@ export const dataArray = [
   {
     id: 3,
     name: "Kannur Food Point",
-    Fooditems: "Kerala Chinese",
+    Fooditems: "Kerala Chinese, Indian Rest",
     distance: "3 kms away",
     image: im3,
   },
@@ -38,7 +38,7 @@ export const dataArray = [
   },
   {
     id: 5,
-    name: "Kannur Food Kitchen",
+    name: "Kannur Food Kit",
     Fooditems: "Kerala Indian, Beverages",
     distance: "1.2 kms away",
     image: im5,

@@ -1,0 +1,71 @@
+<head>
+    <style>
+        body{
+            background-color: rgb(9, 122, 160);
+        }
+        input{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;}
+
+  input[type="text"]::placeholder {  
+    padding-left: 7px; 
+    font-size: 12px;
+    } 
+    input[type="radio"]
+    {
+        width:15px;
+      
+        
+    }
+    
+    /* .rex1{
+        font-size:100px;} */
+
+    #uex{
+        font-size: 60px;
+        padding:10px;
+        text-align: center;
+    }
+    button{
+  font-size: 20px;
+  font-weight: bold;
+  background-color: orange;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+button:hover {
+          opacity: 0.8;}
+.r1{
+    font-size: 20px;
+}
+/* .rex1{
+    font-size: 10px;
+      margin-left:10rem;
+} */
+    </style>
+</head>
+<h1 id="uex">Student Details</h1><br>
+<body>
+    <form action="">
+    <label class="r1">First Name: <input type="text" name="FirstName" Placeholder="FirstName" required></label><br>
+    <label class="r1">Middle Name: <input type="text" name="MiddleName" placeholder="Middlename" required></label><br>
+    <label class="r1">Last Name: <input type="text" name="LastName" Placeholder="LastName" required></label><br>
+    <label Claas="r1"> Male <input type="radio" name="Gender" value="Male"></label>
+    <label class="r1"> Female <input type="radio" name="Gender" value="Female"></label>
+    <label class="r1"> Others <input type="radio" name="Gender" value="Others"></label><br>
+    <label class="r1">Mobile Number <input type="Number" placeholder="Mobile Number" name="Mobile Number"></label><br>
+    <label class="r1">Email <input type="email" placeholder="Email" name="Email id"></label><br>
+    <label class="r1">Student Class <input type="text" placeholder="Student Class" name="StudentClass"></label><br>
+    <label class="r1">Student Session <input type="text" placeholder="Student Session" name="Student Session"></label><br>
+    <label class="r1">Blood Group <input type="" placeholder="BloodGroup" name="BloodGroup"></label><br>
+    <button type="submit">Admission Enquiry</button>  <br>
+    </form>
+</body>
