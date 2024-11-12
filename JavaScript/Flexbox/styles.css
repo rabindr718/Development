@@ -1,0 +1,108 @@
+/* .container {
+  display: flex;
+  background-color: teal;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 40%;
+  gap: 20px;
+  padding: 20px;
+  flex-direction: column;
+} */
+/* <!-- *********************************    FLEX- BOX  Order Properties Start  **************************************** --> */
+/* .items {
+  height: 60px;
+  width: 70px;
+  font-size: 17px;
+  font-weight: 500;
+  gap: 20px;
+  text-align: center;
+  background-color: hotpink;
+  line-height: 60px;
+} */
+/* .item3 {
+  order: -2;
+}
+.item6 {
+  order: -3;
+} */
+/* <!-- *********************************    FLEX- BOX  Order Properties END  **************************************** --> */
+/* <!-- *********************************    FLEX- BOX  Order Properties Start  **************************************** --> */
+.container {
+  /* display: flex;
+  background-color: teal;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 40%;
+  height: 455px;
+  gap: 20px;
+  padding: 20px; */
+  /* flex-direction: row; */
+  /* flex-wrap: nowrap; it remains same means No-Line Break */
+  /* flex-wrap: wrap; */
+  /* Combination of both ###############################################flex-direction ########flex-wrap ********/
+  /* flex-flow: row wrap; */
+}
+/* .items {
+  height: 60px;
+  width: 70px;
+  font-size: 17px;
+  font-weight: 500;
+  gap: 20px;
+  text-align: center;
+  background-color: hotpink;
+  line-height: 60px;
+} */
+/* <!-- *********************************    FLEX- BOX  Order Properties End  **************************************** --> */
+
+/* ******************************************************************************************************* */
+
+/* ######################################  Horizonatal / sleep justify-content 6 items ##########################*/
+.container {
+  /* display: flex;
+  background-color: teal; */
+  /* justify-content: center; all in Center horizontall */
+  /* justify-content: flex-end; go all items at end  */
+  /* justify-content: flex-start; go all items from start */
+  /* justify-content: space-around;    1 at left 6 at right and give equal space both sides of items like 1 2 2 2 2 1 */
+  /* justify-content: space-evenly; equal size both side inside or ouside */
+  /* justify-content: space-between; first and last ender own side and add all space in between */
+}
+/* ****************************************** Ended Justify content ********************************************************* */
+
+/* ################################### Perpendicular/ Vertical  align-itmes 6 items started ##########################*/
+.container {
+  /* display: flex;
+    background-color: teal; */
+  /* align-items: center; all in Center horizontall */
+  /* align-items: flex-end; go all items at end  */
+  /* align-items: flex-start; go all items from start */
+  /* align-items: baseline; equal the base if font or text */
+  /* align-items: space-between; first and last ender own side and add all space in between */
+}
+/* ##################   Perpendicular/ Vertical  align-itmes 6 items started align-itmes 6 items ended  ############*/
+
+.container {
+    align-items: ;
+  display: flex;
+  background-color: teal;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 40%;
+  height: 455px;
+  gap: 20px;
+  padding: 20px;
+}
+.items {
+  height: 60px;
+  width: 70px;
+  font-size: 17px;
+  font-weight: 500;
+  gap: 20px;
+  text-align: center;
+  background-color: hotpink;
+  line-height: 60px;
+}
+/* <!-- *********************************    FLEX- BOX  Order Properties End  **************************************** --> */
