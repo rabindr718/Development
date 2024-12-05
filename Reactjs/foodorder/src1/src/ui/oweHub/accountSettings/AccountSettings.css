@@ -1,0 +1,454 @@
+.account-container {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding: 0.5rem;
+  /* width: 100%; */
+}
+.account-section-main {
+  width: 100%;
+  margin-top: 15px;
+}
+.account-section-main p{
+  color: var(--input-border-color);
+}
+.titlehed {
+  background-color: var(--input-border-color);
+  padding: 0.5rem;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--input-border-color);
+}
+.titlehed img {
+  margin-top: 2px;
+  width: 20px;
+  height: 20px;
+}
+.profile-section {
+  display: flex;
+  background-color: white;
+  /* height: 520px; */
+  border-radius: 16px;
+  padding-bottom: 2rem;
+  /* width: 700px; */
+  gap: 1rem;
+}
+.profile-sec-button {
+  padding: 1rem;
+  background-color: white;
+  border-radius: 16px;
+}
+.profile-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #363636;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 400;
+}
+.tab-links {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  width: fit-content;
+}
+.tab {
+  padding: 0.5rem;
+  margin: 0.5em;
+  border: none;
+  color: var(--input-border-color);
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  text-align: left;
+  font-weight: 500;
+  transition: transform 0.3s ease;
+}
+.tab:not(.active-profile):hover {
+  background-color: #e9ebeb;
+}
+
+.tab-content {
+  width: 80%;
+}
+.active-profile {
+  background-color: #e9f0ff;
+  font-weight: 600;
+}
+.vertical {
+  border-left: 1px solid #dbdddf;
+  margin-top: 1.5rem;
+  /* border: 1px 0px 0px 0px; */
+  /* margin-left: 2rem; */
+}
+.myProf-section {
+  /* margin-top: 1.5rem; */
+  font-size: 18px;
+  font-weight: 500;
+  text-align: left;
+  padding: 1rem;
+  /* margin-right: 2rem; */
+}
+.admin-section {
+  display: flex;
+  text-align: center;
+  padding: 1rem 0rem 1rem 1rem;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 1rem;
+  width: 100%;
+  height: 114px;
+  border: 1px solid #e0e0e0;
+  border-radius: 16px;
+}
+.caleb-section h3 {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+}
+.caleb-section p {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: left;
+}
+.edit-section {
+  display: flex;
+  align-items: center;
+  width: 90px;
+  height: 34px;
+  padding: 8px 16px 8px 16px;
+  gap: 8px;
+  border-radius: 8px;
+  border: 1px solid #d5d5d5;
+  cursor: pointer;
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
+}
+.edit-section:hover {
+  background-color: #ddebff;
+  transform: scale(1.09);
+}
+.active-edit-section {
+  border: none;
+  background: #ddebff;
+}
+.edit-section p {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+}
+.Personal-container {
+  margin-top: 2rem;
+  height: 250px;
+  border: 1px solid #e0e0e0;
+  border-radius: 16px;
+}
+.per-info-pad {
+  padding: 20px;
+}
+.create-input-container {
+  width: 100%;
+}
+.caleb-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32.2rem;
+}
+.personal-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  align-items: center;
+}
+
+.reset-Update button {
+  width: 150px;
+  height: 40px;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  text-decoration: none;
+  margin-right: 0.4rem;
+  cursor: pointer;
+  border-radius: 8px;
+}
+.reset-Update :hover {
+  transition:
+    background-color 0.5s ease,
+    color 0.5s ease;
+  background-color: #1d66e8;
+}
+
+.profile-reset {
+  display: flex;
+  justify-content: right;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.profile-reset :hover {
+  background-color: #1d66e8;
+}
+
+.user-profile-container {
+  margin-top: 2rem;
+  /* width: 954px; */
+  height: 468px;
+
+  gap: 0px;
+  opacity: 0px;
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 0.5rem;
+}
+.user-profile-cross {
+  display: flex;
+  justify-content: right;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+.create-user {
+  margin-left: 3rem;
+}
+.create-user h3 {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 44px;
+  text-align: left;
+}
+.create-user p {
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 10.9px;
+  text-align: left;
+}
+
+.cam-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* width: 133px; */
+  height: 133px;
+  margin-top: 5rem;
+}
+.image-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #d9d9d9;
+}
+.image-button {
+  margin-top: 0.5rem;
+}
+
+.image-button button {
+  border: none;
+  font-size: 12px;
+  font-weight: 500;
+  text-align: left;
+  background: #0493ce;
+  padding: 12px;
+  color: white;
+  border-radius: 8px;
+}
+.vertical-create {
+  border-left: 1px solid #dbdddf;
+  height: 250px;
+  margin-top: 1.5rem;
+  margin-left: 2rem;
+  padding: 1rem;
+}
+
+.image-circle {
+  text-align: center;
+  padding: 1rem;
+}
+
+.reset-Update-support {
+  display: flex;
+  /* justify-content: right; */
+  /* padding: 1rem; */
+  margin-top: 1rem;
+}
+.reset-Update-support button {
+  /* width: 280px; */
+  height: 48px;
+  font-size: 14px;
+  font-weight: 500;
+  /* line-height: 11.96px; */
+  text-align: center;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition:
+    background-color 0.5s ease,
+    color 0.5s ease;
+}
+.reset-Update-support :hover {
+  background-color: #1d66e8;
+}
+
+.user-create-profile-section {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  margin-left: 5rem;
+}
+.create-account-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-top: 0.5rem;
+}
+
+.create-input-field-profile {
+  width: 47%;
+}
+/* .create-input-field-profile input:hover {
+  border: 2px solid #0493ce;
+  border-radius: 8px;
+} */
+.create-input-field-address {
+  width: 30.5%;
+}
+/* .create-input-field-address input:hover {
+  border: 2px solid #0493ce;
+  border-radius: 8px;
+} */
+
+.Personal-container-detail {
+  margin-top: 2rem;
+  height: auto;
+  border: 1px solid #e0e0e0;
+  border-radius: 16px;
+  padding-bottom: 20px;
+}
+
+.create-input-field-profile-password {
+  width: 31.5%;
+}
+
+.prof-fields-onboard {
+  position: static !important;
+  display: block;
+  margin-bottom: -15px;
+}
+
+.reset-profile-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.reset-pass-fields {
+  display: flex;
+  justify-content: space-between;
+}
+.reset-Update {
+  display: flex;
+  justify-content: right;
+  padding: 1rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .profile-section {
+    gap: 0.5rem;
+  }
+  .tab-links {
+    width: 0;
+    min-width: fit-content;
+  }
+  .reset-pass-fields {
+    flex-wrap: wrap;
+  }
+  .create-input-field-address,
+  .create-input-field-profile-password {
+    width: 47%;
+  }
+  .reset-pass-fields {
+    justify-content: unset;
+    gap: 15px;
+  }
+  .reset-Update {
+    justify-content: unset;
+    padding: 0;
+    padding-top: 1rem;
+  }
+  .reset-Update button {
+    width: 47%;
+  }
+  .Personal-container {
+    height: 300px;
+  }
+  .active-profile {
+    padding: 0.5rem 1rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .profile-section {
+    gap: 0.5rem;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px;
+  }
+  .account-container {
+    padding: 1rem;
+  }
+  .tab-content {
+    width: 100%;
+  }
+  .tab-links {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .account-section-main .loginButton {
+    width: 100%;
+  }
+  .account-section-main .cancel {
+    width: 98%;
+  }
+  .profile-reset {
+    flex-direction: column;
+  }
+  .vertical {
+    border-bottom: 1px solid #dbdddf;
+    margin-top: 0;
+    /* border: 1px 0px 0px 0px; */
+    /* margin-left: 2rem; */
+  }
+  .create-input-field-profile,
+  .create-input-field-address,
+  .create-input-field-profile-password {
+    width: 95%;
+  }
+  .reset-pass-fields {
+    flex-direction: column;
+  }
+  .error {
+    font-size: 10px;
+  }
+  .Personal-container {
+    height: auto;
+  }
+}

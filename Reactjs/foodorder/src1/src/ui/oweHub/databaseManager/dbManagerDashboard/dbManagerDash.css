@@ -1,0 +1,360 @@
+.Db-manager-container {
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+}
+
+.runner-section {
+  width: 233px;
+  height: 381px;
+  gap: 0px;
+  border-radius: 16px;
+  background-color: #ffffff;
+  text-align: center;
+  padding-top: 5rem;
+
+  flex-shrink: 0;
+}
+.dbm-top {
+  margin-top: -29px;
+}
+.runner-section h3 {
+  font-family: Poppins;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+  color: #000000;
+  text-align: center;
+}
+
+.runner-section p {
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 21px;
+  color: #000000;
+}
+.dbm-img {
+  width: 57px;
+  height: 57px;
+}
+
+.active-button {
+  margin-top: 3.4rem;
+  width: 100%;
+  height: 162px;
+  gap: 0px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  background: rgb(184, 228, 223);
+  display: inline-block;
+}
+.status-circle {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.status-circle.red {
+  background-color: #ff0000;
+}
+
+.status-circle.green {
+  background-color: rgba(59, 179, 29, 1);
+}
+
+.active-since-section button {
+  width: 100px;
+  height: 36px;
+  margin-top: 30px;
+  margin-bottom: 5px;
+  border-radius: 100px;
+  opacity: 0px;
+  border: none;
+  background: #ffffff;
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 21px;
+  cursor: pointer;
+}
+
+.since-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  margin-top: 13px;
+}
+
+.since-section h3 {
+  margin-top: 0rem;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  color: #000000;
+  margin-left: 19px;
+}
+
+.since-section p {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18px;
+  margin-left: 4px;
+}
+
+.DashBarchart-section {
+  background-color: white;
+  flex-grow: 1;
+  border-radius: 16px;
+  border: 1px solid #ffffff;
+}
+
+.dash-section {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: left;
+}
+
+.webhook-container {
+  margin-top: -0.9rem;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 16px;
+}
+
+.status-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.status-section p {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  color: #263747;
+}
+
+.create-container {
+  border: 1px solid #d0d5dd;
+  width: 32.23%;
+  height: 394px;
+  border-radius: 16px;
+  align-items: center;
+}
+
+.Create-section {
+  display: flex;
+  padding: 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Create-section p {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+  color: #263747;
+}
+
+.container-graph {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 1px;
+  justify-content: space-between;
+}
+
+.Payroll-section {
+  display: flex;
+  height: 36px;
+  background-color: white;
+  padding: 0 3px 0 12px;
+  gap: 0.5rem;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid #b6b5b5;
+  z-index: 1;
+}
+
+.Payroll-section1 {
+  display: flex;
+  height: 36px;
+  background-color: white;
+  padding: 0 6px 0 12px;
+  gap: 0.5rem;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid #b6b5b5;
+  margin-left: 41px;
+  /* Add z-index to ensure the dropdown appears above other elements */
+  z-index: 1;
+  /* You can adjust the value as needed */
+}
+
+.dash-select {
+  position: relative;
+  border: none;
+  outline: none;
+  padding: 0.3rem 0.7rem;
+  font-size: 12px;
+  cursor: pointer;
+  color: #101828 !important;
+  background-color: #ffffff !important;
+  font-weight: 500;
+  border-radius: 0.25rem;
+  z-index: 2;
+  line-height: 20px;
+}
+
+.identity {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  text-align: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24%;
+  margin-top: -128px;
+}
+
+.identity p {
+  margin-top: -1px;
+  font-size: 12px;
+  color: #000000;
+}
+
+.identity1 {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  text-align: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 39%;
+  margin-bottom: 15px;
+}
+
+.identity1 p {
+  margin-top: 1px;
+  font-size: 12px;
+  color: #333333;
+  font-weight: 400;
+  line-height: 14.52px;
+}
+
+.PieBarchart-section {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  /* Adjust margin-top as needed */
+}
+
+.PieChart-container {
+  width: 300px;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+}
+
+.PieChartWithPaddingAngle {
+  width: 100%;
+  height: 100%;
+  transform-origin: top left;
+  /* Set transform origin to top left corner */
+  transform: scale(1);
+  /* Set initial scale */
+  transition: transform 0.3s ease;
+  /* Add transition for smooth scaling */
+}
+
+.Payroll-section-up {
+  display: flex;
+  height: 36px;
+  width: 212px;
+  background-color: white;
+  padding: 0 6px 0 12px;
+  gap: 0.5rem;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid #b6b5b5;
+  margin-left: 41px;
+  z-index: 1;
+}
+
+.dash-select-up {
+  position: relative;
+  border: none;
+  outline: none;
+  padding: 0.3rem 0.7rem;
+  font-size: 12px;
+  cursor: pointer;
+  color: #101828 !important;
+  background-color: #ffffff;
+  font-weight: 500;
+  border-radius: 0.25rem;
+  z-index: 2;
+  line-height: 20px;
+  margin-left: -6px;
+  width: 200px;
+}
+
+#dropdown {
+  appearance: none; /* Remove default styles */
+  -webkit-appearance: none; /* Remove default styles for Safari */
+  -moz-appearance: none; /* Remove default styles for Firefox */
+  /* background-image: url(''); Remove default dropdown arrow */
+}
+
+#dropdown::-ms-expand {
+  display: none; /* Remove default arrow in IE10+ */
+}
+.top-icon {
+  width: 69px;
+  height: 50px;
+  padding: 8.22px 5.64px 8px 5.64px;
+  gap: 0px;
+  opacity: 0px;
+  color: #6d6d6d;
+  margin-left: 49px;
+  cursor: pointer;
+}
+
+.dashbar-db .recharts-tooltip-wrapper {
+  z-index: 50;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 0px 0px !important;
+  background-color: #000000;
+  border-radius: 0 !important;
+}
+
+.dashbar-db .recharts-tooltip-wrapper .pie-tooltip {
+  padding: 0 !important;
+  border: 0 !important;
+}
+
+@media screen and (max-width: 1024px) {
+  .Create-section {
+    padding: 0.7rem;
+  }
+  .Create-section p {
+    font-size: 13px;
+  }
+  .identity {
+    padding-left: 0;
+    justify-content: center;
+  }
+  .PieBarchart-section {
+    margin-top: 0;
+  }
+}

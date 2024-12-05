@@ -1,0 +1,172 @@
+/* Smartphones in both portrait and landscape */
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  /* Styles for smartphones */
+  .lineChart-wrapper .recharts-responsive-container {
+    left: -6.5pc;
+    position: relative;
+    width: 160% !important;
+    height: 200px !important;
+  }
+}
+
+/* Tablets in both portrait and landscape */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  /* Styles for tablets */
+}
+
+/* Laptops and small desktops */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  /* Styles for small desktops */
+}
+
+.monthSelectFocus:focus-visible {
+  outline: none;
+}
+
+.react-datepicker__day-name {
+  font-weight: bold;
+}
+
+.monthSelect {
+  padding-right: 16px;
+  padding-left: 30px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #fff;
+  position: relative;
+}
+
+.monthSelect::after {
+  content: '\25BC';
+  position: absolute;
+  left: 10px;
+  pointer-events: none;
+  font-size: 12px;
+  color: #000;
+}
+
+.monthSelectFocus:focus-visible {
+  outline: none;
+}
+
+.editedinParent {
+  border-radius: 8px !important;
+  border: 1px solid #929292 !important;
+  width: 152px !important;
+  padding: 0 !important;
+  margin-right: 14px !important;
+}
+
+div#dropdowninHistoryRedirectXR ul li:nth-child(1):hover {
+  border-radius: 6px 6px 0 0;
+}
+
+div#dropdowninHistoryRedirectXR ul li:nth-child(2):hover {
+  border-radius: 0 0 6px 6px;
+}
+
+.editedinParent ul {
+  border-radius: 8px;
+}
+
+.editedinParent li {
+  font-size: 12px !important;
+  font-weight: normal !important;
+  padding: 9px 7px 9px 7px !important;
+  height: 100% !important;
+}
+
+.editedinParent li:hover {
+ 
+  font-size: 12px !important;
+  transform: none !important;
+  color: #000 !important;
+  font-weight: normal !important;
+  padding: 9px 7px 9px 7px !important;
+  background-color: #ddebff;
+}
+.editedinParentXR {
+  border-radius: 8px !important;
+  border: 1px solid #929292 !important;
+  width: 152px !important;
+  padding: 0 !important;
+  margin-right: 14px !important;
+}
+
+
+.editedinParentXR ul {
+  border-radius: 8px;
+}
+
+.editedinParentXR li {
+  font-size: 12px !important;
+  font-weight: normal !important;
+  padding: 9px 7px 9px 7px !important;
+  height: 100% !important;
+}
+
+.editedinParentXR li:hover {
+ 
+  font-size: 12px !important;
+  transform: none !important;
+  color: #000 !important;
+  font-weight: normal !important;
+  padding: 9px 7px 9px 7px !important;
+  background-color: #ddebff;
+}
+
+.editedinParentHTRY li:hover {
+  font-size: 12px !important;
+  transform: none !important;
+  font-weight: normal !important;
+  padding: 9px 7px 9px 7px !important;
+  background-color: #ddebff;
+
+}
+
+.editedinParentHTRY li {
+  font-size: 12px !important;
+  font-weight: normal !important;
+  padding: 9px 7px 9px 7px !important;
+  height: 100% !important;
+}
+
+.editedinParentHTRY ul {
+  border-radius: 8px;
+}
+
+.editedinParentHTRY{
+  border: 1px solid #929292 !important;
+  width: 152px !important;
+  padding: 0 !important;
+  margin-right: 14px !important;
+}
+
+.editedinParentLT_FLTR {
+  border: 1px solid #929292 !important;
+  width: 152px !important;
+  padding: 0 !important;
+  margin-right: 14px !important;
+}
+
+.editedinParentLT_FLTR ul {
+}
+
+.editedinParentLT_FLTR li {
+  font-size: 12px !important;
+  font-weight: normal !important;
+  padding: 9px 7px 9px 7px !important;
+  height: 100% !important;
+}
+
+.editedinParentLT_FLTR li:hover {
+ 
+  font-size: 12px !important;
+  transform: none !important;
+  /* color: #000 !important; */
+  font-weight: normal !important;
+  padding: 9px 7px 9px 7px !important;
+  background-color: #ddebff;
+  /* border-radius: 8px !important; */
+}

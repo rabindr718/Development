@@ -1,0 +1,775 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif !important;
+}
+
+.loader {
+  display: none !important;
+}
+
+.rcw-picker-btn .rcw-send-icon,
+.rcw-send .rcw-send-icon {
+  margin-left: 10px;
+}
+
+.rcw-picker-btn {
+  display: none;
+}
+
+.rcw-new-message {
+  width: calc(100% - 15px);
+}
+
+/* Alert css  */
+div:where(.swal2-container) h2:where(.swal2-title) {
+  font-size: 18px;
+}
+
+div:where(.swal2-container) .swal2-html-container {
+  font-size: 14px;
+}
+
+div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-cancel), div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-confirm){
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+div:where(.swal2-container).swal2-center>.swal2-popup{
+  border-radius: 16px;
+}
+
+/*auto complete */
+
+/* Global CSS to target the Google Maps Autocomplete dropdown */
+
+/* Dialogue Map Hover css  */
+.gm-style .gm-style-iw-c {
+  padding: 0 !important;
+}
+
+.gm-style .gm-style-iw-c:focus-visible {
+  outline: none !important;
+}
+
+.gm-style-iw-chr {
+  display: none !important;
+}
+
+/* Google map css  */
+.gm-control-active.gm-fullscreen-control,
+.gmnoprint.gm-bundled-control.gm-bundled-control-on-bottom button {
+  width: 36px !important;
+  height: 36px !important;
+  border-radius: 8px !important;
+}
+
+.gmnoprint>div[draggable="false"] {
+  border-radius: 8px !important;
+  width: 36px !important;
+}
+
+.gm-style-mtc button,
+.ssQIHO-checkbox-menu-item {
+  font-size: 14px !important;
+}
+
+.gm-style-mtc ul[role*="menu"]{
+  border-bottom-left-radius: 4px !important;
+  border-bottom-right-radius: 4px !important;
+  left: 0 !important;
+}
+
+.gm-style-mtc-bbw .gm-style-mtc:last-of-type>button{
+  border-start-end-radius: 12px !important;
+  border-end-end-radius: 12px !important;
+}
+
+.gm-style-mtc-bbw .gm-style-mtc:first-of-type>button {
+  border-start-start-radius: 12px;
+  border-end-start-radius: 12px;
+}
+
+.gm-control-active.gm-fullscreen-control img,
+.gmnoprint>div[draggable="false"] button img {
+  width: 16px !important;
+  height: 16px !important;
+}
+
+div[style*="display: inline-flex"][style*="position: absolute"][style*="right: 0px"][style*="bottom: 0px"] {
+  display: none !important; 
+}
+
+/* calculator css  */
+.rc-slider-track,
+.rc-slider-tracks {
+  background-color: #00C8D0 !important;
+}
+
+.rc-slider-dot {
+  display: none !important;
+}
+
+.rc-slider-handle {
+  border: solid 5px #00C8D0 !important;
+  opacity: 1 !important;
+  width: 16px !important;
+  height: 16px !important;
+}
+
+/* This styles the container of the dropdown */
+.pac-container {
+  font-family: 'Poppins', sans-serif !important;
+  /* Ensure Poppins is applied */
+  font-size: 12px !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+  border: 1px solid #ccc !important;
+  overflow: hidden !important;
+  cursor: pointer;
+}
+
+/* Styles individual dropdown items */
+.pac-item {
+  padding: 4px 12px !important;
+  border-bottom: 1px solid #eaeaea !important;
+  cursor: pointer;
+  font-size: inherit !important;
+}
+
+.pac-item .pac-icon {
+  display: none !important;
+}
+
+.pac-item .pac-item-query {
+  font-size: 12px !important;
+}
+
+/* Highlighting items when hovered */
+.pac-item:hover {
+  background-color: #f2f7ff !important;
+}
+
+/* Style the highlighted text inside each item */
+.pac-item .pac-item-query {
+  font-weight: 400px !important;
+  color: #263747 !important;
+}
+
+/* scheduler calendar css  */
+.rdp-month_caption{
+  color: var(--input-border-color);
+}
+.styles_day_picker__uFN-L table tbody tr td{
+  font-size: 14px;
+}
+.rdp-weekdays{
+  position: static !important;
+}
+
+/* phone number Input color  */
+.react-tel-input .form-control, .react-tel-input .flag-dropdown{
+  border-color: var(--input-border-color);
+  border-radius: 8px;
+}
+.react-tel-input .form-control{
+  margin-top: -2px !important;
+  height: 36px !important;
+}
+.react-tel-input .flag-dropdown{
+  background-color: unset;
+  border-radius: 8px 0 0 8px;
+  top: -2px !important;
+}
+.react-tel-input .country-list .search-box{
+  border-radius: 8px;
+  height: 36px;
+  font-size: 12px;
+  width: 240px;
+  font-weight: 300;
+}
+.react-tel-input .country-list .search-emoji{
+  font-size: 16px;
+}
+.react-tel-input .country-list .country{
+  padding-left: 16px;
+  font-size: 12px;
+}
+.react-tel-input .country-list{
+  border-radius: 8px;
+}
+
+/* color config */
+:root {
+  --white-color: #fff;
+  --children-bg-color: #f3f3f3;
+  --border-color: #eaecf0;
+  --btn-text-color: #344054;
+  --check-border-color: #ccc;
+  --page-heading-color: #263747;
+  --secondary-text-color: #565656;
+  --active-text-color: #04a5e8;
+  --input-border-color: #d5d5d5;
+  --black-color: #0d0d0d;
+  --heading-color: #000000;
+  --danger-color: #d93f21;
+  --check-color: #2196f3;
+  --green-color: #8fcd00;
+  --coloumn-text-color: #101828;
+  --row-bg-color: #f6f6f6;
+  --arrow-icon-color: #667085;
+  --button-border-color: #d0d5dd;
+  --para-color: #393851;
+  --fade-gray-black: #575757;
+  --project-card-color-1: #e9f8ff;
+  --project-card-color-2: #e9ebff;
+  --project-card-color-3: #e9fff7;
+  --project-card-color-4: #ffe9e9;
+
+  --project-icon-color: #0493ce;
+  --project-icon-color-2: #e98045;
+  --project-icon-color-3: #19b87e;
+  --project-icon-color-4: #de2e2e;
+
+  --primary-color: #377cf6;
+  --secondary-color: #63aca3;
+  --teritary-color: #8e81e0;
+  --orange-color: #ee824d;
+  --purpink-color: #c470c7;
+  --primary-light-color: #d5e4ff;
+
+  --input-border-color: #292B2E;
+  --grey-text-color: #80848B;
+  --grey-border-color: #BFBFBF;
+  --grey-light-color: #E8E8E8;
+  --button-hover-color: #4062CA;
+  --delete-btn-color: #D91515;
+  --delete-btn-hover: #AD1313;
+  --select-Context-Menu:#F5E9D7
+
+}
+
+a {
+  text-decoration: none;
+}
+
+.inputLabel-select {
+  position: absolute;
+  color: var(--input-border-color);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.5px;
+  top: 4px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.loader-container {
+  display: flex;
+  justify-content: center;
+  height: 80vh;
+}
+
+.downloading-animation {
+  animation: 1.2s ease-in-out infinite download-animation;
+}
+
+@keyframes download-animation {
+  from {
+    transform: translateY(-100%);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateY(150%);
+    opacity: 0;
+  }
+}
+
+.data-not-found {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 4rem;
+}
+
+.data-not-found h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #979797;
+}
+
+h3 {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 30px;
+  text-align: left;
+  color: var(--input-border-color);
+}
+
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+/* Edge: Hide native eye icon */
+input[type='password']::-ms-reveal,
+input[type='password']::-ms-clear {
+  display: none;
+}
+
+/* image icon srtyle  */
+/* img{
+  cursor: pointer;
+} */
+.icon-image {
+  width: 20x !important;
+  height: 20px !important;
+}
+
+.user_img {
+  width: 18px !important;
+  height: 18px !important;
+}
+
+.children-icon-image {
+  width: 16px !important;
+  height: 16px !important;
+}
+
+/* circle style  */
+.ellipse {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+}
+
+.ellipsee {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: rgb(171 165 165);
+  margin-left: 27px;
+}
+
+.ellipseee {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: #23b364;
+  margin-left: 27px;
+}
+
+.user-btn {
+  background-color: #04a5e8;
+  outline: none;
+  border: none;
+  font-size: 0.85rem;
+  color: white;
+  padding: 0.5rem;
+  cursor: pointer;
+  border-radius: 0.5rem;
+}
+
+.dashboard-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.admin-dashboard {
+  background-color: white !important;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.admin-card-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background-color: white;
+  height: 178px;
+  /* padding: 1rem; */
+  border-radius: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+/* ::-webkit-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}  */
+
+/* modal style  */
+.transparent-model {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 400;
+}
+
+.modal {
+  background-color: #fefefe;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 900px;
+  height: 560px;
+  overflow: hidden;
+}
+
+.modal-body {
+  height: calc(100% - 150px);
+  /* Adjust the height for the body content */
+  overflow-y: auto;
+}
+
+.modal-footer {
+  border-top: 1px solid #ddd;
+  padding: 0px 20px 30px 20px;
+  /* text-align: right; */
+  display: flex;
+  justify-content: center;
+}
+
+.sales-modal {
+  width: 400px;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.createUserCrossButton {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 10px 10px 0 0px;
+  cursor: pointer;
+}
+
+.createUserCrossButton svg {
+  transition: transform 0.3s ease;
+}
+
+.createUserCrossButton svg:hover {
+  transform: scale(1.05);
+}
+
+.createProfileText {
+  font-size: 18px;
+  margin-left: 36px;
+  font-weight: 600;
+  color: var(--input-border-color);
+}
+
+.createProfileTextView {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0 36px 18px 36px;
+  height: 100%;
+}
+
+.modal-body::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.modal-body::-webkit-scrollbar {
+  display: initial;
+}
+
+.modal-body::-webkit-scrollbar-thumb {
+  background-color: rgb(173, 173, 173);
+  border-radius: 30px;
+}
+
+.modal-body::-webkit-scrollbar-button {
+  display: initial;
+}
+
+.modal-body::-webkit-scrollbar {
+  -ms-overflow-style: initial;
+  scrollbar-width: thin;
+}
+
+.modal-body::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+.createProfileInputView {
+  margin-top: 1rem;
+}
+
+.create-input-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.createUserActionButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #d0d5dd;
+  padding: 24px 0 24px 0;
+  gap: 1rem;
+}
+
+.rate-input-container {
+  display: flex;
+  width: 31.5%;
+  justify-content: space-between;
+}
+
+.start-input-container {
+  display: flex;
+  width: 65.5%;
+  justify-content: space-between;
+}
+
+.rate-input-field {
+  width: 48.5%;
+}
+
+.create-input-field {
+  position: relative;
+  width: 30%;
+}
+
+@media (max-width: 600px) {
+  .create-input-field {
+    width: 100%;
+  }
+}
+
+.radio-container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.radio-content {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.3rem;
+  /* width: 23%; */
+}
+
+.radio {
+  cursor: pointer;
+  width: 30px !important;
+  height: 30px;
+}
+
+.user-radio {
+  height: 18px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.create-input-field-note {
+  width: 100%;
+}
+
+.create-input-field-note textarea {
+  width: 100%;
+  border: 1px solid var(--input-border-color);
+  outline: none;
+  padding: 0.5rem;
+  font-size: 13px !important;
+  border-radius: 0.5rem;
+}
+
+.create-input-field-note textarea:hover, .create-input-field-note textarea:focus{
+  border-color: var(--primary-color);
+}
+
+.check-box {
+  width: 20px !important;
+  height: 20px !important;
+  background-color: var(--border-color);
+}
+
+/* <-----------------Filter css---------------------> */
+.filter-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2.2rem 0 2.2rem;
+
+  /* padding: "1rem 2rem 0rem 2rem"; */
+}
+
+.apply p {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 14.5px;
+  text-align: left;
+}
+
+.cross-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.6rem;
+  cursor: pointer;
+}
+
+.cross-btn img {
+  width: 24px;
+  height: 24px;
+}
+
+br {
+  margin: 0.5rem 0;
+}
+
+/* FileInputComponent.css */
+/* FileInputComponent.css */
+
+.fildelb-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 24px;
+  cursor: pointer;
+  align-self: center;
+}
+
+.fildelb-btn img {
+  width: 18px;
+  height: 20px;
+  transition: all 0.3s ease;
+}
+
+.fildelb-btn img:hover {
+  transform: scale(1.05);
+}
+
+.select-type-label {
+  position: static !important;
+  display: block;
+  margin-bottom: -15px !important;
+}
+
+.scrollbar {
+  overflow: auto;
+  height: 100vh;
+}
+
+.scrollbar::-webkit-scrollbar {
+  display: initial !important;
+  width: 10px !important;
+  height: auto !important;
+  scrollbar-width: thin !important;
+  -ms-overflow-style: auto !important;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgb(173, 173, 173);
+  border-radius: 30px;
+}
+
+.scrollbar::-webkit-scrollbar-button {
+  display: initial;
+}
+
+.scrollbar::-webkit-scrollbar {
+  -ms-overflow-style: initial;
+  scrollbar-width: thin;
+}
+
+.scrollbar::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+.bg-white {
+  background-color: var(--white-color);
+}
+
+.bg-primary {
+  background-color: var(--primary-color);
+}
+
+.bg-secondary {
+  background-color: var(--secondary-color);
+}
+
+.d-none {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .modal {
+    max-width: 750px;
+  }
+
+  .create-input-container {
+    gap: 15px;
+    margin-left: 0.5rem !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .scrollbar::-webkit-scrollbar {
+    display: none !important;
+  }
+  .createProfileText{
+    margin-left: 18px;
+  }
+}
+
+.main-container {
+  max-width: 1900px;
+  margin-inline: auto;
+}
+
+@media screen and (max-width: 767px) {
+  .react-tel-input .country-list {
+    width: 256px;
+    text-align: left;
+  }
+
+  .modal {
+    margin: 10px;
+  }
+
+  .react-tel-input .country-list * {
+    text-align: left;
+  }
+
+  .create-input-container {
+    margin-left: 0 !important;
+  }
+
+  .filter-section,
+  .createProfileTextView {
+    padding: 1rem;
+  }
+}
+
+.one-line-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

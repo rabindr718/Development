@@ -1,0 +1,292 @@
+.userManagementTable__search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.userManagementTable__search input {
+  padding: 10px;
+  border: 1px solid var(--input-border-color);
+  border-radius: 4px;
+  width: 200px;
+  height: 36px;
+  border-radius: 8px;
+  font-size: 12px;
+}
+
+.userManagementTable__search input::placeholder {
+  color: var(--input-border-color);
+}
+
+.userManagementTable__search input:focus,
+.userManagementTable__search input:hover {
+  outline: none;
+  border-color: var(--primary-color)
+}
+
+.userManagementTable__search input:hover::placeholder, .userManagementTable__search input:focus::placeholder {
+  color: var(--primary-color);
+}
+
+.reset_hover_btn {
+  transition: all 0.3s ease;
+}
+
+.reset_hover_btn:hover {
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+
+}
+
+.userManagementTable__search input:focus {
+  outline: none;
+  border-color: #007bff;
+  /* Change the border color to your desired color */
+}
+
+.flex-row-reverse {
+  flex-direction: row-reverse;
+}
+
+.userManagementTable__search button {
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  height: 36px;
+}
+
+.management-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.manage-user p {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: -0.03em;
+  text-align: left;
+  color: var(--para-color);
+}
+
+.admin-user {
+  display: flex;
+  gap: 8px;
+  margin-top: 1.2rem;
+}
+
+.admin-user img {
+  transition: all 0.3s ease;
+}
+
+.admin-user img:hover {
+  transform: scale(1.2);
+}
+
+.user-new-button {
+  display: flex;
+  align-items: center;
+}
+
+.user-new-button button {
+  border: none;
+  background-color: var(--active-text-color);
+  color: var(--primary-text-color);
+  padding: 0.5rem;
+  border-radius: 8px;
+  font-size: 16px;
+  margin-bottom: 1rem;
+}
+
+.add {
+  font-size: 20px;
+}
+
+.ManagerUser-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  margin-top: 1.2rem;
+  border-radius: 16px 16px 0px 0px;
+  padding: 0rem 1rem 1rem 1rem;
+}
+
+/* .rate-input-field select {
+  width: Fixed (180px)px;
+height: Fixed (36px)px;
+padding: 6px 16px 6px 6px;
+gap: 46px;
+border-radius: 8px;
+border: 1px 0px 0px 0px;
+opacity: 0px;
+
+} */
+
+.iconsSection-delete {
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 8px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #d0d5dd;
+  padding: 2px;
+
+  /* border: "1px solid #d0d5dd"; */
+}
+
+.iconsSection-delete img {
+  width: 17px;
+  height: 18px;
+}
+
+/* .iconsSection-delete h4 {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  text-align: left;
+} */
+
+.db-access {
+  display: flex;
+  align-items: center;
+}
+
+.db-access input {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px 0px 0px 0px;
+  border: 1px 0px 0px 0px;
+  opacity: 0px;
+}
+
+.db-access label {
+  margin-top: 1rem;
+  padding-left: 0.5rem;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 12px;
+  padding-bottom: 1rem;
+}
+
+.selectTable-section {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+
+.selectTable-section img {
+  cursor: pointer;
+}
+
+.selectTable-section p {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 14.5px;
+  text-align: left;
+}
+
+.access-data {
+  align-items: center;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+.access-data p {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 14.5px;
+  text-align: left;
+}
+
+.dash-select-user {
+  background-color: #ececec;
+  width: 51px;
+  text-align: center;
+  align-items: center;
+  height: 28px;
+  border: none;
+  outline: none;
+  padding: 0.3rem 0.5rem 0.1rem 0.5rem;
+  font-size: 12px;
+  cursor: pointer;
+  color: #344054 !important;
+  font-weight: 500;
+  border-radius: 0.25rem;
+  transition:
+    transform 0.3s,
+    background-color 0.3s;
+}
+
+.dash-select-user:hover {
+  transform: scale(1.06);
+  background-color: #ababab;
+}
+
+.user-table {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.select-caret {
+  font-size: 10px;
+  position: absolute;
+  top: -4px;
+  z-index: 1;
+  display: block;
+  left: 7px;
+}
+
+.user-table-dropdown:hover .select-caret, .user-table-dropdown:hover .dropdownText{
+  color: var(--primary-color) !important;
+}
+
+.Line-container {
+  cursor: pointer;
+  transition: transform 500ms ease;
+}
+
+.Line-container:hover {
+  transform: scale(1.09);
+}
+
+.edit-line img {
+  transition: border 500ms ease;
+}
+
+.edit-line img:hover {
+  border-radius: 8px;
+  border: solid 1px rgb(161, 161, 161);
+}
+
+@media screen and (max-width: 767px) {
+  .ManagerUser-container {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  .delete-icon-container {
+    flex-direction: column !important;
+    position: relative;
+  }
+
+  .user_user-type {
+    flex-direction: row !important;
+    justify-content: space-between;
+  }
+
+  .userManagementTable__search,
+  .userManagementTable__search input {
+    width: 100%;
+  }
+}

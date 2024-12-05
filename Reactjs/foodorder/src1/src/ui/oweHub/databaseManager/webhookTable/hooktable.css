@@ -1,0 +1,6 @@
+.TableContainer table {
+  width: 100%;
+  border-collapse: collapse;
+  align-items: left;
+  text-align: left;
+}

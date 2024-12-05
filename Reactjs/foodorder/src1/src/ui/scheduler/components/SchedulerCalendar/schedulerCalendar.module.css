@@ -1,0 +1,154 @@
+.appointmentSchedulerContainer {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 400px;
+  margin: 0 auto;
+  font-family: 'Arial', sans-serif;
+}
+
+.selectorButtons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+.selectorButton {
+  border: 1px solid #377cf6;
+  color: #377cf6;
+  padding: 5px 20px;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: white;
+  flex: 1;
+  max-width: 120px;
+}
+
+.selectorButton.active {
+  background-color: #377cf6;
+  color: white;
+}
+
+.calendarContainer {
+  margin-bottom: 20px;
+}
+
+.react-datepicker {
+  width: 100%;
+  border: none;
+  font-family: 'Arial', sans-serif;
+}
+
+.react-datepicker__header {
+  background-color: white;
+  border-bottom: none;
+}
+
+.react-datepicker__day-name,
+.react-datepicker__day {
+  width: 2.5rem;
+  line-height: 2.5rem;
+  margin: 0.1rem;
+}
+
+.react-datepicker__day--selected {
+  background-color: #377cf6;
+  border-radius: 50%;
+}
+
+.custom_header {
+  display: flex;
+  justify-content: center !important;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.custom_header button {
+  background: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: #377cf6;
+}
+
+.custom_header_text {
+  font-weight: bold;
+}
+
+.timeSlotContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.timeSlot {
+  border: 1px solid #377cf6;
+  color: #377cf6;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: white;
+}
+
+.timeSlot.active {
+  background-color: #377cf6;
+  color: white;
+}
+
+.selectedDateDisplay {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.sendAppointmentBtn button {
+  width: 100%;
+  background-color: #377cf6;
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+}
+
+.sendAppointmentBtn button:hover {
+  background-color: #2e69d0;
+}
+.react-datepicker__day:hover {
+  background-color: #e6f2ff;
+  border-radius: 50%;
+}
+
+.react-datepicker__day--keyboard-selected,
+.react-datepicker__day--keyboard-selected:hover {
+  background-color: #377cf6;
+  color: white;
+  border-radius: 50%;
+}
+
+.react-datepicker__day--selected,
+.react-datepicker__day--selected:hover {
+  background-color: #377cf6;
+  color: white;
+  border-radius: 50%;
+}
+.react-datepicker__month-container {
+  float: none;
+  border: 0.89px solid #d1d5db;
+  padding: 5px 10px;
+  border-radius: 14.32px;
+}
+.prev-month,
+.next-month {
+  width: 35.8px;
+  height: 28.64px;
+  border-radius: 7.16px;
+  border: 0.89px solid #d1d5db;
+}

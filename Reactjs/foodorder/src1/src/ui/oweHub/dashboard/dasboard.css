@@ -1,0 +1,1013 @@
+.Dashboard-section-container {
+  width: 100%;
+  /* height: 87vh; */
+}
+
+.DashboardPage-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+  padding: 10px 4px;
+}
+
+.DashboardPage-wel h6 {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: -0.03em;
+  text-align: left;
+  color: #393851;
+}
+
+.rep-up .dropdown-toggle {
+  white-space: nowrap;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.date-button {
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
+  background: #ffffff;
+  padding: 6px;
+  cursor: pointer;
+  text-wrap: nowrap;
+  color: rgb(52, 64, 84);
+  font-size: 12px;
+  font-weight: 500;
+  user-select: none;
+}
+
+.dealer-pay-search::placeholder{
+  color: var(--input-border-color);
+}
+
+.date-button:hover{
+  border-color: var(--primary-color) !important;
+}
+
+.date-button:hover .dealer-date-text, .date-button:hover .dealer-date-svg{
+  color: var(--primary-color);
+}
+
+.date-button.active {
+  border-color: var(--primary-color) !important;
+}
+
+.date-button.active .dealer-date-text,
+.date-button.active .dealer-date-svg {
+  color: var(--primary-color);
+}
+
+
+.calender-container {
+  position: absolute;
+  z-index: 999;
+  margin-left: -42px;
+  top: 130%;
+  background-color: #fff;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+.apply-calender {
+  background: #3d91ff;
+  color: white;
+  font-size: 12px;
+  padding: 4px 15px;
+  border-radius: 50px;
+  cursor: pointer;
+  position: relative;
+  left: 410px;
+  bottom: 10px;
+  border: none;
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.reset-calender {
+  background: #3d91ff;
+  color: white;
+  font-size: 12px;
+  padding: 4px 15px;
+  border-radius: 50px;
+  cursor: pointer;
+  position: relative;
+  left: 400px;
+  bottom: 10px;
+  border: none;
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.reset-calender:hover,
+.apply-calender:hover {
+  transform: scale(1.07);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.calender-btn-wrapper {
+  display: flex;
+  gap: 14px;
+  justify-content: flex-end;
+  padding-right: 12px;
+}
+
+.calender-btn-wrapper .reset-calender,
+.calender-btn-wrapper .apply-calender {
+  position: relative !important;
+  left: auto !important;
+}
+
+.commission-section-dash {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 4px;
+}
+
+.dealer-tot-amt {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.dealer-tot-amt h4 {
+  font-weight: 500;
+  color: var(--input-border-color);
+}
+
+.total-commisstion {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  background-color: white;
+  border: 1.5px solid #a5aab242;
+  box-shadow: 3px 7px 12px 0px rgba(184, 184, 184, 0.2);
+  border-radius: 12px;
+  padding: 14px;
+  width: 32%;
+  margin-top: 5px;
+}
+
+.total-section-desc {
+  background-color: #F7F8F8;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 12px;
+  width: 100%;
+}
+
+.total-section-desc img {
+  width: 28%;
+}
+
+.total-section-desc p {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--input-border-color);
+}
+
+.tsd-percent {
+  padding: 3px 6px;
+  border-radius: 4px;
+}
+
+.total-section h4 {
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 28px;
+  text-align: left;
+  text-overflow: ellipsis;
+  overflow-x: hidden;
+  text-wrap: nowrap;
+  width: 200px;
+}
+
+.total-section p {
+  color: var(--input-border-color);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1rem;
+  text-align: left;
+}
+
+.teamImg {
+  width: 55px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.dashboard-payroll {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.dealer-calendar .rdrDateDisplayWrapper {
+  display: none;
+}
+
+.dealer-calendar .rdrMonthAndYearWrapper {
+  padding-top: 0;
+}
+
+.dealer-pay-search {
+  height: 36px;
+  width: 200px;
+  border-radius: 0.5rem;
+  border: 1px solid var(--input-border-color);
+  outline: none;
+  padding: 10px;
+  transition: all 0.1s ease;
+  font-size: 12px;
+}
+
+.dealer-pay-search:hover::placeholder {
+  color: var(--primary-color);
+}
+
+.dealer-pay-search:hover,
+.dealer-pay-search:focus,
+.dealer-pay-search:not(:placeholder-shown) {
+  border-color: #377cf6;
+  border-width: 1px;
+}
+
+.dealer-pay-search:focus {
+  border-color: var(--primary-color); 
+  outline: none; 
+}
+
+.dealer-pay-search:focus::placeholder {
+  color: var(--primary-color); 
+}
+
+.payroll-date {
+  font-size: 13px;
+  border-radius: 0.4rem;
+  border: none;
+  outline: none;
+  background: #ececec;
+  padding: 4px 8px;
+}
+
+.Payroll-section {
+  display: flex;
+  height: 36px;
+  background-color: white;
+  padding: 0 6px 0 12px;
+  gap: 0.5rem;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid #d0d5dd;
+}
+
+.dash-head-input {
+  display: flex;
+  height: 47px;
+  background-color: #ffffff;
+  padding: 0 3px 0 3px;
+  /*here change for reduce left space ***************/
+  gap: 0px;
+  align-items: center;
+  border-radius: 8px;
+}
+
+.dash-select {
+  background-color: #ececec;
+  border: none;
+  outline: none;
+  padding: 0.3rem, 0.7rem;
+  font-size: 12px;
+  cursor: pointer;
+  color: #344054 !important;
+  font-weight: 500;
+  border-radius: 0.4rem;
+  position: relative;
+}
+
+.dashboard-chart-view {
+  background: #ffffff;
+  border-radius: 0.4rem;
+  border: none;
+  outline: none;
+  padding: 8px;
+  cursor: pointer;
+  text-wrap: nowrap;
+}
+
+.line-graph {
+  display: flex;
+  align-items: center;
+  /* margin-top: 0.4rem; */
+  gap: 0.5rem;
+  /* align-content: center;
+  justify-content: center; */
+}
+
+.payroll-label {
+  font-size: 13px;
+  color: var(--btn-text-color);
+  font-weight: 600;
+}
+
+.filter-line {
+  width: 36px !important;
+  height: 36px !important;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.filter-line:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  background-color: #4062CA !important;
+}
+
+.filter-disable {
+  width: 36px !important;
+  height: 36px !important;
+  border-radius: 0.5rem;
+  cursor: not-allowed;
+  background-color: white;
+  opacity: 0.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.active-filter-line {
+  background-color: #377cf6;
+}
+.active-filter-line:hover {
+  background-color: #4062CA;
+}
+
+.active-filter-line img {
+  fill: white;
+}
+
+.filter-line img {
+  width: 20px;
+  height: 20px;
+}
+
+.dashboard-filter {
+  color: var(--white-color);
+  height: 20px;
+  width: 20px;
+}
+
+.help-container {
+  position: absolute;
+  width: 75%;
+  height: 55vh;
+  /* top: -100px; */
+  bottom: 280px;
+  left: 150px;
+  opacity: 0px;
+}
+
+.section-help {
+  position: fixed;
+  border-radius: 24px;
+  /* width: 60%; */
+  /* height: 98vh; */
+  background-color: white;
+  border: 1px solid var(--border-color);
+}
+
+.help-section-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1rem 0 1rem;
+  border-bottom: 1px solid var(--border-color);
+  background-color: #0493ce;
+  overflow-x: hidden;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+.dealer-pay-table {
+  margin-top: 1.2rem;
+}
+
+.help-section {
+  display: flex;
+  justify-content: space-between;
+  /* padding: 1rem; */
+  padding: 0 1rem 1rem 1rem;
+  /* margin-left: 1rem; */
+}
+
+.help-section h3 {
+  font-size: 20px;
+  font-weight: 600;
+  /* line-height: 44px; */
+  text-align: left;
+  color: white;
+}
+
+.create-input-container {
+  /* text-align: left; */
+  width: 100%;
+}
+
+.help-icon {
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.help-icon:hover {
+  transform: scale(1.05);
+}
+
+.rep-manage-user {
+  display: flex !important;
+  gap: 9px !important;
+  align-items: center;
+}
+
+.help-input-container {
+  padding: 1rem 2rem 1rem 2rem;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+.create-input-field-help {
+  /* width: 280px; */
+  /* margin-left: 2rem; */
+  flex: 1;
+  /* margin-top: 0.5rem; */
+}
+
+.bi-support-icon {
+  height: 14px;
+  width: 14px;
+  stroke-width: 0.2;
+}
+
+.breakdown-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--input-border-color);
+  padding: 1rem;
+}
+
+.breakdown-img {
+  cursor: pointer;
+}
+
+.project-section h3 {
+  font-size: 28px;
+  font-weight: 600;
+  text-align: left;
+  color: white;
+}
+
+.project-section h4 {
+  font-size: 16px;
+  font-weight: 500;
+  text-align: left;
+  color: var(--input-border-color);
+}
+
+.project-section h5 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--input-border-color);
+}
+
+.close-popup-btn {
+  filter: brightness(0.5);
+  transition: all 500ms;
+}
+
+.close-popup-btn:hover {
+  transform: scale(1.05);
+  transition: all 500ms;
+}
+
+.breakdown-table {
+  display: block;
+  height: 100%;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  white-space: nowrap;
+}
+
+.children-container {
+  background-color: var(--children-bg-color);
+  padding: 1.2rem 1.2rem;
+  flex: 1;
+  overflow-y: scroll;
+  height: calc(100vh - 65px);
+  scroll-behavior: smooth;
+  padding-bottom: 1.2rem;
+}
+
+.breakdown-table::-webkit-scrollbar {
+  width: 10px;
+  height: auto;
+}
+
+.breakdown-table::-webkit-scrollbar {
+  display: initial;
+}
+
+.breakdown-table::-webkit-scrollbar-thumb {
+  background-color: rgb(173, 173, 173);
+  border-radius: 30px;
+}
+
+.breakdown-table::-webkit-scrollbar-button {
+  display: initial;
+}
+
+.breakdown-table::-webkit-scrollbar {
+  -ms-overflow-style: initial;
+  scrollbar-width: thin;
+}
+
+.breakdown-table::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+.breakdown-table tbody {
+  font-weight: 500;
+}
+
+.help-submit {
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 0.5rem;
+  color: #fff;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 11.962px;
+  cursor: pointer;
+  height: 40px;
+  text-transform: capitalize;
+  width: 150px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.help-submit:hover {
+  background-color: #4062CA !important;
+  transform: scale(1.05);
+}
+
+.createUserCrossButtonBreak {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 10px 10px 0 0px;
+  cursor: pointer;
+}
+
+.createUserCrossButtonBreak img {
+  color: white;
+  width: 32px;
+  height: 32px;
+  font-size: 32px;
+}
+
+.transparent-model-down {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 200;
+}
+
+.modal-down-break {
+  background-color: #fefefe;
+  border-radius: 16px;
+  width: 600px;
+  max-width: 900px;
+  height: 500px;
+  overflow: hidden;
+}
+
+.modal-body-down {
+  height: calc(100% - 70px);
+  overflow-y: auto;
+}
+
+.create-input-help {
+  width: 100%;
+  padding: 0.5rem 2rem 0.5rem 2rem;
+}
+
+.create-input-help textarea {
+  border: 1px solid #d0d5dd;
+  outline: none;
+  padding: 0.5rem;
+  font-size: 13px !important;
+  border-radius: 0.5rem;
+  /* background-color: #263747; */
+  width: 100%;
+  margin-top: 0.5rem;
+  background-color: white;
+}
+
+.inputLabeldash p {
+  font-size: 13px;
+  font-weight: 500;
+  /* line-height: 18px; */
+  text-align: left;
+}
+
+.inputLabel-help {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  text-align: left;
+}
+
+.file-input-container-help {
+  position: relative;
+  border: 1px solid #ced4da;
+  /* Show border */
+  border-radius: 8px;
+  padding: 4px;
+  /* width: 290px; */
+  margin-top: 0.1rem;
+  height: 38px;
+  border-style: dashed;
+  border-color: #0493ce;
+  background-color: #e8f8ff;
+}
+
+.inputLabel {
+  color: #000000;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
+  /* text-align: left; */
+  /* width: 45px; */
+}
+
+.custom-button-dash {
+  /* Define your button styles */
+  background: linear-gradient(180deg, #f6f6f6 0%, #c1c1c1 100%);
+  color: #000000;
+  padding: 5px 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 18px;
+  margin-right: 10px;
+  /* text-align: left; */
+}
+
+.custom-button-dash {
+  /* Define your button styles */
+  background: linear-gradient(180deg, #f6f6f6 0%, #c1c1c1 100%);
+  color: #000000;
+  padding: 5px 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 18px;
+  margin-right: 10px;
+  /* text-align: left; */
+}
+
+.createUserActionButtonDash {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #d0d5dd;
+  padding: 24px 0 24px 0;
+  gap: 1rem;
+}
+
+.createUserActionButtonDash :hover {
+  background-color: #263747;
+}
+
+.create-input-field-help {
+  /* width: 290px; */
+  width: 50%;
+  display: flex;
+  display: block;
+  padding-top: 0.5rem;
+}
+
+.create-input-field-help {
+  /* width: 290px; */
+  width: 50%;
+  display: flex;
+  display: block;
+  padding-top: 0.5rem;
+}
+
+.create-input-field-help label {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: left;
+  margin-bottom: -5px;
+  /* background-color: #0493CE; */
+}
+
+.help-modal {
+  position: fixed;
+  background-color: #fefefe;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 900px;
+  height: 612px;
+}
+
+.add-arrow-icon {
+  stroke-width: 20;
+  font-size: 16px;
+  vertical-align: middle;
+    margin-left: 3px;
+}
+
+.add-arrow-icon.up {
+  color: rgb(0, 0, 0);
+  font-weight: 900;
+}
+
+.add-arrow-icon.down {
+  color: rgb(0, 0, 0);
+  font-weight: 900;
+}
+
+.white-back {
+  background-color: white;
+  padding-left: 13px;
+  padding-right: 13px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 18px;
+}
+
+@media (max-width: 1024px) {
+  .total-commisstion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 16px;
+    padding: 10px;
+    width: 32.2%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    transition: box-shadow 0.3s ease;
+  }
+
+  .total-section h4 {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 28px;
+    text-align: left;
+    color: #ffffff;
+    margin-right: 7px;
+    width: 130px;
+  }
+
+  .total-section p {
+    font-size: 12px;
+  }
+
+  .teamImg {
+    width: 54px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.3);
+  }
+
+  .calender-container {
+    position: absolute;
+    z-index: 999;
+    margin-left: -73px;
+    top: 130%;
+    background-color: #fff;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
+  }
+
+  .help-modal {
+    position: fixed;
+    background-color: #fefefe;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 750px;
+    height: 412px;
+  }
+
+  .help-section-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1rem 0 1rem;
+    border-bottom: 1px solid var(--border-color);
+    background-color: #0493ce;
+    overflow-x: hidden;
+  }
+
+  .dealer-pay-search {
+    width: 170px;
+  }
+
+  .total-section-desc {
+    position: relative;
+    padding-top: 1.4rem;
+  }
+
+  .total-section-desc img {
+    width: 70px !important;
+  }
+
+  .total-section-desc p {
+    font-size: 10px;
+  }
+
+  .tsd-percent {
+    padding: 2px 6px;
+    position: absolute;
+    top: 11px;
+    right: 65px;
+  }
+
+  .dealer-tot-amt h4 {
+    text-overflow: ellipsis;
+    text-wrap: nowrap;
+    overflow-x: hidden;
+    max-width: 100px;
+    font-size: 14px;
+  }
+}
+
+/*Responsive*/
+
+@media screen and (max-width: 768px) {
+  .children-container {
+    padding: unset;
+    overflow: unset;
+  }
+
+  .attach-help-mob{
+    flex-basis: auto;
+  }
+
+  .help-projId{
+    width: 100% !important;
+  }
+
+  .modal-down-break{
+    margin: 10px;
+  }
+
+  .date-button{
+    gap: 1.5rem !important;
+  }
+
+  .help-proj-input{
+    width: 100% !important;
+  }
+
+  .help-submit{
+    width: 100px;
+  }
+
+  .white-back {
+    margin: 10px;
+    position: relative;
+  }
+
+  .commission-section-dash {
+    flex-direction: column;
+    gap: 5px;
+    padding: 0 2px;
+  }
+
+  .total-commisstion {
+    width: 100%;
+  }
+
+  .total-section h4 {
+    width: 210px;
+  }
+
+  .rep-manage-user {
+    flex-direction: column;
+    gap: 14px !important;
+    align-items: flex-start !important;
+  }
+
+  .DashboardPage-container {
+    align-items: flex-start;
+  }
+
+  .dealer-export-mob {
+    display: none;
+  }
+
+  .dealer-exp-svg {
+    width: 15px;
+    margin-top: 2px;
+    height: 15px;
+  }
+
+  .dealer-bread {
+    margin-left: 14px !important;
+  }
+
+  .dealer-payroll {
+    position: absolute;
+    right: 10px;
+    top: 65px;
+  }
+
+  .dealer-commission {
+    min-width: unset !important;
+  }
+
+  .dealer-pay-table {
+    margin-top: 10px;
+  }
+
+  .dealer-pay-search {
+    position: absolute;
+    top: 72px;
+    right: 1.1rem;
+  }
+
+  .tsd-percent {
+    position: unset;
+    padding: 3px 6px;
+  }
+
+  .tsd-text {
+    margin-top: 0;
+  }
+
+  .total-section-desc {
+    padding-top: 12px;
+  }
+
+  .total-section-desc img {
+    width: 80px !important;
+  }
+
+  .total-section-desc p {
+    font-size: 11px;
+  }
+
+  .dealer-tot-amt h4 {
+    max-width: 150px;
+  }
+
+  .help-modal {
+    width: 95%;
+  }
+
+  .help-mob-input {
+    width: unset !important;
+  }
+
+  .dealer-mob-upload {
+    transform: scale(1.2);
+  }
+}

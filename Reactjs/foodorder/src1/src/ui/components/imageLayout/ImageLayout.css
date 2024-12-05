@@ -1,0 +1,116 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Five columns */
+  grid-gap: 10px; /* Gap between grid items */
+  align-items: center;
+  justify-content: center;
+  grid-template-rows: repeat(2, 268px);
+}
+
+.grid-container > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.left,
+.right {
+  grid-column: span 2; /* Each spans two columns */
+}
+
+.center {
+  width: 320px;
+  height: 536px;
+}
+
+/* img {
+  max-width: 100%;
+  height: auto;
+} */
+.leftView {
+  width: 100%;
+  height: 100%;
+  margin: 5px;
+  border-radius: 12px;
+}
+
+.rightView {
+  width: 320px;
+  height: 260px;
+  margin: 5px;
+}
+
+.bottamTextView {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 0px 0px 16px 16px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.bottamTextView div {
+  background: rgba(0, 0, 0, 0.63);
+}
+
+.bottamTextView div span {
+  color: #fff;
+  /* font-family: Poppins; */
+  font-weight: 300;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-block: 5px;
+}
+
+.centerTextView {
+  position: absolute;
+  bottom: 0%;
+  width: 100%;
+}
+
+.centerTextView div {
+  border-radius: 0px 0px 16px 16px;
+  background: rgba(0, 0, 0, 0.63);
+  margin-bottom: 5.8px;
+}
+
+.centerTextView div span {
+  color: #fff;
+  font-weight: 300;
+  font-family: Poppins;
+  font-size: 18px;
+  height: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 1024px) {
+  .leftView {
+    width: 100%;
+    height: 100%;
+    margin: 5px;
+    border-radius: 12px;
+  }
+  .bottamTextView {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    right: 0;
+  }
+
+  .bottamTextView div span {
+    color: #fff;
+    font-weight: 300;
+    font-size: 12px;
+    display: flex;
+    padding: 11px 10px;
+  }
+}

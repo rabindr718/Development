@@ -1,0 +1,36 @@
+.input_wrapper {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.input_field {
+  width: 100%;
+  border: none;
+  background-color: #fff;
+  padding: 10px;
+  font-weight: 500;
+  color: #222222;
+  background-color: #f3f3f3;
+}
+
+.input_field:focus {
+  outline: none;
+}
+
+.edit_btn {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  line-height: 1;
+  cursor: pointer;
+}
+
+.input_label {
+  color: #6d6d6d;
+  font-size: 12px;
+  font-weight: 400;
+  display: block;
+  margin-bottom: 4px;
+}

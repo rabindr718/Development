@@ -1,0 +1,62 @@
+.top-0 {
+  top: 0;
+}
+
+.left-0 {
+  left: 0;
+  /* transform: translateX(-50%); */
+}
+
+.day_picker table tbody tr:hover {
+  background-color: transparent !important;
+}
+.day_picker table tbody tr td {
+  padding: 0.5rem 3px;
+}
+.caption_label {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.day_cell {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  font-size: 15px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.active_day_cell {
+  background-color: #d5e4ff;
+  border: none;
+  color: #377cf6;
+  cursor: pointer;
+  font-size: 14px;
+}
+.disable_day_cell:disabled {
+  color: #868686;
+}
+.selected_cell {
+  border: none !important;
+}
+.active_selected_cell {
+  background-color: #377cf6;
+  border: none;
+  color: #fff;
+}
+.day_picker table thead tr {
+  background-color: #fff !important;
+}
+
+.day_picker table tbody tr {
+  border: none !important;
+}
+
+/* .month_caption{
+  margin-left: 8px;
+  font-size: 14px;
+  font-weight: 600;
+} */

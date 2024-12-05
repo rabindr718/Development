@@ -1,0 +1,130 @@
+.dropdown-container {
+  position: relative;
+}
+
+.dropdown-toggle {
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
+  width: 2rem;
+  min-height: unset;
+  height: 17px;
+  align-content: center;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #000000;
+}
+
+.dropdown-toggle::after {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  color: #000000; /* Change this to the desired color */
+}
+
+.dropdown-text{
+  color: var(--input-border-color);
+  margin-top: -3px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: -32px;
+  z-index: 5;
+  background-color: white;
+  border: 1px solid var(--input-border-color);
+  border-radius: 8px;
+  padding: 5px;
+  margin-top: 7px;
+  overflow-y: auto;
+  width: 150px;
+  height: 285px !important;
+  box-sizing: border-box;
+  color: #0493ce;
+  box-shadow: 0px 4px 10px rgba(43, 42, 42, 0.3); /* Add this line */
+}
+
+.dropdown-item {
+  display: flex;
+  padding: 4px 8px;
+  cursor: pointer;
+  color: var(--input-border-color);
+  font-weight: 500;
+  font-size: 12px;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.dropdown-item input[type='checkbox'] {
+  cursor: pointer;
+  width: 14px;
+  height: 14px;
+  border-radius: 4px;
+  border: 1px solid var(--grey-text-color);
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #ffffff;
+}
+
+.dropdown-item input[type='checkbox']:checked {
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown-item input[type='checkbox']:checked::before {
+  content: '';
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-color: #377cf6;
+  border-radius: 2px;
+}
+
+.drop-icon {
+  color: #292929;
+  font-weight: 1800;
+}
+
+.selected-count {
+  background-color: #377cf6;
+  color: #ffffff;
+  font-weight: 500;
+  flex-shrink: 0;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+@media (max-width: 1024px) {
+  .selected-count {
+    background-color: #377cf6;
+    color: #ffffff;
+    font-weight: 500;
+    border-radius: 50%;
+    flex-shrink: 0;
+    width: 10px;
+    height: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 6px;
+  }
+}

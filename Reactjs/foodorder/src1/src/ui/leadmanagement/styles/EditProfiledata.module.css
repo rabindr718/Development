@@ -1,0 +1,20 @@
+.customer_wrapper_list {
+    flex-basis: calc(100%);
+    border-radius: 8px;
+    background-color: #fff;
+    max-width: 1012px;
+    min-height: 572px;
+    max-height: 625px;
+    min-width: 612px;
+    display: flex;
+    flex-direction: column;
+  }
+  .crossIconImg{
+    cursor: pointer;
+    background-color: teal;
+  }
+  .btnContainer{
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+  }

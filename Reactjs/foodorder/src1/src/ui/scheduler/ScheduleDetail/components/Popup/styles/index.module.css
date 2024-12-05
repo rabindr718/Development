@@ -1,0 +1,41 @@
+.popup_background {
+  background-color: rgb(110, 110, 110, 0.87);
+  min-height: 100vh;
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: grid;
+  place-items: center;
+}
+
+.popup_card_wrapper {
+  width: 100%;
+  max-width: 726px;
+  border-radius: 12px;
+  background-color: #fff;
+  padding-block: 37px;
+}
+
+.popup_title {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.success_btn {
+  background-color: #4372e9;
+  padding: 12px 54px;
+  border: none;
+  color: #fff;
+  border-radius: 6px;
+  margin-inline: auto;
+  cursor: pointer;
+  display: block;
+  margin-top: 4rem;
+  transition: all 500ms;
+  transform-origin: top left;
+}
+
+.success_btn:hover {
+  transform: scale(1.1);
+  transition: all 500ms;
+}

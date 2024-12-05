@@ -1,0 +1,106 @@
+.active {
+  padding: 0 0 10px 5px;
+  border: 0px, 0px, 1px, 0px;
+  gap: 20px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  border-bottom: 2.5px solid #04a5e8;
+  color: var(--primary-color, #04a5e8);
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  display: inline-block; /* Set display to inline-block */
+  margin: 0 70px 0 0; /* Adjust this value to set the desired gap */
+}
+
+.inactive {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  color: #6d6d6d;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  display: inline-block; /* Set display to inline-block */
+  margin: 0 70px 0 0; /* Adjust this value to set the desired gap */
+}
+
+.tab-view {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.tab-buttons {
+  display: flex;
+}
+
+.tab-buttons > div {
+  flex-basis: 33.33%;
+}
+@media screen and (max-width: 1024px) {
+  .active {
+    padding: 0 0 10px 5px;
+    border: 0px, 0px, 1px, 0px;
+    gap: 20px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+    border-bottom: 2.5px solid #04a5e8;
+    color: var(--primary-color, #04a5e8);
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    display: inline-block; /* Set display to inline-block */
+    margin: 0 70px 0 0; /* Adjust this value to set the desired gap */
+  }
+
+  .inactive {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+    color: #6d6d6d;
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    display: inline-block; /* Set display to inline-block */
+    margin: 0 70px 0 0; /* Adjust this value to set the desired gap */
+  }
+}
+
+@media (max-width: 767px) {
+  .welcomeOverProcessTitle {
+    font-size: 1.5rem;
+  }
+  .inactive,
+  .active {
+    margin: 0;
+    font-size: 12px;
+    padding: 0 0 10px 5px;
+  }
+  .landing-table > div,
+  .landing-table > div .table-box {
+    width: 100%;
+  }
+  .landing-table {
+    width: 100%;
+    overflow-x: auto;
+    flex-direction: column;
+    padding-right: 0;
+  }
+}

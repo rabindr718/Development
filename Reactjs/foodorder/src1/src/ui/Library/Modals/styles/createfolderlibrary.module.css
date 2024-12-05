@@ -1,0 +1,240 @@
+.customer_wrapper_list {
+  border-radius: 16px;
+  background-color: #fff;
+  max-width: 620px;
+  width: 100%;
+  margin-inline: 24px;
+  height: 289px;
+}
+
+.success_header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding: 0 1.5rem;
+}
+.success_heading {
+  font-family: 'Inter';
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 32px;
+  color: var(--input-border-color);
+}
+.success_crossing {
+  transition: transform 0.3s ease;
+}
+.success_crossing:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+.success_hrline {
+  border: 1px solid var(--input-border-color);
+  width: 620px;
+  opacity: 10%;
+  margin-top: 20px;
+}
+.succicon {
+  display: flex;
+  justify-content: center;
+}
+.succicon_input_box {
+  /* height: 54px; */
+  width: 548px;
+  margin-top: 40px;
+  border-radius: 8px;
+  /* padding: 3px, 18px; */
+  color: var(--input-border-color);
+  border: 1px solid var(--input-border-color);
+  font-family: 'Poppins';
+  font-weight: 400;
+  font-size: 14px;
+  outline: none;
+  color: var(--input-border-color);
+  line-height: 24px;
+  padding: 10px 22px;
+}
+
+.succicon_input_box::placeholder {
+  color: var(--input-border-color);
+}
+.succicon_input_box:focus::placeholder,
+.succicon_input_box:hover::placeholder {
+  color: var(--primary-color);
+}
+.succicon_input_box:focus,
+.succicon_input_box:hover {
+  border-color: var(--primary-color);
+}
+.survey_button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.other {
+  width: 150px;
+  height: 40px;
+  color: white;
+  transition: all 0.3s ease;
+  background-color: #377cf6;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Poppins';
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+}
+.other:hover {
+  background-color: #4062ca;
+  transform: scale(1.05);
+  font-family: 'Poppins';
+  cursor: pointer;
+}
+
+.createUserCrossButton {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+
+.createUserCrossButton img {
+  transition: transform 0.3s ease;
+}
+
+.DetailsMcontainer {
+  display: flex;
+  justify-content: space-between;
+  width: auto;
+  height: auto;
+  height: 112px;
+  padding: 12px;
+  border: 1px solid #377cf6;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  background-color: #eef5ff;
+}
+
+.main_name {
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 3.7%;
+}
+
+.Column1Details {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  flex-basis: auto;
+  padding: 14px;
+  font-size: 14px;
+}
+.verified {
+  color: #20963a;
+  margin-left: 5px;
+}
+/* .error {
+  color: #db4437;
+  font-size: 12px;
+  margin-top: 4px;
+  font-weight: 400;
+} */
+
+.Column2Details {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  flex-basis: auto;
+  padding: 14px;
+  font-size: 14px;
+  margin-bottom: 1.5%;
+}
+
+.addresshead {
+  margin-bottom: 3.7%;
+}
+
+@media (max-width: 450px) {
+  .customer_wrapper_list {
+    height: 250px;
+  }
+
+  .success_hrline {
+    overflow-x: hidden;
+    width: 100%;
+  }
+  .succicon {
+    display: flex;
+
+    width: 100%;
+  }
+
+  .succicon_input_box {
+    height: 36px;
+    width: 320px;
+    margin-top: 7%;
+    border-radius: 8px;
+    color: #989898;
+    border: 1px solid #989898;
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: 12px;
+    outline: none;
+    color: #000000;
+    line-height: 18px;
+    padding: 10px 22px;
+  }
+
+  /* .DetailsMcontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 16px;
+    border: 1px solid #377cf6;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    background-color: #eef5ff;
+  } */
+  .survey_button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0px;
+  }
+
+  .error {
+    margin-left: 15px;
+  }
+  /* .success_crossing{
+    height: 26px;
+  
+  } */
+}
+
+@media (max-width: 768px) {
+  .customer_wrapper_list {
+    width: 95%;
+  }
+  .succicon_input_box {
+    width: 90%;
+  }
+  .other {
+    width: 100px;
+  }
+  .success_heading {
+    font-size: 16px;
+  }
+  .succicon_input_box {
+    padding: 8px 22px;
+  }
+}

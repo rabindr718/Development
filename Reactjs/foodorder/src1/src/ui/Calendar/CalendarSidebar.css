@@ -1,0 +1,236 @@
+.sidebar-wrapper {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(42, 42, 42, 0.7);
+  z-index: 990;
+  overflow-y: auto;
+  right: 0px;
+  transition: 500ms;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.user-sidebar {
+  max-width: 580px;
+  min-width: 580px;
+  min-height: 100vh;
+  overflow-y: auto;
+  background: #fff;
+  padding: 20px;
+}
+
+.user-sidebar .upper-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.user-sidebar .upper-section p {
+  font-weight: 500;
+}
+
+.upper-section .close-icon {
+  position: absolute;
+  color: #377cf6;
+  left: 0;
+  background-color: #e4eeff;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.upper-section .close-icon:hover {
+  transform: scale(1.1);
+}
+
+.sidebar-cards {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.sidebar-cards .card {
+  border: 1.5px solid #377cf6;
+  border-radius: 12px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3px;
+  transition: all 0.3s ease;
+}
+
+.sidebar-cards .card:hover {
+  transform: scale(1.03);
+  box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-cards .card-name {
+  font-weight: 500;
+  text-overflow: ellipsis;
+  text-wrap: nowrap;
+  overflow-x: hidden;
+  width: 150px;
+}
+
+.sidebar-cards .card-title {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+}
+
+.sidebar-cards .card-title span {
+  height: 12px;
+  width: 12px;
+  margin: 0;
+  border-radius: 50%;
+}
+
+.sidebar-cards .card-address {
+  font-size: 14px;
+  color: #1f2937;
+  text-overflow: ellipsis;
+  text-wrap: nowrap;
+  overflow-x: hidden;
+  width: 230px;
+}
+.sidebar-cards .card-address:hover {
+  color: #3c7af1;
+}
+
+.sidebar-cards .card-address:hover {
+  text-decoration: underline;
+}
+
+.sidebar-cards .card-id {
+  color: #838383;
+  font-size: 14px;
+}
+
+.sidebar-cards .our-id {
+  color: '#1F2937';
+  font-size: 13px;
+}
+
+.sidebar-cards .card-status {
+  border-radius: 1rem;
+  border: none;
+  padding: 3px 12px;
+  color: #fff;
+  margin-top: 10px;
+  text-transform: capitalize;
+}
+
+.upper-section-status {
+  display: none;
+}
+
+@media screen and (max-width: 915px) {
+  .sidebar-wrapper {
+    position: unset;
+    background-color: unset;
+    overflow-y: unset;
+    justify-content: center;
+    background: #fff;
+    border-radius: 20px;
+    margin-top: 1rem;
+  }
+
+  .user-sidebar {
+    max-width: unset;
+    width: 100%;
+  }
+
+  .sidebar-cards .card {
+    justify-content: space-between;
+  }
+
+  .upper-section {
+    padding: 1rem 0;
+  }
+
+  .sidebar-cards {
+    margin: 2rem 0;
+  }
+
+  .sidebar-cards .card-name {
+    margin-right: 10px;
+  }
+
+  .user-sidebar {
+    background: unset;
+    padding: 0 1rem;
+    height: unset !important;
+    scroll-behavior: unset;
+    min-width: unset;
+  }
+
+  .user-sidebar .upper-section {
+    justify-content: flex-start;
+  }
+
+  .upper-section .close-icon {
+    display: none;
+  }
+
+  .user-sidebar .upper-section p {
+    font-weight: 600;
+    font-size: 1.3rem;
+  }
+
+  .upper-section-status {
+    display: none;
+  }
+
+  .upper-section-status div {
+    padding: 7px;
+    padding-right: 1rem;
+    border-radius: 20px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+  }
+
+  .upper-section-status span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.3rem;
+    height: 1.3rem;
+    border-radius: 50%;
+    margin-right: 8px;
+    font-weight: 500;
+    background-color: #fff;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-sidebar {
+    margin: 10px;
+  }
+}
+
+@media (max-width: 590px) {
+  .sidebar-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar-wrapper {
+    display: block;
+  }
+  .sidebar-cards .card-name {
+    width: 200px;
+  }
+}

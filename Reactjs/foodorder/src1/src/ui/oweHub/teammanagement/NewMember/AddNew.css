@@ -1,0 +1,231 @@
+.tm-modal {
+  background-color: #fefefe;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 672px;
+
+  overflow: hidden;
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.character-count {
+  margin-top: 1px;
+  font-size: 12px;
+  color: #888;
+}
+
+.character-count.exceeded {
+  color: red;
+}
+
+.tm-createUserActionButton {
+  margin-top: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 0 24px 0;
+  gap: 1rem;
+  border-top: 1px solid #d0d5dd;
+}
+
+.scroll-user {
+  position: relative;
+  height: 100%;
+  background: var(--white-color);
+  overflow-y: auto;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+.scroll-user::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.scroll-user::-webkit-scrollbar {
+  display: initial;
+}
+
+.scroll-user::-webkit-scrollbar-thumb {
+  background-color: rgb(173, 173, 173);
+  border-radius: 30px;
+}
+
+.scroll-user::-webkit-scrollbar-button {
+  display: initial;
+}
+
+.scroll-user::-webkit-scrollbar {
+  -ms-overflow-style: initial;
+  scrollbar-width: thin;
+}
+
+.scroll-user::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+.PhoneInput {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 8px;
+  font-size: 14px;
+}
+
+.PhoneInput input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 1px;
+}
+
+.country-list {
+  margin-right: 8px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 14px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.country-list::-webkit-scrollbar {
+  -ms-overflow-style: initial;
+  scrollbar-width: thin;
+  display: initial;
+  background-color: transparent;
+  width: 10px;
+}
+
+.country-list::-webkit-scrollbar-thumb {
+  background-color: rgb(173, 173, 173);
+  border-radius: 30px;
+  height: 100px;
+}
+
+.country-list::-webkit-scrollbar-button {
+  display: initial;
+}
+
+.country-list::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+.phoneParentView {
+  width: 30%;
+}
+
+.react-tel-input .form-control {
+  width: 100% !important;
+}
+
+.react-tel-input {
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  position: relative;
+  width: 100%;
+  margin-top: 5px;
+}
+
+.tm-create-input-field {
+  position: relative;
+  width: 47%;
+}
+
+.new-tm-modal {
+  background-color: #fefefe;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 954px;
+  height: 556px;
+  overflow: hidden;
+}
+
+.tm-new-create-input-field {
+  position: relative;
+  width: 30%;
+}
+
+.nt-select-cust {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tm-select-data {
+  align-items: center;
+  justify-content: center;
+  margin-top: 5px;
+}
+.tm-select-data p {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 44px;
+  text-align: left;
+}
+.tm-selected-option {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #e8e8e8;
+  height: 26px;
+  align-items: center;
+  text-align: center;
+  border-radius: 8px;
+  gap: 10px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+/* .nt-select-cust {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+} */
+.tm-selected-option span {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 12px;
+  color: #000000;
+}
+
+.remove-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  margin-top: 2px;
+}
+
+.remove-icon {
+  width: 11px;
+  height: 11px;
+}
+
+@media screen and (max-width: 1024px) {
+  .new-tm-modal {
+    width: 100%;
+    max-width: 654px;
+    height: 432px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .tm-new-create-input-field {
+    position: relative;
+    width: 47%;
+  }
+  .new-tm-modal {
+    margin: 10px;
+    height: 500px;
+  }
+
+  .tm-modal {
+    max-width: 380px;
+  }
+}

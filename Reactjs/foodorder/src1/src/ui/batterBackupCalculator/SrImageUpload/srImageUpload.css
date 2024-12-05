@@ -1,0 +1,554 @@
+.sr-image-container {
+  background-color: #f2f2f2;
+  overflow-y: scroll;
+  overflow-x: scroll;
+  height: 100vh;
+}
+
+.sr-image-container::-webkit-scrollbar {
+  display: block !important; 
+}
+
+.form-container {
+  color: white;
+  padding-inline: 79px;
+  padding-bottom: 79px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 700px;
+  margin: auto;
+  box-sizing: border-box;
+  height: 100vh;
+}
+
+
+
+/* ::-webkit-scrollbar {
+  display: block !important;
+  width: 3px !important;
+}
+
+::-webkit-scrollbar-track {
+  background: white !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background: grey !important;
+} */
+
+.absolute_info_icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+}
+
+.sr-form-header {
+  background-color: #fff;
+  padding-bottom: 17px;
+  padding-left: 38px;
+  padding-top: 48px;
+  max-width: 700px;
+  margin: auto;
+}
+.prospect-input-field input,
+.prospect-input-field textarea {
+  padding-block: 17px;
+  border: none;
+  border-radius: 8px;
+  position: relative;
+  width: 100%;
+  padding-left: 24px;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.04));
+}
+.sr-appliance-wrapper {
+  border-radius: 8px;
+  margin-top: 18px;
+  padding-block: 14px;
+  padding-left: 24px;
+  padding-right: 20px;
+  background-color: #fff;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.04));
+}
+
+.sr-appliance-header {
+  padding-bottom: 12px;
+  border-bottom: 1px solid #f2f2f2;
+}
+.text-sm {
+  font-size: 14px;
+}
+.sr-appliance-body {
+  padding-top: 11px;
+}
+
+.text-dark-navy {
+  color: #272727;
+}
+
+.prospect-input-field input:focus {
+  outline: none;
+  width: 100%;
+}
+
+.image-buttons {
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: center;
+  gap: 30px;
+}
+
+.image-button {
+  background-color: #1f222a;
+  border: 2px solid #2c2e35;
+  color: #bbb;
+  cursor: pointer;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 245px;
+  height: 236px;
+  box-sizing: border-box;
+}
+
+.icon {
+  margin-bottom: 10px;
+  width: 50px; /* Set the size of the icons to be the same */
+  height: 50px;
+}
+
+.icon-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.form-group {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #bbb;
+}
+
+.form-group input {
+  width: calc(100% - 10px);
+  padding: 10px;
+  background-color: #1f222a;
+  border: 2px solid #2c2e35;
+  color: white;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.form-group input[readonly] {
+  color: #7f7f7f;
+}
+
+.send-button {
+  background-color: #129537;
+  border: none;
+  padding: 13px;
+  width: 100%;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  color: #fff;
+  margin-top: 30px;
+}
+/* srImageUpload.css */
+.send-button:disabled {
+  color: #919191;
+  background-color: #e7e7e7;
+}
+
+/* Ensure the default styles for the share button */
+.share-button {
+  background-color: gray; /* Default color when not enabled */
+  color: white; /* Default text color */
+}
+.share-button.enabled {
+  background-color: green;
+  color: white;
+}
+
+.camera-icon {
+  font-size: 40px;
+}
+.img-remove {
+  position: absolute;
+  top: -10px; /* Adjust as needed to position correctly */
+  right: -10px; /* Adjust as needed to position correctly */
+  border-radius: 50%;
+  border: none;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  z-index: 1; /* Ensure the badge is above the thumbnail */
+}
+
+.uploaded-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  max-width: 100%;
+}
+
+.thumbnail-container {
+  position: relative;
+  height: 52px;
+}
+
+.uploaded-image {
+  width: 52px;
+  height: 52px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* Updated .image-number styles */
+.image-number {
+  position: absolute;
+  top: -10px; /* Adjust as needed to position correctly */
+  right: -10px; /* Adjust as needed to position correctly */
+  background-color: white;
+  color: black;
+  padding: 5px;
+  border-radius: 50%;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  z-index: 1; /* Ensure the badge is above the thumbnail */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Optional: Add shadow for depth */
+}
+
+.lower-btns {
+  display: flex;
+  justify-content: space-between; /* Distribute items evenly */
+  align-items: center; /* Center items vertically */
+  gap: 128px; /* Adjust as needed */
+}
+
+.upper-btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 460px;
+}
+
+.camera-icon {
+  font-size: 40px;
+  cursor: pointer;
+}
+.back-button {
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  color: #bbb;
+
+  cursor: pointer;
+}
+
+.back-icon {
+  margin-right: 5px; /* Adjust spacing between icon and text */
+}
+
+.back-icon {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.add-more {
+  color: #7f7f7f;
+  cursor: pointer;
+  text-align: center;
+  align-self: center;
+  margin-left: -80px; /* Adjust as needed */
+}
+
+.add-moree {
+  color: #7f7f7f;
+  cursor: pointer;
+  text-align: center;
+  align-self: center;
+}
+
+.camera-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #1f222a;
+  color: white;
+}
+
+.back-button {
+  align-self: flex-start;
+  margin: 20px;
+
+  border: none;
+  color: #bbb;
+
+  cursor: pointer;
+}
+
+.camera-instructions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  min-height: 100vh;
+}
+
+.camera-part {
+  height: 85%;
+}
+
+.webcam,
+.captured-image {
+  width: 100%;
+  height: 90%;
+  border-radius: 10px;
+}
+
+.circular-button {
+  width: 80px;
+  height: 80px;
+  border: 2px solid #bbb;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-left: 62px;
+}
+
+.circle-inner {
+  width: 50px;
+  height: 50px;
+  background-color: #bbb;
+  border-radius: 50%;
+}
+
+.next-button {
+  background-color: #2e7d32;
+  border: none;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 5px;
+  width: 160px;
+  height: 56px;
+  cursor: pointer;
+}
+
+/* Existing styles remain unchanged */
+.uploaded-images-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.uploaded-image-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #14161d;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.uploaded-image-list {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.image-details {
+  flex: 1;
+  margin-left: 10px;
+}
+
+.image-filename {
+  color: white;
+  font-size: 14px;
+}
+
+.image-date {
+  color: #7f7f7f;
+  font-size: 12px;
+}
+
+.delete-button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* Media queries for mobile responsiveness */
+@media (max-width: 768px) {
+  .form-container {
+    padding-inline: 20px;
+    padding-bottom: 40px;
+  }
+
+  .image-buttons {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .image-button {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .icon {
+    width: 40px;
+    height: 40px;
+  }
+  .upper-btns {
+    gap: 217px;
+    margin-bottom: -22px;
+  }
+
+  .form-group input {
+    width: 100%;
+  }
+
+  .lower-btns {
+    display: flex;
+    justify-content: space-between; /* Distribute items evenly */
+    align-items: center; /* Center items vertically */
+    gap: 110px; /* Adjust as needed */
+    margin-top: 10px;
+  }
+
+  .img-remove {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    color: black;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  .uploaded-images {
+    margin-top: 0;
+  }
+
+  .webcam,
+  .captured-image {
+    height: auto;
+  }
+
+  .circular-button {
+    width: 42px;
+    height: 43px;
+    margin-left: 0;
+  }
+
+  .circle-inner {
+    width: 38px;
+    height: 37px;
+  }
+
+  .next-button {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+  }
+
+  .uploaded-images-list {
+    gap: 5px;
+  }
+
+  .uploaded-image-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .uploaded-image-list {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  .add-more,
+  .add-moree {
+    margin-left: 0;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-container {
+    padding-inline: 10px;
+    padding-bottom: 40px;
+  }
+
+  .image-button {
+    padding: 10px;
+  }
+
+  .form-group input {
+    padding: 5px;
+  }
+
+  .share-button {
+    padding: 10px;
+  }
+
+  .circular-button {
+    width: 40px;
+    height: 35px;
+    margin-left: 0;
+  }
+  .lower-btns {
+    display: flex;
+    justify-content: space-between; /* Distribute items evenly */
+    align-items: center; /* Center items vertically */
+    gap: 55px; /* Adjust as needed */
+  }
+  .img-remove {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  .circle-inner {
+    width: 29px;
+    height: 29px;
+  }
+
+  .next-button {
+    padding: 10px 20px;
+  }
+
+  .upper-btns {
+    gap: 197px;
+  }
+}

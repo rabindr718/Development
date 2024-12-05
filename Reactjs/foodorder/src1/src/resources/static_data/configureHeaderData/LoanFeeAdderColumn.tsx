@@ -1,0 +1,113 @@
+import { Column } from '../../../core/models/data_models/FilterSelectModel';
+
+export const LoanFeeAdderColumns: Column[] = [
+  { name: 'type', displayName: 'Type', type: 'string', isCheckbox: true },
+  { name: 'dealer', displayName: 'Dealer', type: 'string', isCheckbox: false },
+  {
+    name: 'installer',
+    displayName: 'Installer',
+    type: 'string',
+    isCheckbox: false,
+  },
+  { name: 'state', displayName: 'State', type: 'string', isCheckbox: false },
+  {
+    name: 'contract',
+    displayName: 'Contract$$',
+    type: 'string',
+    isCheckbox: false,
+  },
+  {
+    name: 'dlr_tier',
+    displayName: 'Dlr Tier',
+    type: 'string',
+    isCheckbox: false,
+  },
+  {
+    name: 'owe_cost',
+    displayName: 'Owe Cost',
+    type: 'number',
+    isCheckbox: false,
+  },
+  {
+    name: 'addr_amt',
+    displayName: 'Addr Amt',
+    type: 'number',
+    isCheckbox: false,
+  },
+  {
+    name: 'per_kw_amt',
+    displayName: 'Per Kw Amt',
+    type: 'string',
+    isCheckbox: false,
+  },
+  { name: 'rep', displayName: 'Rep $ / %', type: 'string', isCheckbox: false },
+  {
+    name: 'description',
+    displayName: 'Per Kw Amt',
+    type: 'string',
+    isCheckbox: false,
+  },
+  { name: 'rep_1', displayName: 'Rep1', type: 'string', isCheckbox: false },
+  { name: 'rep_2', displayName: 'rep_2', type: 'string', isCheckbox: false },
+  {
+    name: 'sys_size',
+    displayName: 'Sys Size',
+    type: 'number',
+    isCheckbox: false,
+  },
+  {
+    name: 'rep_count',
+    displayName: 'Rep Count',
+    type: 'string',
+    isCheckbox: false,
+  },
+  {
+    name: 'per_rep_addr',
+    displayName: 'Per Rep Addr',
+    type: 'string',
+    isCheckbox: false,
+  },
+  {
+    name: 'per_rep_ovrd',
+    displayName: 'Per Rep Ovrd',
+    type: 'string',
+    isCheckbox: false,
+  },
+  { name: 'share', displayName: 'Share', type: 'string', isCheckbox: false },
+  {
+    name: 'r1_pay_scale',
+    displayName: 'R1 Pay Scale',
+    type: 'string',
+    isCheckbox: false,
+  },
+  {
+    name: 'rep1_def_resp',
+    displayName: 'Rep 1 Def Resp',
+    type: 'string',
+    isCheckbox: false,
+  },
+  {
+    name: 'r1_addr_resp',
+    displayName: 'R1 Addr Resp',
+    type: 'string',
+    isCheckbox: false,
+  },
+  {
+    name: 'r2_pay_scale',
+    displayName: 'R2 Pay Scale',
+    type: 'string',
+    isCheckbox: false,
+  },
+  {
+    name: 'rep2_def_resp',
+    displayName: 'Rep 2 Def Resp',
+    type: 'string',
+    isCheckbox: false,
+  },
+  {
+    name: 'r2_addr_resp',
+    displayName: 'R2 Addr Resp',
+    type: 'string',
+    isCheckbox: false,
+  },
+];

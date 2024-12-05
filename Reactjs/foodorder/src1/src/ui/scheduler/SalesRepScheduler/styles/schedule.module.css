@@ -1,0 +1,249 @@
+.schedule_detail {
+  font-size: 20px;
+  color: #263747;
+  font-size: 600;
+}
+.grid_spans {
+  grid-template-columns: repeat(12, 1fr) 0.5fr !important;
+}
+
+.primary_heading {
+  color: #04a5e8;
+  font-weight: 500;
+}
+
+.h_screen {
+  min-height: 100vh;
+}
+
+.customer_wrapper_list {
+  flex-basis: 100%;
+  border-radius: 12px;
+  background-color: #fff;
+  border: 1px solid #d0d5dd;
+}
+
+.time_range {
+  padding-left: 8px;
+  padding-right: 8px;
+  height: 38px;
+  border-radius: 6px;
+  background-color: #e3e3e3;
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  color: #838383;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.time_range:hover {
+  color: #535353;
+  background-color: #dfdfdf;
+}
+
+.time_range.selected {
+  background-color: #377cf6;
+  color: #ffffff;
+}
+
+.percent_status {
+  margin-top: -4px;
+  display: flex;
+  flex-direction: row;
+  height: 46px;
+  border: 1px solid #d1d5db;
+  width: 140px;
+  border-radius: 7px;
+}
+
+.percent_status span {
+  width: 57px;
+  background-color: #e0ebff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-size: 500;
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+}
+
+.percent_status p {
+  width: 83px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-size: 500;
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
+  color: #377cf6;
+}
+
+.avail {
+  margin-top: 9px;
+  display: flex;
+  flex-direction: row;
+  gap: 14px;
+}
+
+.top_sec {
+  display: flex;
+  justify-content: space-between;
+}
+
+.dayselect {
+  display: flex;
+  flex-direction: row;
+  border-left: 1px solid #d0d5dd;
+  padding-top: 10px;
+  padding-right: 22px;
+  justify-content: end;
+  gap: 5.6rem;
+  width: 100%;
+}
+
+.shift {
+  width: 53px;
+  height: 64px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  padding-left: 4px;
+  padding-right: 4px;
+  transition: all 0.3s ease;
+}
+
+.shift:hover {
+  background-color: #e3e3e3;
+}
+
+.shift.selected {
+  background-color: #377cf6;
+  color: white;
+}
+
+.tstop {
+  display: grid;
+  grid-template-columns: 210px auto;
+  border-bottom: 1px solid #efefef;
+  padding-bottom: 13px;
+}
+
+.tstop h2 {
+  margin-top: 30px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #377cf6;
+  padding-left: 60px;
+}
+
+.timeselect {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  background-color: #f2f4f6;
+  font-size: 16px;
+  font-weight: 500;
+  gap: 36px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-right: 25px;
+  padding-left: 14px;
+  margin-top: 19px;
+  margin-right: 14px;
+}
+
+.time.specialColor {
+  color: #377cf6;
+}
+
+.left_side {
+  display: flex;
+  flex-direction: column;
+}
+
+.progressbar {
+  display: grid;
+  grid-template-columns: 160px auto;
+  border-bottom: 1px solid #efefef;
+}
+
+.surveyor_name {
+  font-size: 14px;
+  font-weight: 500;
+  border-right: 1px solid #d1d5db;
+  display: flex;
+  align-items: center;
+  padding-left: 59px;
+  padding-block: 25px;
+}
+
+.half_hour_span_wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: end;
+}
+
+.half_hour_span {
+  height: 17px;
+  width: 1px;
+  background-color: rgba(255, 255, 255, 0.4);
+  /* transform: translateX(-5px); */
+}
+
+.full_hour_span {
+  height: 36px;
+  width: 1px;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.time_slot_wrapper {
+  display: grid;
+  grid-template-columns: repeat(13, 1fr);
+}
+
+.progress_wrapper {
+  padding: 14px 24px;
+  position: relative;
+}
+
+.progress_bar {
+  height: 36px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr) 0.5fr;
+  grid-auto-flow: column;
+  gap: 1px;
+}
+
+.bg_available_slot:hover .available_btn {
+  opacity: 1;
+  transition: all 500ms;
+}
+
+.bg_available_slot:hover .swap_btn {
+  opacity: 1;
+  transition: all 500ms;
+}
+
+.bg_available_slot {
+  background: #8ce38a;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  grid-auto-flow: column;
+  overflow: hidden;
+}
+
+.sales_rep_book_btn {
+  padding: 4px 18px !important;
+  font-size: 12px;
+}

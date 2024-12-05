@@ -1,0 +1,174 @@
+.customer_wrapper {
+  border: 1px solid #d1d5db;
+  padding: 12px 16px;
+  border-radius: 12px;
+  transition: all 500ms;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.customer_wrapper .customer_grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr) auto;
+  align-items: center;
+}
+.avatar_circle {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  font-weight: 600;
+  font-size: 11px;
+  position: relative;
+  z-index: 2;
+}
+
+.bg_name {
+  color: #377cf6;
+  background-color: #ebf3ff;
+}
+
+.bg_green {
+  color: #8bc48a;
+  background-color: #e8ffe7;
+}
+.bg_phone {
+  color: #8e81e0;
+  background-color: #eeebff;
+}
+.customer_name {
+  font-size: 14px;
+  font-weight: 600;
+
+  color: #000;
+  line-height: normal;
+}
+.sm_text {
+  color: #afafaf;
+  font-size: 10px;
+  font-weight: 500;
+}
+
+.accordian_btn {
+  border: none;
+  border-radius: 5px;
+  background-color: #eaecf0;
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: all 500ms;
+}
+.accordian_btn:focus-within {
+  outline: none;
+}
+.bg_time {
+  background-color: #fff0e8;
+  color: #ee824d;
+}
+
+.bg_stone {
+  background-color: #dadada;
+}
+.schedule_btn {
+  border: none;
+
+  font-size: 16px;
+  width: 100%;
+  max-width: 115px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  transition: all 500ms;
+  cursor: pointer;
+}
+.primary_btn {
+  background-color: #4372e9;
+  color: #fff;
+}
+.secondary_btn {
+  color: #4372e9;
+  border: 1px solid #4372e9;
+  background-color: transparent;
+}
+.schedule_btn:hover {
+  transition: all 500ms;
+  font-size: 18px;
+  box-shadow: 0 12px 12px rgba(0, 0, 0, 0.12);
+}
+.other_info_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 32px;
+}
+.map_wrapper {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.map_location {
+  font-size: 12px;
+}
+.appointment_status {
+  font-size: 16px;
+}
+.accordian_btn:hover {
+  background-color: #dde9ff;
+  transition: all 500ms;
+  color: #4372e9;
+}
+
+
+@media only screen and (max-width: 450px) {
+  .customer_wrapper .customer_grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) auto;
+    align-items: center;
+  }
+
+  
+  .other_info_grid{
+    display: flex;
+    flex-direction: row;
+    gap: 44px;
+  }
+
+  .mail_mobile{
+    display: flex !important;
+    flex-direction: row !important;
+  }
+
+  .customer_name{
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  .name_customer{
+    font-size: 14px !important;
+
+  }
+  .primary_btn{
+    margin-top: 24px;
+
+  }
+
+  .appointment_status{
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .map_location {
+    font-size: 12px;
+    font-weight: 500;
+  }
+/* 
+  .wrapper_map{
+    display: flex;
+    flex-direction: column-reverse;
+
+  } */
+
+
+}

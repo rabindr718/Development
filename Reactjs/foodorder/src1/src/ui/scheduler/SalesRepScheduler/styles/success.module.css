@@ -1,0 +1,94 @@
+.customer_wrapper_list {
+  flex-basis: calc(100%);
+  border-radius: 8px;
+  background-color: #fff;
+  padding-top: 15px;
+  padding-inline: 20px;
+  max-width: 494px;
+  height: 372px;
+}
+.succicon {
+  height: 54px;
+  width: 54px;
+  background-color: #20963a;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.succicon img {
+  width: 27px;
+  height: 19px;
+}
+
+.success_not {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.success_not h2 {
+  font-weight: 600;
+  font-size: 18px;
+  color: #333333;
+}
+
+.success_not p {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #6d6d6d;
+  max-width: 305px;
+}
+.survey_button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 64px;
+  gap: 9px;
+}
+.survey_button button {
+  width: 335px;
+  height: 38px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.self {
+  background-color: #20963a;
+  transition: all 0.3s ease;
+}
+.self:hover {
+  background-color: #007f1c;
+  transform: scale(1.03);
+}
+
+.other {
+  background-color: #4372e9;
+  transition: all 0.3s ease;
+}
+.other:hover {
+  background-color: #0040e1;
+  transform: scale(1.03);
+}
+
+.createUserCrossButton {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+
+  cursor: pointer;
+}
+
+.createUserCrossButton img {
+  transition: transform 0.3s ease;
+}

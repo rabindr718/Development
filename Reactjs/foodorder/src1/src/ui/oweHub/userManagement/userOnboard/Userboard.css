@@ -1,0 +1,125 @@
+.error-message {
+  color: #db4437;
+  font-size: 12px;
+  margin-top: 5px;
+}
+.db-access-disable {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+.selected-fields-onboard {
+  position: static !important;
+  display: block;
+  margin-bottom: -15px;
+}
+
+.character-count {
+  margin-top: 1px;
+  font-size: 12px;
+  color: #888;
+}
+
+.character-count.exceeded {
+  color: #db4437;
+}
+.um-createUserActionButton {
+  margin-top: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 0 24px 0;
+  gap: 1rem;
+  border-top: 1px solid #d0d5dd;
+}
+
+.scroll-user {
+  position: relative;
+  height: 100%;
+  background: var(--white-color);
+  overflow-y: auto;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+.scroll-user::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+.scroll-user::-webkit-scrollbar {
+  display: initial;
+}
+
+.scroll-user::-webkit-scrollbar-thumb {
+  background-color: rgb(173, 173, 173);
+  border-radius: 30px;
+}
+.scroll-user::-webkit-scrollbar-button {
+  display: initial;
+}
+.scroll-user::-webkit-scrollbar {
+  -ms-overflow-style: initial;
+  scrollbar-width: thin;
+}
+.scroll-user::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+.PhoneInput {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 8px;
+  font-size: 14px;
+}
+
+.PhoneInput input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 1px;
+}
+
+.country-list {
+  margin-right: 8px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 14px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.country-list::-webkit-scrollbar {
+  -ms-overflow-style: initial;
+  scrollbar-width: thin;
+  display: initial;
+  background-color: transparent;
+  width: 10px;
+}
+.country-list::-webkit-scrollbar-thumb {
+  background-color: rgb(173, 173, 173);
+  border-radius: 30px;
+  height: 100px;
+}
+.country-list::-webkit-scrollbar-button {
+  display: initial;
+}
+
+.country-list::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+.phoneParentView {
+  width: 30%;
+}
+
+.react-tel-input .form-control {
+  width: 100% !important;
+}
+.react-tel-input {
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  position: relative;
+  width: 100%;
+  margin-top: 5px;
+}

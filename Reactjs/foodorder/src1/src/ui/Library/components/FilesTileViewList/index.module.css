@@ -1,0 +1,84 @@
+.list_grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: 32px;
+    /* row-gap: 62px; */
+    row-gap: 40px;
+    align-items: start;
+    padding-inline: 25px;
+    border-top: 1px solid #EFF5FF;
+    background-color: #fff;
+    padding-block: 47px;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+
+
+
+/* Large devices (desktops, less than 1300px) */
+@media (max-width: 1300px) {
+    .list_grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 1024px) {
+    .list_grid {
+        grid-template-columns: repeat(5, 1fr);
+        padding-left: 19px;
+        padding-right: 30px;
+    }
+}
+@media (max-width: 991px) {
+    .list_grid {
+        grid-template-columns: repeat(4, 1fr);
+        display: grid;
+        /* grid-template-columns: repeat(6, 1fr); */
+        column-gap: 32px;
+        /* row-gap: 62px; */
+        row-gap: 40px;
+        align-items: start;
+        /* padding-inline: 25px; */
+        padding-left: 8px;
+        padding-right: 20px;
+        border-top: 1px solid #EFF5FF;
+        background-color: #fff;
+        padding-block: 13px;
+        border-bottom-left-radius: 12px;
+    
+        border-bottom-right-radius: 12px;
+    }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767px) {
+    .list_grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575px) {
+    .list_grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 375px) {
+    .list_grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 375px) {
+    .list_grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+/* Update existing media query for very small devices */
+@media (max-width: 370px) {
+    .list_grid {
+        grid-template-columns: 100%;
+    }
+}

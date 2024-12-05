@@ -1,0 +1,19 @@
+<svg width="260" height="150" viewBox="0 0 260 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0_9359_18487" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="260" height="150">
+<rect width="260" height="149.52" rx="12" fill="#377CF6"/>
+</mask>
+<g mask="url(#mask0_9359_18487)">
+<rect x="-15.6797" y="-8.99219" width="316.778" height="161.573" rx="11.5" fill="#EFF5FF" stroke="black"/>
+</g>
+<g clip-path="url(#clip0_9359_18487)">
+<circle cx="133.5" cy="75.5" r="12.5" fill="#377CF6"/>
+<path d="M134 51C120.766 51 110 61.7666 110 75C110 88.2334 120.766 99 134 99C147.234 99 158 88.2334 158 75C158 61.7666 147.234 51 134 51ZM143.541 75.8408L129.541 84.8408C129.377 84.9473 129.188 85 129 85C128.836 85 128.67 84.959 128.522 84.878C128.199 84.7022 128 84.3662 128 84V66C128 65.6338 128.199 65.2978 128.522 65.122C128.838 64.9482 129.234 64.9589 129.541 65.1592L143.541 74.1592C143.826 74.3427 144 74.6602 144 75C144 75.3398 143.826 75.6572 143.541 75.8408Z" fill="white"/>
+</g>
+<line opacity="0.45" x1="16.5" y1="13.5" x2="247.5" y2="13.5" stroke="#377CF6" stroke-width="3" stroke-linecap="square" stroke-dasharray="7 7"/>
+<line opacity="0.45" x1="16.5" y1="133.5" x2="247.5" y2="133.5" stroke="#377CF6" stroke-width="3" stroke-linecap="square" stroke-dasharray="7 7"/>
+<defs>
+<clipPath id="clip0_9359_18487">
+<rect width="48" height="48" fill="white" transform="translate(110 51)"/>
+</clipPath>
+</defs>
+</svg>

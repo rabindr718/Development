@@ -1,0 +1,536 @@
+.team-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.team-header-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--white-color);
+  padding: 0.44rem;
+  border: 1px solid var(--button-border-color);
+  border-radius: 8px;
+  color: var(--btn-text-color);
+  cursor: pointer;
+}
+.team-main {
+  height: 100vh;
+  background: var(--white-color);
+  padding: 20px;
+  border-radius: 16px;
+  overflow-y: auto;
+  max-height: 84vh;
+  scroll-behavior: smooth;
+}
+.team-cards {
+  display: flex;
+  gap: 28px;
+  flex-wrap: wrap;
+  padding: 16px 7px;
+
+  overflow: hidden;
+  transition:
+    max-height 0s ease,
+    visibility 0s linear 0s;
+}
+
+.team-cards:not(.open) {
+  max-height: 0;
+  visibility: hidden;
+  transition:
+    max-height 0.5s ease,
+    visibility 0s linear;
+}
+
+.team-card-heading {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #ffffff;
+  max-width: 170px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+}
+
+.team-card-p {
+  font-size: 11px;
+  font-weight: 400;
+  color: #7d7d7d;
+  flex: 1;
+}
+.team-arrow-right {
+  height: 16px;
+  width: 16px;
+}
+.team-arrow-wrapper {
+  background: var(--white-color);
+  height: 23px;
+  width: 23px;
+  border-radius: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s ease-out;
+}
+.team-pay-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 210px;
+  min-height: 104px;
+  border: none;
+  border-radius: 12px;
+  padding: 14px;
+  cursor: pointer;
+  background: rgb(216, 216, 216);
+  transition: transform 550ms ease;
+}
+
+.team-pay-card:hover .card-heading {
+  color: #fff !important;
+}
+.team-pay-card:hover {
+  transform: scale(1.05);
+}
+.team-pay-card .view-text {
+  font-size: 12px;
+  font-weight: 400;
+  display: none;
+  margin-right: 5px;
+}
+
+.team-pay-card:hover .view-text {
+  display: inline;
+}
+.team-pay-card:hover .team-arrow-wrapper {
+  width: 64px;
+}
+
+.team-card-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #f1f1f1;
+  padding-bottom: 5px;
+  cursor: pointer;
+  user-select: none;
+}
+.accordion-icon {
+  color: var(--secondary-text-color);
+}
+.payer-type {
+  padding-bottom: 5px;
+}
+
+.team-main::-webkit-scrollbar {
+  width: 10px;
+  height: auto;
+}
+.team-main::-webkit-scrollbar {
+  display: initial;
+}
+
+.team-main::-webkit-scrollbar-thumb {
+  background-color: rgb(173, 173, 173);
+  border-radius: 30px;
+}
+.team-main::-webkit-scrollbar-button {
+  display: block;
+}
+.team-main::-webkit-scrollbar {
+  -ms-overflow-style: initial;
+  scrollbar-width: thin;
+}
+.team-main::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+.team-con-fle {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 8px;
+  width: 100%;
+}
+
+.bg-salmon:hover {
+  transition: all 500ms;
+  background-color: #ee824d !important;
+}
+
+.bg-light-blue:hover {
+  transition: all 500ms;
+  background-color: #57b3f1 !important;
+}
+.bg-purple:hover {
+  transition: all 500ms;
+  background-color: #c470c7 !important;
+}
+
+.bg-light-green:hover {
+  transition: all 500ms;
+  background-color: #63aca3 !important;
+}
+
+.bg-dark-blue:hover {
+  transition: all 500ms;
+  background-color: #6761da !important;
+}
+
+.teamp-group {
+  display: flex;
+  flex-direction: column;
+}
+.teamp-group h4 {
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.create-new-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  width: 210px;
+  height: 104px;
+  border-radius: 12px;
+  padding: 14px;
+  cursor: pointer;
+  background: rgb(255, 255, 255);
+  border: 1px solid #e6e6e6;
+}
+.team-cust-file {
+  margin-top: 13px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.team-cust-file h4 {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #adadad;
+}
+
+.team-table-top {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 10px;
+}
+.team-button-sec button {
+  background-color: #377cf6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  height: 40px;
+  width: 150px;
+  margin-top: 14px;
+  font-size: 12px;
+  margin-right: 12px;
+  cursor: pointer;
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
+}
+.team-button-sec button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.team-members-top {
+  margin-left: 22px;
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+
+.team-members span {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 30px;
+  color: #484848;
+}
+.team-members h1 {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 30px;
+}
+.user-mg {
+  border-radius: 2rem;
+  text-align: center;
+  padding: 5px 10px;
+  background: #ffdcf7;
+  width: 90px;
+  color: #b84bbc;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+.user-namg {
+  border-radius: 2rem;
+  text-align: center;
+  padding: 5px 10px;
+  background: #ffe6da;
+  width: 90px;
+  color: #ee824d;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+.team-members span {
+  font-size: 1.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding-top: 5px;
+}
+
+.team-members p {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--input-border-color);
+  margin-top: 7px;
+}
+
+.team-table-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.team-input {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 1.5rem;
+  font-weight: 600;
+  max-width: 270px;
+  cursor: default;
+  padding: 0;
+  box-shadow: none;
+  color: #263747;
+}
+
+.team-cancel {
+  display: none;
+}
+
+.done-icon,
+.edit-icon {
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
+  cursor: pointer;
+  margin-top: 5px;
+}
+.done-icon:hover,
+.edit-icon:hover {
+  transform: scale(1.07);
+}
+
+@media screen and (max-width: 1024px) {
+  .team-cards {
+    gap: 16px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .team-cards {
+    gap: 16px;
+  }
+}
+
+.teamdash-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+.teamdash-header h1 {
+  font-weight: 600;
+  font-size: 1.3rem;
+  color: var(--input-border-color);
+}
+.dash-newteam .create {
+  background-color: #ffffff;
+  color: #377cf6;
+  border: 1px solid #377cf6;
+  border-radius: 8px;
+  padding: 8px 24px;
+  height: 36px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: transform 0.3s ease;
+}
+
+.dash-newteam .delete {
+  background-color: #ff0000;
+  color: #ffffff;
+  padding: 6.33px, 8.13px, 6.33px, 8.13px;
+  border-radius: 8px;
+  height: 38px;
+  width: 170px;
+  cursor: pointer;
+  border: none;
+  font-weight: 500;
+  font-size: 14px;
+  transition: transform 0.3s ease;
+}
+
+.dash-newteam .create:hover,
+.dash-newteam .delete:hover {
+  transform: scale(1.05);
+}
+
+.dash-newteam {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.team-checkbox-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.team-checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 1.9px solid #ffffff;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.team-checkbox:checked {
+  background-color: #33333300;
+}
+
+.team-checkbox:checked::after {
+  content: '\2714';
+  font-size: 16px;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.creat-drop {
+  display: flex;
+  flex-direction: row;
+  gap: 9px;
+}
+
+@media screen and (max-width: 767px) {
+  .team-main {
+    margin: 10px;
+    max-height: 91vh;
+  }
+  .teamp-group img {
+    display: none;
+  }
+  .teamp-group h4 {
+    font-weight: 400;
+  }
+  .team-arrow-wrapper {
+    position: relative;
+    bottom: 10px;
+  }
+  .team-card-heading {
+    font-size: 1rem;
+  }
+  .team-pay-card {
+    width: 214px;
+    min-height: unset;
+  }
+  .team-pay-card:hover {
+    transform: scale(1.02);
+  }
+  .team-checkbox-wrapper {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    gap: 1rem;
+  }
+  .teamp-group {
+    margin-left: 2.5rem;
+  }
+  .team-checkbox {
+    top: 10px;
+    width: 23px;
+    height: 24px;
+  }
+  .teamdash-header {
+    position: relative;
+    display: block;
+  }
+  .teamdash-header h1 {
+    position: absolute;
+    font-weight: 700px;
+    top: 70px;
+    left: 10px;
+    font-size: 1rem;
+  }
+  .creat-drop {
+    flex-direction: row-reverse;
+  }
+  .sm-hide {
+    display: none;
+  }
+  .btxt-none {
+    display: none;
+  }
+  .dash-newteam {
+    margin-top: 10px;
+    display: block;
+    position: relative;
+  }
+  .team-cancel {
+    display: block;
+  }
+  .dash-newteam .remove-section-oncheck {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 0 10px;
+  }
+  .team-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 3.5rem;
+  }
+  .team-members {
+    margin-left: -20px;
+  }
+  .team-button-sec button {
+    font-size: 24px;
+    font-weight: 300;
+  }
+  .team-button-sec button span {
+    display: none;
+  }
+  .dash-newteam .create {
+    padding: 0 12px;
+  }
+  .create-add-btn {
+    font-size: 1.5rem;
+  }
+  .pay-card-wrapper-sm {
+    height: 75px;
+  }
+}
+.team-members .error-message {
+  color: red !important;
+  font-size: 12px !important;
+  margin-top: 5px !important;
+  line-height: 2px;
+}

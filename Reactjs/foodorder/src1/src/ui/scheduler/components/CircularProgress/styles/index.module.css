@@ -1,0 +1,13 @@
+.absolute {
+  position: absolute;
+}
+.left-0 {
+  left: 50%;
+  transform: translateX(-50%);
+}
+.top-0 {
+  top: 0;
+}
+.svg_wrapper {
+  flex-shrink: 0;
+}

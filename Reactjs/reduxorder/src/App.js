@@ -2,11 +2,13 @@ import "./App.css";
 import Header from "./Components/Header/Header";
 import Home from "./Components/Home/Home";
 import DetailsPage from "./Components/OrderCart/SelectedItem";
+import Counter from "./Components/Home/Counter";
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Home />
+      <Counter />
+      {/* <Header /> */}
+      {/* <Home /> */}
     </div>
   );
 }

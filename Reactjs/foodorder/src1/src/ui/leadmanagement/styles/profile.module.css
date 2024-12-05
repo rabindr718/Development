@@ -1,0 +1,188 @@
+.DetailsMcontainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr !important;
+  overflow: auto;
+}
+
+.customer_wrapper_list {
+  flex-basis: calc(100%);
+  border-radius: 8px;
+  background-color: #fff;
+  max-width: 1012px;
+  min-height: 572px;
+  max-height: 625px;
+  min-width: 612px;
+  display: flex;
+  flex-direction: column;
+}
+.specialfont a {
+  color: #7996ec  !important;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.specialfont a:hover {
+  color: #4062ca !important;
+}
+.specialfont a:active {
+  color: #4062ca !important;
+}
+.specialfont a:focus {
+  color: #4062ca !important;
+}
+
+.Column1Details {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  flex-basis: auto;
+  padding: 18px;
+  font-size: 14px;
+  position: relative;
+}
+
+tr {
+  transition: background-color 0.3s ease;
+  /* Smooth transition for background color */
+}
+
+.RowDiv {
+}
+
+.RowDiv:hover {
+  background-color: #ddebff;
+}
+
+.Column1Details::after {
+  content: '';
+  position: absolute;
+  top: 19px;
+  right: 0;
+  width: 2px;
+  height: 92.5%;
+  background-color: #cccccc;
+}
+
+.Column1Details tr {
+  width: 100% !important;
+}
+
+.Column2Details {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  flex-basis: auto;
+  padding: 18px;
+  font-size: 14px;
+  margin-bottom: 1.5%;
+}
+
+/* TABLE STYLING */
+
+.leftAlign {
+  border: none !important;
+  text-align: left;
+  height: 32px !important;
+  padding: 12px 0px 12px 18px;
+  /* Adjust the values as needed: top, right, bottom, left */
+  line-height: 9px;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.rightAlign {
+  border: none !important;
+  text-align: right;
+  height: 25px !important;
+  padding: 12px 18px 12px 0px;
+  color: #377cf6;
+  line-height: 9px;
+  font-weight: 500;
+  font-size: 14px;
+  width: 119px;
+  word-wrap: break-word;
+  white-space: normal;
+}
+
+.specialfont {
+  font-weight: 400;
+  color: #3e3e3e !important;
+}
+
+.btnContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.XR {
+  cursor: pointer;
+  margin-top: 18px;
+  margin-left: 20px;
+  font-weight: 600;
+}
+
+.crossIconImg {
+  cursor: pointer;
+  margin-top: 18px;
+  margin-right: 20px;
+  transition: all 0.3s ease;
+}
+
+.crossIconImg:hover {
+  transform: scale(1.05);
+}
+.SignDocumentPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 767px) {
+  .DetailsMcontainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .customer_wrapper_list {
+    height: 635px;
+    scroll-behavior: smooth;
+    overflow-y: auto;
+    min-width: 290px;
+  }
+
+  .customer_wrapper_list::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  .customer_wrapper_list::-webkit-scrollbar {
+    display: initial;
+  }
+
+  .customer_wrapper_list::-webkit-scrollbar-thumb {
+    background-color: rgb(173, 173, 173);
+    border-radius: 30px;
+  }
+
+  .customer_wrapper_list::-webkit-scrollbar-button {
+    display: initial;
+  }
+
+  .customer_wrapper_list::-webkit-scrollbar {
+    -ms-overflow-style: initial;
+    scrollbar-width: thin;
+  }
+
+  .customer_wrapper_list::-webkit-scrollbar-corner {
+    background-color: transparent;
+  }
+
+  .leftAlign {
+    line-height: 14px;
+  }
+  .customer_wrapper_list_mob_inner {
+    padding: 0 8px;
+  }
+}

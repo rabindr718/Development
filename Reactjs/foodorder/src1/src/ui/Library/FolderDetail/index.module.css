@@ -1,0 +1,39 @@
+.lg_hide{
+    display: none !important;
+}
+.flex_auto{
+    flex: 1;
+    max-width: 220px;
+    margin-right: auto;
+}
+.lg_text_hide{
+    display: none !important;
+}
+@media (max-width:768px) {
+    .lg_text_hide{
+        display: inline-block !important;
+    }
+    .lg_hide{
+        display: flex !important;
+    
+    }
+    .mobile_hide {
+        display: none;
+    }
+}
+
+@media (max-width: 400px) {
+   
+    .mobile_gap {
+       gap: 6px;
+    }
+    .flex_auto{
+        flex: 1;
+        max-width: 170px;
+        margin-right: auto;
+    }
+    .flex_auto ::placeholder{
+        font-size: 10px;
+    }
+    
+}

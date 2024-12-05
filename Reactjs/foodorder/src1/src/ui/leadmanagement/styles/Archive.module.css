@@ -1,0 +1,1061 @@
+/* -----------------Rabindra----------------- */
+
+.CrossICONBTNHover1:hover {
+  transform: scale(1.07);
+}
+
+.CrossICONBTNHover1 {
+  height: 27px;
+  width: 27px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.CrossICONBTNHover:hover {
+  transform: scale(1.07);
+}
+
+.CrossICONBTNHover {
+  height: 32px;
+  width: 32px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dashboard {
+  padding: 24px;
+  background-color: #f3f4f6;
+  min-height: 100vh;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 24px;
+}
+
+.chartGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.card {
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.cardHeader {
+  padding: 16px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cardContent {
+  padding: 16px;
+  min-height: 70vh;
+}
+
+.totalLeads {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 8px;
+}
+
+.legend {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+}
+
+.legendColor {
+  width: 12px;
+  height: 6.12px;
+  border-radius: 6.12px;
+  margin-right: 8px;
+}
+
+.legendText {
+  font-size: 10.71px;
+}
+
+.monthSelect {
+  background-color: #377cf6;
+  color: white;
+  border-radius: 20px;
+  padding: 6px 10px;
+  border: none;
+  padding-right: 0;
+}
+.PaginationFont select {
+  min-width: 44px;
+  min-height: 31.1px;
+  border-radius: 4px;
+  text-align: center; 
+  text-align-last: center;
+  margin: 0 auto;
+  position: relative;
+  padding: 0;
+}
+.stats {
+  margin-top: 16px;
+  font-size: 14px;
+}
+
+.statItem {
+  margin-right: 16px;
+}
+
+.buttonGroup {
+  display: flex;
+  padding: 5px;
+  gap: 5px;
+  width: 71%;
+  flex-wrap: wrap;
+  border-radius: 22px 0 0 22px;
+}
+
+.button {
+  border: 1px solid #858585 !important;
+  color: #858585;
+  background-color: #fff;
+  padding: 5px;
+  border-radius: 26px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 500;
+  padding-right: 12px;
+  transition: all 500ms;
+}
+
+.button:hover {
+  background-color: #ddebff;
+}
+
+.status {
+  background: #fff;
+  border-radius: 50%;
+  padding: 4px;
+  color: #377cf6;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  font-size: 14px;
+}
+
+.statusInactive {
+  background: #dfdfdf !important;
+  color: #929292 !important;
+}
+
+.buttonActive {
+  background-color: #3b82f6;
+  color: white;
+  border: unset !important;
+}
+
+.buttonActive:hover {
+  background-color: #3b82f6;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  text-align: left;
+  padding: 11px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.table th {
+  font-weight: bold;
+}
+
+table tbody tr:hover {
+  transition: 0.4s all linear;
+  background-color: #377df623;
+}
+
+.statusPending {
+  color: #f59e0b;
+}
+
+.filtericonHistory {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 38px;
+  width: 38px;
+  border-radius: 50%;
+  border: 1.2px solid #377cf6;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.history1 {
+  font-size: 12px;
+  cursor: pointer;
+  color: #353232;
+}
+
+.OpenStylesHistory {
+  padding: 10px 10px 12px 10px;
+  margin: 51px -49px 0px 0px;
+  border-radius: 8px;
+  width: 99px;
+  height: 69px;
+  background-color: white;
+  border: 1px solid rgb(10, 10, 10);
+}
+
+.filtericon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 39px;
+  width: 39px;
+  border-radius: 50%;
+  background-color: #377cf6;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filtericon:hover {
+  background-color: #4062ca;
+  transform: scale(1.05);
+}
+
+.filtericonHistory {
+  transform: scale(1.05);
+}
+
+.filtericon img {
+  height: 24px;
+  width: 24px;
+}
+
+.filterCallToAction {
+  display: flex;
+  gap: 10px;
+  transform: scale(0.7) translate(-1em, -4em);
+  position: relative;
+  right: -8px;
+}
+
+.pieChart :focus {
+  outline: none;
+}
+
+.table {
+  width: 100%;
+  border-collapse: separate;
+}
+
+.history_lists {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+.history_list_inner {
+  display: grid !important;
+  grid-template-columns: auto minmax(0, 0.9fr) minmax(0, 1fr) minmax(0, 2fr) minmax(
+      0,
+      1.4fr
+    ) auto auto !important;
+
+  align-items: center !important;
+  padding: 16px !important;
+  gap: 16px !important;
+}
+
+.user_name {
+  display: flex;
+  flex-direction: column;
+}
+
+.user_name h2 {
+  font-weight: 600;
+  font-size: 16px;
+  margin: 0;
+}
+
+.user_name p {
+  font-weight: 500;
+  font-size: 12px;
+  color: #81a6e7;
+  margin: 4px 0 0 0;
+}
+
+.phone_number,
+.email,
+.address {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.email {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+input[type='checkbox'] {
+  width: 18px !important;
+  height: 18px !important;
+  border-radius: 100px;
+  border: 1px solid #797979;
+  cursor: pointer;
+  transition: border 0.2s ease;
+}
+
+input[type='checkbox']:hover {
+  border: 1.5px solid var(--primary-color);
+}
+
+input[type='checkbox']:checked {
+  background-color: #377cf6;
+  border-color: #377cf6;
+}
+
+.cardHeaderFirst {
+  padding: 18px 16px 16px 16px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cardHeader {
+  padding: 16px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cardHeaderSecond {
+  padding: 10.8px 16px 16px 16px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: -7px;
+}
+
+.actionButtons {
+  display: flex;
+  gap: 10px;
+}
+
+.rescheduleButton {
+  background-color: #377cf6;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.rescheduleButton:hover {
+  background-color: #4062ca;
+}
+
+.archiveButton {
+  background-color: transparent;
+  color: #757575;
+  border: 1px solid #757575;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.archiveButton:hover {
+  background-color: #757575;
+  color: white;
+}
+
+.selectionInfo {
+  display: flex;
+  align-items: center;
+}
+
+.closeIcon {
+  font-size: 24px;
+  margin-right: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.closeIcon img {
+  cursor: pointer;
+}
+
+.closeIcon img:hover {
+  transform: scale(1.06);
+}
+
+.SecondChildContain {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.closeIcon:hover {
+  /* background: #377cf630; */
+  border-radius: 5px;
+}
+
+.ConditionalButtons {
+  display: flex;
+  gap: 9px;
+  margin-right: 11.9px;
+}
+
+.selectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  height: 100%;
+}
+
+.archieveButtonX {
+  background-color: #d91515;
+  border: 1px solid #929292;
+  padding: 0px 0px 0px 0px;
+  border-radius: 26px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  width: 120px;
+  height: 38px;
+  text-align: center;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.archieveButtonX:hover {
+  transform: scale(1.05);
+  background-color: #ad1313;
+}
+
+.archieveButtonA {
+  background-color: #377cf6;
+  color: white;
+  text-align: center;
+  border: none;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 120px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  font-weight: 400;
+}
+
+.archieveButtonA:hover {
+  transform: scale(1.05);
+  background-color: #4062ca;
+}
+
+.archieveButton:hover {
+  background-color: #ad1313;
+  transform: scale(1.05);
+}
+
+.UnArchiveButton {
+  background-color: #377cf6;
+  color: white;
+  text-align: center;
+  border: none;
+  padding: 8px;
+  height: 36px;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 120px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  font-weight: 400;
+}
+
+.UnArchiveButton:hover {
+  background-color: #4062ca;
+  transform: scale(1.05);
+}
+
+.removeButton {
+  color: #929292;
+  background-color: transparent;
+  border: 1px solid #929292;
+  padding: 0px 0px 0px 0px;
+  border-radius: 26px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  width: 87px;
+  height: 38px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.removeButton:hover {
+  transform: scale(1.05);
+  background-color: #757575;
+  color: white;
+}
+
+.paginationContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+}
+
+.leadpagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.chevron_down {
+  display: none !important;
+  height: 24px;
+  width: 24px;
+  background-color: #eaecf0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+.PaginationFont a {
+  font-size: 12px !important;
+}
+
+.date_parent {
+  display: flex;
+  gap: 10px;
+}
+
+.action_needed_btn {
+  width: auto;
+}
+
+.tabs_setting {
+  padding: 10px 0 0 5px;
+}
+
+/* -----------------RESPONSIVE STYLES - MEDIA QUERY----------------- */
+@media (min-width: 768px) {
+  .tabs_setting {
+    padding: 10px 15px;
+  }
+
+
+  .history_list_inner_declined {
+    display: grid;
+    grid-template-columns: 35px 1fr 1fr 2fr 1fr auto !important;
+    align-items: center;
+  }
+
+  .chartGrid {
+    grid-template-columns: 40% 60%;
+  }
+
+  .lineCard {
+    margin-right: 26px;
+  }
+
+  .buttonGroup {
+    display: flex;
+    gap: 16px;
+    width: 100%;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    box-shadow: unset;
+  }
+
+  .filterCallToAction {
+    display: flex;
+    gap: 10px;
+    transform: scale(1);
+    position: unset;
+  }
+
+  .mobile_view_table {
+    display: flex;
+    flex: 1;
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 667px) {
+  .button {
+    transform: scale(0.9);
+  }
+
+  .phone_number,
+  .email,
+  .address {
+    display: none;
+  }
+
+  .history_list_inner_declined {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr !important;
+    align-items: start;
+  }
+
+  .history_list_inner {
+    display: grid;
+    grid-template-columns: 0.2fr auto 0.2fr 0.01fr !important;
+    align-items: baseline;
+  }
+
+  .history_list_inner_Mobile_View {
+    display: grid;
+    grid-template-columns: 0.2fr 3fr 0.2fr !important;
+    align-items: baseline;
+  }
+
+  .actionButtons {
+    transform: scale(0.7) translate(0, -10px);
+  }
+
+  .chevron_down {
+    display: block !important;
+    height: 24px !important;
+    width: 24px !important;
+    background-color: #eaecf0;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    border-radius: 5px;
+  }
+
+  .BOXDelete {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    margin-bottom: -10px;
+    transform: translate(0, -7px);
+    padding-top: 5px;
+    justify-self: center;
+    align-self: center;
+  }
+
+  .hist_date {
+    font-size: 10px !important;
+  }
+
+  .date_parent {
+    display: flex;
+    gap: 10px;
+    transform: scale(0.8);
+    margin-right: -15px;
+  }
+
+  .date_calendar {
+    gap: unset !important;
+  }
+
+  .user_name {
+    transform: translate(5px, -5px);
+  }
+
+  .archieveButtonX {
+    /* all: unset; */
+    background-color: #ee4747;
+    border: 1px solid #929292;
+    padding: 0px 0px 0px 0px;
+    border-radius: 26px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 500;
+    width: 84px;
+    height: 31px;
+    text-align: center;
+    color: white;
+    transition: all 0.3s ease;
+  }
+
+  .archieveButtonX:hover {
+    transform: scale(1.05);
+  }
+
+  .archieveButtonA {
+    background-color: #377cf6;
+    margin-top: 7px;
+    color: white;
+    text-align: center;
+    border: none;
+    padding: 0px 20px 0px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 103px;
+    height: 31px;
+    font-size: 12px;
+    transition: all 0.3s ease;
+    font-weight: 400;
+  }
+
+  .archieveButtonA:hover {
+    transform: scale(1.05);
+  }
+
+  .archieveButton:hover {
+    background-color: #ad1313;
+    transform: scale(1.05);
+  }
+
+  .UnArchiveButton {
+    background-color: #377cf6;
+    margin-top: 7px;
+    color: white;
+    text-align: center;
+    border: none;
+    padding: 0px 20px 0px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100px;
+    height: 31px;
+    font-size: 12px;
+    transition: all 0.3s ease;
+    font-weight: 400;
+  }
+
+  .UnArchiveButton:hover {
+    background-color: #4062ca;
+    transform: scale(1.05);
+  }
+
+  .removeButton {
+    color: #757575;
+    border: 1px solid #929292;
+    padding: 0px 0px 0px 0px;
+    border-radius: 26px;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 500;
+    width: 75px;
+    height: 31px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+
+  .removeButton:hover {
+    transform: scale(1.05);
+    color: transparent;
+    background-color: #757575;
+  }
+
+  .CrossICONBTNHover {
+    all: unset;
+    margin-right: 9px !important;
+    margin-bottom: -19px;
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .history_list_inner_declined {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 1fr 2fr 1fr auto !important;
+
+    align-items: center;
+  }
+}
+
+@media only screen and (min-width: 668px) and (max-width: 768px) {
+  .UnArchiveButton {
+    padding: 0px 10px 0px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 85px;
+    height: 33px;
+    font-size: 12px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+  }
+
+  .UnArchiveButton:hover {
+    background-color: #4062ca;
+    transform: scale(1.05);
+  }
+}
+
+@media only screen and (min-width: 767px) and (max-width: 1025px) {
+  .history_list_inner_Tablet_View {
+    display: grid;
+    grid-template-columns: 0.2fr 1fr 1fr 1fr 0.4fr 0.1fr auto !important;
+    align-items: baseline;
+  }
+
+  .BOXDelete {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    transform: translate(0, -3px);
+    padding-top: 5px;
+    justify-self: center;
+    align-self: center;
+  }
+
+  .chartGrid {
+    grid-template-columns: 50% 50%;
+  }
+
+  .lineChart_div {
+    position: relative;
+    /* top: 50px; */
+    align-items: center;
+    justify-content: center;
+    right: 30px;
+  }
+
+  .lineChart_legend {
+    display: none;
+  }
+
+  .hist_date {
+    font-weight: 500 !important;
+    font-size: 12px !important;
+  }
+
+  .date_display {
+    position: relative;
+  }
+
+  .date_calendar {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap;
+    justify-content: right !important;
+    gap: 10px;
+  }
+
+  .date_parent {
+    display: flex;
+    gap: 10px;
+  }
+
+  .leadpagination {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    gap: 50px !important;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .leftitem,
+  .rightitem {
+    align-items: flex-start;
+  }
+}
+
+.lead__datepicker_content {
+  position: absolute;
+  right: 26px;
+  z-index: 10;
+  background-color: var(--white-color);
+  border-radius: 4px;
+  border: 1px solid var(--border-color);
+  top: 160px;
+  right: 60px;
+}
+
+.lead__datepicker_btns {
+  display: flex;
+  justify-content: center;
+  padding: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+.lead__datepicker_btns button {
+  position: static;
+}
+
+.lead__datepicker_btns button:first-child {
+  margin-right: 0.5rem;
+}
+
+.hist_date {
+  font-weight: 600;
+  font-size: 14px;
+  color: #377cf6;
+}
+
+.calender {
+  background-color: #377cf6;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 500ms ease;
+}
+
+.calender:hover {
+  transform: scale(1.05);
+  background-color: #4062ca;
+}
+
+.date_calendar {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: right !important;
+}
+
+.monthSelect {
+  margin-top: 0;
+  border-radius: 8px;
+  outline: none;
+  color: #3e3e3e;
+  width: 140px;
+  height: 36px;
+  font-size: 12px;
+  border: 1px solid #d0d5dd;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 20px;
+  /* Space for the arrow */
+  background-color: #ffffff;
+  box-shadow: none;
+  position: relative;
+  appearance: none;
+}
+
+/* Arrow in the dropdown */
+.monthSelect::after {
+  content: '▼';
+  /* Down arrow character */
+  font-size: 12px;
+  color: #3e3e3e;
+  position: absolute;
+  right: 10px;
+  pointer-events: none;
+  /* Prevent interaction with the arrow */
+}
+
+/* Border will be none when the dropdown is open */
+.monthSelect:focus {
+  border: none;
+  box-shadow: none;
+}
+
+.monthSelectFocus:focus-within {
+  border-color: #377cf6;
+  box-shadow: 0 0 0 1px #377cf6;
+  caret-color: #3e3e3e;
+}
+
+.placeholder {
+  color: #3e3e3e;
+}
+
+.option {
+  font-size: 13px;
+  color: #3e3e3e;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+.option:hover {
+  background-color: #ddebff;
+}
+
+.optionSelected {
+  background-color: #ffffff;
+}
+
+.singleValue {
+  color: #3e3e3e;
+}
+
+.menu {
+  width: 140px;
+  margin-top: 0px;
+}
+
+.indicatorSeparator {
+  display: none;
+}
+.infoIcon {
+  padding: 5px 5px;
+  border-radius: 50%;
+  border: 1px solid #377cf6;
+  color: #377cf6;
+  display: flex;
+  font-size: 19px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.infoIcon:hover {
+  background-color: #ddebff;
+  transform: scale(1.05);
+}
+
+@media (max-width: 767px) {
+  .monthSelect {
+    width: 80px;
+  }
+  .infoIcon {
+    padding: 5px 5px 5px 5px;
+    border-radius: 50%;
+    border: 1px solid #377cf6;
+    color: #377cf6;
+    display: flex;
+    font-size: 19px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+}
+
+/* IT WILL BE ALSO USED */
+/* @media only screen and (min-width: 450px) and (max-width: 569px) {
+  .history_list_inner {
+    display: grid;
+    grid-template-columns: 0.2fr auto 0.4fr 0.4fr 0.2fr !important;
+    align-items: baseline;
+}
+
+} */

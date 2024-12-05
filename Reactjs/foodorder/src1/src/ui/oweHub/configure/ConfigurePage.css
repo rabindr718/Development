@@ -1,0 +1,241 @@
+.configure-header {
+  margin-left: 6px;
+  margin-top: 6px;
+}
+
+.configure-header-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--white-color);
+  padding: 0.44rem;
+  border: 1px solid var(--button-border-color);
+  border-radius: 8px;
+  color: var(--btn-text-color);
+  cursor: pointer;
+}
+
+.configure-main {
+  height: 100%;
+  background: var(--white-color);
+  padding: 20px;
+  border-radius: 16px;
+  overflow-y: auto;
+  max-height: 84vh;
+  scroll-behavior: smooth;
+}
+
+.payer-type {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--page-heading-color);
+}
+
+.configure-cards {
+  display: flex;
+  gap: 28px;
+  flex-wrap: wrap;
+  padding: 14px;
+  max-height: 1000px;
+  overflow: hidden;
+  transition:
+    max-height 0s ease,
+    visibility 0s linear 0s;
+}
+
+.configure-cards.open {
+  max-height: 1000px;
+}
+
+.configure-cards:not(.open) {
+  max-height: 0;
+  visibility: hidden;
+  transition:
+    max-height 0.5s ease,
+    visibility 0s linear;
+}
+
+.card-heading {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18px;
+  /* width: 100px; */
+  color: var(--coloumn-text-color);
+  text-overflow: ellipsis;
+  overflow-x: hidden;
+  text-wrap: nowrap;
+  width: 150px;
+}
+
+.card-p {
+  font-size: 11px;
+  font-weight: 400;
+  color: #7d7d7d;
+  flex: 1;
+}
+
+.arrow-right {
+  height: 16px;
+  width: 16px;
+}
+
+.arrow-wrapper {
+  background: var(--white-color);
+  height: 30px;
+  width: 30px;
+  border-radius: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s ease-out;
+}
+
+.pay-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  width: 160px;
+  height: 83px;
+  border: none;
+  border-radius: 8px;
+  padding: 14px;
+  cursor: pointer;
+  background: rgb(216, 216, 216);
+  transition: all 0.4s ease;
+}
+
+.pay-card:hover .card-heading {
+  color: #fff !important;
+}
+
+.pay-card:hover {
+  transform: scale(1.08);
+  transition: all 0.4s ease;
+}
+
+.pay-card .view-text {
+  color: black;
+  font-size: 12px;
+  font-weight: 400;
+  display: none;
+  margin-right: 5px;
+}
+
+.pay-card:hover .view-text {
+  display: inline;
+}
+
+.pay-card:hover .arrow-wrapper {
+  width: 94px;
+}
+
+.configure-card-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #f1f1f1;
+  padding-bottom: 5px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.accordion-icon {
+  color: var(--secondary-text-color);
+}
+
+.payer-type {
+  padding-bottom: 5px;
+}
+
+.configure-main::-webkit-scrollbar {
+  width: 10px;
+  height: auto;
+}
+
+.configure-main::-webkit-scrollbar {
+  display: initial;
+}
+
+.configure-main::-webkit-scrollbar-thumb {
+  background-color: rgb(173, 173, 173);
+  border-radius: 30px;
+}
+
+.configure-main::-webkit-scrollbar-button {
+  display: block;
+}
+
+.configure-main::-webkit-scrollbar {
+  -ms-overflow-style: initial;
+  scrollbar-width: thin;
+}
+
+.configure-main::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+.con-fle {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  align-items: center;
+  text-align: center;
+}
+
+.bg-salmon:hover {
+  transition: all 500ms;
+  background-color: #ee824d !important;
+}
+
+.bg-light-blue:hover {
+  transition: all 500ms;
+  background-color: #57b3f1 !important;
+}
+
+.bg-purple:hover {
+  transition: all 500ms;
+  background-color: #c470c7 !important;
+}
+
+.bg-light-green:hover {
+  transition: all 500ms;
+  background-color: #63aca3 !important;
+}
+
+.bg-dark-blue:hover {
+  transition: all 500ms;
+  background-color: #6761da !important;
+}
+
+@media (max-width: 768px) {
+
+  .configure-main,
+  .commissionContainer {
+    margin: 10px;
+  }
+
+  .pay-card,
+  .pay-card-wrapper {
+    width: 100%;
+  }
+
+  .commissionSection {
+    position: relative;
+    padding-bottom: 3.5rem;
+  }
+
+  .config-export {
+    position: absolute;
+    right: 1rem;
+    top: 3.8rem;
+  }
+
+  .config-archive {
+    position: absolute;
+    left: 1.5rem;
+    top: 4.2rem;
+  }
+}

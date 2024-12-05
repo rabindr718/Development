@@ -1,0 +1,14 @@
+.otp-input-wrap .input-wrapper .input-inner-view svg {
+  width: 1rem;
+  height: 1rem;
+}
+.otp-input-wrap .input-wrapper .input-inner-view {
+  border: none;
+  border-bottom: 1px solid #d0d5dd;
+  border-radius: unset !important;
+}
+.otp-input-wrap .input-wrapper .input-inner-view .input {
+  color: #1a1a1a;
+  font-size: 1rem;
+  font-weight: 300;
+}

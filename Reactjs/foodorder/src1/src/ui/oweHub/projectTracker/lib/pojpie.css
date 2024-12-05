@@ -1,0 +1,131 @@
+.pc-links {
+  padding-left: 14px;
+  padding-right: 17px;
+  padding-top: 22px;
+  padding-bottom: 19px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.pc-link {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.disable-btn {
+  cursor: not-allowed !important;
+  opacity: 0.5;
+}
+.disable-btn svg {
+  cursor: not-allowed !important;
+  transition: none !important;
+  transform: none !important;
+}
+.disable-btn:hover {
+  background-color: #fff !important;
+  color: #377cf6 !important;
+}
+
+.copy-message {
+  color: #28a745; /* Green color for success */
+  font-size: 0.9rem;
+  margin-top: 5px;
+  animation: fadeOut 2s forwards;
+  position: absolute;
+  right: 26px;
+  top: 21px;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.link-head {
+  display: flex;
+  flex-direction: column;
+}
+.link-head h3 {
+  font-size: 14px;
+  font-weight: 600;
+}
+.link-head span {
+  margin-top: -4px;
+  font-size: 12px;
+  font-weight: 400;
+  color: #8c8c8c;
+}
+.link-url {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.link-tab {
+  height: 36px;
+  width: 36px;
+  border: 1.5px solid #377cf6;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: #377cf6;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.link-tab a:visited,
+.link-tab a:active {
+  color: #377cf6;
+}
+
+.link-tab:hover {
+  background-color: #377cf6;
+  color: white;
+}
+
+.link-tab:hover svg {
+  color: white;
+}
+
+.link-tab.disable-btn:hover svg {
+  color: var(--primary-color);
+}
+
+.link-tab img {
+  height: 18px;
+  width: 18px;
+}
+
+.link-tab svg {
+  transition: transform 0.3s ease;
+}
+
+.link-tab:hover svg {
+  transform: scale(1.05);
+}
+.pm-doc-heading {
+  padding-top: 25px;
+  padding-left: 13px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+  .pc-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+}
+@media (max-width: 768px) {
+  .pc-links {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,42 @@
+import { Column } from '../../../core/models/data_models/FilterSelectModel';
+
+export const ApOthColumn: Column[] = [
+  {
+    name: 'unique_id',
+    displayName: 'Unique ID',
+    type: 'string',
+    isCheckbox: true,
+  },
+  { name: 'payee', displayName: 'Payee', type: 'string', isCheckbox: false },
+  {
+    name: 'amount',
+    displayName: 'Amount',
+    type: 'number',
+    isCheckbox: false,
+  },
+  {
+    name: 'date',
+    displayName: 'Date',
+    type: 'date',
+    isCheckbox: false,
+  },
+  {
+    name: 'short_code',
+    displayName: 'Short Code',
+    type: 'string',
+    isCheckbox: false,
+  },
+  {
+    name: 'description',
+    displayName: 'Description',
+    type: 'string',
+    isCheckbox: false,
+  },
+
+  {
+    name: 'notes',
+    displayName: 'Notes',
+    type: 'string',
+    isCheckbox: false,
+  },
+];

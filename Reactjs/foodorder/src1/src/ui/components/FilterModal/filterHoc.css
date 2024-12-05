@@ -1,0 +1,24 @@
+.filter-modal {
+  position: fixed;
+  inset: 0;
+  transition: all 500ms ease-in-out;
+  width: 100%;
+  background-color: #fff;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.filter-modal .transparent-model {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  background-color: transparent !important;
+}
+.modal-close {
+  transform: translateY(-200%) !important;
+  transition: all 300ms ease-in-out;
+}
+.modal-open {
+  transform: translateY(0);
+  transition: all 300ms ease-in-out;
+}

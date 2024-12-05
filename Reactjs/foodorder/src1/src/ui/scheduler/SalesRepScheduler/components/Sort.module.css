@@ -1,0 +1,95 @@
+.sortContainer {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .sortIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 8px;
+    /* padding: 8.5px; */
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 36px;
+    height: 36px;  }
+
+    .sortIcon:hover {
+        background-color: var(--button-hover-color);
+        transform: scale(1.05);
+      }
+  
+  .sortDropdown {
+    position: absolute;
+    background: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+  }
+  
+  .sortOption {
+    padding: 10px;
+    cursor: pointer;
+    /* background-color: #377cf6;
+    color: #fff; */
+
+  }
+  
+  .sortOption:hover {
+    background: #f0f0f0;
+  }
+
+  .sortDropdown {
+    position: absolute;
+    top: 100%;
+    background-color: #fff;
+    border: 1px solid var(--input-border-color);
+    border-radius: 6px;
+    z-index: 1000;
+    max-height: 200px;
+    overflow-y: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    top: 42px;
+    right: 0px;
+        width: max-content;
+        padding: 6px 3px;
+        }
+
+  .sortOption {
+    padding: 6px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 500;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin: 0px 5px;
+    height: 100%;
+    line-height: 21px;
+    padding-left: 10px;
+  }
+
+  .sortOption:hover {
+    background-color: #d5e4ff;
+    color: var(--input-border-color);
+  }
+
+  .sortIcon.active {
+    background-color: var(--button-hover-color);
+  }
+
+  .sortOption.selected {
+    background-color:var(--primary-color);
+    color: #fff;}
+
+    .selectedOptionStyle{
+      padding-left: 4px;
+      padding-right: 4px;
+    }

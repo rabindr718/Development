@@ -1,0 +1,47 @@
+.checkbox-slider {
+  margin-top: 25px;
+  position: relative;
+  display: inline-block;
+  width: 34px;
+  height: 20px;
+}
+
+.checkbox-slider input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.check-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #f1f1f1;
+  transition: 0.4s;
+  border-radius: 34px;
+  height: 20px;
+  width: 34px;
+}
+
+.check-slider:before {
+  position: absolute;
+  content: '';
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  bottom: 2px;
+  background-color: #d4d4d4;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .check-slider {
+  background-color: var(--check-color);
+}
+
+input:checked + .check-slider:before {
+  transform: translateX(14px);
+}

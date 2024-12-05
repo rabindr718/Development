@@ -1,0 +1,165 @@
+.pr-sorting {
+  position: relative;
+  cursor: pointer;
+}
+
+.pr-dropdown {
+  position: absolute;
+  width: 160px;
+  right: 0;
+  top: 65px;
+  background-color: #fff;
+  border: 1px solid #2b63f1;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  z-index: 999;
+  margin-top: -22px;
+  /* border-radius: 8px; */
+}
+
+.pr-dropdown ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pr-dropdown li {
+  cursor: pointer;
+  font-size: 12px;
+  padding: 5px 0;
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.pr-dropdown li:hover {
+ color: #4062CA;
+  transform: scale(1.05);
+}
+
+.sort_btn1 {
+  background-color: #377cf6;
+  border: none;
+  height: 36px;
+  width: 36px;
+  border-radius: 8px;
+  padding: 5px;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.sort_btn1:hover {
+  transform: scale(1.05);
+  background-color: #4062CA;
+
+}
+
+.active_sorting {
+  color: #0045f4;
+}
+
+.lead-cal-content {
+  width: 330px;
+  position: absolute;
+  z-index: 99;
+  top: 140px;
+  /* left: 59rem; */
+  right: 200px;
+  background-color: var(--white-color);
+  border: 1.5px solid #c1ccd7;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.1);
+}
+.lead-cal-btns {
+  display: flex;
+  justify-content: center;
+  padding: 0.25rem;
+  padding-bottom: 1rem;
+}
+
+.lead-cal-btns button {
+  position: static;
+}
+
+.lead-cal-btns button:first-child {
+  margin-right: 0.5rem;
+}
+
+.lead-calc-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.lead-calc-container select {
+  border: 2px solid #377cf6;
+  border-radius: 4px;
+  width: 50%;
+  padding: 2px;
+}
+
+.lead-reset-calender {
+  background-color: #2b63f1;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 4px 7px 4px 7px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.lead-reset-calender:hover {
+  transform: scale(1.05);
+  background-color: #4062CA;
+
+}
+
+.lead-apply-calender {
+  background-color: #377cf6;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 4px 7px 4px 7px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.lead-apply-calender:hover {
+  transform: scale(1.05);
+  background-color: #4062CA;
+
+}
+
+@media screen and (max-width: 767px) {
+  .lead-cal-content {
+    width: 300px;
+    position: absolute;
+    z-index: 99;
+    top: 125px;
+    right: 5px;
+  }
+  .sort_btn {
+    background-color: #4372e9;
+    border: none;
+    height: 30.5px;
+    width: 30.5px;
+    border-radius: 8px;
+    padding: 5px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+}
+@media (max-width:968px) {
+  
+  .mobile_tooltip{
+    display: none !important;
+  }
+
+  
+}

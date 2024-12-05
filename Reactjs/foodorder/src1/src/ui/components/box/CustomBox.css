@@ -1,0 +1,61 @@
+.boxContainer {
+  /* width: 272px; */
+  width: 285px;
+  height: 200px;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  margin-right: 2rem;
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.boxContainer:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.2);
+}
+
+.boxUpperView {
+  height: 100px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  /* margin-top: 18px; */
+}
+
+.boxBelowView {
+  height: 100px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.boxCommissionText {
+  color: #222;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.boxCommissionSubText {
+  color: #222;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+@media (max-width: 767px) {
+  .boxBelowView {
+    height: auto;
+    min-height: 100px;
+  }
+  .boxCommissionText {
+    font-size: 18px;
+  }
+}

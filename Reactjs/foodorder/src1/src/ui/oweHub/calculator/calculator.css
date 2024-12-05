@@ -1,0 +1,490 @@
+.calc-wrapper{
+    background-color: var(--white-color) !important;
+    border-radius: 16px;
+}
+#calc-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--white-color);
+    padding: 1.5rem;
+    background: linear-gradient(90deg, #159CBF 30%, #6EC135 70%);
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+}
+
+#calc-header h2 {
+    /* font-size: 1rem; */
+    font-size: 18px;
+    font-weight: 600;
+}
+
+#calc-header svg {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#calc-header svg:hover {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    transform: scale(1.05);
+}
+
+#calculator-main {
+    display: flex;
+    padding: 1.2rem;
+    justify-content: space-between;
+    position: relative;
+    margin-top: 3px;
+}
+
+#calculator-main .build-earnout,
+#calculator-main .equity-growth {
+    height: 85vh;
+    box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.12);
+    border-radius: 18px;
+    position: relative;
+}
+
+.build-earnout {
+    width: 60%;
+}
+
+
+.equity-growth {
+    width: 38.5%;
+}
+
+.build-header,
+.equity-header {
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+}
+
+.build-head-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.build-head-btn button {
+    background: #E0FBFF;
+    border: 1px solid #1EA0B2;
+    color: #1EA0B2;
+    border-radius: 100px;
+    width: 100px;
+    height: 36px;
+    padding: 8px 12px;
+    font-weight: 500;
+    font-size: 12px;
+    transition: all 0.3s ease;
+}
+
+.build-head-btn button:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+    color: var(--white-color);
+    background: #1EA0B2;
+}
+
+.build-head-btn button.active {
+    background: #1EA0B2;
+    color: var(--white-color);
+}
+
+.build-earnout h2,
+.equity-header h2 {
+    /* font-size: 1.1rem; */
+    font-size: 16px;
+    font-weight: 600;
+    color: #5E5E5E;
+    text-align: center;
+    padding: 10px;
+}
+
+.build-body,
+.equity-body {
+    padding: 2rem;
+    height: 55vh;
+    overflow-y: scroll;
+}
+
+.build-body::-webkit-scrollbar {
+    height: 10px;
+    width: 10px;
+}
+
+.build-body::-webkit-scrollbar {
+    display: initial;
+}
+
+.build-body::-webkit-scrollbar-thumb {
+    background-color: rgb(173, 173, 173);
+    border-radius: 30px;
+}
+
+.build-body::-webkit-scrollbar-button {
+    display: initial;
+}
+
+.build-body::-webkit-scrollbar {
+    -ms-overflow-style: initial;
+    scrollbar-width: thin;
+}
+
+.build-body::-webkit-scrollbar-corner {
+    background-color: transparent;
+}
+
+.equity-body::-webkit-scrollbar {
+    height: 10px;
+    width: 10px;
+}
+
+.equity-body::-webkit-scrollbar {
+    display: initial;
+}
+
+.equity-body::-webkit-scrollbar-thumb {
+    background-color: rgb(173, 173, 173);
+    border-radius: 30px;
+}
+
+.equity-body::-webkit-scrollbar-button {
+    display: initial;
+}
+
+.equity-body::-webkit-scrollbar {
+    -ms-overflow-style: initial;
+    scrollbar-width: thin;
+}
+
+.equity-body::-webkit-scrollbar-corner {
+    background-color: transparent;
+}
+
+
+.body-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.body-header .input-group {
+    position: relative;
+}
+
+.body-header .input-group span {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #5E5E5E;
+}
+
+
+.body-header input.number-input {
+    background: none;
+    border-radius: 4px;
+    border: 1px solid #dcdcdc;
+    padding: 0.4rem;
+    width: 120px;
+    color: #5E5E5E;
+    font-weight: 500;
+    outline: none;
+    font-size: 14px;
+    text-align: center;
+}
+
+.build-body p,
+.equity-body p {
+    color: #5E5E5E;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.build-body .filter,
+.equity-body .filter {
+    margin-top: 5px;
+}
+
+.build-body .filter input,
+.equity-body .filter input {
+    width: 100%;
+}
+
+.build-footer,
+.equity-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 2rem;
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    bottom: 0px;
+    text-wrap: nowrap;
+}
+
+.build-body,
+.equity-body {
+    flex: 1;
+}
+
+.build-footer button,
+.equity-footer button {
+    padding: 8px;
+    width: 350px;
+    border-radius: 30px;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    background-color: #1EA0B2;
+    color: var(--white-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.build-footer button span,
+.equity-footer button span {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+#calculator-main .footer-value {
+    font-size: 14px;
+    font-weight: 500;
+    color: #5E5E5E;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+#calculator-main .footer-value:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    text-shadow: 1px 1px 6px #b9b8b8;
+}
+
+.calc-btn-earn,
+.calc-btn-growth{
+    transition: all 0.3s ease;
+}
+
+.slider-container {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.filter-wrap {
+    margin-bottom: 3.5rem;
+}
+
+.value-display button {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+.rc-slider-mark {
+    top: 26px;
+}
+
+.rc-slider-mark span {
+    width: 15px;
+    text-align: center;
+}
+
+.rc-slider-mark-text {
+    color: #858585;
+    font-size: 10px;
+    font-weight: 500;
+}
+
+.rc-slider-mark-text::before {
+    content: '';
+    display: block;
+    height: 1px;
+    width: 7px;
+    background-color: #858585;
+    position: absolute;
+    left: 25%;
+    bottom: 20px;
+    transform: rotate(90deg)
+}
+
+.rc-slider-handle {
+    border-radius: 50%;
+}
+.desktop-hide{
+    display: none;
+}
+
+@media (max-width: 1024px){
+    #calculator-main{
+        padding: 10px 12px;
+    }
+    .build-earnout, .equity-growth{
+        height: 88vh !important;
+    }
+    #calc-header{
+        padding: 1.1rem;
+    }
+    #calc-header h2{
+        font-size: 14px;
+    }
+    .body-header input.number-input{
+        width: 80px;
+        font-size: 12px;
+    }
+    .build-earnout h2, .equity-header h2{
+        font-size: 1rem;
+    }
+    .build-body p, .equity-body p{
+        font-size: 13px;
+    }
+    .build-head-btn button{
+        height: 34px;
+    }
+    .build-earnout{
+        width: 54%;
+    }
+    .equity-growth{
+        width: 45%
+    }
+    .build-footer button, .equity-footer button{
+        width: 300px;
+        font-size: 1rem;
+    }
+    #calculator-main .footer-value{
+        font-size: 12px;
+    }
+    .build-footer button span, .equity-footer button span{
+        font-size: 12px;
+    }
+}
+
+
+/* Responsive  */
+@media (max-width: 768px) {
+    .calc-wrapper{
+        margin: 0;
+    }
+    .desktop-hide{
+        display: inline-flex;
+    }
+    #calculator-main {
+        flex-direction: column;
+        padding: 0;
+        margin-top: 0;
+    }
+    .equity-growth{box-shadow: unset !important}
+
+    .mob-header-active{
+        color: #5E5E5E !important;
+    }
+
+    .mob-header-inactive{
+        color: #cfcfcf !important;
+    }
+
+    .build-header{
+        justify-content: flex-start;
+    }
+    .equity-growth:not(.selected-tab) {
+        display: none !important;
+    }
+
+    .build-body-mob:not(.selected-tab) {
+        display: none !important;
+    }
+ 
+    .hide-mob:not(.selected-tab){
+        display: none !important;
+    }
+
+    .equity-header{
+        display: none;
+    }
+    .sm-btn{
+        cursor: pointer;
+    }
+
+    .equity-growth.selected-tab{
+        height:82vh !important ;
+    }
+
+    .margin-mob{
+        margin-top: 0  !important;
+    }
+    .equity-body{
+        margin-top: 0;
+    }
+
+    .build-earnout.height-mob{
+        height: 60px  !important;
+        box-shadow: none !important;
+    }
+    #calc-header {
+        padding: 1.1rem;
+        gap: 1rem;
+        border-radius: 0;
+    }
+
+    #calc-header h2{
+        font-size: 14px;
+    }
+
+    .build-earnout h2{
+        font-size: 14px;
+    }
+
+    .build-earnout,
+    .equity-growth {
+        width: 100%;
+        border-radius: unset !important;
+        height: 92vh !important;
+    }
+
+    .build-header,
+    .equity-header {
+        border-radius: unset;
+        padding-left: 0.5rem;
+    }
+
+    .build-footer, .equity-footer{
+        left: 0;
+        right: 0;
+    }
+
+    .build-footer button, .equity-footer button {
+        border-radius: unset;
+        width: 100%;
+    }
+
+    .build-head-btn{
+        position: absolute;
+        top: 80px;
+        left: 16px;
+    }
+
+    .build-body, .equity-body{
+        margin-top: 4rem;
+    }
+
+    .body-header input.number-input{
+        width: 100px;
+    }
+}

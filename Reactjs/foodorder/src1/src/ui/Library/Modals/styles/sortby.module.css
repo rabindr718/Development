@@ -1,0 +1,118 @@
+.sortby_container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo_sortby_botton {
+  /* width: 115px; */
+  /* width: 130px; */
+  /* height: 30px; */
+  border-radius: 8px;
+  background-color: #fff;
+  /* border: 1px solid #8C8C8C; */
+  border: 1px solid var(--input-border-color);
+  color: var(--input-border-color);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  font-family: 'Poppins';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 8px 12px;
+}
+.logo_sortby_botton:hover, .logo_sortby_botton:focus {
+ border: 1px solid #377CF6;
+ color: #377CF6;
+  /* transform: scale(1.07); */
+}
+.sortlibrary_inner_div {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  width: 102px;
+  top: 37px;
+  border-radius: 6px;
+  border: 1px solid #8c8c8c;
+}
+
+.sortbylibrary_all {
+  padding-inline: 10px;
+  color: #3e3e3e;
+  cursor: pointer;
+  font-family: 'Poppins' sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-inline: 12px;
+}
+
+.sortbylibrary_all:hover {
+  background-color: #d6e5ff;
+}
+
+
+
+.icon_active {
+  transition: 500ms;
+  transform: rotate(180deg);
+}
+
+.dropdownMenu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 45px;
+  right: 0;
+  background-color: white;
+  border: 1px solid var(--input-border-color);
+  box-shadow: 0px 4px 10px rgba(43, 42, 42, 0.3);
+  z-index: 100;
+  width: 150px;
+  border-radius: 8px;
+  padding: 4px;
+}
+
+.dropdownItem {
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 21px;
+}
+
+.dropdownItem:hover {
+  background-color: #d6e5ff;
+  /* border-radius: 3px; */
+}
+.selected {
+  background-color: #377cf6;
+  color: #ffffff;
+  /* border-radius: 3px; */
+}
+
+.selected:hover {
+  background-color: #377cf6;
+  color: #ffffff;
+  /* border-radius: 3px; */
+}
+
+@media (max-width:420px) {
+  .logo_sortby_botton{
+    width: auto;
+    padding-inline: 6px;
+  }
+}

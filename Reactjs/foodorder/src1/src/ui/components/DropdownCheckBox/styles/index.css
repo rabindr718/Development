@@ -1,0 +1,86 @@
+.dropdown-checkbox {
+  min-width: 143px;
+  border-radius: 8px;
+}
+
+.dropdown-checkbox .dropdown-toggle {
+  width: 100%;
+  padding: 7px 1rem;
+  border: 1px solid var(--input-border-color);
+  font-weight: 500;
+  height: auto;
+  transition: all 0.3s ease;
+}
+
+.input-drop-check::placeholder{
+  color: var(--grey-border-color);
+}
+
+.dropdown-checkbox .dropdown-toggle span {
+  color: var(--input-border-color);
+}
+.dropdown-checkbox .dropdown-toggle svg {
+  color: var(--input-border-color);
+}
+.dropdown-toggle.disabled-dropdown {
+  background-color: #eeecec;
+  cursor: not-allowed;
+}
+
+span.disbaled-label {
+  color: #c2c1c1;
+}
+
+.disabled-checkbox {
+  border: 1px solid #eeecec !important;
+  cursor: not-allowed;
+}
+.disabled-checkbox::before {
+  background-color: #eeecec !important;
+}
+
+.dropdown-toggle.disabled-dropdown span {
+  /*disable color  */
+  color: #c2c1c1;
+}
+.dropdown-toggle.disabled-dropdown svg {
+  color: #c2c1c1;
+}
+.dropdown-checkbox .dropdown-menu {
+  right: 0;
+  left: auto;
+  width: 100%;
+}
+
+.dropdown-checkbox .dropdown-menu .input {
+  width: 100%;
+}
+
+.dropdown-checkbox .dropdown-toggle:not(.disabled-dropdown):hover {
+  border-color: var(--primary-color) !important;
+  transition: all 0.3s ease;
+}
+
+.dropdown-checkbox .dropdown-toggle:not(.disabled-dropdown):hover span, .dropdown-checkbox .dropdown-toggle:not(.disabled-dropdown):hover svg {
+  color: var(--primary-color); 
+}
+
+.dropdown-checkbox .dropdown-toggle {
+  width: 100%;
+  padding: 6px 12px !important;
+  border: 1px solid var(--input-border-color);
+  font-weight: 500;
+  height: auto;
+  transition: all 0.3s ease;
+}
+
+.dropdown-checkbox .dropdown-toggle.active {
+  border-color: var(--primary-color);
+  /* transform: scale(1.04);  */
+  transition: all 0.3s ease;
+}
+
+.dropdown-checkbox .dropdown-toggle.active span,
+.dropdown-checkbox .dropdown-toggle.active svg {
+  color: var(--primary-color); 
+}

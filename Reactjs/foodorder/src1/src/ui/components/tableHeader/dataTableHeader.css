@@ -1,0 +1,42 @@
+/* dbManagerDash.css */
+.data-header-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.search-container-data {
+  /* position: relative; */
+  display: inline-block;
+}
+
+.search-container-data input,
+.search-container-data select {
+  padding: 0.6rem;
+  border-radius: 8px;
+  border: 2px solid #d0d5dd;
+  font-size: 14px;
+  font-weight: 500;
+  margin-left: 10px;
+  color: black;
+}
+
+.search-container-data ::placeholder {
+  color: #000000;
+}
+
+.dropdown-icon {
+  position: absolute;
+  margin-top: 20px;
+  right: 10px;
+  font-size: 2rem;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+}
+
+.commission-back{
+  display: flex;
+  align-content: center;
+  gap: 10px;
+}

@@ -1,0 +1,66 @@
+.input-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Input style */
+.input {
+  font-size: 12px;
+  font-weight: 400;
+  flex: 1;
+  height: 36px;
+  color: var(--input-border-color);
+  padding: 0px 14px;
+  line-height: 14.5px;
+  border: 0;
+  border-radius: 8px;
+  outline: 0;
+}
+
+.input::placeholder {
+  color: var(--input-border-color);
+}
+
+.input-inner-view {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  border: 1px solid var(--input-border-color);
+  margin-top: 5.5px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: white !important;
+}
+
+.input-inner-view:hover,
+.input-inner-view:focus,
+.input-inner-view.focused,
+.input-inner-view:has(input:not(:placeholder-shown)) {
+  border-color: var(--primary-color);
+}
+
+.input-inner-view:hover input::placeholder, .input-inner-view:focus input::placeholder, .input-inner-view.focused input::placeholder {
+  color: var(--primary-color);
+}
+
+.inputLabel {
+  color: var(--input-border-color);
+}
+
+.eyeIcon:hover {
+  cursor: pointer;
+}
+
+/* Input field focus */
+
+.error {
+  color: #db4437;
+  font-size: 12px;
+  margin-top: 4px;
+  font-weight: 400;
+}
+
+input::placeholder {
+  color: #8b8484;
+}
