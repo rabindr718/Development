@@ -1,0 +1,22 @@
+/* src/components/ListItems/list.module.css */
+
+.container {
+  padding: 20px;
+}
+
+.item {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.deleteButton {
+  margin-left: 10px;
+  background-color: red;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.deleteButton:hover {
+  background-color: darkred;
+}
