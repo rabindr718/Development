@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Professional Image Slider</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="slider-container">
+      <div class="slider">
+        <div class="slider-image-wrapper">
+          <img
+            id="sliderImage"
+            src=""
+            alt="Slider Image"
+            class="slider-image"
+          />
+        </div>
+
+        <div class="slider-controls">
+          <button
+            id="prevBtn"
+            class="slider-btn slider-btn-prev"
+            aria-label="Previous Image"
+          >
+            &#10094;
+          </button>
+          <button
+            id="nextBtn"
+            class="slider-btn slider-btn-next"
+            aria-label="Next Image"
+          >
+            &#10095;
+          </button>
+        </div>
+
+        <div class="slider-indicators"></div>
+      </div>
+    </div>
+
+    <script src="javascript.js"></script>
+  </body>
+</html>
