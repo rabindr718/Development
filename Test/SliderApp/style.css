@@ -3,6 +3,7 @@
   --secondary-color: #f4f4f4;
   --accent-color: #007bff;
   --transition-speed: 0.5s;
+  --white-color: #ffffff;
 }
 
 * {
@@ -59,7 +60,7 @@ body {
 
 .slider-btn {
   background-color: rgba(0, 0, 0, 0.5);
-  color: white;
+  color: var(--white-color);
   border: none;
   font-size: 2rem;
   padding: 10px 15px;
@@ -92,7 +93,7 @@ body {
 }
 
 .slider-indicator.active {
-  background-color: white;
+  background-color: var(--white-color);
 }
 
 @media (max-width: 768px) {

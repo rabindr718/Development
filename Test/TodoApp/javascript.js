@@ -1,101 +1,93 @@
-// Task Management Module
 class TodoList {
   constructor() {
     this.taskInput = document.getElementById("taskInput");
-    this.addTaskBtn = document.getElementById("addTaskBtn");
     this.taskList = document.getElementById("taskList");
 
-    // Bind event listeners
-    this.addTaskBtn.addEventListener("click", () => this.addTask());
-    this.taskInput.addEventListener("keypress", (e) => this.handleKeyPress(e));
+    document.getElementById("addTaskBtn").onclick = () => this.addTask();
+    this.taskInput.onkeyup = (e) => e.key === "Enter" && this.addTask();
 
-    // Load existing tasks from local storage
-    this.loadTasks();
+    JSON.parse(localStorage.getItem("todoTasks") || "[]").forEach((t) =>
+      this.addTaskToDOM(t)
+    );
   }
 
-  // Add a new task
   addTask() {
-    const taskText = this.taskInput.value.trim();
+    const text = this.taskInput.value.trim();
+    if (!text) return this.showError("Task cannot be empty");
 
-    if (taskText === "") {
-      this.showValidationError("Task cannot be empty");
-      return;
-    }
-
-    this.createTaskElement(taskText);
-    this.saveTasks();
+    this.addTaskToDOM(text);
+    this.save();
     this.taskInput.value = "";
   }
 
-  // Create task element
-  createTaskElement(taskText) {
+  addTaskToDOM(text) {
     const li = document.createElement("li");
     li.classList.add("task-item");
 
-    const taskSpan = document.createElement("span");
-    taskSpan.textContent = taskText;
+    const span = document.createElement("span");
+    span.className = "listitem";
+    span.textContent = text;
 
     const deleteBtn = document.createElement("button");
     deleteBtn.textContent = "Delete";
-    deleteBtn.classList.add("delete-btn");
-    deleteBtn.addEventListener("click", () => this.deleteTask(li));
+    deleteBtn.className = "delete-btn";
+    deleteBtn.onclick = () => {
+      li.remove();
+      this.save();
+    };
 
-    li.appendChild(taskSpan);
+    li.appendChild(span);
     li.appendChild(deleteBtn);
+
     this.taskList.appendChild(li);
   }
 
-  // Delete a task
-  deleteTask(taskElement) {
-    this.taskList.removeChild(taskElement);
-    this.saveTasks();
-  }
-
-  // Handle enter key press
-  handleKeyPress(e) {
-    if (e.key === "Enter") {
-      this.addTask();
-    }
-  }
-
-  // Save tasks to local storage
-  saveTasks() {
-    const tasks = Array.from(this.taskList.children).map(
-      (taskItem) => taskItem.querySelector("span").textContent
+  save() {
+    localStorage.setItem(
+      "todoTasks",
+      JSON.stringify(
+        [...this.taskList.children].map((li) => li.firstChild.textContent)
+      )
     );
-    localStorage.setItem("todoTasks", JSON.stringify(tasks));
   }
 
-  // Load tasks from local storage
-  loadTasks() {
-    const savedTasks = JSON.parse(localStorage.getItem("todoTasks") || "[]");
-    savedTasks.forEach((taskText) => this.createTaskElement(taskText));
-  }
-
-  // Show validation error (optional enhancement)
-  showValidationError(message) {
-    const errorContainer = document.createElement("div");
-    errorContainer.textContent = message;
-    errorContainer.style.color = "red";
-    errorContainer.style.marginBottom = "10px";
-
-    // Remove any existing error messages
-    const existingError = document.querySelector(".error-message");
-    if (existingError) {
-      existingError.remove();
-    }
-
-    errorContainer.classList.add("error-message");
-    this.taskInput.parentNode.insertBefore(errorContainer, this.taskInput);
-
-    // Remove error after 3 seconds
-    setTimeout(() => {
-      errorContainer.remove();
-    }, 3000);
+  showError(msg) {
+    document.querySelector(".error-message")?.remove();
+    const err = document.createElement("div");
+    err.className = "error-message";
+    err.textContent = msg;
+    err.style.color = "red";
+    this.taskInput.parentNode.insertBefore(err, this.taskInput);
+    // setTimeout(() => err.remove(), 3000);
   }
 }
+const style = document.createElement("style");
+style.textContent = `
+    .task-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #f0f0f0;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        margin-bottom: 10px;
+        padding: 10px 20px;
+    }
 
-// Initialize the todo list when the DOM is fully loaded
-document.addEventListener("DOMContentLoaded", () => {
-  new TodoList();
-});
+    .listitem {
+        flex: 1;
+        color: #333;
+        font-size: 16px;
+    }
+
+    .delete-btn {
+        background-color: #ff4d4d;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 5px 10px;
+        cursor: pointer;
+    }
+`;
+document.head.appendChild(style);
+document.addEventListener("DOMContentLoaded", () => new TodoList());
