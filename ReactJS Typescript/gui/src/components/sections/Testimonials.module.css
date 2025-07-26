@@ -1,0 +1,155 @@
+.testimonials {
+  padding: 5rem 0;
+  background: #f7fafc;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.header h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin-bottom: 1rem;
+}
+
+.header p {
+  font-size: 1.125rem;
+  color: #718096;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.testimonialContainer {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.navButton {
+  background: white;
+  border: 2px solid #e2e8f0;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #4a5568;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.navButton:hover {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-color: #667eea;
+  color: white;
+}
+
+.testimonialCard {
+  background: white;
+  padding: 3rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  flex: 1;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.rating {
+  margin-bottom: 1.5rem;
+}
+
+.star {
+  color: #ffd700;
+  font-size: 1.5rem;
+  margin-right: 0.25rem;
+}
+
+.content {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: #4a5568;
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+
+.author {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.authorInfo h4 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1a202c;
+  margin-bottom: 0.25rem;
+}
+
+.authorInfo span {
+  display: block;
+  color: #718096;
+  font-size: 0.875rem;
+}
+
+.indicators {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  background: #cbd5e0;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.indicator.active {
+  background: #667eea;
+}
+
+@media (max-width: 768px) {
+  .testimonialContainer {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .navButton {
+    order: 2;
+    position: static;
+  }
+
+  .testimonialCard {
+    padding: 2rem;
+    order: 1;
+  }
+
+  .content {
+    font-size: 1.125rem;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  .header h2 {
+    font-size: 2rem;
+  }
+}

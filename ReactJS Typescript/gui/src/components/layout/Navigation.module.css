@@ -1,0 +1,100 @@
+.nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.navLink {
+  font-weight: 500;
+  text-decoration: none;
+  color: #374151;
+  transition: all 0.6s ease; /* Slower transition */
+  padding: 0.75rem 1.5rem;
+  position: relative;
+  border-radius: 0.5rem; /* Subtle rounding for non-active */
+  overflow: hidden;
+}
+
+/* Hover underline effect for non-active items */
+.navLink::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  transition: all 0.6s ease; /* Slower transition */
+  transform: translateX(-50%);
+  border-radius: 1px;
+}
+
+.navLink:hover::before {
+  width: 80%;
+}
+
+.navLink:hover {
+  color: #2563eb;
+  transform: translateY(-1px);
+}
+
+.navLink.active {
+  background: rgba(37, 99, 235, 0.15);
+  color: #2563eb;
+  border-radius: 2rem;
+  /* padding: 0.75rem 1.5rem; */
+  /* font-weight: 600; */
+  transform: none;
+  box-shadow: none;
+}
+
+.navLink.active::before {
+  display: none; /* No underline for active */
+}
+
+.navLink.active:hover {
+  color: #2563eb; /* Keep blue text on hover */
+  transform: none; /* No transform on hover */
+  background: rgba(37, 99, 235, 0.2); /* Slightly darker background on hover */
+}
+
+/* Mobile styles */
+@media (max-width: 1023px) {
+  .nav {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0 1rem;
+  }
+
+  .navLink {
+    padding: 1rem 1.5rem;
+    border-radius: 0.75rem;
+    transition: all 0.6s ease; /* Slower transition */
+    font-weight: 600;
+  }
+
+  .navLink::before {
+    display: none; /* No underline on mobile */
+  }
+
+  .navLink:hover {
+    background: #f3f4f6;
+    transform: translateX(8px);
+  }
+
+  /* .navLink.active {
+    background: rgba(37, 99, 235, 0.15); 
+    color: #2563eb; 
+    transform: translateX(12px); 
+    box-shadow: none; 
+    border-radius: 2rem;
+    padding: 1rem 1.5rem;
+    font-weight: 600;
+    padding: 10px auto;
+  } */
+
+  .navLink.active:hover {
+    transform: translateX(16px);
+    background: rgba(37, 99, 235, 0.2); /* Slightly darker on hover */
+    color: #2563eb;
+  }
+}

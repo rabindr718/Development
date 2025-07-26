@@ -1,0 +1,63 @@
+i have create a vite react typescript project. i want to build a website for
+ software development company advance professional website served area of 
+ europiun union europe. make structure of files then send codes and correct code.
+  fully resonsive website i need. SEE ALL NEEDS THEN START DEVELOP.
+I have using this structure all files made. but i need to use import classes as 
+ module.css. used so give all codes again
+src/
+├── components/
+│   ├── layout/
+│   │   ├── Header.tsx
+│   │   ├── Footer.tsx
+│   │   └── Navigation.tsx
+│   ├── ui/
+│   │   ├── Button.tsx
+│   │   ├── Card.tsx
+│   │   ├── Modal.tsx
+│   │   └── Loading.tsx
+│   ├── sections/
+│   │   ├── Hero.tsx
+│   │   ├── Services.tsx
+│   │   ├── About.tsx
+│   │   ├── Portfolio.tsx
+│   │   ├── Team.tsx
+│   │   ├── Testimonials.tsx
+│   │   ├── Contact.tsx
+│   │   └── GDPR.tsx
+│   └── common/
+│       ├── AnimatedCounter.tsx
+│       └── ScrollReveal.tsx
+├── pages/
+│   ├── Home.tsx
+│   ├── Services.tsx
+│   ├── Portfolio.tsx
+│   ├── About.tsx
+│   ├── Contact.tsx
+│   └── Privacy.tsx
+├── hooks/
+│   ├── useInView.ts
+│   ├── useScrollLock.ts
+│   └── useLocalStorage.ts
+├── utils/
+│   ├── constants.ts
+│   ├── animations.ts
+│   └── validations.ts
+├── styles/
+│   ├── globals.css
+│   └── animations.css
+├── assets/
+│   ├── images/
+│   └── icons/
+├── types/
+│   └── index.ts
+├── App.tsx
+├── main.tsx
+└── index.html
+layout code you give but after continue if i do continue then fail. so give from here
+
+give after this Complete Software Development Company Website - All Files
+Code ∙ Version 2 
+Now let me continue with the React components:
+Complete Software Development Company Website - All Files
+Code ∙ Version 3 
+Continue.heroStats { grid-template-columns: repeat(3, 1fr); gap: 1rem; } .heroStat h3 { font-size: 1.5rem; } .floatingElements { display: none; } } @media (max-width: 480px) { .heroStats { grid-template-columns: 1fr; gap: 1rem; } .heroText h1 { font-size: 2rem; } }
