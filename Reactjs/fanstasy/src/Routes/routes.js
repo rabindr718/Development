@@ -1,0 +1,12 @@
+export const ROUTES = {
+  LIVESCORE: "/liveScore",
+  ABOUT: "/about",
+  CONTACT: "/contact",
+  SERVICES: "/services",
+  PORTFOLIO: "/portfolio",
+  SKILLS: "/skills",
+  EXPERIENCE: "/experience",
+  GALLERY: "/gallery",
+  DiSPLAY: "/display",
+  IPL: "/ipl-schedule",
+};

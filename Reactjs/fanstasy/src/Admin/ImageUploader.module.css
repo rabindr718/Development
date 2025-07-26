@@ -1,0 +1,48 @@
+.container {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  max-width: 400px;
+  margin: 2rem auto;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.input {
+  margin-bottom: 1rem;
+  display: block;
+  width: 100%;
+}
+
+.button {
+  padding: 0.5rem 1.2rem;
+  background-color: #2563eb;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.button:hover {
+  background-color: #1e40af;
+}
+
+.preview {
+  margin-top: 1rem;
+}
+
+.image {
+  width: 100%;
+  max-width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-top: 0.5rem;
+}
+
+.url {
+  font-size: 0.75rem;
+  word-break: break-all;
+  margin-top: 0.5rem;
+}

@@ -1,0 +1,145 @@
+.container {
+  font-family: Arial, sans-serif;
+  padding: 1rem;
+  background-color: #f8f9fa;
+}
+
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0a4c75;
+  color: white;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.menu span {
+  margin: 0 1rem;
+  cursor: pointer;
+}
+
+.matchRow {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+  overflow-x: auto;
+}
+
+.matchCard {
+  background-color: #e2ecf6;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  min-width: 200px;
+}
+
+.main {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.leftPanel,
+.centerPanel,
+.rightPanel {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.leftPanel {
+  flex: 1;
+}
+
+.centerPanel {
+  flex: 2;
+  text-align: center;
+}
+
+.rightPanel {
+  flex: 1;
+}
+
+.mainImage {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 0.5rem;
+}
+
+.featureText {
+  margin-top: 1rem;
+  font-weight: bold;
+  text-align: left;
+  font-size: 1.2rem;
+}
+.explainSection {
+  color: gray;
+  text-align: left;
+  font-size: 0.9rem;
+}
+.videoCard {
+  background-color: #f0f0f0;
+  padding: 0.8rem;
+  margin-top: 0.5rem;
+  border-radius: 8px;
+}
+.cretaeLineBelow {
+  position: relative;
+  padding-bottom: 1.2rem; /* give some space for the line */
+  text-align: center;
+}
+
+.cretaeLineBelow::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 2px; /* adjust height of vertical line */
+  background-color: #007bff; /* or any color you like */
+}
+.iplXtraMainHead {
+  text-align: right;
+  color: gray;
+  padding-top: 2px;
+  margin: 3.5px 0px;
+}
+.latestNews {
+  padding-left: 20px !important;
+}
+.latestNews li {
+  list-style: none;
+  text-align: left !important;
+}
+.latestNewsText {
+  font-size: 0.8rem;
+  color: #999;
+  padding: 3px 0px;
+}
+.latestNewsTime {
+  color: slategray;
+  padding: 3px 0px;
+  font-size: 0.8rem;
+}
+.latestNewsHeading {
+  font-size: 0.9rem;
+}
+.linebelow {
+  width: 100%;
+  height: 2px;
+  background-color: slateblue;
+  padding: 0px;
+  margin-bottom: 6px;
+  margin-top: 6px;
+}
+.cardsContainer {
+  display: flex;
+  overflow-x: auto;
+  padding: 12px 0;
+  gap: 16px;
+  background-color: #f8f8f8;
+  scrollbar-width: thin;
+  -webkit-overflow-scrolling: touch;
+}

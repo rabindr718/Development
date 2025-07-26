@@ -1,0 +1,90 @@
+.container {
+  font-family: Arial, sans-serif;
+  padding: 16px;
+  background-color: #fff;
+  color: #222;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  max-width: 1000px;
+  margin: auto;
+}
+
+.header h3 {
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.status {
+  color: red;
+  font-weight: bold;
+  margin-top: 4px;
+}
+
+.teams {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 12px;
+}
+
+.team {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.score {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+.runRate {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #666;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 16px 0;
+  font-size: 14px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 8px;
+}
+
+.activeTab {
+  font-weight: bold;
+  border-bottom: 2px solid #007bff;
+}
+
+.scoreTable,
+.bowlerTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+  font-size: 14px;
+}
+
+.scoreTable th,
+.bowlerTable th,
+.scoreTable td,
+.bowlerTable td {
+  border: 1px solid #eee;
+  padding: 8px;
+  text-align: left;
+}
+
+.scoreTable thead,
+.bowlerTable thead {
+  background-color: #f9f9f9;
+  font-weight: bold;
+}
+
+.summary {
+  margin-top: 16px;
+  font-size: 13px;
+  color: #444;
+  line-height: 1.5;
+}

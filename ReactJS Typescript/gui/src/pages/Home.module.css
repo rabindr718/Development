@@ -101,7 +101,13 @@
 .heroText {
   text-align: center;
   max-width: none;
-  overflow: hidden !important;
+  min-width: 45vw;
+  max-width: 100vw;
+  min-height: 35vw;
+  max-height: 70vw;
+  /* overflow: hidden !important; */
+  /* background-color: magenta !important; */
+
   /* THIS IS FOR TRANSFORM EFFECT */
 }
 
