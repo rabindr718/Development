@@ -119,8 +119,9 @@
   animation: slideInUp 1s ease-out 0.3s both;
   margin-left: auto;
   margin-right: auto;
-  overflow: hidden;
+  /* overflow: hidden; */
   /* THIS IS FOR TRANSFORM EFFECT */
+  /* background-color: red; */
 }
 .highlightText {
   display: inline-block;
@@ -133,7 +134,9 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
   animation: gradientShift 3s ease-in-out infinite;
-  overflow: hidden;
+  min-height: 9vh;
+  max-height: 15vh;
+  /* overflow: hidden; */
   /* THIS IS FOR TRANSFORM EFFECT */
 }
 
@@ -1159,7 +1162,9 @@
 /* Text Colors */
 .textWhite {
   color: white;
-  overflow: hidden;
+  min-height: 12vh;
+  max-height: 15vh;
+  /* overflow: hidden; */
   /* THIS IS FOR TRANSFORM EFFECT */
 }
 
